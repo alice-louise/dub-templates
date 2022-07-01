@@ -44,6 +44,9 @@ view-form-public-component .hide-on-front-identifier, form-preview-page .hide-on
     font-size:10px;
 }
 
+.hide-on-front {
+    display: none;
+}
 
 .main-codes-id div.hide-on-front{
 	background:none!important;
