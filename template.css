@@ -225,6 +225,16 @@ span.col-xs-12.ng-binding.ng-scope {
     background-color: transparent;
     border-color: transparent;
 }
+//new-builder
+.container-form-element.row-flex{
+	display: grid!important;
+}
+
+.container-form-element.row-flex div{
+	display: grid!important;
+}
+
+//old-builder
 .row-flex {
     display: flex;
     width: 100%;
