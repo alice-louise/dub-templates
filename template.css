@@ -1,4 +1,7 @@
 
+.form-viewer.dubsado-form {
+    padding: 0px!important;
+}
 form.ng-pristine.ng-valid{
  display: block!important;
 } 
