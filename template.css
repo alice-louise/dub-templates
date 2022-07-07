@@ -230,8 +230,9 @@ span.col-xs-12.ng-binding.ng-scope {
 	display: grid!important;
 }
 
-.container-form-element.row-flex div{
-	display: grid!important;
+
+.container-form-element .row-flex-image div{
+	height:100%;
 }
 
 //old-builder
