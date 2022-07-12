@@ -29,7 +29,8 @@ background: transparent;
 
 
 view-form-public-component .hide-on-front,
-view-form-public-component .hide-on-front-identifier, form-preview-page .hide-on-front {
+view-form-public-component .hide-on-front-identifier, form-preview-page .hide-on-front,
+form-preview-page .hide-on-front-identifier{
     display: none;
 }
     
@@ -344,6 +345,14 @@ span.col-xs-12.ng-binding.ng-scope {
         flex-direction: column;
     }
 }
+
+.row-package-stretch .container-form-element__column {
+    width: 100%;
+	
+.row-package-stretch .form-element__content {
+    padding: 0px!important;
+}
+	
 .row-package-stretch .column {
     margin: 0 !important;
     padding: 0 !important;
@@ -360,6 +369,8 @@ span.col-xs-12.ng-binding.ng-scope {
 .row-package-stretch section.ng-scope {
     width: 100%;
 }
+
+
 
 .row-package-stretch .col-xs-12 {
     padding: 0 !important;
