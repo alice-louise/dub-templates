@@ -2,6 +2,10 @@
 .form-viewer.dubsado-form {
     padding: 0px!important;
 }
+input.form-element__input {
+    margin-bottom: 20px;
+}
+
 form.ng-pristine.ng-valid{
  display: block!important;
 } 
