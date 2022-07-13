@@ -1,1 +1,904 @@
-(function(_0x32bd7a,_0x261e0e){var _0x51774e=_0x50e4,_0x3d60a0=_0x32bd7a();while(!![]){try{var _0xc71008=parseInt(_0x51774e(0x10f))/0x1*(parseInt(_0x51774e(0x10c))/0x2)+-parseInt(_0x51774e(0x10d))/0x3+parseInt(_0x51774e(0x132))/0x4*(parseInt(_0x51774e(0x124))/0x5)+-parseInt(_0x51774e(0xff))/0x6+-parseInt(_0x51774e(0x11b))/0x7*(parseInt(_0x51774e(0x116))/0x8)+-parseInt(_0x51774e(0x139))/0x9+parseInt(_0x51774e(0x126))/0xa;if(_0xc71008===_0x261e0e)break;else _0x3d60a0['push'](_0x3d60a0['shift']());}catch(_0x4519b9){_0x3d60a0['push'](_0x3d60a0['shift']());}}}(_0x6dc1,0x241f7));function hideFront(){var _0xbcc90b=_0x50e4,_0x295beb,_0xfdac9b,_0x4e5b89;if(document['querySelector'](_0xbcc90b(0x144))!==null||document[_0xbcc90b(0x12f)](_0xbcc90b(0x151))!==null){_0x295beb=document[_0xbcc90b(0x153)]('hide-on-front');for(_0xfdac9b=0x0;_0xfdac9b<_0x295beb[_0xbcc90b(0x152)];_0xfdac9b+=0x1){_0x4e5b89=_0x295beb[_0xfdac9b][_0xbcc90b(0x112)]('.item'),_0x4e5b89[_0xbcc90b(0x130)][_0xbcc90b(0x110)]='0',_0x4e5b89[_0xbcc90b(0x130)][_0xbcc90b(0x13c)]=_0xbcc90b(0xfb),_0x4e5b89[_0xbcc90b(0x130)][_0xbcc90b(0x127)]=_0xbcc90b(0x106);}}if(document['querySelector'](_0xbcc90b(0x10e))!==null){_0x295beb=document[_0xbcc90b(0x153)](_0xbcc90b(0x12c));for(_0xfdac9b=0x0;_0xfdac9b<_0x295beb[_0xbcc90b(0x152)];_0xfdac9b+=0x1){_0x4e5b89=_0x295beb[_0xfdac9b]['closest'](_0xbcc90b(0x13a)),_0x4e5b89[_0xbcc90b(0x121)](_0xbcc90b(0x130),_0xbcc90b(0x13f));}}}function hidePackageHeight(){var _0x3d5ba4=_0x50e4,_0x39e5aa,_0x16fc25,_0x35b028;if(document['querySelector'](_0x3d5ba4(0x144))!==null){_0x35b028=document['getElementsByClassName'](_0x3d5ba4(0x118));for(_0x39e5aa=0x0;_0x39e5aa<_0x35b028[_0x3d5ba4(0x152)];_0x39e5aa+=0x1){_0x16fc25=_0x35b028[_0x39e5aa][_0x3d5ba4(0x112)](_0x3d5ba4(0x138)),_0x16fc25[_0x3d5ba4(0x130)]['display']=_0x3d5ba4(0x122),_0x16fc25[_0x3d5ba4(0x130)][_0x3d5ba4(0x13c)]=_0x3d5ba4(0xfb);}}if(document[_0x3d5ba4(0x12f)](_0x3d5ba4(0x10e))!==null){_0x35b028=document[_0x3d5ba4(0x153)](_0x3d5ba4(0x118));for(_0x39e5aa=0x0;_0x39e5aa<_0x35b028[_0x3d5ba4(0x152)];_0x39e5aa+=0x1){_0x16fc25=_0x35b028[_0x39e5aa][_0x3d5ba4(0x112)]('.form-element'),_0x16fc25[_0x3d5ba4(0x130)][_0x3d5ba4(0x127)]=_0x3d5ba4(0x122),_0x16fc25['style'][_0x3d5ba4(0x13c)]=_0x3d5ba4(0xfb);}}}function packagesBackend(){var _0x2a7159=_0x50e4,_0x45d2ac,_0xaf4bb0,_0x99a8ca;if(document[_0x2a7159(0x12f)](_0x2a7159(0x150))!==null){_0x45d2ac=document[_0x2a7159(0x153)](_0x2a7159(0x133));for(_0xaf4bb0=0x0;_0xaf4bb0<_0x45d2ac[_0x2a7159(0x152)];_0xaf4bb0+=0x1){_0x99a8ca=_0x45d2ac[_0xaf4bb0][_0x2a7159(0x112)]('.row'),_0x99a8ca[_0x2a7159(0x105)]['add']('packageNotSelected');}}}function rowStyleFullWidth(){var _0x55613c=_0x50e4,_0x45033e,_0x55d587,_0x51c33e,_0x3d4ee6,_0x100058,_0x3bc96c;if(document[_0x55613c(0x12f)]('view-form-public-component')!==null||document['querySelector']('#edit-form')!==null||document[_0x55613c(0x12f)](_0x55613c(0x151))!==null){if(document[_0x55613c(0x153)]('row-full-width-identify')){_0x45033e=document[_0x55613c(0x153)](_0x55613c(0x148));for(_0x55d587=0x0;_0x55d587<_0x45033e[_0x55613c(0x152)];_0x55d587+=0x1){_0x51c33e=_0x45033e[_0x55d587],_0x3d4ee6=_0x51c33e[_0x55613c(0x11e)],_0x3d4ee6[_0x55613c(0x130)][_0x55613c(0x110)]='0',_0x100058=_0x51c33e[_0x55613c(0x112)](_0x55613c(0x140)),_0x100058!==null&&(_0x3bc96c=_0x100058[_0x55613c(0x112)](_0x55613c(0x141)),_0x3bc96c[_0x55613c(0x105)][_0x55613c(0x136)](_0x55613c(0x137)));}}}if(document[_0x55613c(0x12f)](_0x55613c(0x10e))!==null){if(document[_0x55613c(0x153)](_0x55613c(0x148))){_0x45033e=document[_0x55613c(0x153)]('row-full-width-identify');for(_0x55d587=0x0;_0x55d587<_0x45033e[_0x55613c(0x152)];_0x55d587+=0x1){_0x51c33e=_0x45033e[_0x55d587],_0x3d4ee6=_0x51c33e[_0x55613c(0x11e)],_0x3d4ee6['style'][_0x55613c(0x110)]='0',_0x100058=_0x51c33e[_0x55613c(0x112)](_0x55613c(0x14f)),_0x100058!==null&&_0x100058[_0x55613c(0x105)]['add']('full-width-row');}}}}function rowStylePadding(){var _0x33ee1c=_0x50e4,_0x437319,_0x3e0e0e,_0xded291,_0xa122d2,_0x1792d0,_0x2452d7;if(document[_0x33ee1c(0x12f)](_0x33ee1c(0x144))!==null||document[_0x33ee1c(0x12f)](_0x33ee1c(0x150))!==null||document[_0x33ee1c(0x12f)](_0x33ee1c(0x151))!==null){if(document[_0x33ee1c(0x153)](_0x33ee1c(0x10b))){_0x437319=document[_0x33ee1c(0x153)]('row-padding-identify');for(_0x3e0e0e=0x0;_0x3e0e0e<_0x437319[_0x33ee1c(0x152)];_0x3e0e0e+=0x1){_0xded291=_0x437319[_0x3e0e0e],_0xa122d2=_0xded291[_0x33ee1c(0x11e)],_0xa122d2[_0x33ee1c(0x130)][_0x33ee1c(0x110)]='0',_0x1792d0=_0xded291[_0x33ee1c(0x112)](_0x33ee1c(0x140)),_0x1792d0!==null&&(_0x2452d7=_0x1792d0[_0x33ee1c(0x112)](_0x33ee1c(0x141)),_0x2452d7['classList'][_0x33ee1c(0x136)](_0x33ee1c(0x128)),_0x2452d7[_0x33ee1c(0x105)][_0x33ee1c(0x136)](_0x33ee1c(0x137)));}}}if(document[_0x33ee1c(0x12f)](_0x33ee1c(0x10e))!==null){if(document[_0x33ee1c(0x153)](_0x33ee1c(0x10b))){_0x437319=document[_0x33ee1c(0x153)](_0x33ee1c(0x10b));for(_0x3e0e0e=0x0;_0x3e0e0e<_0x437319[_0x33ee1c(0x152)];_0x3e0e0e+=0x1){_0xded291=_0x437319[_0x3e0e0e],_0xa122d2=_0xded291[_0x33ee1c(0x11e)],_0xa122d2[_0x33ee1c(0x130)][_0x33ee1c(0x110)]='0',_0x1792d0=_0xded291[_0x33ee1c(0x112)](_0x33ee1c(0x14f)),_0x1792d0!==null&&(_0x1792d0[_0x33ee1c(0x105)][_0x33ee1c(0x136)](_0x33ee1c(0x128)),_0x1792d0['classList'][_0x33ee1c(0x136)](_0x33ee1c(0x137)));}}}}function _0x6dc1(){var _0x30cd63=['row-padding','row-style1','package-style2','row-style1-identify','hide-on-front','.droppable-columns','row-package-equal','querySelector','style','inner-column-style4-identify','12mGCvgM','btn\x20btn-squared\x20border-around','package-style2-identify','getElementById','add','full-width-row','.item','1891800btFPKn','.form-element','package-style3-identify','height','div.hide-on-front','.ng-scope','min-height:\x200px;\x20padding:0px!important;\x20border-width:0px!important;','.column','.row','row-style4-identify','package-style1-identify','view-form-public-component','inner-column-style1','inner-column-style1-identify','package-style3','row-full-width-identify','row-flex','row-flex-image','row-flex-inner','.item.padding-top-10.row.ng-scope','package-style1','querySelectorAll','.container-form-element','#edit-form','#view-form','length','getElementsByClassName','0!important','margin-top:0px!important;margin-bottom:0px!important;\x20border:0px','inner-column-style3','row-flex-reverse-identify','1674750rPWJTC','row-flex-reverse','row-style2','row-package-stretch-identify','row-style3-identify','row-style5','classList','none!important','row-package-stretch','row-style5-identify','appendChild','.container-form-element__column','row-padding-identify','43592evGPPy','830439YAYxTh','.form-viewer','5mdrGcH','minHeight','row-style2-identify','closest','inner-column-style2-identify','inner-column-style2','row-move-submit-id','1069312YJXRim','row-move-submit','row-package-equal-identify','section','row-style4','7ErzNiO','row-style3','.form-viewer-footer','parentNode','row-flex-identify','submitButton','setAttribute','none','inner-column-style3-identify','24250eQnymo','ff-package-image-flex','9242310JYXSJd','display'];_0x6dc1=function(){return _0x30cd63;};return _0x6dc1();}function rowStyleFlex(){var _0x22cdbb=_0x50e4,_0x2db447,_0x3b1100,_0x21c000,_0x1222f9,_0x293697,_0x837c86,_0x2b2520,_0x5b80e9,_0x2ab173;if(document[_0x22cdbb(0x12f)]('view-form-public-component')!==null||document[_0x22cdbb(0x12f)](_0x22cdbb(0x150))!==null||document[_0x22cdbb(0x12f)](_0x22cdbb(0x151))!==null){if(document[_0x22cdbb(0x153)]('row-flex-identify')){_0x2db447=document['getElementsByClassName'](_0x22cdbb(0x11f));for(_0x3b1100=0x0;_0x3b1100<_0x2db447[_0x22cdbb(0x152)];_0x3b1100+=0x1){_0x21c000=_0x2db447[_0x3b1100],_0x1222f9=_0x21c000[_0x22cdbb(0x11e)],_0x1222f9[_0x22cdbb(0x130)][_0x22cdbb(0x110)]='0',_0x293697=_0x21c000['closest'](_0x22cdbb(0x140)),_0x293697!==null&&(_0x837c86=_0x293697[_0x22cdbb(0x112)](_0x22cdbb(0x141)),_0x837c86['classList'][_0x22cdbb(0x136)](_0x22cdbb(0x149)),document[_0x22cdbb(0x12f)](_0x22cdbb(0x150))===null&&(_0x2b2520=_0x21c000[_0x22cdbb(0x112)](_0x22cdbb(0x13e)),_0x2b2520[_0x22cdbb(0x105)][_0x22cdbb(0x136)](_0x22cdbb(0x14b)),_0x5b80e9=_0x2b2520[_0x22cdbb(0x112)](_0x22cdbb(0x14c)),_0x5b80e9[_0x22cdbb(0x105)][_0x22cdbb(0x136)](_0x22cdbb(0x14b)),_0x2ab173=_0x5b80e9['closest'](_0x22cdbb(0x119)),_0x2ab173[_0x22cdbb(0x105)][_0x22cdbb(0x136)]('row-flex-inner')));}}}if(document[_0x22cdbb(0x12f)](_0x22cdbb(0x10e))!==null){if(document[_0x22cdbb(0x153)]('row-flex-identify')){_0x2db447=document[_0x22cdbb(0x153)](_0x22cdbb(0x11f));for(_0x3b1100=0x0;_0x3b1100<_0x2db447[_0x22cdbb(0x152)];_0x3b1100+=0x1){_0x21c000=_0x2db447[_0x3b1100],_0x1222f9=_0x21c000[_0x22cdbb(0x11e)],_0x1222f9[_0x22cdbb(0x130)][_0x22cdbb(0x110)]='0',_0x293697=_0x21c000[_0x22cdbb(0x112)]('.container-form-element'),_0x293697!==null&&_0x293697[_0x22cdbb(0x105)][_0x22cdbb(0x136)](_0x22cdbb(0x149));}}}if(document[_0x22cdbb(0x12f)](_0x22cdbb(0x10e))!==null){if(document[_0x22cdbb(0x153)](_0x22cdbb(0x125))){_0x2db447=document[_0x22cdbb(0x153)](_0x22cdbb(0x125));for(_0x3b1100=0x0;_0x3b1100<_0x2db447[_0x22cdbb(0x152)];_0x3b1100+=0x1){_0x21c000=_0x2db447[_0x3b1100],_0x1222f9=_0x21c000[_0x22cdbb(0x11e)],_0x1222f9[_0x22cdbb(0x130)][_0x22cdbb(0x110)]='0',_0x293697=_0x21c000[_0x22cdbb(0x112)](_0x22cdbb(0x10a)),_0x293697!==null&&_0x293697[_0x22cdbb(0x105)][_0x22cdbb(0x136)](_0x22cdbb(0x14a));}}}}function rowStyleFlexReverse(){var _0x19d720=_0x50e4,_0x2fdbea,_0x47ca10,_0x417ee1,_0x4049c6,_0x5415e5,_0x5ae692,_0x42bba6,_0x5e6c3d,_0xbebd6d;if(document[_0x19d720(0x12f)]('view-form-public-component')!==null||document[_0x19d720(0x12f)](_0x19d720(0x150))!==null||document[_0x19d720(0x12f)](_0x19d720(0x151))!==null){if(document[_0x19d720(0x153)](_0x19d720(0xfe))){_0x2fdbea=document['getElementsByClassName'](_0x19d720(0xfe));for(_0x47ca10=0x0;_0x47ca10<_0x2fdbea[_0x19d720(0x152)];_0x47ca10+=0x1){_0x417ee1=_0x2fdbea[_0x47ca10],_0x4049c6=_0x417ee1[_0x19d720(0x11e)],_0x4049c6[_0x19d720(0x130)][_0x19d720(0x110)]='0',_0x5415e5=_0x417ee1[_0x19d720(0x112)](_0x19d720(0x140)),_0x5415e5!==null&&(_0x5ae692=_0x5415e5[_0x19d720(0x112)](_0x19d720(0x141)),_0x5ae692[_0x19d720(0x105)][_0x19d720(0x136)](_0x19d720(0x100)),document['querySelector'](_0x19d720(0x150))===null&&(_0x42bba6=_0x417ee1[_0x19d720(0x112)](_0x19d720(0x13e)),_0x42bba6[_0x19d720(0x105)]['add'](_0x19d720(0x14b)),_0x5e6c3d=_0x42bba6['closest'](_0x19d720(0x14c)),_0x5e6c3d[_0x19d720(0x105)][_0x19d720(0x136)](_0x19d720(0x14b)),_0xbebd6d=_0x5e6c3d[_0x19d720(0x112)]('section'),_0xbebd6d['classList'][_0x19d720(0x136)](_0x19d720(0x14b))));}}}if(document[_0x19d720(0x12f)](_0x19d720(0x10e))!==null){if(document[_0x19d720(0x153)]('row-flex-reverse-identify')){_0x2fdbea=document[_0x19d720(0x153)](_0x19d720(0xfe));for(_0x47ca10=0x0;_0x47ca10<_0x2fdbea[_0x19d720(0x152)];_0x47ca10+=0x1){_0x417ee1=_0x2fdbea[_0x47ca10],_0x4049c6=_0x417ee1[_0x19d720(0x11e)],_0x4049c6[_0x19d720(0x130)]['minHeight']='0',_0x5415e5=_0x417ee1[_0x19d720(0x112)](_0x19d720(0x14f)),_0x5415e5!==null&&(_0x5415e5[_0x19d720(0x105)][_0x19d720(0x136)](_0x19d720(0x100)),_0x5415e5[_0x19d720(0x105)][_0x19d720(0x136)](_0x19d720(0x149)));}}}if(document[_0x19d720(0x12f)](_0x19d720(0x10e))!==null){if(document[_0x19d720(0x153)]('ff-package-image-flex')){_0x2fdbea=document[_0x19d720(0x153)](_0x19d720(0x125));for(_0x47ca10=0x0;_0x47ca10<_0x2fdbea[_0x19d720(0x152)];_0x47ca10+=0x1){_0x417ee1=_0x2fdbea[_0x47ca10],_0x4049c6=_0x417ee1[_0x19d720(0x11e)],_0x4049c6[_0x19d720(0x130)][_0x19d720(0x110)]='0',_0x5415e5=_0x417ee1[_0x19d720(0x112)](_0x19d720(0x10a)),_0x5415e5!==null&&_0x5415e5[_0x19d720(0x105)][_0x19d720(0x136)](_0x19d720(0x14a));}}}}function rowPackageEqual(){var _0x12d1b7=_0x50e4,_0x4b2010,_0xd7e60c,_0x4256d7,_0xa5897a,_0x39715c,_0x3f1e11;if(document[_0x12d1b7(0x12f)]('view-form-public-component')!==null||document[_0x12d1b7(0x12f)](_0x12d1b7(0x150))!==null||document['querySelector'](_0x12d1b7(0x151))!==null){if(document[_0x12d1b7(0x153)](_0x12d1b7(0x118))){_0x4b2010=document[_0x12d1b7(0x153)](_0x12d1b7(0x118));for(_0xd7e60c=0x0;_0xd7e60c<_0x4b2010['length'];_0xd7e60c+=0x1){_0x4256d7=_0x4b2010[_0xd7e60c],_0xa5897a=_0x4256d7['parentNode'],_0xa5897a[_0x12d1b7(0x130)][_0x12d1b7(0x110)]='0',_0x39715c=_0x4256d7[_0x12d1b7(0x112)](_0x12d1b7(0x140)),_0x39715c!==null&&(_0x3f1e11=_0x39715c[_0x12d1b7(0x112)](_0x12d1b7(0x141)),_0x3f1e11[_0x12d1b7(0x105)]['add'](_0x12d1b7(0x12e)));}}}if(document[_0x12d1b7(0x12f)](_0x12d1b7(0x10e))!==null){if(document[_0x12d1b7(0x153)](_0x12d1b7(0x118))){_0x4b2010=document[_0x12d1b7(0x153)](_0x12d1b7(0x118));for(_0xd7e60c=0x0;_0xd7e60c<_0x4b2010[_0x12d1b7(0x152)];_0xd7e60c+=0x1){_0x4256d7=_0x4b2010[_0xd7e60c],_0xa5897a=_0x4256d7['parentNode'],_0xa5897a[_0x12d1b7(0x130)]['minHeight']='0',_0x39715c=_0x4256d7[_0x12d1b7(0x112)](_0x12d1b7(0x14f)),_0x39715c!==null&&_0x39715c['classList'][_0x12d1b7(0x136)](_0x12d1b7(0x12e));}}}}function rowPackageStretch(){var _0x12d2b3=_0x50e4,_0x5b367a,_0x17163d,_0x258a98,_0x19c6cb,_0x2e0a44,_0xd86402;if(document[_0x12d2b3(0x12f)](_0x12d2b3(0x144))!==null||document['querySelector']('#edit-form')!==null||document['querySelector'](_0x12d2b3(0x151))!==null){if(document[_0x12d2b3(0x153)](_0x12d2b3(0x102))){_0x5b367a=document['getElementsByClassName'](_0x12d2b3(0x102));for(_0x17163d=0x0;_0x17163d<_0x5b367a[_0x12d2b3(0x152)];_0x17163d+=0x1){_0x258a98=_0x5b367a[_0x17163d],_0x19c6cb=_0x258a98[_0x12d2b3(0x11e)],_0x19c6cb[_0x12d2b3(0x130)]['minHeight']='0',_0x2e0a44=_0x258a98[_0x12d2b3(0x112)](_0x12d2b3(0x140)),_0x2e0a44!==null&&(_0xd86402=_0x2e0a44[_0x12d2b3(0x112)]('.row'),_0xd86402[_0x12d2b3(0x105)]['add'](_0x12d2b3(0x107)));}}}if(document[_0x12d2b3(0x12f)]('.form-viewer')!==null){if(document['getElementsByClassName'](_0x12d2b3(0x102))){_0x5b367a=document[_0x12d2b3(0x153)](_0x12d2b3(0x102));for(_0x17163d=0x0;_0x17163d<_0x5b367a[_0x12d2b3(0x152)];_0x17163d+=0x1){_0x258a98=_0x5b367a[_0x17163d],_0x19c6cb=_0x258a98[_0x12d2b3(0x11e)],_0x19c6cb[_0x12d2b3(0x130)][_0x12d2b3(0x110)]='0',_0x2e0a44=_0x258a98['closest'](_0x12d2b3(0x14f)),_0x2e0a44!==null&&_0x2e0a44[_0x12d2b3(0x105)][_0x12d2b3(0x136)]('row-package-stretch');}}}}function rowStyle1(){var _0xadb23a=_0x50e4,_0x4d0ca4,_0x5b0696,_0xad683c,_0x20d2cc,_0x195bf4,_0x2a4866;if(document[_0xadb23a(0x12f)]('view-form-public-component')!==null||document[_0xadb23a(0x12f)](_0xadb23a(0x150))!==null||document[_0xadb23a(0x12f)](_0xadb23a(0x151))!==null){if(document[_0xadb23a(0x153)](_0xadb23a(0x12b))){_0x4d0ca4=document[_0xadb23a(0x153)](_0xadb23a(0x12b));for(_0x5b0696=0x0;_0x5b0696<_0x4d0ca4[_0xadb23a(0x152)];_0x5b0696+=0x1){_0xad683c=_0x4d0ca4[_0x5b0696],_0x20d2cc=_0xad683c['parentNode'],_0x20d2cc[_0xadb23a(0x130)][_0xadb23a(0x110)]='0',_0x195bf4=_0xad683c[_0xadb23a(0x112)](_0xadb23a(0x140)),_0x195bf4!==null&&(_0x2a4866=_0x195bf4[_0xadb23a(0x112)](_0xadb23a(0x141)),_0x2a4866[_0xadb23a(0x105)][_0xadb23a(0x136)](_0xadb23a(0x129)),_0x2a4866[_0xadb23a(0x105)][_0xadb23a(0x136)]('full-width-row'));}}}if(document[_0xadb23a(0x12f)](_0xadb23a(0x10e))!==null){if(document['getElementsByClassName'](_0xadb23a(0x12b))){_0x4d0ca4=document[_0xadb23a(0x153)](_0xadb23a(0x12b));for(_0x5b0696=0x0;_0x5b0696<_0x4d0ca4[_0xadb23a(0x152)];_0x5b0696+=0x1){_0xad683c=_0x4d0ca4[_0x5b0696],_0x20d2cc=_0xad683c[_0xadb23a(0x11e)],_0x20d2cc['style'][_0xadb23a(0x110)]='0',_0x195bf4=_0xad683c[_0xadb23a(0x112)](_0xadb23a(0x14f)),_0x195bf4!==null&&(_0x195bf4['classList'][_0xadb23a(0x136)](_0xadb23a(0x129)),_0x195bf4[_0xadb23a(0x105)][_0xadb23a(0x136)](_0xadb23a(0x137)));}}}}function rowStyle2(){var _0x537d4b=_0x50e4,_0x3f3a31,_0x4e5193,_0x25f04e,_0x4052fc,_0x30ea78,_0xb7ba6d;if(document[_0x537d4b(0x12f)](_0x537d4b(0x144))!==null||document[_0x537d4b(0x12f)](_0x537d4b(0x150))!==null||document[_0x537d4b(0x12f)](_0x537d4b(0x151))!==null){if(document[_0x537d4b(0x153)](_0x537d4b(0x111))){_0x3f3a31=document[_0x537d4b(0x153)](_0x537d4b(0x111));for(_0x4e5193=0x0;_0x4e5193<_0x3f3a31[_0x537d4b(0x152)];_0x4e5193+=0x1){_0x25f04e=_0x3f3a31[_0x4e5193],_0x4052fc=_0x25f04e[_0x537d4b(0x11e)],_0x4052fc['style'][_0x537d4b(0x110)]='0',_0x30ea78=_0x25f04e[_0x537d4b(0x112)](_0x537d4b(0x140)),_0x30ea78!==null&&(_0xb7ba6d=_0x30ea78[_0x537d4b(0x112)](_0x537d4b(0x141)),_0xb7ba6d['classList'][_0x537d4b(0x136)](_0x537d4b(0x101)),_0xb7ba6d[_0x537d4b(0x105)][_0x537d4b(0x136)](_0x537d4b(0x137)));}}}if(document[_0x537d4b(0x12f)](_0x537d4b(0x10e))!==null){if(document['getElementsByClassName'](_0x537d4b(0x111))){_0x3f3a31=document['getElementsByClassName'](_0x537d4b(0x111));for(_0x4e5193=0x0;_0x4e5193<_0x3f3a31['length'];_0x4e5193+=0x1){_0x25f04e=_0x3f3a31[_0x4e5193],_0x4052fc=_0x25f04e[_0x537d4b(0x11e)],_0x4052fc['style']['minHeight']='0',_0x30ea78=_0x25f04e[_0x537d4b(0x112)]('.container-form-element'),_0x30ea78!==null&&(_0x30ea78['classList'][_0x537d4b(0x136)](_0x537d4b(0x101)),_0x30ea78['classList'][_0x537d4b(0x136)](_0x537d4b(0x137)));}}}}function rowStyle3(){var _0x3d79ad=_0x50e4,_0x113af0,_0x154d10,_0x23e353,_0x4d05ed,_0x41348,_0x557a33;if(document['querySelector'](_0x3d79ad(0x144))!==null||document[_0x3d79ad(0x12f)](_0x3d79ad(0x150))!==null||document[_0x3d79ad(0x12f)](_0x3d79ad(0x151))!==null){if(document[_0x3d79ad(0x153)](_0x3d79ad(0x103))){_0x113af0=document['getElementsByClassName']('row-style3-identify');for(_0x154d10=0x0;_0x154d10<_0x113af0['length'];_0x154d10+=0x1){_0x23e353=_0x113af0[_0x154d10],_0x4d05ed=_0x23e353[_0x3d79ad(0x11e)],_0x4d05ed[_0x3d79ad(0x130)][_0x3d79ad(0x110)]='0',_0x41348=_0x23e353[_0x3d79ad(0x112)](_0x3d79ad(0x140)),_0x41348!==null&&(_0x557a33=_0x41348[_0x3d79ad(0x112)](_0x3d79ad(0x141)),_0x557a33[_0x3d79ad(0x105)][_0x3d79ad(0x136)]('row-style3'),_0x557a33[_0x3d79ad(0x105)][_0x3d79ad(0x136)](_0x3d79ad(0x137)));}}}if(document['querySelector']('.form-viewer')!==null){if(document[_0x3d79ad(0x153)]('row-style3-identify')){_0x113af0=document[_0x3d79ad(0x153)]('row-style3-identify');for(_0x154d10=0x0;_0x154d10<_0x113af0[_0x3d79ad(0x152)];_0x154d10+=0x1){_0x23e353=_0x113af0[_0x154d10],_0x4d05ed=_0x23e353[_0x3d79ad(0x11e)],_0x4d05ed['style'][_0x3d79ad(0x110)]='0',_0x41348=_0x23e353[_0x3d79ad(0x112)]('.container-form-element'),_0x41348!==null&&(_0x41348[_0x3d79ad(0x105)][_0x3d79ad(0x136)](_0x3d79ad(0x11c)),_0x41348['classList']['add'](_0x3d79ad(0x137)));}}}}function rowStyle4(){var _0x50226d=_0x50e4,_0x253915,_0x104e5f,_0x2d1086,_0x588fab,_0x1e0467,_0x427a41;if(document['querySelector'](_0x50226d(0x144))!==null||document[_0x50226d(0x12f)](_0x50226d(0x150))!==null||document[_0x50226d(0x12f)](_0x50226d(0x151))!==null){if(document[_0x50226d(0x153)](_0x50226d(0x142))){_0x253915=document[_0x50226d(0x153)](_0x50226d(0x142));for(_0x104e5f=0x0;_0x104e5f<_0x253915['length'];_0x104e5f+=0x1){_0x2d1086=_0x253915[_0x104e5f],_0x588fab=_0x2d1086[_0x50226d(0x11e)],_0x588fab[_0x50226d(0x130)][_0x50226d(0x110)]='0',_0x1e0467=_0x2d1086[_0x50226d(0x112)]('.column'),_0x1e0467!==null&&(_0x427a41=_0x1e0467[_0x50226d(0x112)]('.row'),_0x427a41[_0x50226d(0x105)][_0x50226d(0x136)](_0x50226d(0x11a)),_0x427a41[_0x50226d(0x105)][_0x50226d(0x136)](_0x50226d(0x137)));}}}if(document[_0x50226d(0x12f)]('.form-viewer')!==null){if(document[_0x50226d(0x153)]('row-style4-identify')){_0x253915=document[_0x50226d(0x153)]('row-style4-identify');for(_0x104e5f=0x0;_0x104e5f<_0x253915[_0x50226d(0x152)];_0x104e5f+=0x1){_0x2d1086=_0x253915[_0x104e5f],_0x588fab=_0x2d1086[_0x50226d(0x11e)],_0x588fab[_0x50226d(0x130)][_0x50226d(0x110)]='0',_0x1e0467=_0x2d1086[_0x50226d(0x112)](_0x50226d(0x14f)),_0x1e0467!==null&&(_0x1e0467[_0x50226d(0x105)][_0x50226d(0x136)]('row-style4'),_0x1e0467[_0x50226d(0x105)][_0x50226d(0x136)](_0x50226d(0x137)));}}}}function rowStyle5(){var _0x935219=_0x50e4,_0x5e6e1d,_0x162a10,_0x159b13,_0x2d79d3,_0x27d0bd,_0x3387a0;if(document[_0x935219(0x12f)](_0x935219(0x144))!==null||document['querySelector'](_0x935219(0x150))!==null||document[_0x935219(0x12f)](_0x935219(0x151))!==null){if(document[_0x935219(0x153)]('row-style5-identify')){_0x5e6e1d=document[_0x935219(0x153)](_0x935219(0x108));for(_0x162a10=0x0;_0x162a10<_0x5e6e1d[_0x935219(0x152)];_0x162a10+=0x1){_0x159b13=_0x5e6e1d[_0x162a10],_0x2d79d3=_0x159b13[_0x935219(0x11e)],_0x2d79d3['style'][_0x935219(0x110)]='0',_0x27d0bd=_0x159b13[_0x935219(0x112)]('.column'),_0x27d0bd!==null&&(_0x3387a0=_0x27d0bd['closest'](_0x935219(0x141)),_0x3387a0[_0x935219(0x105)]['add']('row-style5'),_0x3387a0[_0x935219(0x105)][_0x935219(0x136)](_0x935219(0x137)));}}}if(document['querySelector'](_0x935219(0x10e))!==null){if(document[_0x935219(0x153)](_0x935219(0x108))){_0x5e6e1d=document[_0x935219(0x153)](_0x935219(0x108));for(_0x162a10=0x0;_0x162a10<_0x5e6e1d['length'];_0x162a10+=0x1){_0x159b13=_0x5e6e1d[_0x162a10],_0x2d79d3=_0x159b13[_0x935219(0x11e)],_0x2d79d3[_0x935219(0x130)][_0x935219(0x110)]='0',_0x27d0bd=_0x159b13[_0x935219(0x112)](_0x935219(0x12d)),_0x27d0bd!==null&&(_0x27d0bd[_0x935219(0x105)][_0x935219(0x136)](_0x935219(0x104)),_0x27d0bd['classList'][_0x935219(0x136)](_0x935219(0x137)));}}}}function packageStyle1(){var _0xa7c8b8=_0x50e4,_0x1ab778,_0xcd3198,_0x447e9e,_0x1ebe60;if(document[_0xa7c8b8(0x12f)](_0xa7c8b8(0x144))!==null||document[_0xa7c8b8(0x12f)](_0xa7c8b8(0x150))!==null||document[_0xa7c8b8(0x12f)](_0xa7c8b8(0x151))!==null){if(document['getElementsByClassName'](_0xa7c8b8(0x143))){_0x1ab778=document[_0xa7c8b8(0x153)]('package-style1-identify');for(_0xcd3198=0x0;_0xcd3198<_0x1ab778[_0xa7c8b8(0x152)];_0xcd3198+=0x1){_0x447e9e=_0x1ab778[_0xcd3198],_0x1ebe60=_0x447e9e['closest'](_0xa7c8b8(0x140)),_0x1ebe60['classList']['add']('package-style1');}}}if(document[_0xa7c8b8(0x12f)]('.form-viewer')!==null){if(document['getElementsByClassName'](_0xa7c8b8(0x143))){_0x1ab778=document[_0xa7c8b8(0x153)]('package-style1-identify');for(_0xcd3198=0x0;_0xcd3198<_0x1ab778[_0xa7c8b8(0x152)];_0xcd3198+=0x1){_0x447e9e=_0x1ab778[_0xcd3198],_0x1ebe60=_0x447e9e['closest']('.container-form-element__column'),_0x1ebe60[_0xa7c8b8(0x105)][_0xa7c8b8(0x136)](_0xa7c8b8(0x14d));}}}}function packageStyle2(){var _0x4bc347=_0x50e4,_0x3acc3a,_0x54edb0,_0x2f3db8,_0x39a88e;if(document[_0x4bc347(0x12f)](_0x4bc347(0x144))!==null||document[_0x4bc347(0x12f)](_0x4bc347(0x150))!==null||document[_0x4bc347(0x12f)](_0x4bc347(0x151))!==null){if(document[_0x4bc347(0x153)](_0x4bc347(0x134))){_0x3acc3a=document[_0x4bc347(0x153)](_0x4bc347(0x134));for(_0x54edb0=0x0;_0x54edb0<_0x3acc3a[_0x4bc347(0x152)];_0x54edb0+=0x1){_0x2f3db8=_0x3acc3a[_0x54edb0],_0x39a88e=_0x2f3db8[_0x4bc347(0x112)](_0x4bc347(0x140)),_0x39a88e[_0x4bc347(0x105)]['add'](_0x4bc347(0x12a));}}}if(document['querySelector'](_0x4bc347(0x10e))!==null){if(document[_0x4bc347(0x153)](_0x4bc347(0x134))){_0x3acc3a=document[_0x4bc347(0x153)]('package-style2-identify');for(_0x54edb0=0x0;_0x54edb0<_0x3acc3a[_0x4bc347(0x152)];_0x54edb0+=0x1){_0x2f3db8=_0x3acc3a[_0x54edb0],_0x39a88e=_0x2f3db8[_0x4bc347(0x112)](_0x4bc347(0x10a)),_0x39a88e['classList']['add'](_0x4bc347(0x12a));}}}}function packageStyle3(){var _0x563bcb=_0x50e4,_0x49a64d,_0x536a50,_0xdc5ab1,_0x1c8f70;if(document[_0x563bcb(0x12f)](_0x563bcb(0x144))!==null||document[_0x563bcb(0x12f)](_0x563bcb(0x150))!==null||document[_0x563bcb(0x12f)](_0x563bcb(0x151))!==null){if(document['getElementsByClassName'](_0x563bcb(0x13b))){_0x49a64d=document[_0x563bcb(0x153)](_0x563bcb(0x13b));for(_0x536a50=0x0;_0x536a50<_0x49a64d[_0x563bcb(0x152)];_0x536a50+=0x1){_0xdc5ab1=_0x49a64d[_0x536a50],_0x1c8f70=_0xdc5ab1['closest'](_0x563bcb(0x140)),_0x1c8f70[_0x563bcb(0x105)][_0x563bcb(0x136)](_0x563bcb(0x147));}}}if(document[_0x563bcb(0x12f)](_0x563bcb(0x10e))!==null){if(document[_0x563bcb(0x153)](_0x563bcb(0x13b))){_0x49a64d=document[_0x563bcb(0x153)](_0x563bcb(0x13b));for(_0x536a50=0x0;_0x536a50<_0x49a64d[_0x563bcb(0x152)];_0x536a50+=0x1){_0xdc5ab1=_0x49a64d[_0x536a50],_0x1c8f70=_0xdc5ab1[_0x563bcb(0x112)](_0x563bcb(0x10a)),_0x1c8f70['classList'][_0x563bcb(0x136)](_0x563bcb(0x147));}}}}function innerColumnStyle1(){var _0x325009=_0x50e4,_0x49f38a,_0xd25db,_0xb49f2f,_0x402145;if(document[_0x325009(0x12f)]('view-form-public-component')!==null||document[_0x325009(0x12f)](_0x325009(0x150))!==null||document[_0x325009(0x12f)](_0x325009(0x151))!==null){if(document[_0x325009(0x153)](_0x325009(0x146))){_0x402145=document[_0x325009(0x153)](_0x325009(0x146));for(_0xd25db=0x0;_0xd25db<_0x402145[_0x325009(0x152)];_0xd25db+=0x1){_0x49f38a=_0x402145[_0xd25db],_0xb49f2f=_0x49f38a['closest']('.column'),_0xb49f2f[_0x325009(0x105)][_0x325009(0x136)](_0x325009(0x145));}}}}function innerColumnStyle2(){var _0xcfee38=_0x50e4,_0xbe2473,_0x3dfbe5,_0x26108e,_0xf98927;if(document[_0xcfee38(0x12f)]('view-form-public-component')!==null||document[_0xcfee38(0x12f)]('#edit-form')!==null||document[_0xcfee38(0x12f)](_0xcfee38(0x151))!==null){if(document['getElementsByClassName']('inner-column-style2-identify')){_0xf98927=document[_0xcfee38(0x153)](_0xcfee38(0x113));for(_0x3dfbe5=0x0;_0x3dfbe5<_0xf98927[_0xcfee38(0x152)];_0x3dfbe5+=0x1){_0xbe2473=_0xf98927[_0x3dfbe5],_0x26108e=_0xbe2473[_0xcfee38(0x112)](_0xcfee38(0x140)),_0x26108e['classList'][_0xcfee38(0x136)](_0xcfee38(0x114));}}}}function innerColumnStyle3(){var _0x294e62=_0x50e4,_0x442223,_0x5724d6,_0x323f03,_0x5bc392;if(document[_0x294e62(0x12f)](_0x294e62(0x144))!==null||document[_0x294e62(0x12f)](_0x294e62(0x150))!==null||document[_0x294e62(0x12f)](_0x294e62(0x151))!==null){if(document[_0x294e62(0x153)](_0x294e62(0x123))){_0x5bc392=document[_0x294e62(0x153)]('inner-column-style3-identify');for(_0x5724d6=0x0;_0x5724d6<_0x5bc392[_0x294e62(0x152)];_0x5724d6+=0x1){_0x442223=_0x5bc392[_0x5724d6],_0x323f03=_0x442223[_0x294e62(0x112)](_0x294e62(0x140)),_0x323f03[_0x294e62(0x105)][_0x294e62(0x136)](_0x294e62(0xfd));}}}}function innerColumnStyle4(){var _0x5efb5d=_0x50e4,_0x5758e8,_0x33bef5,_0x39f45e,_0x3a7421;if(document[_0x5efb5d(0x12f)](_0x5efb5d(0x144))!==null||document[_0x5efb5d(0x12f)](_0x5efb5d(0x150))!==null||document['querySelector']('#view-form')!==null){if(document[_0x5efb5d(0x153)]('inner-column-style4-identify')){_0x3a7421=document[_0x5efb5d(0x153)](_0x5efb5d(0x131));for(_0x33bef5=0x0;_0x33bef5<_0x3a7421['length'];_0x33bef5+=0x1){_0x5758e8=_0x3a7421[_0x33bef5],_0x39f45e=_0x5758e8[_0x5efb5d(0x112)]('.column'),_0x39f45e[_0x5efb5d(0x105)]['add']('inner-column-style4');}}}}function identifyMainCodes(){var _0x1bd569=_0x50e4,_0x1075a3,_0x48322f,_0x4af894,_0x18e9e2;if(document['querySelector'](_0x1bd569(0x144))!==null||document[_0x1bd569(0x12f)](_0x1bd569(0x150))!==null||document['querySelector'](_0x1bd569(0x151))!==null){if(document[_0x1bd569(0x14e)](_0x1bd569(0x13d))){_0x18e9e2=document[_0x1bd569(0x14e)](_0x1bd569(0x13d));for(_0x4af894=0x0;_0x4af894<_0x18e9e2[_0x1bd569(0x152)];_0x4af894+=0x1){_0x1075a3=_0x18e9e2[_0x4af894],_0x48322f=_0x1075a3['closest'](_0x1bd569(0x141)),_0x48322f!==null&&(_0x48322f[_0x1bd569(0x105)][_0x1bd569(0x136)]('main-codes-id'),_0x48322f[_0x1bd569(0x121)]('style',_0x1bd569(0xfc)));}}}}function _0x50e4(_0x11db0b,_0x563e1e){var _0x6dc191=_0x6dc1();return _0x50e4=function(_0x50e47e,_0x2efec9){_0x50e47e=_0x50e47e-0xfb;var _0x5d9f85=_0x6dc191[_0x50e47e];return _0x5d9f85;},_0x50e4(_0x11db0b,_0x563e1e);}function rowMoveAboveSubmit(){var _0x171599=_0x50e4,_0x2a2012,_0x1c99a2,_0x3522b8,_0x3785b4,_0x54c123;if(document[_0x171599(0x12f)](_0x171599(0x144))!==null||document[_0x171599(0x12f)]('#view-form')!==null){if(document[_0x171599(0x153)]('row-move-submit-id')){_0x3785b4=document['getElementsByClassName'](_0x171599(0x115));for(_0x1c99a2=0x0;_0x1c99a2<_0x3785b4[_0x171599(0x152)];_0x1c99a2+=0x1){_0x3522b8=_0x3785b4[_0x1c99a2],_0x2a2012=_0x3522b8[_0x171599(0x11e)],_0x2a2012['style'][_0x171599(0x110)]='0',_0x54c123=_0x3522b8[_0x171599(0x112)]('.row'),_0x54c123['id']='row-move-submit';}}document[_0x171599(0x135)](_0x171599(0x117))&&document[_0x171599(0x135)]('row-move-submit')['appendChild'](document[_0x171599(0x135)](_0x171599(0x120)));}if(document['querySelector'](_0x171599(0x10e))!==null){if(document[_0x171599(0x153)](_0x171599(0x115))){_0x3785b4=document['getElementsByClassName'](_0x171599(0x115));for(_0x1c99a2=0x0;_0x1c99a2<_0x3785b4['length'];_0x1c99a2+=0x1){_0x3522b8=_0x3785b4[_0x1c99a2],_0x2a2012=_0x3522b8['parentNode'],_0x2a2012[_0x171599(0x130)]['minHeight']='0',_0x54c123=_0x3522b8['closest'](_0x171599(0x13a)),_0x54c123['id']=_0x171599(0x117);}}document[_0x171599(0x135)](_0x171599(0x117))&&document[_0x171599(0x135)](_0x171599(0x117))[_0x171599(0x109)](document['querySelector'](_0x171599(0x11d)));}}function changeRowColours(){rowStyleFullWidth(),rowStylePadding(),rowStyleFlex(),rowStyleFlexReverse(),rowPackageEqual(),rowPackageStretch(),rowStyle1(),rowStyle2(),rowStyle3(),rowStyle4(),rowStyle5(),packageStyle1(),packageStyle2(),packageStyle3(),innerColumnStyle1(),innerColumnStyle2(),innerColumnStyle3(),innerColumnStyle4();}function startJavascript(){hideFront(),changeRowColours(),hidePackageHeight(),packagesBackend(),identifyMainCodes(),rowMoveAboveSubmit();}startJavascript();
+
+
+
+function hideFront() {
+    var elementsTextToHide;
+    var i;
+    var hideOnFront;
+//old builder
+if ((document.querySelector("view-form-public-component") !== null) || (document.querySelector("#view-form") !== null)){
+    elementsTextToHide = document.getElementsByClassName("hide-on-front");
+    for (i = 0; i < elementsTextToHide.length; i += 1) {
+        hideOnFront = elementsTextToHide[i].closest(".item");
+        hideOnFront.style.minHeight = "0";
+        hideOnFront.style.height = "0!important";
+        hideOnFront.style.display = "none!important";
+    }
+}
+//new builder
+if (document.querySelector(".form-viewer") !== null) {
+    elementsTextToHide = document.getElementsByClassName("hide-on-front");
+    for (i = 0; i < elementsTextToHide.length; i += 1) {
+        hideOnFront = elementsTextToHide[i].closest(".form-element");
+        hideOnFront.setAttribute("style", "min-height: 0px; padding:0px!important; border-width:0px!important;");
+
+    }
+}
+
+}
+
+function hidePackageHeight() {
+    var i;
+    var hideOnFront;
+    var elementsTextToHide;
+//old builder
+if (document.querySelector("view-form-public-component") !== null) {
+    elementsTextToHide = document.getElementsByClassName("row-package-equal-identify");
+    for (i = 0; i < elementsTextToHide.length; i += 1) {
+        hideOnFront = elementsTextToHide[i].closest(".item");
+        hideOnFront.style.display = "none";
+        hideOnFront.style.height = "0!important";
+
+    }
+}
+
+//new builder
+if (document.querySelector(".form-viewer") !== null) {
+    elementsTextToHide = document.getElementsByClassName("row-package-equal-identify");
+    for (i = 0; i < elementsTextToHide.length; i += 1) {
+        hideOnFront = elementsTextToHide[i].closest(".form-element");
+        hideOnFront.style.display = "none";
+        hideOnFront.style.height = "0!important";
+
+    }
+}
+}
+
+
+//old builder
+function packagesBackend() {
+    var packages;
+    var i;
+    var packageEdit;
+//old builder
+if (document.querySelector("#edit-form") !== null) {
+    packages = document.getElementsByClassName("btn btn-squared border-around");
+    for (i = 0; i < packages.length; i += 1) {
+        packageEdit = packages[i].closest(".row");
+        packageEdit.classList.add("packageNotSelected");
+    }
+}
+}
+
+
+function rowStyleFullWidth(){
+    var elementGroup;
+    var i;
+    var element;
+    var hideElement;
+    var parent;
+    var grandparent;
+//old builder
+if ((document.querySelector("view-form-public-component") !== null) || (document.querySelector("#edit-form") !== null) || (document.querySelector("#view-form") !== null)) {
+    if (document.getElementsByClassName("row-full-width-identify")) {
+        elementGroup = document.getElementsByClassName("row-full-width-identify");
+        for (i = 0; i < elementGroup.length; i += 1) {
+            element = elementGroup[i];
+            hideElement = element.parentNode;
+            hideElement.style.minHeight = "0";
+            parent = element.closest(".column");
+            if (parent !== null) {
+                grandparent = parent.closest(".row");
+                grandparent.classList.add("full-width-row");
+
+            }
+        }
+    }
+}
+
+//new builder
+if (document.querySelector(".form-viewer") !== null) {
+    if (document.getElementsByClassName("row-full-width-identify")) {
+        elementGroup = document.getElementsByClassName("row-full-width-identify");
+        for (i = 0; i < elementGroup.length; i += 1) {
+            element = elementGroup[i];
+            hideElement = element.parentNode;
+            hideElement.style.minHeight = "0";
+            parent = element.closest(".droppable-columns");
+            if (parent !== null) {
+                parent.classList.add("full-width-row");
+            }
+        }
+    }
+}
+}
+
+
+
+
+function rowStylePadding(){
+    var elementGroup;
+    var i;
+    var element;
+    var hideElement;
+    var parent;
+    var grandparent;
+//old builder
+if ((document.querySelector("view-form-public-component") !== null) || (document.querySelector("#edit-form") !== null) || (document.querySelector("#view-form") !== null)) {
+    if (document.getElementsByClassName("row-padding-identify")) {
+        elementGroup = document.getElementsByClassName("row-padding-identify");
+        for (i = 0; i < elementGroup.length; i += 1) {
+            element = elementGroup[i];
+            hideElement = element.parentNode;
+            hideElement.style.minHeight = "0";
+            parent = element.closest(".column");
+            if (parent !== null) {
+                grandparent = parent.closest(".row");
+                grandparent.classList.add("row-padding");
+                grandparent.classList.add("full-width-row");
+            }
+        }
+    }
+}
+
+//new builder
+if (document.querySelector(".form-viewer") !== null) {
+    if (document.getElementsByClassName("row-padding-identify")) {
+        elementGroup = document.getElementsByClassName("row-padding-identify");
+        for (i = 0; i < elementGroup.length; i += 1) {
+            element = elementGroup[i];
+            hideElement = element.parentNode;
+            hideElement.style.minHeight = "0";
+            parent = element.closest(".droppable-columns");
+            if (parent !== null) {
+                parent.classList.add("row-padding");
+                parent.classList.add("full-width-row");
+
+            }
+        }
+    }
+}
+}
+
+
+
+
+
+function rowStyleFlex(){
+    var elementGroup;
+    var i;
+    var element;
+    var hideElement;
+    var parent;
+    var grandparent;
+    var innerFlex;
+    var innerFlex1;
+    var innerFlex2;
+    var parentDiv;
+    var parentElement;
+    var parentColumn;
+    var parentColumn2;
+    var parentOuterColumn;
+//old builder
+if ((document.querySelector("view-form-public-component") !== null) || (document.querySelector("#edit-form") !== null) || (document.querySelector("#view-form") !== null)) {
+    if (document.getElementsByClassName("row-flex-identify")) {
+        elementGroup = document.getElementsByClassName("row-flex-identify");
+        for (i = 0; i < elementGroup.length; i += 1) {
+            element = elementGroup[i];
+            hideElement = element.parentNode;
+            hideElement.style.minHeight = "0";
+            parent = element.closest(".column");
+            if (parent !== null) {
+                grandparent = parent.closest(".row");
+                grandparent.classList.add("row-flex");
+                if (document.querySelector("#edit-form") === null) {
+
+                    innerFlex = element.closest(".ng-scope");
+                    innerFlex.classList.add("row-flex-inner");
+                    innerFlex1 = innerFlex.closest(".item.padding-top-10.row.ng-scope");
+                    innerFlex1.classList.add("row-flex-inner");
+                    innerFlex2 = innerFlex1.closest("section");
+                    innerFlex2.classList.add("row-flex-inner");
+                }
+
+            }
+        }
+    }
+}
+
+
+
+
+
+function rowStyleFlexReverse(){
+    var elementGroup;
+    var i;
+    var element;
+    var hideElement;
+    var parent;
+    var grandparent;
+    var innerFlex;
+    var innerFlex1;
+    var innerFlex2;
+    var parentDiv;
+    var parentElement;
+    var parentColumn;
+    var parentColumn2;
+    var parentOuterColumn;
+//old builder
+if ((document.querySelector("view-form-public-component") !== null) || (document.querySelector("#edit-form") !== null) || (document.querySelector("#view-form") !== null)) {
+    if (document.getElementsByClassName("row-flex-reverse-identify")) {
+        elementGroup = document.getElementsByClassName("row-flex-reverse-identify");
+        for (i = 0; i < elementGroup.length; i += 1) {
+            element = elementGroup[i];
+            hideElement = element.parentNode;
+            hideElement.style.minHeight = "0";
+            parent = element.closest(".column");
+            if (parent !== null) {
+                grandparent = parent.closest(".row");
+                grandparent.classList.add("row-flex-reverse");
+                if (document.querySelector("#edit-form") === null) {
+
+                    innerFlex = element.closest(".ng-scope");
+                    innerFlex.classList.add("row-flex-inner");
+                    innerFlex1 = innerFlex.closest(".item.padding-top-10.row.ng-scope");
+                    innerFlex1.classList.add("row-flex-inner");
+                    innerFlex2 = innerFlex1.closest("section");
+                    innerFlex2.classList.add("row-flex-inner");
+                }
+
+            }
+        }
+    }
+}
+
+
+}
+
+
+
+
+
+function rowPackageEqual(){
+    var elementGroup;
+    var i;
+    var element;
+    var hideElement;
+    var parent;
+    var grandparent;
+//old builder
+if ((document.querySelector("view-form-public-component") !== null) || (document.querySelector("#edit-form") !== null) || (document.querySelector("#view-form") !== null)) {
+    if (document.getElementsByClassName("row-package-equal-identify")) {
+        elementGroup = document.getElementsByClassName("row-package-equal-identify");
+        for (i = 0; i < elementGroup.length; i += 1) {
+            element = elementGroup[i];
+            hideElement = element.parentNode;
+            hideElement.style.minHeight = "0";
+            parent = element.closest(".column");
+            if (parent !== null) {
+                grandparent = parent.closest(".row");
+                grandparent.classList.add("row-package-equal");
+
+            }
+        }
+    }
+}
+
+
+
+//new builder
+if (document.querySelector(".form-viewer") !== null) {
+    if (document.getElementsByClassName("row-package-equal-identify")) {
+        elementGroup = document.getElementsByClassName("row-package-equal-identify");
+        for (i= 0; i < elementGroup.length; i += 1) {
+            element = elementGroup[i];
+            hideElement = element.parentNode;
+            hideElement.style.minHeight = "0";
+            parent = element.closest(".container-form-element");
+            if (parent !== null) {
+                parent.classList.add("row-package-equal");
+            }
+        }
+    }
+}
+
+
+}
+
+
+
+
+
+function rowPackageStretch(){
+    var elementGroup;
+    var i;
+    var element;
+    var hideElement;
+    var parent;
+    var grandparent;
+//old builder
+if ((document.querySelector("view-form-public-component") !== null) || (document.querySelector("#edit-form") !== null) || (document.querySelector("#view-form") !== null)) {
+    if (document.getElementsByClassName("row-package-stretch-identify")) {
+        elementGroup = document.getElementsByClassName("row-package-stretch-identify");
+        for (i = 0; i < elementGroup.length; i += 1) {
+            element = elementGroup[i];
+            hideElement = element.parentNode;
+            hideElement.style.minHeight = "0";
+            parent = element.closest(".column");
+            if (parent !== null) {
+                grandparent = parent.closest(".row");
+                grandparent.classList.add("row-package-stretch");
+
+            }
+        }
+    }
+}
+
+
+//new builder
+if (document.querySelector(".form-viewer") !== null) {
+    if (document.getElementsByClassName("row-package-stretch-identify")) {
+        elementGroup = document.getElementsByClassName("row-package-stretch-identify");
+        for (i= 0; i < elementGroup.length; i += 1) {
+            element = elementGroup[i];
+            hideElement = element.parentNode;
+            hideElement.style.minHeight = "0";
+            parent = element.closest(".container-form-element");
+            if (parent !== null) {
+                parent.classList.add("row-package-stretch");
+            }
+        }
+    }
+}
+
+}
+
+
+
+function rowStyle1(){
+
+    var elementGroup;
+    var i;
+    var element;
+    var hideElement;
+    var parent;
+    var grandparent;
+//old builder
+if ((document.querySelector("view-form-public-component") !== null) || (document.querySelector("#edit-form") !== null) || (document.querySelector("#view-form") !== null)) {
+    if (document.getElementsByClassName("row-style1-identify")) {
+        elementGroup = document.getElementsByClassName("row-style1-identify");
+        for (i= 0; i < elementGroup.length; i += 1) {
+            element = elementGroup[i];
+            hideElement = element.parentNode;
+            hideElement.style.minHeight = "0";
+            parent = element.closest(".column");
+            if (parent !== null) {
+                grandparent = parent.closest(".row");
+                grandparent.classList.add("row-style1");
+                grandparent.classList.add("full-width-row");
+
+            }
+        }
+    }
+}
+
+
+//new builder
+if (document.querySelector(".form-viewer") !== null) {
+    if (document.getElementsByClassName("row-style1-identify")) {
+        elementGroup = document.getElementsByClassName("row-style1-identify");
+        for (i= 0; i < elementGroup.length; i += 1) {
+            element = elementGroup[i];
+            hideElement = element.parentNode;
+            hideElement.style.minHeight = "0";
+            parent = element.closest(".container-form-element");
+            if (parent !== null) {
+                parent.classList.add("row-style1");
+                parent.classList.add("full-width-row");
+            }
+        }
+    }
+}
+
+}
+
+
+function rowStyle2(){
+    var elementGroup;
+    var i;
+    var element;
+    var hideElement;
+    var parent;
+    var grandparent;
+//old builder
+if ((document.querySelector("view-form-public-component") !== null) || (document.querySelector("#edit-form") !== null) || (document.querySelector("#view-form") !== null)) {
+    if (document.getElementsByClassName("row-style2-identify")) {
+        elementGroup = document.getElementsByClassName("row-style2-identify");
+        for (i= 0; i < elementGroup.length; i += 1) {
+            element = elementGroup[i];
+            hideElement = element.parentNode;
+            hideElement.style.minHeight = "0";
+            parent = element.closest(".column");
+            if (parent !== null) {
+                grandparent = parent.closest(".row");
+                grandparent.classList.add("row-style2");
+                grandparent.classList.add("full-width-row");
+
+            }
+        }
+    }
+}
+
+//new builder
+if (document.querySelector(".form-viewer") !== null) {
+    if (document.getElementsByClassName("row-style2-identify")) {
+        elementGroup = document.getElementsByClassName("row-style2-identify");
+        for (i= 0; i < elementGroup.length; i += 1) {
+            element = elementGroup[i];
+            hideElement = element.parentNode;
+            hideElement.style.minHeight = "0";
+            parent = element.closest(".container-form-element");
+            if (parent !== null) {
+                parent.classList.add("row-style2");
+                parent.classList.add("full-width-row");
+            }
+        }
+    }
+}
+
+}
+
+
+
+function rowStyle3(){
+    var elementGroup;
+    var i;
+    var element;
+    var hideElement;
+    var parent;
+    var grandparent;
+//old builder
+if ((document.querySelector("view-form-public-component") !== null) || (document.querySelector("#edit-form") !== null) || (document.querySelector("#view-form") !== null)) {
+    if (document.getElementsByClassName("row-style3-identify")) {
+        elementGroup = document.getElementsByClassName("row-style3-identify");
+        for (i= 0; i < elementGroup.length; i += 1) {
+            element = elementGroup[i];
+            hideElement = element.parentNode;
+            hideElement.style.minHeight = "0";
+            parent = element.closest(".column");
+            if (parent !== null) {
+                grandparent = parent.closest(".row");
+                grandparent.classList.add("row-style3");
+                grandparent.classList.add("full-width-row");
+
+            }
+        }
+    }
+}
+
+//new builder
+if (document.querySelector(".form-viewer") !== null) {
+    if (document.getElementsByClassName("row-style3-identify")) {
+        elementGroup = document.getElementsByClassName("row-style3-identify");
+        for (i= 0; i < elementGroup.length; i += 1) {
+            element = elementGroup[i];
+            hideElement = element.parentNode;
+            hideElement.style.minHeight = "0";
+            parent = element.closest(".container-form-element");
+            if (parent !== null) {
+                parent.classList.add("row-style3");
+                parent.classList.add("full-width-row");
+            }
+        }
+    }
+}
+
+}
+
+
+
+
+function rowStyle4(){
+    var elementGroup;
+    var i;
+    var element;
+    var hideElement;
+    var parent;
+    var grandparent;
+//old builder
+if ((document.querySelector("view-form-public-component") !== null) || (document.querySelector("#edit-form") !== null) || (document.querySelector("#view-form") !== null)) {
+    if (document.getElementsByClassName("row-style4-identify")) {
+        elementGroup = document.getElementsByClassName("row-style4-identify");
+        for (i= 0; i < elementGroup.length; i += 1) {
+            element = elementGroup[i];
+            hideElement = element.parentNode;
+            hideElement.style.minHeight = "0";
+            parent = element.closest(".column");
+            if (parent !== null) {
+                grandparent = parent.closest(".row");
+                grandparent.classList.add("row-style4");
+                grandparent.classList.add("full-width-row");
+
+            }
+        }
+    }
+}
+
+//new builder
+if (document.querySelector(".form-viewer") !== null) {
+    if (document.getElementsByClassName("row-style4-identify")) {
+        elementGroup = document.getElementsByClassName("row-style4-identify");
+        for (i= 0; i < elementGroup.length; i += 1) {
+            element = elementGroup[i];
+            hideElement = element.parentNode;
+            hideElement.style.minHeight = "0";
+            parent = element.closest(".container-form-element");
+            if (parent !== null) {
+                parent.classList.add("row-style4");
+                parent.classList.add("full-width-row");
+            }
+        }
+    }
+}
+
+}
+
+
+
+function rowStyle5(){
+    var elementGroup;
+    var i;
+    var element;
+    var hideElement;
+    var parent;
+    var grandparent;
+//old builder
+if ((document.querySelector("view-form-public-component") !== null) || (document.querySelector("#edit-form") !== null) || (document.querySelector("#view-form") !== null)) {
+    if (document.getElementsByClassName("row-style5-identify")) {
+        elementGroup = document.getElementsByClassName("row-style5-identify");
+        for (i= 0; i < elementGroup.length; i += 1) {
+            element = elementGroup[i];
+            hideElement = element.parentNode;
+            hideElement.style.minHeight = "0";
+            parent = element.closest(".column");
+            if (parent !== null) {
+                grandparent = parent.closest(".row");
+                grandparent.classList.add("row-style5");
+                grandparent.classList.add("full-width-row");
+
+            }
+        }
+    }
+}
+
+//new builder
+if (document.querySelector(".form-viewer") !== null) {
+    if (document.getElementsByClassName("row-style5-identify")) {
+        elementGroup = document.getElementsByClassName("row-style5-identify");
+        for (i= 0; i < elementGroup.length; i += 1) {
+            element = elementGroup[i];
+            hideElement = element.parentNode;
+            hideElement.style.minHeight = "0";
+            parent = element.closest(".droppable-columns");
+            if (parent !== null) {
+                parent.classList.add("row-style5");
+                parent.classList.add("full-width-row");
+            }
+        }
+    }
+}
+}
+
+
+
+function packageStyle1(){
+    var packageIdentifiers;
+    var i;
+    var packageID;
+    var parent;
+//old builder
+if ((document.querySelector("view-form-public-component") !== null) || (document.querySelector("#edit-form") !== null) || (document.querySelector("#view-form") !== null) ){
+    if (document.getElementsByClassName("package-style1-identify")) {
+        packageIdentifiers = document.getElementsByClassName("package-style1-identify");
+        for (i= 0; i < packageIdentifiers.length; i += 1) {
+            packageID = packageIdentifiers[i];
+            parent = packageID.closest(".column");
+            parent.classList.add("package-style1");
+        }
+    }
+}
+
+//new builder
+if (document.querySelector(".form-viewer") !== null) {
+
+    if (document.getElementsByClassName("package-style1-identify")) {
+        packageIdentifiers = document.getElementsByClassName("package-style1-identify");
+        for (i= 0; i < packageIdentifiers.length; i += 1) {
+            packageID = packageIdentifiers[i];
+            parent = packageID.closest(".container-form-element__column");
+            parent.classList.add("package-style1");
+        }
+    }
+}
+}
+
+
+
+
+function packageStyle2(){
+    var packageIdentifiers;
+    var i;
+    var packageID;
+    var parent;
+//old builder
+if ((document.querySelector("view-form-public-component") !== null) || (document.querySelector("#edit-form") !== null) || (document.querySelector("#view-form") !== null) ){
+    if (document.getElementsByClassName("package-style2-identify")) {
+        packageIdentifiers = document.getElementsByClassName("package-style2-identify");
+        for (i= 0; i < packageIdentifiers.length; i += 1) {
+            packageID = packageIdentifiers[i];
+            parent = packageID.closest(".column");
+            parent.classList.add("package-style2");
+        }
+    }
+}
+//new builder
+if (document.querySelector(".form-viewer") !== null) {
+
+    if (document.getElementsByClassName("package-style2-identify")) {
+        packageIdentifiers = document.getElementsByClassName("package-style2-identify");
+        for (i= 0; i < packageIdentifiers.length; i += 1) {
+            packageID = packageIdentifiers[i];
+            parent = packageID.closest(".container-form-element__column");
+            parent.classList.add("package-style2");
+        }
+    }
+}
+}
+
+
+
+
+function packageStyle3(){
+    var packageIdentifiers;
+    var i;
+    var packageID;
+    var parent;
+//old builder
+if ((document.querySelector("view-form-public-component") !== null) || (document.querySelector("#edit-form") !== null) || (document.querySelector("#view-form") !== null) ){
+    if (document.getElementsByClassName("package-style3-identify")) {
+        packageIdentifiers = document.getElementsByClassName("package-style3-identify");
+        for (i= 0; i < packageIdentifiers.length; i += 1) {
+            packageID = packageIdentifiers[i];
+            parent = packageID.closest(".column");
+            parent.classList.add("package-style3");
+        }
+    }
+}
+
+//new builder
+if (document.querySelector(".form-viewer") !== null) {
+
+    if (document.getElementsByClassName("package-style3-identify")) {
+        packageIdentifiers = document.getElementsByClassName("package-style3-identify");
+        for (i= 0; i < packageIdentifiers.length; i += 1) {
+            packageID = packageIdentifiers[i];
+            parent = packageID.closest(".container-form-element__column");
+            parent.classList.add("package-style3");
+        }
+    }
+}
+}
+
+
+
+
+
+function innerColumnStyle1(){
+    var innerColumnID;
+    var i;
+    var parent;
+    var innerColumnIdentifiers;
+//old builder
+if ((document.querySelector("view-form-public-component") !== null) || (document.querySelector("#edit-form") !== null) || (document.querySelector("#view-form") !== null) ){
+
+    if (document.getElementsByClassName("inner-column-style1-identify")) {
+        innerColumnIdentifiers = document.getElementsByClassName("inner-column-style1-identify");
+        for (i= 0; i < innerColumnIdentifiers.length; i += 1) {
+            innerColumnID = innerColumnIdentifiers[i];
+            parent = innerColumnID.closest(".column");
+            parent.classList.add("inner-column-style1");
+        }
+    }
+}
+}
+
+//old builder
+function innerColumnStyle1Remove(){
+    var i;
+    var removeElement;
+    var elements;
+    if (document.querySelector("#edit-form") !== null) {
+        elements = document.getElementsByClassName("inner-column-style1");
+        for (i= 0; i < elements.length; i += 1) {
+            removeElement = elements[i];
+            if (removeElement.getElementsByClassName("inner-column-style1-identify").length === 0) {
+                removeElement.classList.remove("inner-column-style1");
+            }
+        }
+    }
+}
+
+function innerColumnStyle2(){
+    var innerColumnID;
+    var i;
+    var parent;
+    var innerColumnIdentifiers;
+//old builder
+if ((document.querySelector("view-form-public-component") !== null) || (document.querySelector("#edit-form") !== null) || (document.querySelector("#view-form") !== null) ){
+
+    if (document.getElementsByClassName("inner-column-style2-identify")) {
+        innerColumnIdentifiers = document.getElementsByClassName("inner-column-style2-identify");
+        for (i= 0; i < innerColumnIdentifiers.length; i += 1) {
+            innerColumnID = innerColumnIdentifiers[i];
+            parent = innerColumnID.closest(".column");
+            parent.classList.add("inner-column-style2");
+        }
+    }
+}
+}
+
+
+
+
+function innerColumnStyle3(){
+    var innerColumnID;
+    var i;
+    var parent;
+    var innerColumnIdentifiers;
+//old builder
+if ((document.querySelector("view-form-public-component") !== null) || (document.querySelector("#edit-form") !== null) || (document.querySelector("#view-form") !== null) ){
+
+    if (document.getElementsByClassName("inner-column-style3-identify")) {
+        innerColumnIdentifiers = document.getElementsByClassName("inner-column-style3-identify");
+        for (i= 0; i < innerColumnIdentifiers.length; i += 1) {
+            innerColumnID = innerColumnIdentifiers[i];
+            parent = innerColumnID.closest(".column");
+            parent.classList.add("inner-column-style3");
+        }
+    }
+}
+}
+
+
+
+function innerColumnStyle4(){
+    var innerColumnID;
+    var i;
+    var parent;
+    var innerColumnIdentifiers;
+//old builder
+if ((document.querySelector("view-form-public-component") !== null) || (document.querySelector("#edit-form") !== null) || (document.querySelector("#view-form") !== null) ){
+
+    if (document.getElementsByClassName("inner-column-style4-identify")) {
+        innerColumnIdentifiers = document.getElementsByClassName("inner-column-style4-identify");
+        for (i= 0; i < innerColumnIdentifiers.length; i += 1) {
+            innerColumnID = innerColumnIdentifiers[i];
+            parent = innerColumnID.closest(".column");
+            parent.classList.add("inner-column-style4");
+        }
+    }
+}
+}
+
+
+
+
+
+
+/** MAIN CODES **/
+
+
+function identifyMainCodes(){
+    var rowElement;
+    var parent;
+    var i;
+    var elementGroup;
+//old builder
+if ((document.querySelector("view-form-public-component") !== null) || (document.querySelector("#edit-form") !== null) || (document.querySelector("#view-form") !== null) ){
+
+    if (document.querySelectorAll("div.hide-on-front")) {
+        elementGroup = document.querySelectorAll("div.hide-on-front");
+        for (i= 0; i < elementGroup.length; i += 1) {
+            rowElement = elementGroup[i];
+            parent = rowElement.closest(".row");
+            if (parent !== null) {
+                parent.classList.add("main-codes-id");
+                parent.setAttribute( "style", "margin-top:0px!important;margin-bottom:0px!important; border:0px");
+            }
+        } 
+    }
+}
+}
+
+
+
+
+function rowMoveAboveSubmit(){
+    var hideElement;
+    var i;
+    var element;
+    var elementGroup;
+    var parent;
+//old builder
+if ((document.querySelector("view-form-public-component") !== null) || (document.querySelector("#view-form") !== null)){
+
+    if (document.getElementsByClassName("row-move-submit-id")) {
+        elementGroup = document.getElementsByClassName("row-move-submit-id");
+        for (i= 0; i < elementGroup.length; i += 1) {
+            element = elementGroup[i];
+            hideElement = element.parentNode;
+            hideElement.style.minHeight = "0";
+            parent = element.closest(".row");
+            parent.id = "row-move-submit";
+        }
+    }
+    if (document.getElementById("row-move-submit")) {
+        document.getElementById("row-move-submit").appendChild(document.getElementById("submitButton") );
+    }
+}
+//new builder
+
+if (document.querySelector(".form-viewer") !== null) {
+
+    if (document.getElementsByClassName("row-move-submit-id")) {
+        elementGroup = document.getElementsByClassName("row-move-submit-id");
+        for (i= 0; i < elementGroup.length; i += 1) {
+            element = elementGroup[i];
+            hideElement = element.parentNode;
+            hideElement.style.minHeight = "0";
+            parent = element.closest(".form-element");
+            parent.id = "row-move-submit";
+        }
+    }
+    if (document.getElementById("row-move-submit")) {
+        document.getElementById("row-move-submit").appendChild(document.querySelector(".form-viewer-footer"));
+    }
+}
+}
+
+
+
+
+
+function changeRowColours() {
+    rowStyleFullWidth();
+    rowStylePadding();
+    rowStyleFlex();
+    rowStyleFlexReverse();
+    rowPackageEqual();
+    rowPackageStretch();
+    rowStyle1();
+    rowStyle2();
+    rowStyle3();
+    rowStyle4();
+    rowStyle5();
+    packageStyle1();
+    packageStyle2();
+    packageStyle3();
+    innerColumnStyle1();
+    innerColumnStyle2();
+    innerColumnStyle3();
+    innerColumnStyle4();
+}
+
+
+
+
+
+function startJavascript() {
+    hideFront();
+    changeRowColours();
+    hidePackageHeight();
+}
+
+startJavascript();
