@@ -98,7 +98,9 @@ pointer-events:none;
 
 }
 
-
+.disable-package span.btn.btn-squared.border-around {
+    cursor: not-allowed;
+}
 .ng-scope.item.padding-top-10.row.remove-padding {
     padding: 0px!important;
     height: 0px;
