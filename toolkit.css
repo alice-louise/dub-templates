@@ -1,3 +1,25 @@
+.legacy-form-preview {
+    padding-top: 0px!important;
+}
+
+.form-viewer .form-element__content {
+    padding: 0px!important;
+}
+
+.form-viewer.dubsado-form {
+    padding: 0px!important;
+}
+input.form-element__input {
+    margin-bottom: 20px;
+}
+
+
+view-form-public-component .hide-on-front,
+view-form-public-component .hide-on-front-identifier, form-preview-page .hide-on-front,
+form-preview-page .hide-on-front-identifier{
+    display: none;
+}
+
 /* ----- Code layout styling  ----- */
 
 #main-wrapper b.hide-on-front, #main-wrapper div.hide-on-front{
