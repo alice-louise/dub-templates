@@ -1,0 +1,149 @@
+/* ----- Code layout styling  ----- */
+
+#main-wrapper b.hide-on-front, #main-wrapper div.hide-on-front{
+    border: 0px;
+    color: black;
+    background-color: #f2f2f2;
+    padding:3px 5px;
+    width: 100%;
+    margin:0px;
+    text-transform:uppercase;
+    font-size:10px;
+}
+
+
+.main-codes-id div.hide-on-front{
+	background:none!important;
+	width:auto!important;
+}
+
+/* ----- Column Paddings ----- */
+
+.column.ng-scope {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+view-form-public-component .dropzone section.ng-scope {
+    min-height: 0px!important;
+}
+
+view-form-public-component label{
+	display:inline;
+}
+
+  
+
+/* ----- Conditional Codes ----- */
+
+.conditional-display-id {
+    opacity: 0;
+    overflow: hidden;
+    height: 0;
+}
+
+
+.hide-content{
+  opacity:0;
+  height:0px!important;
+  overflow: hidden;
+  transition:1s
+}
+
+.show-content{
+  opacity:1!important;
+  height:auto!important;
+  overflow:initial!important;
+  transition:1s;
+}
+
+#edit-form .conditional-display-id{
+  opacity:1!important;
+  height:auto!important;
+  transition:1s;
+}
+
+#edit-form .hide-content{
+   opacity:1!important;
+   height:auto!important;
+  overflow:initial!important;
+}
+
+
+#edit-form .hide-on-front{
+display:inline-block;
+}
+
+.hide-on-front{
+display: none;
+}
+
+.disable-package{
+  opacity: 80%;
+    height: 100%;
+    cursor: not-allowed;
+}
+
+.disable-package span.col-sm-12.ng-binding {
+    pointer-events: none;
+    }
+
+.disable-package:active {
+pointer-events:none;
+}
+
+.disable-package input, .disable-package label{
+    cursor: not-allowed;
+
+}
+
+
+.ng-scope.item.padding-top-10.row.remove-padding {
+    padding: 0px!important;
+    height: 0px;
+}
+
+.remove-padding {
+    padding: 0px!important;
+    height: 0px;
+}
+
+.spacer-small {
+    height: 2vw;
+}
+.spacer-medium {
+    height: 5vw;
+}
+.spacer-large {
+    height: 10vw;
+}
+
+
+
+
+
+/* =========================
+FULL WIDTH ROWS
+========================= */
+
+
+.item.padding-top10.row.ng-scope.full-width-row, .full-width-row, .full-width {
+width: 100vw!important;
+margin: 0 -50vw!important;
+position: relative!important;
+left: 50%!important;
+right: 50%!important;
+}
+
+#edit-form .full-width, #edit-form  .full-width-row{
+width: initial!important;
+left: initial!important;
+right: initial!important;
+margin:initial!important;
+
+}
+
+#edit-form .row{
+    margin-left:0px!important;
+    margin-right:0px!important}
