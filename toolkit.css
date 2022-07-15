@@ -3,8 +3,7 @@
 }
 
 
-.form-viewer.dubsado-form {
-    padding: 0px!important;
+.form-viewer.dubsado-form {.remove-title thead    padding: 0px!important;
 }
 input.form-element__input {
     margin-bottom: 20px;
