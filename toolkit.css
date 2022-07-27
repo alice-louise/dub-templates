@@ -2156,6 +2156,10 @@ border-radius:50px;
    display: none;
 }
 
+ .hide-tax td.packageItemTax{
+   display: none;
+}
+
 .hide-description td.packageItemDescription{
  display:none;
 }
