@@ -79,10 +79,10 @@ display:inline-block;
 display: none;
 }
 
-.disable-package{
-  opacity: 80%;
+.disable-package, .disable-package label {
+    opacity: 80%;
     height: 100%;
-    cursor: not-allowed;
+    cursor: not-allowed!important;
 }
 
 .disable-package span.col-sm-12.ng-binding {
