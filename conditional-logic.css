@@ -94,7 +94,7 @@ pointer-events:none;
 }
 
 .disable-package input, .disable-package label{
-    cursor: not-allowed;
+    cursor: not-allowed!important;
 
 }
 
