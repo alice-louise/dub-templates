@@ -311,6 +311,14 @@ span.col-xs-12.ng-binding.ng-scope {
 .row-package-equal .column {
     align-self: stretch;
 }
+
+.row-package-equal .container-form-element__column {
+    width: 100%;
+}
+
+.row-package-equal .container-form-element__column {
+    width: 100%;
+}
 .row-package-equal section {
     height: 100%;
 }
