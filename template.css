@@ -807,9 +807,9 @@ span.col-xs-12.ng-binding.ng-scope {
     margin: 15px 0px;
 }
 
-//.row-package-equal .form-package-element, .row-package-equal .form-element__content, .row-package-equal .form-element, .row-package-equal .form-viewer__form-elements-list, .row-package-equal .form-package-element div {
-//height: 100%;
-//}
+.row-package-equal .form-package-element div {
+    height: 100%;
+}
 
 @media only screen and (max-width: 767px) {
     .row-package-equal {
