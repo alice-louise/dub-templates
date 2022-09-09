@@ -772,6 +772,10 @@ span.col-xs-12.ng-binding.ng-scope {
     height: 100%;
 }
 
+.row-flex-image .form-element__content {
+    padding: 0px!important;
+}
+
 @media only screen and (max-width: 767px) {
     .row-flex-reverse {
         flex-direction: column-reverse;
