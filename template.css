@@ -267,6 +267,11 @@ span.col-xs-12.ng-binding.ng-scope {
     display: flex;
     width: 100%;
 }
+
+.container-form-element.row-flex {
+    display: grid!important;
+}
+
 @media only screen and (max-width: 767px) {
     .row-flex {
         flex-direction: column;
