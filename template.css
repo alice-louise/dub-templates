@@ -1326,7 +1326,7 @@ span.col-xs-12.ng-binding.ng-scope {
     margin: 15px 0px;
 }
 
-.row-package-equal .form-package-element div {
+.row-package-equal .form-package-element > div {
     height: 100%;
 }
 
