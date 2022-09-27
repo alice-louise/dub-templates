@@ -2063,23 +2063,67 @@ border-radius:50px;
 
 
 
+/** Packages **/
+
+/** SOLID  **/
+
+.solid-1 .packageNotSelected{
+  background-color:var(--first-color)!important;
+}
+
+.solid-2 .packageNotSelected{
+  background-color:var(--second-color)!important;
+}
+
+.solid-3 .packageNotSelected{
+  background-color:var(--third-color)!important;
+}
+
+.solid-4 .packageNotSelected{
+  background-color:var(--fourth-color)!important;
+}
+
+.solid-5 .packageNotSelected{
+  background-color:var(--fifth-color)!important;
+}
+
+.solid-6 .packageNotSelected{
+  background-color:var(--sixth-color)!important;
+}
+
+.solid-7 .packageNotSelected{
+  background-color:var(--seventh-color)!important;
+}
+
+.solid-8 .packageNotSelected{
+  background-color:var(--eighth-color)!important;
+}
+
+.solid-9 .packageNotSelected{
+  background-color:var(--ninth-color)!important;
+}
+
+.solid-10 .packageNotSelected{
+  background-color:var(--tenth-color)!important;
+}
+
 /**  Selected Packages BACKGROUNDS  **/
 
 
 
-.packageSelected.selected-solid-1  {
+.selected-solid-1 .packageSelected  {
   background-color:var(--first-color)!important;
 }
 
-.packageSelected.selected-solid-2  {
+.selected-solid-2 .packageSelected  {
   background-color:var(--second-color)!important;
 }
 
-.packageSelected.selected-solid-3  {
+.selected-solid-3 .packageSelected  {
   background-color:var(--third-color)!important;
 }
 
-.packageSelected.selected-bdr-white{
+.selected-bdr-white .packageSelected{
   border-color:white!important;
     border-style:solid;
 
@@ -2091,19 +2135,19 @@ border-radius:50px;
 
 }
 
-.packageSelected.selected-bdr-color1{
+.selected-bdr-color1 .packageSelected{
   border-color:var(--first-color)!important;
     border-style:solid;
 
 }
 
-.packageSelected.selected-bdr-color2{
+.selected-bdr-color2 .packageSelected{
   border-color:var(--second-color)!important;
     border-style:solid;
 
 }
 
-.packageSelected.selected-bdr-color3{
+.selected-bdr-color3 .packageSelected{
   border-color:var(--third-color)!important;
     border-style:solid;
 
@@ -2359,4 +2403,8 @@ div#submitButton {
 }
 .spacer-large {
     height: 10vw;
+}
+
+.form-package-element > div {
+    padding: 0px!important;
 }
