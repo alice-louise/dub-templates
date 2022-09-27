@@ -12,7 +12,7 @@ input.form-element__input {
 
 view-form-public-component .hide-on-front,
 view-form-public-component .hide-on-front-identifier, form-preview-page .hide-on-front,
-form-preview-page .hide-on-front-identifier, .form-viewer .hide-on-front, .form-viewer .hide-on-front-identifier{
+form-preview-page .hide-on-front-identifier, .form-viewer .hide-on-front, .form-viewer .hide-on-front-identifier, .form-viewer .package-identify, .form-viewer .row-identify, .form-viewer .column-identify{ 
     display: none;
 }
 
