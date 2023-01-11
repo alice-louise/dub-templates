@@ -332,6 +332,7 @@ height:5vw;
 height:10vw;
 }
 
+
 @media only screen and (max-width: 767px) {
   .spacer-small{
 height:2vh;
@@ -2256,16 +2257,6 @@ div#submitButton {
     width: 100%;
 }
 
-.spacer-small {
-    height: 2vw;
-}
-.spacer-medium {
-    height: 5vw;
-}
-.spacer-large {
-    height: 10vw;
-}
 
-.form-package-element > div {
-    padding: 0px!important;
-}
+
+
