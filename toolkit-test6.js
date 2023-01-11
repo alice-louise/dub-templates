@@ -450,16 +450,10 @@ if (document.querySelector(".form-viewer") !== null) {
 
         var individualPackages = packagesGroup[k];
         var individualPackage = packagesGroup[k].firstChild;
-        var individualPackageInnerNotSelected = individualPackage.closest('.packageNotSelected');
-        var individualPackageInnerSelected = individualPackage.closest('.packageSelected');
-        alert(individualPackage.innerHTML);
-        if (individualPackageInnerNotSelected){
-          individualPackageInnerNotSelected.style.cssText = elementsCSS;
-          
-             }
-        if (individualPackageInnerSelected){
-          individualPackageInnerSelected.style.cssText = elementsCSS;
-             }
+        var individualPackageInner = individualPackage.firstChild;
+
+          individualPackageInner.style.cssText = elementsCSS;
+             
 
         var elementList = packageElement.classList;
 
