@@ -450,7 +450,7 @@ if (document.querySelector(".form-viewer") !== null) {
 
         var individualPackages = packagesGroup[k];
         var individualPackage = packagesGroup[k].firstChild;
-        var individualPackageInner = individualPackage.firstChild;
+        var individualPackageInner = individualPackage.querySelector('div.packageNotSelected');
 
           individualPackageInner.style.cssText = elementsCSS;
              
