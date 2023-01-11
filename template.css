@@ -1527,3 +1527,7 @@ div#submitButton {
 	.form-element__content {
     padding-bottom: 0px!important;
 }
+
+	.form-viewer-element.form-element.form-element--root-element .image-column {
+    min-height: 250px!important;
+}
