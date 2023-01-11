@@ -287,139 +287,6 @@ justify-content: center;
 /* ========================= 
 ROW STYLE EQUAL HEIGHT  - Package Equal Heights
   ========================= */
-#edit-form .package-equal {
-    display:block;
-}
-
-.package-equal {
-    display:flex;
-    justify-content: center;
-  width: 100%;
-}
-
-@media only screen and (max-width: 767px) {
-.package-equal {
-flex-direction:column;
-}
-
-}
-
-.package-equal .column {
-    align-self:stretch;
-}
-
-.package-equal section {
-    height:100%;
-}
-
-.package-equal .item {
-    height:100%;
-    display: flex;
-}
-
-.package-equal .packageNotSelected, .package-equal .packageSelected {
-    height: 100%;
-    margin: 0px 5px;
-}
-
-
-.package-equal > .col-sm-12.ng-scope {
-       display:none;
-}
-
-.package-equal .col-xs-12 {
-       padding:0px!important;
-}
-
-.package-equal ng-form.ng-pristine.ng-valid.ng-scope {
-    width: 100%;
-    height: 100%;
-}
-
-.package-equal span.col-sm-12.ng-binding{
-  height:100%;
-  display: flex;
-        flex-direction: column;
-
-}
-
-
-.package-equal.align-middle span.col-sm-12.ng-binding{
-        justify-content: center;
-}
-
-.package-equal.align-top span.col-sm-12.ng-binding{
-        justify-content: flex-start;
-}
-
-.package-equal.align-top.button-bottom span.btn.btn-squared.border-around {
-    bottom: 0;
-    position: absolute;
-    right: 0;
-    left: 0;
-
-}
-
-.package-equal.align-bottom span.col-sm-12.ng-binding{
-        justify-content: flex-end;
-}
-
-.package-equal.equal-spacing span.col-sm-12.ng-binding{
-  justify-content: space-between;
-    display: flex;
-    flex-direction: column;
-}
-
-/* ----- When Editing  ----- */
-
-#edit-form .package-equal .column{
-margin:0px!important;
-}
-
-#edit-form .package-equal .column .col-sm-12
-{
-padding:0px!important;
-}
-
-#edit-form .package-equal .column {
-      padding:15px!important;
-}
-
-
-/* =========================
-ROW STYLE EQUAL HEIGHT COLUMNS - Column Equal Heights
-  ========================= */
-#edit-form .column-equal {
-    display:block;
-}
-
-
-.column-equal {
-    display:flex;
-    justify-content: center;
-  width:100%;
-}
-
-view-form-public-component .column-equal .column {
-    display: flex;
-    width: 100%;
-}
-
-
-view-form-public-component .column-equal .column section.ng-scope {
-    width: 100%;
-}
-
-@media only screen and (max-width: 767px) {
-.column-equal {
-flex-direction:column;
-}
-
-}
-
-.column-equal > .col-sm-12.ng-scope {
-       display:none;
-}
 
 
 .column-equal.align-middle .column {
@@ -433,12 +300,6 @@ flex-direction:column;
 
 .column-equal.align-bottom .column {
         align-items: flex-end;
-}
-
-.column-equal.equal-spacing span.col-sm-12.ng-binding{
-  justify-content: space-between;
-    display: flex;
-    flex-direction: column;
 }
 
 
@@ -470,6 +331,7 @@ height:5vw;
 .spacer-large{
 height:10vw;
 }
+
 
 @media only screen and (max-width: 767px) {
   .spacer-small{
@@ -2395,16 +2257,3 @@ div#submitButton {
     width: 100%;
 }
 
-.spacer-small {
-    height: 2vw;
-}
-.spacer-medium {
-    height: 5vw;
-}
-.spacer-large {
-    height: 10vw;
-}
-
-.form-package-element > div {
-    padding: 0px!important;
-}
