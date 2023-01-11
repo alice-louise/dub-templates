@@ -302,7 +302,9 @@ ROW STYLE EQUAL HEIGHT  - Package Equal Heights
         align-items: flex-end;
 }
 
-
+.package-equal div {
+    height: 100%;
+}
 
 
 /* =========================
