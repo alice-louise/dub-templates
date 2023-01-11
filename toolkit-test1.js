@@ -452,8 +452,10 @@ if (document.querySelector(".form-viewer") !== null) {
         var individualPackage = packagesGroup[k].firstChild;
         var individualPackageInnerNotSelected = individualPackage.closest('.packageNotSelected');
         var individualPackageInnerSelected = individualPackage.closest('.packageSelected');
+        alert(individualPackageInnerNotSelected);
         if (individualPackageInnerNotSelected){
           individualPackageInnerNotSelected.style.cssText = elementsCSS;
+          
              }
         if (individualPackageInnerSelected){
           individualPackageInnerSelected.style.cssText = elementsCSS;
