@@ -1535,6 +1535,7 @@ div#submitButton {
 	
 .form-viewer-element .row-flex-reverse-identify,  .form-viewer-element .row-flex-identify{
 	display:none;
+	height:0px!important;
 	}
 	
 	
