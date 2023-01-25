@@ -1531,3 +1531,10 @@ div#submitButton {
 	.form-viewer-element.form-element.form-element--root-element .image-column {
     min-height: 250px!important;
 }
+	
+	
+.form-viewer-element .row-flex-reverse-identify,  .form-viewer-element .row-flex-identify{
+	display:none;
+	}
+	
+	
