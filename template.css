@@ -5,7 +5,13 @@
 }
 }
 
+.form-viewer-element .form-element__content {
+    padding: 0px!important;
+}
 
+.form-viewer.dubsado-form {
+    padding-top: 0px!important;
+}
 
 .legacy-form-preview {
     padding-top: 0px!important;
@@ -1537,9 +1543,11 @@ div#submitButton {
 }
 	
 	
-.form-viewer-element .row-flex-reverse-identify,  .form-viewer-element .row-flex-identify{
-	display:none;
+.row-flex-reverse-identify, .row-flex-identify{
+	display:none!important;
 	height:0px!important;
 	}
 	
-	
+.form-viewer-element .row-flex-image div {
+    height: 100%;
+}	
