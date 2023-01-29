@@ -760,7 +760,10 @@ span.col-xs-12.ng-binding.ng-scope {
 	height:100%;
 }
 
-//old-builder
+/*=========================
+OLD BUILDER
+========================= */
+
 .row-flex {
     display: flex;
     width: 100%;
@@ -1257,7 +1260,8 @@ span.col-xs-12.ng-binding.ng-scope {
     background-color: transparent;
     border-color: transparent;
 }
-//new-builder
+/* NEW BUILDER */
+
 .container-form-element.row-flex{
 	display: grid!important;
 }
@@ -1267,7 +1271,7 @@ span.col-xs-12.ng-binding.ng-scope {
 	height:100%;
 }
 
-//old-builder
+/* OLD BUILDER */
 .row-flex {
     display: flex;
     width: 100%;
@@ -1485,7 +1489,7 @@ padding:25px!important;
 }
 
 
-/*Height on preview fix*/
+/* Height on preview fix */
  legacy-form-preview-component span div {
     min-height: initial!important;
 }
