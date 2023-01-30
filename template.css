@@ -1,3 +1,8 @@
+.row-flex-identify, .row-flex-reverse-identify{
+	display:none!important;
+	height:0px!important;
+}
+
 
 @media only screen and (max-width: 480px) {
 .container-form-element__column {
@@ -43,6 +48,1538 @@ padding-bottom:0px;
 }
 
 form-preview-page .element{
+@media only screen and (max-width: 480px) {
+.container-form-element__column {
+    max-width: 100%!important;
+}
+}
+
+
+
+.legacy-form-preview {
+    padding-top: 0px!important;
+}
+
+
+.form-viewer.dubsado-form {
+    padding: 0px!important;
+}
+input.form-element__input {
+    margin-bottom: 20px;
+}
+
+form.ng-pristine.ng-valid{
+ display: block!important;
+} 
+
+div#submitButton {
+    z-index: 9999!important;
+}
+
+form-preview-page .proposal-tabs{
+margin-bottom:0px;
+}
+
+form-preview-page .form-element{
+background: transparent;
+padding-bottom:0px;
+}
+
+form-preview-page .element{
+background: transparent;
+}
+
+#edit-form .full-width-row {
+    padding: 0px;
+}
+
+
+view-form-public-component .hide-on-front,
+view-form-public-component .hide-on-front-identifier, form-preview-page .hide-on-front,
+form-preview-page .hide-on-front-identifier{
+    display: none;
+}
+    
+    /* ----- Code layout styling  ----- */#edit-form .row-package-equal .column,#edit-form .row-package-stretch .column{padding:15px!important;margin:0!important}.dubsado-form .form-viewer__top-padding,.legacy-form-preview{padding-top:0!important}#edit-form .row-package-equal .column .col-sm-12,.dubsado-form .form-element--root-element,.form-viewer.dubsado-form,.row-package-equal .col-xs-12,.row-package-stretch .col-xs-12{padding:0!important}input.form-element__input{margin-bottom:20px}form.ng-pristine.ng-valid{display:block!important}div#submitButton{z-index:9999!important;width:100%}form-preview-page .proposal-tabs{margin-bottom:0}form-preview-page .form-element{background:0 0;padding-bottom:0}form-preview-page .element{background:0 0}#edit-form .full-width-row,.form-builder-canvas .full-width-row,.padding-30{padding:0}.form-viewer .hide-on-front,.form-viewer .hide-on-front-identifier,.row-flex>.col-sm-12.ng-scope,.row-package-equal .item>.col-sm-12.ng-scope,.row-package-equal>.col-sm-12.ng-scope,.row-package-stretch>.col-sm-12.ng-scope,form-builder-canvas .hide-on-front,form-builder-canvas .hide-on-front-identifier,form-preview-page .hide-on-front,form-preview-page .hide-on-front-identifier,legacy-form-preview-component .hide-on-front,legacy-form-preview-component .hide-on-front-identifier,view-form-public-component .hide-on-front,view-form-public-component .hide-on-front-identifier{display:none}#main-wrapper b.hide-on-front,#main-wrapper div.hide-on-front{border:0;color:#000;background-color:#f2f2f2;padding:3px 5px;width:100%;display:block;margin:0;text-transform:uppercase;font-size:10px}#edit-form img.hide-on-front,#view-form .hide-on-front,.hide-on-front,img.hide-on-front{display:none!important}.main-codes-id div.hide-on-front{background:0 0!important;width:auto!important}.alert-danger.ng-isolate-scope.alert,.dubsado-form div.full-width-row,.full-width-row2,.item.row.padding-top-10 .full-width-row,.item.row.padding-top-10.full-width-row,form-preview-page .full-width-row,view-form-public-component .alert-warning.ng-isolate-scope.alert{width:100vw!important;margin:0 -50vw!important;position:relative!important;left:50%!important;right:50%!important}.hide-on-front-id .col-sm-12.ng-binding.ng-scope,.main-codes-id .col-sm-12.ng-binding.ng-scope{margin:0!important}label.hide-on-front.toggle-box{font-size:10px}.col-sm-12.hidden-print.padding-top-20 div,span.col-xs-12.ng-binding.ng-scope{min-height:0!important}view-form-public-component .alert-warning.ng-isolate-scope.alert{text-align:center;text-transform:uppercase;padding:0;background-color:#d3d3d3;background-color:var(--second-color);letter-spacing:1px;font-weight:700}.alert-danger.ng-isolate-scope.alert{text-align:center;padding:0}#main-wrapper .jb-form.container>section>div.row.item:hover{border:thin solid #777}#main-wrapper .jb-form.container>section>div.row.item.main-codes-id:hover{border:thin solid #777!important}#main-wrapper .jb-form.container>section>div.row.item.main-codes-id{margin:0!important;padding:0!important;border:0}.container{padding-top:0}#edit-form .padding-30{padding-top:30px}#edit-form span.col-xs-12.ng-binding.ng-scope{min-height:75px!important}.row{margin-left:0;margin-right:0}#edit-form .item.padding-top-10.row.ng-scope{margin:0 -15px!important}.col-sm-12.margin-top-20.hidden-print .alert-warning.ng-isolate-scope.alert{margin:0}#edit-form .l-card-wrapper{padding-bottom:50px}#edit-form .hide-on-front,#edit-form .hide-on-front-identifier{display:inline-block!important}#edit-form .full-width-row,#edit-form .full-width-row2{width:auto;margin:auto;left:0;right:0;position:inital}.modal-body .full-width,.modal-body .full-width-row{width:100%!important;left:auto!important;right:auto!important;margin:0!important;padding:0!important}.row-padding{padding:3vw 10vw}#edit-form .full-width-row,#edit-form .row{padding-left:5px!important;padding-right:5px!important}@supports (-webkit-touch-callout:inherit){.row{background-attachment:scroll!important}}.packageNotSelected,.packageSelected{display:flex;justify-content:center}.btn-info,.btn-info:hover{background-color:transparent;border-color:transparent}//new-builder .container-form-element.row-flex{display:grid!important}.container-form-element .row-flex-image div,.ff-package-image-flex,.row-flex .packageNotSelected,.row-flex .packageSelected,.row-flex-inner>.element,.row-package-equal section{height:100%}//old-builder .row-flex{display:flex;width:100%}#edit-form .row-flex>.ng-scope,.row-package-equal ng-form.ng-pristine.ng-valid.ng-scope,.row-package-stretch .container-form-element__column,.row-package-stretch section.ng-scope{width:100%}.row-flex-inner{height:100%;padding:0;width:100%}.dubsado-form .form-viewer-element .form-element__content,.form-element__content{padding-bottom:0!important}.ff-package-image-flex{flex-basis:50%;z-index:0}.row-flex .packageNotSelected,.row-flex .packageSelected{align-items:center;display:flex;align-items:center}#edit-form .row-package-equal{display:block}.row-package-equal{display:flex;justify-content:center;width:100%;margin:15px 0}.row-package-equal .column{align-self:stretch}.row-package-equal .item{height:100%;display:flex}.row-package-equal .packageNotSelected,.row-package-equal .packageSelected{height:100%;margin:0}.row-package-stretch{display:flex}.row-package-stretch .column{margin:0!important;padding:0!important;display:flex;align-items:center;justify-content:center}.row-package-stretch .form-text{padding:25px!important}#edit-form .row-package-stretch .column{display:inline-block}.spacer-small{height:2vw}.spacer-medium{height:5vw}.spacer-large{height:10vw}.fab{display:inline-block;font:14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.break-after,.break-before{display:block;position:relative}.social-media-style1 ul{list-style:none;margin-block-start:0;margin-block-end:0;margin-inline-start:0;margin-inline-end:0;padding-inline-start:0px}.break-after{page-break-after:always}.break-before{page-break-before:always}@media only screen and (max-width:767px){.row-flex,.row-package-equal,.row-package-stretch{flex-direction:column}.row-flex-reverse{flex-direction:column-reverse}.row-style1.row,.row-style2.row,.row-style3.row,.row-style4.row,.row-style5.row{padding-left:20px!important;padding-right:20px!important}}.testimonial-overall .hero-card .ff-testimonial-slider-style5{position:relative;overflow:hidden}.swiper-container{overflow:hidden}.ff-logo-carousel-style2 .swiper-container-logo-style2.swiper-container{margin:0 auto}img.hide-on-front{height:0}
+form.ng-pristine.ng-valid{
+ display: block!important;
+} 
+
+div#submitButton {
+    z-index: 9999!important;
+}
+
+form-preview-page .proposal-tabs{
+margin-bottom:0px;
+}
+
+form-preview-page .form-element{
+background: transparent;
+padding-bottom:0px;
+}
+
+form-preview-page .element{
+background: transparent;
+}
+
+#edit-form .full-width-row {
+    padding: 0px;
+}
+
+
+view-form-public-component .hide-on-front,
+view-form-public-component .hide-on-front-identifier, form-preview-page .hide-on-front {
+    display: none;
+}
+    
+    /* ----- Code layout styling  ----- */
+
+#main-wrapper b.hide-on-front, #main-wrapper div.hide-on-front{
+    border: 0px;
+    color: black;
+    background-color: #f2f2f2;
+    padding:3px 5px;
+    width: 100%;
+    display: block;
+    margin:0px;
+    text-transform:uppercase;
+    font-size:10px;
+}
+
+
+.main-codes-id div.hide-on-front{
+	background:none!important;
+	width:auto!important;
+}
+.form-builder-canvas .full-width-row {
+    padding:0px;
+}
+
+form-preview-page .full-width-row {
+    width: 100vw!important;
+    margin: 0 -50vw!important;
+    position: relative!important;
+    left: 50%!important;
+    right: 50%!important;
+}
+
+.main-codes-id .col-sm-12.ng-binding.ng-scope, .hide-on-front-id .col-sm-12.ng-binding.ng-scope {
+    margin: 0px!important;
+}
+
+  
+#edit-form img.hide-on-front {
+    display: none!important;
+}
+
+
+label.hide-on-front.toggle-box{
+	font-size:10px;
+}  
+
+.col-sm-12.hidden-print.padding-top-20 div {
+    min-height: 0px!important;
+}
+
+
+
+view-form-public-component .alert-warning.ng-isolate-scope.alert {
+    width: 100vw!important;
+    margin: 0 -50vw!important;
+    position: relative!important;
+    left: 50%!important;
+    right: 50%!important;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0px;
+    background-color: lightgrey;
+    background-color: var(--second-color);
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.alert-danger.ng-isolate-scope.alert {
+    width: 100vw!important;
+    margin: 0 -50vw!important;
+    position: relative!important;
+    left: 50%!important;
+    right: 50%!important;
+    text-align: center;
+    padding:0px;
+}
+
+#view-form .hide-on-front{
+	  display: none!important;
+}
+
+/* ----- Hover Border  ----- */
+
+#main-wrapper .jb-form.container > section > div.row.item:hover {
+    border: thin solid #777;
+}
+
+
+#main-wrapper .jb-form.container > section > div.row.item.main-codes-id:hover{
+border: thin solid #777!important;
+}
+
+/* ----- Remove Margins & Borders for the main styles codes  ----- */
+
+#main-wrapper .jb-form.container > section > div.row.item.main-codes-id{
+margin: 0px 0px!important;
+padding:0px!important;
+border:0px;
+}
+
+
+/*=========================
+REMOVE OVERALL PADDING 
+& WHITE SPACE ON FORM
+========================= */
+
+.container {
+    padding-top: 0;
+}
+.padding-30 {
+    padding-top: 0;
+    padding: 0;
+}
+#edit-form .padding-30 {
+    padding-top: 30px;
+}
+span.col-xs-12.ng-binding.ng-scope {
+    min-height: 0 !important;
+}
+#edit-form span.col-xs-12.ng-binding.ng-scope {
+    min-height: 75px !important;
+}
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#edit-form .item.padding-top-10.row.ng-scope {
+    margin: 0 -15px !important;
+}
+.col-sm-12.margin-top-20.hidden-print .alert-warning.ng-isolate-scope.alert {
+    margin: 0;
+}
+#edit-form .l-card-wrapper {
+    padding-bottom: 50px;
+}
+#edit-form .hide-on-front,
+#edit-form .hide-on-front-identifier {
+    display: inline-block !important;
+}
+
+.full-width-row2,
+.item.row.padding-top-10 .full-width-row,
+.item.row.padding-top-10.full-width-row {
+    width: 100vw !important;
+    margin: 0 -50vw !important;
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+}
+#edit-form .full-width-row,
+#edit-form .full-width-row2 {
+    width: auto;
+    margin: auto;
+    left: 0;
+    right: 0;
+    position: inital;
+}
+
+.modal-body .full-width-row, .modal-body .full-width {
+    width: 100%!important;
+    left: auto!important;
+    right: auto!important;
+    margin: 0px!important;
+    padding: 0px!important;
+}
+
+.row-padding {
+    padding: 3vw 10vw;
+}
+#edit-form .full-width-row,
+#edit-form .row {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+@supports (-webkit-touch-callout: inherit) {
+    .row {
+        background-attachment: scroll !important;
+    }
+}
+.packageNotSelected,
+.packageSelected {
+    display: flex;
+    justify-content: center;
+}
+.btn-info,
+.btn-info:hover {
+    background-color: transparent;
+    border-color: transparent;
+}
+.row-flex {
+    display: flex;
+    width: 100%;
+}
+
+.container-form-element.row-flex {
+    display: grid!important;
+}
+
+@media only screen and (max-width: 767px) {
+    .row-flex {
+        flex-direction: column;
+    }
+}
+.row-flex > .col-sm-12.ng-scope {
+    display: none;
+}
+#edit-form .row-flex > .ng-scope {
+    width: 100%;
+}
+.row-flex-inner {
+    height: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+.row-flex-inner > .element {
+    height: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+    .row-flex-reverse {
+        flex-direction: column-reverse;
+    }
+}
+.ff-package-image-flex {
+    height: 100%;
+    height: 100%;
+    flex-basis: 50%;
+    z-index: 0;
+}
+.row-flex .packageNotSelected,
+.row-flex .packageSelected {
+    align-items: center;
+    display: flex;
+    align-items: center;
+}
+.ff-package-image-flex,
+.row-flex .packageNotSelected,
+.row-flex .packageSelected {
+    height: 100%;
+}
+
+#edit-form .row-package-equal {
+    display: block;
+}
+.row-package-equal {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 15px 0px;
+}
+
+
+.rpe-package .form-viewer__form-elements-list, .rpe-package .form-viewer-element, .rpe-package .form-element__content, .rpe-package.form-viewer-element {
+    height: 100%;
+}
+
+.row-package-equal .container-form-element__column {
+    overflow: hidden;
+}
+
+.row-package-equal .packageNotSelected, .row-package-equal .packageSelected{
+    
+margin-top:0px!important;
+margin-bottom:0px!important;
+
+}
+
+
+.row-package-equal .form-viewer__form-elements-list {
+    height: 100%;
+}
+
+.rpe-package.form-element__content, .rpe-package .form-package-element > div, .rpe-package .form-package-element {
+    height: 100%;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .row-package-equal {
+        flex-direction: column;
+    }
+}
+.row-package-equal .column {
+    align-self: stretch;
+}
+.row-package-equal section {
+    height: 100%;
+}
+.row-package-equal .item {
+    height: 100%;
+    display: flex;
+}
+.row-package-equal .packageNotSelected,
+.row-package-equal .packageSelected {
+    height: 100%;
+    margin: 0;
+}
+.row-package-equal > .col-sm-12.ng-scope {
+    display: none;
+}
+
+.row-package-equal .item > .col-sm-12.ng-scope {
+    display: none;
+}
+
+.row-package-equal .col-xs-12 {
+    padding: 0 !important;
+}
+.row-package-equal ng-form.ng-pristine.ng-valid.ng-scope {
+    width: 100%;
+}
+#edit-form .row-package-equal .column {
+    margin: 0 !important;
+}
+#edit-form .row-package-equal .column .col-sm-12 {
+    padding: 0 !important;
+}
+#edit-form .row-package-equal .column {
+    padding: 15px !important;
+}
+.row-package-stretch {
+    display: flex;
+}
+@media only screen and (max-width: 767px) {
+    .row-package-stretch {
+        flex-direction: column;
+    }
+}
+.row-package-stretch .column {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.row-package-stretch .column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.row-package-stretch > .col-sm-12.ng-scope {
+    display: none;
+}
+
+.row-package-stretch section.ng-scope {
+    width: 100%;
+}
+
+.row-package-stretch .col-xs-12 {
+    padding: 0 !important;
+}
+
+
+.row-package-stretch .form-text{
+padding:25px!important;
+}
+
+#edit-form .row-package-stretch .column {
+    margin: 0 !important;
+    display: inline-block;
+}
+#edit-form .row-package-stretch .column {
+    padding: 15px !important;
+}
+
+.container-form-element.row-flex.row-package-stretch {
+    display: grid!important;
+}
+
+.row-package-stretch .form-viewer__form-elements-list, .row-package-stretch .form-element, .row-package-stretch .form-element__content, .row-package-stretch .form-package-element {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+}
+
+
+
+.spacer-small {
+    height: 2vw;
+}
+.spacer-medium {
+    height: 5vw;
+}
+.spacer-large {
+    height: 10vw;
+}
+
+.fab {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.social-media-style1 ul {
+    list-style: none;
+    list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+.break-after {
+    display: block;
+    page-break-after: always;
+    position: relative;
+}
+
+.break-before {
+    display: block;
+    page-break-before: always;
+    position: relative;
+}
+
+@media only screen and (max-width: 767px) {
+
+.row-style1.row, .row-style2.row, .row-style3.row, .row-style4.row, .row-style5.row {
+    padding-left:  20px!important;
+    padding-right:  20px!important;
+}
+}
+
+
+/* Slider Fix */
+.testimonial-overall .hero-card  .ff-testimonial-slider-style5{ position: relative; overflow:hidden; }
+.swiper-container {
+    overflow: hidden;
+}
+
+.ff-logo-carousel-style2 .swiper-container-logo-style2.swiper-container {
+    margin: 0 auto;
+}
+
+
+/*Height on preview fix*/
+ legacy-form-preview-component span div {
+    min-height: initial!important;
+}
+
+
+img.hide-on-front{
+    height:0;
+    display:none!important;
+}
+
+div#submitButton {
+
+    width: 100%;
+}
+
+
+/* NEW BUILDER */
+.dubsado-form .form-viewer-element .form-element__content {
+    padding-bottom: 0px!important;
+}
+
+.dubsado-form .form-viewer__top-padding {
+    padding-top: 0px!important;
+}
+
+.dubsado-form .form-element--root-element{
+ padding: 0px!important;
+}
+
+
+.dubsado-form div.full-width-row {
+    width: 100vw!important;
+    margin: 0 -50vw!important;
+    position: relative!important;
+    left: 50%!important;
+    right: 50%!important;
+}
+
+
+
+#main-wrapper b.hide-on-front, #main-wrapper div.hide-on-front{
+    border: 0px;
+    color: black;
+    background-color: #f2f2f2;
+    padding:3px 5px;
+    width: 100%;
+    display: block;
+    margin:0px;
+    text-transform:uppercase;
+    font-size:10px;
+}
+
+.hide-on-front {
+    display: none!important;
+}
+
+.main-codes-id div.hide-on-front{
+	background:none!important;
+	width:auto!important;
+}
+.form-builder-canvas .full-width-row {
+    padding:0px;
+}
+
+form-preview-page .full-width-row {
+    width: 100vw!important;
+    margin: 0 -50vw!important;
+    position: relative!important;
+    left: 50%!important;
+    right: 50%!important;
+}
+
+.main-codes-id .col-sm-12.ng-binding.ng-scope, .hide-on-front-id .col-sm-12.ng-binding.ng-scope {
+    margin: 0px!important;
+}
+
+  
+#edit-form img.hide-on-front {
+    display: none!important;
+}
+
+
+label.hide-on-front.toggle-box{
+	font-size:10px;
+}  
+
+.col-sm-12.hidden-print.padding-top-20 div {
+    min-height: 0px!important;
+}
+
+
+
+view-form-public-component .alert-warning.ng-isolate-scope.alert {
+    width: 100vw!important;
+    margin: 0 -50vw!important;
+    position: relative!important;
+    left: 50%!important;
+    right: 50%!important;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0px;
+    background-color: lightgrey;
+    background-color: var(--second-color);
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.alert-danger.ng-isolate-scope.alert {
+    width: 100vw!important;
+    margin: 0 -50vw!important;
+    position: relative!important;
+    left: 50%!important;
+    right: 50%!important;
+    text-align: center;
+    padding:0px;
+}
+
+#view-form .hide-on-front{
+	  display: none!important;
+}
+
+/* ----- Hover Border  ----- */
+
+#main-wrapper .jb-form.container > section > div.row.item:hover {
+    border: thin solid #777;
+}
+
+
+#main-wrapper .jb-form.container > section > div.row.item.main-codes-id:hover{
+border: thin solid #777!important;
+}
+
+/* ----- Remove Margins & Borders for the main styles codes  ----- */
+
+#main-wrapper .jb-form.container > section > div.row.item.main-codes-id{
+margin: 0px 0px!important;
+padding:0px!important;
+border:0px;
+}
+
+
+/*=========================
+REMOVE OVERALL PADDING 
+& WHITE SPACE ON FORM
+========================= */
+
+.container {
+    padding-top: 0;
+}
+.padding-30 {
+    padding-top: 0;
+    padding: 0;
+}
+#edit-form .padding-30 {
+    padding-top: 30px;
+}
+span.col-xs-12.ng-binding.ng-scope {
+    min-height: 0 !important;
+}
+#edit-form span.col-xs-12.ng-binding.ng-scope {
+    min-height: 75px !important;
+}
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#edit-form .item.padding-top-10.row.ng-scope {
+    margin: 0 -15px !important;
+}
+.col-sm-12.margin-top-20.hidden-print .alert-warning.ng-isolate-scope.alert {
+    margin: 0;
+}
+#edit-form .l-card-wrapper {
+    padding-bottom: 50px;
+}
+#edit-form .hide-on-front,
+#edit-form .hide-on-front-identifier {
+    display: inline-block !important;
+}
+
+.full-width-row2,
+.item.row.padding-top-10 .full-width-row,
+.item.row.padding-top-10.full-width-row {
+    width: 100vw !important;
+    margin: 0 -50vw !important;
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+}
+#edit-form .full-width-row,
+#edit-form .full-width-row2 {
+    width: auto;
+    margin: auto;
+    left: 0;
+    right: 0;
+    position: inital;
+}
+
+.modal-body .full-width-row, .modal-body .full-width {
+    width: 100%!important;
+    left: auto!important;
+    right: auto!important;
+    margin: 0px!important;
+    padding: 0px!important;
+}
+
+.row-padding {
+    padding: 3vw 10vw;
+}
+#edit-form .full-width-row,
+#edit-form .row {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+@supports (-webkit-touch-callout: inherit) {
+    .row {
+        background-attachment: scroll !important;
+    }
+}
+.packageNotSelected,
+.packageSelected {
+    display: flex;
+    justify-content: center;
+}
+.btn-info,
+.btn-info:hover {
+    background-color: transparent;
+    border-color: transparent;
+}
+//new-builder
+.container-form-element.row-flex{
+	display: grid!important;
+}
+
+
+.container-form-element .row-flex-image div{
+	height:100%;
+}
+
+//old-builder
+.row-flex {
+    display: flex;
+    width: 100%;
+}
+@media only screen and (max-width: 767px) {
+    .row-flex {
+        flex-direction: column;
+    }
+}
+.row-flex > .col-sm-12.ng-scope {
+    display: none;
+}
+#edit-form .row-flex > .ng-scope {
+    width: 100%;
+}
+.row-flex-inner {
+    height: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+.row-flex-inner > .element {
+    height: 100%;
+}
+
+.row-flex-image .form-element__content {
+    padding: 0px!important;
+}
+
+@media only screen and (max-width: 767px) {
+    .row-flex-reverse {
+        flex-direction: column-reverse;
+    }
+}
+.ff-package-image-flex {
+    height: 100%;
+    height: 100%;
+    flex-basis: 50%;
+    z-index: 0;
+}
+.row-flex .packageNotSelected,
+.row-flex .packageSelected {
+    align-items: center;
+    display: flex;
+    align-items: center;
+}
+.ff-package-image-flex,
+.row-flex .packageNotSelected,
+.row-flex .packageSelected {
+    height: 100%;
+}
+
+#edit-form .row-package-equal {
+    display: block;
+}
+.row-package-equal {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 15px 0px;
+}
+@media only screen and (max-width: 767px) {
+    .row-package-equal {
+        flex-direction: column;
+    }
+}
+.row-package-equal .column {
+    align-self: stretch;
+}
+
+.row-package-equal .container-form-element__column {
+    width: 100%;
+}
+
+.row-package-equal .container-form-element__column {
+    width: 100%;
+}
+.row-package-equal section {
+    height: 100%;
+}
+.row-package-equal .item {
+    height: 100%;
+    display: flex;
+}
+.row-package-equal .packageNotSelected,
+.row-package-equal .packageSelected {
+    height: 100%;
+    margin: 0;
+}
+.row-package-equal > .col-sm-12.ng-scope {
+    display: none;
+}
+
+.row-package-equal .item > .col-sm-12.ng-scope {
+    display: none;
+}
+
+.row-package-equal .col-xs-12 {
+    padding: 0 !important;
+}
+.row-package-equal ng-form.ng-pristine.ng-valid.ng-scope {
+    width: 100%;
+}
+#edit-form .row-package-equal .column {
+    margin: 0 !important;
+}
+#edit-form .row-package-equal .column .col-sm-12 {
+    padding: 0 !important;
+}
+#edit-form .row-package-equal .column {
+    padding: 15px !important;
+}
+.row-package-stretch {
+    display: flex;
+}
+@media only screen and (max-width: 767px) {
+    .row-package-stretch {
+        flex-direction: column;
+    }
+}
+
+.row-package-stretch .container-form-element__column {
+    width: 100%;
+}
+.row-package-stretch .form-element__content {
+    padding: 0px!important;
+}
+	
+.row-package-stretch .column {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.row-package-stretch .column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.row-package-stretch > .col-sm-12.ng-scope {
+    display: none;
+}
+
+.row-package-stretch section.ng-scope {
+    width: 100%;
+}
+
+
+
+.row-package-stretch .col-xs-12 {
+    padding: 0 !important;
+}
+
+
+.row-package-stretch .form-text{
+padding:25px!important;
+}
+
+#edit-form .row-package-stretch .column {
+    margin: 0 !important;
+    display: inline-block;
+}
+#edit-form .row-package-stretch .column {
+    padding: 15px !important;
+}
+.spacer-small {
+    height: 2vw;
+}
+.spacer-medium {
+    height: 5vw;
+}
+.spacer-large {
+    height: 10vw;
+}
+
+.fab {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.social-media-style1 ul {
+    list-style: none;
+    list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+.break-after {
+    display: block;
+    page-break-after: always;
+    position: relative;
+}
+
+.break-before {
+    display: block;
+    page-break-before: always;
+    position: relative;
+}
+
+@media only screen and (max-width: 767px) {
+
+.row-style1.row, .row-style2.row, .row-style3.row, .row-style4.row, .row-style5.row {
+    padding-left:  20px!important;
+    padding-right:  20px!important;
+}
+}
+
+
+/* Slider Fix */
+.testimonial-overall .hero-card  .ff-testimonial-slider-style5{ position: relative; overflow:hidden; }
+.swiper-container {
+    overflow: hidden;
+}
+
+.ff-logo-carousel-style2 .swiper-container-logo-style2.swiper-container {
+    margin: 0 auto;
+}
+
+
+/*Height on preview fix*/
+ legacy-form-preview-component span div {
+    min-height: initial!important;
+}
+
+
+img.hide-on-front{
+    height:0;
+    display:none!important;
+}
+
+div#submitButton {
+
+    width: 100%;
+}
+
+
+/* NEW BUILDER */
+.dubsado-form .form-viewer-element .form-element__content {
+    padding-bottom: 0px!important;
+}
+
+.dubsado-form .form-viewer__top-padding {
+    padding-top: 0px!important;
+}
+
+.dubsado-form .form-element--root-element{
+ padding: 0px!important;
+}
+
+
+.dubsado-form div.full-width-row {
+    width: 100vw!important;
+    margin: 0 -50vw!important;
+    position: relative!important;
+    left: 50%!important;
+    right: 50%!important;
+}
+	
+	.form-element__content {
+    padding-bottom: 0px!important;
+}.form-viewer.dubsado-form {
+    padding: 0px!important;
+}
+input.form-element__input {
+    margin-bottom: 20px;
+}
+
+form.ng-pristine.ng-valid{
+ display: block!important;
+} 
+
+div#submitButton {
+    z-index: 9999!important;
+}
+
+form-preview-page .proposal-tabs{
+margin-bottom:0px;
+}
+
+form-preview-page .form-element{
+background: transparent;
+padding-bottom:0px;
+}
+
+form-preview-page .element{
+background: transparent;
+}
+
+#edit-form .full-width-row {
+    padding: 0px;
+}
+
+
+view-form-public-component .hide-on-front,
+view-form-public-component .hide-on-front-identifier, form-preview-page .hide-on-front,
+form-preview-page .hide-on-front-identifier{
+    display: none;
+}
+    
+    /* ----- Code layout styling  ----- */
+
+#main-wrapper b.hide-on-front, #main-wrapper div.hide-on-front{
+    border: 0px;
+    color: black;
+    background-color: #f2f2f2;
+    padding:3px 5px;
+    width: 100%;
+    display: block;
+    margin:0px;
+    text-transform:uppercase;
+    font-size:10px;
+}
+
+.hide-on-front {
+    display: none!important;
+}
+
+.main-codes-id div.hide-on-front{
+	background:none!important;
+	width:auto!important;
+}
+.form-builder-canvas .full-width-row {
+    padding:0px;
+}
+
+form-preview-page .full-width-row {
+    width: 100vw!important;
+    margin: 0 -50vw!important;
+    position: relative!important;
+    left: 50%!important;
+    right: 50%!important;
+}
+
+.main-codes-id .col-sm-12.ng-binding.ng-scope, .hide-on-front-id .col-sm-12.ng-binding.ng-scope {
+    margin: 0px!important;
+}
+
+  
+#edit-form img.hide-on-front {
+    display: none!important;
+}
+
+
+label.hide-on-front.toggle-box{
+	font-size:10px;
+}  
+
+.col-sm-12.hidden-print.padding-top-20 div {
+    min-height: 0px!important;
+}
+
+
+
+view-form-public-component .alert-warning.ng-isolate-scope.alert {
+    width: 100vw!important;
+    margin: 0 -50vw!important;
+    position: relative!important;
+    left: 50%!important;
+    right: 50%!important;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0px;
+    background-color: lightgrey;
+    background-color: var(--second-color);
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.alert-danger.ng-isolate-scope.alert {
+    width: 100vw!important;
+    margin: 0 -50vw!important;
+    position: relative!important;
+    left: 50%!important;
+    right: 50%!important;
+    text-align: center;
+    padding:0px;
+}
+
+#view-form .hide-on-front{
+	  display: none!important;
+}
+
+/* ----- Hover Border  ----- */
+
+#main-wrapper .jb-form.container > section > div.row.item:hover {
+    border: thin solid #777;
+}
+
+
+#main-wrapper .jb-form.container > section > div.row.item.main-codes-id:hover{
+border: thin solid #777!important;
+}
+
+/* ----- Remove Margins & Borders for the main styles codes  ----- */
+
+#main-wrapper .jb-form.container > section > div.row.item.main-codes-id{
+margin: 0px 0px!important;
+padding:0px!important;
+border:0px;
+}
+
+
+/*=========================
+REMOVE OVERALL PADDING 
+& WHITE SPACE ON FORM
+========================= */
+
+.container {
+    padding-top: 0;
+}
+.padding-30 {
+    padding-top: 0;
+    padding: 0;
+}
+#edit-form .padding-30 {
+    padding-top: 30px;
+}
+span.col-xs-12.ng-binding.ng-scope {
+    min-height: 0 !important;
+}
+#edit-form span.col-xs-12.ng-binding.ng-scope {
+    min-height: 75px !important;
+}
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#edit-form .item.padding-top-10.row.ng-scope {
+    margin: 0 -15px !important;
+}
+.col-sm-12.margin-top-20.hidden-print .alert-warning.ng-isolate-scope.alert {
+    margin: 0;
+}
+#edit-form .l-card-wrapper {
+    padding-bottom: 50px;
+}
+#edit-form .hide-on-front,
+#edit-form .hide-on-front-identifier {
+    display: inline-block !important;
+}
+
+.full-width-row2,
+.item.row.padding-top-10 .full-width-row,
+.item.row.padding-top-10.full-width-row {
+    width: 100vw !important;
+    margin: 0 -50vw !important;
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+}
+#edit-form .full-width-row,
+#edit-form .full-width-row2 {
+    width: auto;
+    margin: auto;
+    left: 0;
+    right: 0;
+    position: inital;
+}
+
+.modal-body .full-width-row, .modal-body .full-width {
+    width: 100%!important;
+    left: auto!important;
+    right: auto!important;
+    margin: 0px!important;
+    padding: 0px!important;
+}
+
+.row-padding {
+    padding: 3vw 10vw;
+}
+#edit-form .full-width-row,
+#edit-form .row {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+@supports (-webkit-touch-callout: inherit) {
+    .row {
+        background-attachment: scroll !important;
+    }
+}
+.packageNotSelected,
+.packageSelected {
+    display: flex;
+    justify-content: center;
+}
+.btn-info,
+.btn-info:hover {
+    background-color: transparent;
+    border-color: transparent;
+}
+//new-builder
+.container-form-element.row-flex{
+	display: grid!important;
+}
+
+
+.container-form-element .row-flex-image div{
+	height:100%;
+}
+
+//old-builder
+.row-flex {
+    display: flex;
+    width: 100%;
+}
+@media only screen and (max-width: 767px) {
+    .row-flex {
+        flex-direction: column;
+    }
+}
+.row-flex > .col-sm-12.ng-scope {
+    display: none;
+}
+#edit-form .row-flex > .ng-scope {
+    width: 100%;
+}
+.row-flex-inner {
+    height: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+.row-flex-inner > .element {
+    height: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+    .row-flex-reverse {
+        flex-direction: column-reverse;
+    }
+}
+.ff-package-image-flex {
+    height: 100%;
+    height: 100%;
+    flex-basis: 50%;
+    z-index: 0;
+}
+.row-flex .packageNotSelected,
+.row-flex .packageSelected {
+    align-items: center;
+    display: flex;
+    align-items: center;
+}
+.ff-package-image-flex,
+.row-flex .packageNotSelected,
+.row-flex .packageSelected {
+    height: 100%;
+}
+
+#edit-form .row-package-equal {
+    display: block;
+}
+.row-package-equal {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 15px 0px;
+}
+
+.row-package-equal .form-package-element > div {
+    height: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+    .row-package-equal {
+        flex-direction: column;
+    }
+}
+.row-package-equal .column {
+    align-self: stretch;
+}
+.row-package-equal section {
+    height: 100%;
+}
+.row-package-equal .item {
+    height: 100%;
+    display: flex;
+}
+.row-package-equal .packageNotSelected,
+.row-package-equal .packageSelected {
+    height: 100%;
+    margin: 0;
+}
+.row-package-equal > .col-sm-12.ng-scope {
+    display: none;
+}
+
+.row-package-equal .item > .col-sm-12.ng-scope {
+    display: none;
+}
+
+.row-package-equal .col-xs-12 {
+    padding: 0 !important;
+}
+.row-package-equal ng-form.ng-pristine.ng-valid.ng-scope {
+    width: 100%;
+}
+#edit-form .row-package-equal .column {
+    margin: 0 !important;
+}
+#edit-form .row-package-equal .column .col-sm-12 {
+    padding: 0 !important;
+}
+#edit-form .row-package-equal .column {
+    padding: 15px !important;
+}
+.row-package-stretch {
+    display: flex;
+}
+@media only screen and (max-width: 767px) {
+    .row-package-stretch {
+        flex-direction: column;
+    }
+}
+
+.row-package-stretch .container-form-element__column {
+    width: 100%;
+	
+.row-package-stretch .form-element__content {
+    padding: 0px!important;
+}
+	
+.row-package-stretch .column {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.row-package-stretch .column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.row-package-stretch > .col-sm-12.ng-scope {
+    display: none;
+}
+
+.row-package-stretch section.ng-scope {
+    width: 100%;
+}
+
+
+
+.row-package-stretch .col-xs-12 {
+    padding: 0 !important;
+}
+
+
+.row-package-stretch .form-text{
+padding:25px!important;
+}
+
+#edit-form .row-package-stretch .column {
+    margin: 0 !important;
+    display: inline-block;
+}
+#edit-form .row-package-stretch .column {
+    padding: 15px !important;
+}
+.spacer-small {
+    height: 2vw;
+}
+.spacer-medium {
+    height: 5vw;
+}
+.spacer-large {
+    height: 10vw;
+}
+
+.fab {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.social-media-style1 ul {
+    list-style: none;
+    list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+.break-after {
+    display: block;
+    page-break-after: always;
+    position: relative;
+}
+
+.break-before {
+    display: block;
+    page-break-before: always;
+    position: relative;
+}
+
+@media only screen and (max-width: 767px) {
+
+.row-style1.row, .row-style2.row, .row-style3.row, .row-style4.row, .row-style5.row {
+    padding-left:  20px!important;
+    padding-right:  20px!important;
+}
+}
+
+
+/* Slider Fix */
+.testimonial-overall .hero-card  .ff-testimonial-slider-style5{ position: relative; overflow:hidden; }
+.swiper-container {
+    overflow: hidden;
+}
+
+.ff-logo-carousel-style2 .swiper-container-logo-style2.swiper-container {
+    margin: 0 auto;
+}
+
+
+/*Height on preview fix*/
+ legacy-form-preview-component span div {
+    min-height: initial!important;
+}
+
+
+img.hide-on-front{
+    height:0;
+    display:none!important;
+}
+
+div#submitButton {
+
+    width: 100%;
+}
+
+
+/* NEW BUILDER */
+.dubsado-form .form-viewer-element .form-element__content {
+    padding-bottom: 0px!important;
+}
+
+.dubsado-form .form-viewer__top-padding {
+    padding-top: 0px!important;
+}
+
+.dubsado-form .form-element--root-element{
+ padding: 0px!important;
+}
+
+
+.dubsado-form div.full-width-row {
+    width: 100vw!important;
+    margin: 0 -50vw!important;
+    position: relative!important;
+    left: 50%!important;
+    right: 50%!important;
+}
+	
+	.form-element__content {
+    padding-bottom: 0px!important;
+}
+
+	.form-viewer-element.form-element.form-element--root-element .image-column {
+    min-height: 250px!important;
+}
 @media only screen and (max-width: 480px) {
 .container-form-element__column {
     max-width: 100%!important;
