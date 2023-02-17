@@ -1533,6 +1533,11 @@ div#submitButton {
     padding-bottom: 0px!important;
 }
 
-	.form-viewer-element.form-element.form-element--root-element .image-column {
+	.form-viewer-element.form-element.form-element--root-element .image-column, .ff-content-style-3 .image-column {
     min-height: 250px!important;
+}
+
+	.ff-content-style-3 .image-column{
+		 min-height: 250px!important;
+	
 }
