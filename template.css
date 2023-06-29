@@ -1541,3 +1541,10 @@ div#submitButton {
 		 min-height: 250px!important;
 	
 }
+
+
+
+.modal-content .video-hero-content{
+max-height:500px;
+}
+	
