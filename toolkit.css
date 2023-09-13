@@ -350,6 +350,17 @@ ROW STYLE EQUAL HEIGHT  - Package Equal Heights
     height: 100%;
 }
 
+.column-equal .container-form-element__column div {
+    height: 100%;
+}
+
+.column-equal .container-form-element__column div {
+    height: 100%;
+}
+
+.column-equal .custom-background__color div {
+    height: initial!important;
+}
 
 /* =========================
 Column Reverse Stack
