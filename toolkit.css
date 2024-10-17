@@ -348,6 +348,7 @@ ROW STYLE EQUAL HEIGHT  - Package Equal Heights
 
 .package-equal div {
     height: 100%;
+    margin-top: 5px;
 }
 
 .column-equal .container-form-element__column div {
