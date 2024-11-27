@@ -1,0 +1,1857 @@
+<div class="hide-on-front"> 🚨READ ME!💡How to Use This Template💡 Click for more info.</div> 
+ <style>
+
+/* =========================
+   INTRO
+=========================== */
+Here at Forms and Flows, we ALWAYS believe in doing things in the EASIEST way possible. That's why we recommend customizing your proposal template fully and then duplicating it  to your other form types. It will save you SO much time. 
+
+Look for “♻️Multi-Form Use Block!♻️” throughout your form to see how you might be able to use this section in other form types. 
+  
+/* =========================
+   HOW TO CREATE YOUR MATCHING COLLECTION
+=========================== */
+This is our recommended order of steps:
+1️⃣ Fully customize your proposal template. That means change out all fonts, colors, images, and other changes you wish to make. Do NOT remove the “♻️Multi-Form Use Block! P / LC / Q♻️” items at this time.
+2️⃣ When you’ve finished customizing, duplicate your proposal 2 times. 
+3️⃣ Click & Drag one of the copies to the Questionnaire column, and drag the other to the Lead Capture column. (You can always ask Dubsado about this piece if you’re unsure!)
+4️⃣ Go through your Lead Capture template first and remove all of the irrelevant sections. We recommend that MOST of your design for your lead capture is done directly on your website instead of in your form. That means you’ll probably be deleting most items except the block that asks for client information. Look for the blocks that say “LC” in the title for recommended blocks to keep! Make sure to map those fields!
+5️⃣ Go through your Questionnaire template and remove any irrelevant sections. Most likely, you’ll be keeping your header, your welcome message, and your client question section. Look for the blocks that say “Q” in the title for recommended blocks to keep!
+6️⃣ Optionally, you can delete this code block & the ♻️Multi-Form Use Block!♻️ items when you’re done customizing. You don’t HAVE to though,this will NOT be visible to your client.)
+
+
+
+<div class="hide-on-front"><img src="https://static.showit.co/file/yooByo-5btLXAw-XIIAhsw/78210/ff_logo.png" width="20"/>Main Templates Code</div> 
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alice-louise/dub-templates@main/template.css">
+
+<script type="application/javascript" src="https://cdn.jsdelivr.net/gh/alice-louise/dub-templates@main/template.min.js"/ defer></script/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alice-louise/dub-templates@main/animations.css">
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/alice-louise/dub-templates@main/animations.min.js"/ defer></script/>
+
+    
+    ​<div class="hide-on-front">Proposal, Contract, Invoice Top Bar Styles </div> 
+<script type="text/javascript">
+
+window.logoImage = 'https://static.showit.co/file/kogmSDNZaefciTEpTpRsVg/78210/dubsado_logo.png';
+
+</script/>
+
+<style>
+ /* Logo Size */
+  .header-logo img {
+    max-width:250px;
+}
+
+ /* Proposal tabs area background */
+  .client-view-tabs {
+    background-color: white!important;
+  }
+  
+
+/* Proposal tabs text */
+.client-view-tabs-col-label{ 
+  color:black!important;
+    letter-spacing: 2px;
+    font-size:14px;
+    transition: 1s;
+  text-transform:uppercase;
+  }
+  
+  
+.client-view-tabs-col-label:hover{   
+  color:  var(--first-color)!important;
+    text-decoration: none;
+}
+/* Proposal tabs underline --- use !important */
+.client-view-tabs-col div {
+    display: none;
+    }
+  
+  .header-logo{
+    text-align: center;
+}
+  
+
+@media only screen and (max-width: 600px) {
+td.header-logo {
+    display: block;
+    width: 100%;
+}
+
+td.header-logo img {
+    max-width:60vw;
+}
+
+td#proposal {
+    display: inline-block;
+    width: 33%;
+}
+
+td#contract {
+    display: inline-block;
+    width: 33%;
+}
+
+td#invoice {
+    display: inline-block;
+    width: 33%;
+}
+
+}
+
+  
+
+</style>
+
+
+<script type="text/javascript">
+
+function addLogoTopBar() {
+if (document.querySelector(".form-viewer") !== null) {
+var logoImageHTML = '<img src='+logoImage+'>';
+var tableRef = document.querySelector('.client-view-tabs-content');
+var logoDiv = document.createElement('div');
+    logoDiv.innerHTML = logoImageHTML;
+    logoDiv.className = 'header-logo';
+
+tableRef.parentNode.insertBefore(logoDiv, tableRef);
+}}
+  addLogoTopBar();
+</script>
+<div class="hide-on-front">Colors</div> 
+
+<style>
+
+:root {
+   --first-color:#F3AE02;
+   --second-color: #FCDD9D;
+   --third-color: #F2F2F2;
+}
+
+</style>
+<div class="hide-on-front"> Fonts</div> 
+
+
+ <style>
+
+
+/* =========================
+FONTS STYLES
+   ========================= */
+
+
+.dubsado-form, 
+.dubsado-form p, 
+.dubsado-form .form-element__input-label, 
+.form-checkbox-element .checkbox-option label, 
+.dubsado-form input, 
+.dubsado-form textarea, 
+.dubsado-form select, 
+.form-multiple-choice-element, 
+.radio-option label, 
+.file-element, 
+.form-element-wrapper {
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   line-height: 1.5;
+   font-size:14px;
+   color: #000000;
+}
+
+.dubsado-form h1  {
+    line-height: 1.2;
+    letter-spacing: 0em;
+    font-size: 3em;
+    font-family: 'Ovo', serif;
+    font-weight: 400;
+}
+
+
+
+.dubsado-form h2  {
+    line-height: 1;
+    font-size: 40px;
+    font-family: 'Ovo', serif;
+    font-weight: 400;
+}
+
+.dubsado-form h3 {
+    color: rgba(78,78,78,1);
+    line-height: 1.6;
+    font-size: 1.5em;
+    font-family: 'Ovo', serif;
+    font-weight: 400;
+}
+
+.dubsado-form h4  {
+    color: rgba(78,78,78,1);
+    font-size: 30px;
+    font-family: 'Ovo', serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+b,
+strong {
+   font-weight: 600;
+}
+
+h1, h2, h3, h4, h5 {
+margin:15px 0px;
+
+</style>
+<div class="hide-on-front">Form Field Styles</div> 
+
+
+<style>
+
+
+/* ===== GENERAL FIELDS ===== */
+
+/* Add space below the form fields */
+.dubsado-form .form-element__input {
+	margin-bottom: 30px;
+}
+
+/* All fields label text */
+.form-element__input-label {
+	font-weight: 800;
+	text-transform: capitalize;
+	letter-spacing: 2px;
+}
+
+/* All fields placeholder text */
+.dubsado-form input::placeholder,
+.dubsado-form textarea::placeholder,
+.dubsado-form .select--placeholder {
+	
+}
+
+/* All input fields --- use !important */
+.dubsado-form input, .dubsado-form textarea, .dubsado-form select {
+border-width: 2px 2px 2px 2px!important;
+	border-color: var(--first-color)!important;
+	box-shadow: none!important;
+	background-color: #ffffff!important;
+	min-height: 40px!important;
+	}
+
+
+/* All input fields --- when clicked on */
+.form-element__input:focus {
+}
+
+/* All input fields if an error */
+
+.form-element__content.has-error .form-element__input{
+	    border-color: red;
+}
+
+/* ===== TEXT FIELDS ===== */
+
+
+/* Short answer */
+.form-element__input {}
+
+/* Free response */
+.free-response-element__text-area {
+	min-height:100px!important;
+}
+
+
+/* ===== DROPDOWN FIELDS ===== */
+
+/* Dropdown fields */
+.dubsado-form select {}
+
+/* Dropdown caret */
+.form-element__select-container::after {}
+
+/* Dropdown selected option text --- use !important for color */
+.dubsado-form .form-element__select-container .select--selected-option {
+  background-color: var(--first-color)!important;}
+
+/* ===== CHECKBOX FIELDS ===== */
+
+/* Checkbox option label text */
+.form-checkbox-element .checkbox-option label {}
+
+/* Checkbox unchecked */
+.form-checkbox-element .checkmark {
+	background-color: white;
+	border-radius: 0!important;
+	border-width: 2px;
+	border-color: var(--first-color);
+}
+
+/* Checkbox checked */
+.form-checkbox-element .checkbox-option input:checked ~ .checkmark {
+	background-color: var(--first-color);
+}
+
+/* Checkbox checked checkmark */
+.form-checkbox-element .checkbox-option .checkmark:after {
+  border-color: white; /* checkmark color */
+}
+
+
+/* Text after checkmark */
+.checkbox label{
+        font-weight:normal;
+}
+
+/* ===== CHECKBOX FIELDS ===== */
+
+/* Multiple choice option label text */
+.form-multiple-choice-element .radio-option label {}
+
+/* Multiple choice radio button unselected */
+.form-multiple-choice-element .checkmark {
+		border: 2px solid  var(--first-color);
+}
+
+/* Multiple choice radio button unselected hover */
+.form-multiple-choice-element .checkmark:hover {
+	  background-color: var(--first-color);!important;}
+}
+
+/* Multiple choice radio button selected */
+.form-multiple-choice-element .radio-option input:checked ~ .checkmark {
+		background-color: var(--first-color);!important;
+}
+
+/* Multiple choice radio button selected marker */
+.form-multiple-choice-element .radio-option .checkmark:after {
+  background-color: var(--first-color); /* inner circle color */
+}
+
+
+/* ===== CALENDAR FIELDS ===== */
+
+/* Date select input fields --- use !important for borders */
+.dubsado-form .date-input input {}
+
+/* Date select calendar button --- use !important */
+.dubsado-form .date-input .icon-button__button {
+  border-radius: 00px!important;
+	border-width: 2px 2px 2px 0px!important;
+	border-color: var(--first-color)!important;
+	box-shadow: none!important;
+	background-color: #ffffff!important;
+	height: 36px!important;}
+
+/* Date select calendar button icon --- use !important */
+.dubsado-form .date-input .icon-button__icon {}
+
+
+/* Date select calendar */
+.dubsado-form .rdtPicker {
+	width:90%;
+}
+
+/* Date select calendar month and year */
+.dubsado-form .rdtPicker th.rdtSwitch {
+  color:var(--first-color);
+  }
+
+/* Date select calendar month and year hover */
+.dubsado-form .rdtPicker th.rdtSwitch:hover {}
+
+/* Date select calendar arrows */
+.dubsado-form .rdtPicker th.rdtPrev,
+.dubsado-form .rdtPicker th.rdtNext {
+	color:var(--first-color);
+}
+
+/* Date select calendar arrows hover */
+.dubsado-form .rdtPicker th.rdtPrev:hover,
+.dubsado-form .rdtPicker th.rdtNext:hover {
+	color:var(--second-color);
+}
+
+/* Date select calendar days of the week */
+.dubsado-form .rdtPicker .dow {}
+
+/* Date select calendar dates current month */
+.dubsado-form .rdtPicker .rdtDay,
+.dubsado-form .rdtPicker .rdtMonth,
+.dubsado-form .rdtPicker .rdtYear {}
+
+/* Date select calendar dates previous and next month */
+.dubsado-form .rdtPicker .rdtOld,
+.dubsado-form .rdtPicker .rdtNew {}
+
+/* Date select calendar current date */
+.dubsado-form .rdtPicker .rdtToday {
+		color: black;
+}
+
+/* Date select calendar dates hover */
+.dubsado-form .rdtPicker td.rdtDay:hover,
+.dubsado-form .rdtPicker td.rdtMonth:hover,
+.dubsado-form .rdtPicker td.rdtYear:hover {}
+
+/* Date select calendar selected date */
+.dubsado-form .rdtPicker td.rdtActive {
+	background-color: var(--first-color);
+}
+
+
+/* Time select input field --- use !important for borders */
+.dubsado-form .time-select input {}
+
+/* Time select dropdown menu */
+.dubsado-form .time-select .time-select__menu {}
+
+/* Time select dropdown menu hover */
+.dubsado-form .time-select .time-select__menu .time-select__option:hover {}
+
+
+
+/* ===== FILE UPLOAD FIELDS ===== */
+
+   /* File uploader button */
+.file-element__drop-zone .upload-btn {
+	border-color: var(--first-color);
+	background-color: #ffffff;
+	box-shadow: none!important;
+	border-width: 2px 2px 2px 2px;
+	border-radius: 0px;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	height: 40px;
+}
+
+/* File uploader button hover */
+.file-element__drop-zone .upload-btn:hover {
+	background-color: var(--first-color);
+	border-color: var(--first-color);
+}
+/* ===== CONTRACT SIGNATURE FIELDS ===== */
+  
+/* Initials element */
+.initials-element {}
+
+/* Initials input --- may require !important */
+.initials-element__initials-input {
+  border-width: 2px 2px 2px 2px!important;
+	border-color: var(--first-color)!important;
+	box-shadow: none!important;
+	background-color: #ffffff!important;
+	min-height: 40px!important;}
+
+/* Initials text */
+.initials-element__text-label {}
+
+
+/* Signature area element */
+.signature-element {}
+
+/* Signature area text */
+.signature-element .form-element__input-label {}
+
+/* Signature area first and last name fields --- may require !important */
+.signature-element .signature-name-fields-name {border-width: 2px 2px 2px 2px!important;
+	border-color: var(--first-color)!important;
+	box-shadow: none!important;
+	background-color: #ffffff!important;
+	min-height: 40px!important;}
+
+/* Signature area first and last name fields placeholder */
+.signature-element .signature-name-fields-name::placeholder {}
+
+/* Signature field label */
+.signature-input-label {}
+
+/* Signature field --- may require !important */
+.signature-element .signature-input-field {border-width: 2px 2px 2px 2px!important;
+	border-color: var(--first-color)!important;
+	box-shadow: none!important;
+	background-color: #ffffff!important;
+	min-height: 40px!important;}
+
+/* Signature field placeholder */
+.signature-element .signature-input-field::placeholder {}
+
+/* Signature information text */ 
+.signature-element .signature-information {}
+  
+  
+ 
+
+</style>
+<div class="hide-on-front">Row &amp; Package Styles</div> 
+
+<style>
+  
+    
+/* =========================
+ROW STYLE  - Full Width
+  ========================= */
+  
+  
+  .dubsado-form div.full-width-row {
+    width: 100vw!important;
+    margin: 0 -50vw!important;
+    position: relative!important;
+    left: 50%!important;
+    right: 50%!important;
+}
+  
+/* =========================
+ROW STYLE  - Padding
+  ========================= */
+
+/* ----- Main Row Background  ----- */
+
+.row-padding {
+        padding: 3vw 10vw;
+}
+
+
+/* =========================
+ROW STYLE  - Padding
+  ========================= */
+
+/* ----- Main Row Background  ----- */
+
+.row-padding {
+        padding: 3vw 10vw;
+}
+
+
+/* =========================
+ROW STYLE  - Solid BG (Main Colour)
+   ========================= */
+
+/* -----  Main Row Background  ----- */
+
+.row-style1 {
+    background:var(--first-color);
+    padding: 4vw 10vw;
+
+}
+
+/* =========================
+ROW STYLE  - Solid BG (Second Colour)
+   ========================= */
+
+/* -----  Main Row Background  ----- */
+
+.row-style2 {
+    background:var(--second-color);
+    padding: 4vw 10vw;
+}
+
+
+/* =========================
+ROW STYLE  - Solid BG (Third Colour)
+  ========================= */
+
+/* ----- Main Row Background  ----- */
+
+.row-style3 {
+       background:var(--third-color);
+    padding: 4vw 10vw;
+}
+
+/* =========================
+ROW STYLE  - Padding
+  ========================= */
+.row-padding{
+    padding: 4vw 10vw;
+}
+
+
+
+/* =========================
+    PACKAGES
+    ========================= */
+
+
+  /* ----- Packages Background  ----- */
+
+    .row-package-equal .column, .row-package-stretch .column, .packageNotSelected,     .packageSelected, .form-package-element,   .row-package-equal .container-form-element__column{
+      background-color: var(--second-color);
+}
+
+  .row-package-equal .container-form-element__column {
+    margin: 0px 5px;
+}
+  
+  .row-package-equal  .form-element__content--image-element {
+    padding: 0px;
+}
+
+   .row-package-equal .column{
+    padding: 0px;
+    margin: 15px;
+}
+
+.row-package-equal .column.ng-scope.col-sm-4 {
+    padding: 0px;
+    margin: 0px 10px;
+}
+
+.row-package-equal .item.padding-top-10.row.ng-scope {
+    height: auto!important;
+}
+
+    /* ----- Default - Packages Not Selected  ----- */
+
+   .form-package-element .packageNotSelected , .packageNotSelected {
+      padding: 2.5%;
+      transition: background-color 1s;
+    }
+
+    /* ----- Default - Packages Selected  ----- */
+
+    .form-package-element .packageSelected, .packageSelected {
+      padding: 2.5%;
+      transition: background-color 1s;
+    }
+
+
+    /* ----- Default - Package Button Unselected  ----- */
+
+    .btn.btn-squared.border-around {
+      margin:5px;
+      color: #ffffff;
+      text-transform:uppercase;
+      font-weight: 500;
+      letter-spacing:2px;
+      padding: 15px 25px;
+      border-width:1px;
+      border-radius:0px;
+      background-color:var(--first-color)!important;
+      border-color:var(--first-color)!important;
+      transition: 0.5s;
+    }
+
+    /* ----- Default - Package Button on Hover  ----- */
+
+    .btn.btn-squared.border-around:hover {
+      background-color:#000000!important;
+      border-color:#000000!important;
+      transition: 0.5s;
+    }
+
+    /* ----- Default - Package Button when Selected  ----- */
+
+    .packageSelected .btn{
+      background-color: var(--first-color)!important;
+      border-color:var(--first-color)!important;
+      color:white!important;
+      transition: 0.5s;
+    }
+    
+     .packageSelected .btn:after{
+       content: "ed";
+      }
+
+
+</style>
+<div class="hide-on-front">Submit Button Styles</div> 
+
+<style>
+
+  /* Center Buttons */
+
+  .form-viewer-footer__buttons {
+    justify-content: center;
+}
+  
+/* Proposal total */
+.proposal-total {
+     font-weight:bold;
+     font-size:16px;
+     color:black!important;
+    text-align:center;
+  text-transform:uppercase;
+  }
+
+/* Questionnaire save draft button */
+.save-draft-button {
+  background-color: white!important;
+  border-radius: 0px;
+  border:2px solid var(--first-color)!important;
+  letter-spacing: 2px;
+  color: var(--first-color)!important;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  }
+
+/* Submit button --- use !important */
+.submit-form-button {
+  background-color: white!important;
+  border-radius: 0px;
+  border:2px solid var(--first-color)!important;
+  letter-spacing: 2px;
+  color: var(--first-color)!important;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  }
+
+/* PDF download button */
+.pdf-button {
+  background-color:transparent!important;
+     border:0px;
+     font-weight:bold;
+     font-size:16px;
+     color:white!important;
+  text-transform:uppercase;
+  }
+
+/* PDF download button icon --- use !important */
+.pdf-button svg {
+  color:white!important}
+
+/* Back to portal button */
+.back-to-portal-button {
+  font-weight:bold;
+     background-color: white!important;
+  border-radius: 0px;
+  border:2px solid var(--first-color)!important;
+  letter-spacing: 2px;
+  color: var(--first-color)!important;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  }
+
+/* Back to portal button back arrow --- use !important */
+.back-to-portal-button svg {
+  color:white!important}
+  
+
+</style>
+<div class="hide-on-front">Scroll to top</div>
+
+<div onclick="javascript:document.body.scrollTop = 0;
+ javascript:document.documentElement.scrollTop=0;
+" class="scroll-to-top" style=""><div class="top-arrow-style">➔</div>
+ </div>
+
+
+<style> 
+
+/* =========================
+    SCROLL TO TOP - EDITABLE
+   ========================= */
+
+/* ----- Scroll to Top Style   ----- */
+
+.scroll-to-top {
+    color:     var(--main-color);
+   font-size: 18px;
+    height: 50px;
+    width: 50px;
+}
+
+/* ----- Scroll to Top Style on Hover  ----- */
+
+.scroll-to-top:hover {
+    color: black;
+
+}
+
+
+
+/* =========================
+    SCROLL TO TOP - DONT TOUCH
+   ========================= */
+
+
+.scroll-to-top {
+    position: fixed;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    bottom: 0px;
+    right: 0px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.top-arrow-style {
+    margin: auto;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+</style>
+<div class="hide-on-front">Print Friendly</div> 
+
+
+<style>
+
+@media print{
+
+/* -----Colours ----- */
+
+* {
+    -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
+    color-adjust: exact !important;                 /*Firefox*/
+     background-attachment: initial!important;
+}
+
+/* -----Hide Scroll to Top ----- */
+
+.scroll-to-top, .top-arrow-style{
+display:none!important;
+}
+
+/* ----- Hide Submit Bar ----- */
+
+div#submitButton {
+    position: relative!important;
+    bottom: 0!important;
+    width: auto!important;
+    margin: 0px!important;
+    left: 0!important;
+    right: 0!important;
+    display: block!important;
+    background:none;
+}
+
+/* ----- Total Text ----- */
+
+#submitButton .btn {
+    display: block!important;
+}
+
+#submitButton{
+font-size:1em;
+}
+
+#submitButton > div{
+color:black!important;
+font-size:2em;
+ }
+
+/* ----- Reduce extra padding ----- */
+
+.full-width-row{
+padding:0px 25px!important;
+}
+
+.full-width-row {
+    min-height: auto!important;
+}
+/* ----- Prevent rows from breaking ----- */
+
+.full-width-row,   .row, .form-group, .column, .form-text {
+    page-break-inside: avoid;
+}
+
+/* ----- Reduce margin on form groups ----- */
+
+.form-group {
+    margin-bottom: 0px!important;
+}
+
+/* ----- Open FAQS ----- */
+
+.faq-tab-content {
+       max-height: 100%!important;
+}
+
+/* ----- Reduce padding on packages ----- */
+
+.packageNotSelected, .packageSelected{
+padding: 2.5%;
+}
+
+
+.package-image,.full-row-1{
+min-height:25vh;
+}
+
+/* ----- Flex Row Styling ----- */
+
+.row-flex .column.ng-scope.col-sm-6, .row-flex-reverse .column.ng-scope.col-sm-6 {
+    flex-basis: 50%;
+}
+
+/* ----- Font Size ----- */
+
+h1{
+font-size:2.5em;
+}
+
+/* ----- Video Hero ----- */
+
+
+.video-hero-content {
+    height: 35vh!important;
+
+
+}
+
+}
+</style>
+
+
+<img class="hide-on-front" src="https://formsandflows.com/wp-content/uploads/2020/07/FF-Logo.png" width="0" onload="
+function removePrintBG(){
+
+	var stylesheetsList = document.styleSheets;
+	for (var i = 0; i < stylesheetsList.length; i++) {
+
+try {
+			var stylesheetsListRules = stylesheetsList[i].cssRules;
+
+		}
+		catch(err) {
+			break
+		}
+		if (stylesheetsListRules)
+
+		for(var j=0;  j < stylesheetsListRules.length; j++){
+
+			if(stylesheetsListRules[j].cssText.indexOf('@media print') !=-1 ){
+				if(stylesheetsListRules[j].cssRules[0].selectorText == '*, ::after, ::before' ){
+					stylesheetsListRules[j].deleteRule(0);
+				}
+
+			}
+		}
+	}
+} 
+
+removePrintBG();
+
+">
+<div class="ff-hero-section-style-8 full-width-row">
+<div class="video-hero hero-video-wrapper demo-video-wrapper">
+  <video class="hero-video" playsinline  autoplay muted loop poster="https://static.showit.co/file/HAfufMvP16jA0TBkt5pIqg/78210/screenshot_2024-10-18_at_11_14_50_am.png" >
+    <source src="https://static.showit.co/file/kx8-b3HQCfPpOgwkYuYMaw/78210/sunflower.mp4" type="video/mp4">
+     
+    </video>
+    <div class="video-overlay"></div>
+    <div class="page-width">
+      <div class="video-hero-content">
+       <h1>Proposal Title Here!</h1>
+       <p>Are you ready to create beautiful Dubsado forms?</p>
+
+<a class="sit-at-bottom chevron-arrow" href='#start-section'><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 192.701 192.701" style="enable-background:new 0 0 192.701 192.701;" xml:space="preserve"> <g> <g id="Double_Chevron_Down"> <path d="M171.955,88.526l-75.61,74.528l-75.61-74.54c-4.74-4.704-12.439-4.704-17.179,0c-4.74,4.704-4.74,12.319,0,17.011 l84.2,82.997c4.559,4.511,12.608,4.535,17.191,0l84.2-83.009c4.74-4.692,4.74-12.319,0-17.011 C184.394,83.823,176.695,83.823,171.955,88.526z"/> <path d="M87.755,104.322c4.559,4.511,12.608,4.535,17.191,0l84.2-82.997c4.74-4.704,4.74-12.319,0-17.011 c-4.74-4.704-12.439-4.704-17.179,0L96.345,78.842L20.734,4.314c-4.74-4.704-12.439-4.704-17.179,0 c-4.74,4.704-4.74,12.319,0,17.011L87.755,104.322z"/> </g> </svg></a>       
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  <style>
+
+
+/*** Video overlay ***/
+.ff-hero-section-style-8  .video-overlay {
+         background-color: rgba(0,0,0,0.25);
+}
+
+/*** Hero Section ***/
+.ff-hero-section-style-8 .video-hero-content {
+    height:65vh;
+}
+
+/*** Text Styles ***/
+.ff-hero-section-style-8 .video-hero-content h1 {
+	color: #FFF;
+
+}
+.ff-hero-section-style-8 .video-hero-content p {
+	color: #FFF;
+}
+
+.ff-hero-section-style-8 .chevron-arrow{
+width:20px;
+fill: white;
+}
+
+
+/* =========================
+   DONT TOUCH
+   ========================= */
+
+.ff-hero-section-style-8 .video-hero-content {
+	position: relative;
+	text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ff-hero-section-style-8 .hero-video-wrapper {
+	position: relative;
+	overflow: hidden;
+	background-position: center center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+	    	background-size: cover;
+}
+
+.ff-hero-section-style-8 .hero-video {
+	position: absolute;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	top: 50%;
+	left: 50%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+	-webkit-transform: translate(-50%,-50%);
+	   -moz-transform: translate(-50%,-50%);
+	    -ms-transform: translate(-50%,-50%);
+	     -o-transform: translate(-50%,-50%);
+	    	transform: translate(-50%,-50%);
+}
+
+
+
+
+@keyframes bounce {
+  0% {opacity: 1; transform: translateY(0px) scale(1);}
+  25%{opacity: 0; transform:translateY(10px) scale(0.9);}
+  26%{opacity: 0; transform:translateY(-10px) scale(0.9);}
+  55% {opacity: 1; transform: translateY(0px) scale(1);}
+}
+
+
+
+.ff-hero-section-style-8  .chevron-arrow:hover{
+        animation-name: bounce;
+        animation-duration:1.4s;
+        animation-iteration-count:2;
+        animation-timing-function:linear;
+  
+}
+
+
+.ff-hero-section-style-8 .sit-at-bottom{
+position:absolute;
+bottom:20px;
+
+}
+@media only screen and (max-width: 767px) {
+
+.ff-hero-section-style-8 .video-hero-content {
+	position: relative;
+	text-align: center;
+        height:30vh;
+}
+
+}
+
+
+/* Video overlay and content */
+.ff-hero-section-style-8 .video-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+</style>
+<div class="ff-logo-carousel-style2 full-width-row">
+
+ <div class="swiper-container swiper-container-logo-style2">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide"><img src="https://formsandflows.com/wp-content/uploads/2020/10/1.png"/></div>
+      <div class="swiper-slide"><img src="https://formsandflows.com/wp-content/uploads/2020/10/2.png"/></div>
+      <div class="swiper-slide"><img  src="https://formsandflows.com/wp-content/uploads/2020/10/3.png" /></div>
+      <div class="swiper-slide"><img src="https://formsandflows.com/wp-content/uploads/2020/10/4.png" /></div>
+      <div class="swiper-slide"><img src="https://formsandflows.com/wp-content/uploads/2020/10/5.png" /></div>
+      <div class="swiper-slide"><img src="https://formsandflows.com/wp-content/uploads/2020/10/6.png" /></div>
+      <div class="swiper-slide"><img src="https://formsandflows.com/wp-content/uploads/2020/10/8.png"/></div>
+      <div class="swiper-slide"><img  src="https://formsandflows.com/wp-content/uploads/2020/10/9.png" /></div>
+      <div class="swiper-slide"><img src="https://formsandflows.com/wp-content/uploads/2020/10/10.png" /></div>
+      <div class="swiper-slide"><img src="https://formsandflows.com/wp-content/uploads/2020/10/11.png" /></div>
+      <div class="swiper-slide"><img src="https://formsandflows.com/wp-content/uploads/2020/10/12.png" /></div>
+
+    </div>
+
+
+
+    </div>
+ 
+
+     <!-- Navigation Arrows -->
+    <div class="swiper-button-prev swiper-button-prev-logo-style2"></div>   
+
+    <div class="swiper-button-next swiper-button-next-logo-style2"></div>
+  
+
+  </div>
+</div>
+
+
+<style>
+
+/* =========================
+   EDITABLE
+   ========================= */
+
+   /* -----  Overall Height  ----- */
+   .ff-logo-carousel-style2{
+    height:20vh;
+    max-height:175px;
+    background-color:var(--first-color);
+  }
+
+  /* -----  Navigation Arrows  ----- */
+  .ff-logo-carousel-style2 .swiper-button-next-logo-style2:after, .ff-logo-carousel-style2 .swiper-button-prev-logo-style2:after{
+    color:black;
+    font-size:20px;
+  }
+
+  .ff-logo-carousel-style2 .swiper-slide{
+background-color:transparent;
+}
+
+/* =========================
+   DONT TOUCH
+   ========================= */
+
+
+   .ff-logo-carousel-style2 .swiper-container-logo-style2 {
+    width: 100%;
+    height: auto;
+  }
+   .ff-logo-carousel-style2{
+    display:flex;
+    }
+    
+  .ff-logo-carousel-style2 .swiper-wrapper{
+    display: flex;
+    align-items: center;
+}
+
+  .ff-logo-carousel-style2 .swiper-container-logo-style2.swiper-container{
+    width:90%;
+  }
+
+  .ff-logo-carousel-style2 .swiper-slide img{
+    max-height:100%;
+    max-width:100%;
+  }
+
+  .ff-logo-carousel-style2 .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+
+
+  </style>
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+<script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"/></script>
+
+  <img class="hide-on-front" src="https://formsandflows.com/wp-content/uploads/2020/05/Forms-and-Flows.png" onload = "
+
+function logoSlider2() {
+ 
+
+   var swiper_logo_style2 = new Swiper('.swiper-container-logo-style2', {
+      slidesPerView: 7,
+      spaceBetween: 10,
+      slidesPerGroup:1,
+      loop:true,
+
+
+
+      pagination: {
+        el: '.swiper-pagination-logo-style2',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next-logo-style2',
+        prevEl: '.swiper-button-prev-logo-style2',
+      },
+      keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+breakpoints: {
+
+  // when window width is <= 300px
+        300: {
+            slidesPerView: 3,
+            spaceBetweenSlides: 10
+        },
+        // when window width is <= 700px
+        700: {
+            slidesPerView: 4,
+            spaceBetweenSlides: 10
+        },
+        // when window width is <= 999px
+        999: {
+            slidesPerView: 5,
+            spaceBetweenSlides: 10
+        },
+ // when window width is <= 1200px
+        1200: {
+            slidesPerView: 6,
+            spaceBetweenSlides: 10
+        },
+ // when window width is <= 1600px
+        1600: {
+            slidesPerView: 8,
+            spaceBetweenSlides: 10
+        }
+    }
+
+    });
+
+}
+
+function waitForElement_logo2(){
+  if(typeof swiper_logo_style2 === 'undefined'){
+    if (typeof Swiper !== 'undefined'){ 
+      logoSlider2();
+    }
+    
+    else{
+      setTimeout(waitForElement_logo2, 250);
+    }
+  }
+}
+
+waitForElement_logo2();
+
+
+"
+
+ width="1" style="display:none">
+ <b class="hide-on-front">Start Content ID Scroll</b> 
+<div id="start-section"></div>
+<div class="ff-content-style-2 full-width-row">
+	<div class="image-column">  
+	</div>
+	<div class="text-column">
+		<div class="content-text">
+			<h4>Welcome!</h4>
+			<h1>I'm Sunflower!</h1>
+
+			<p>Proin vel gravida elit. Suspendisse vitae turpis sed nisi dictum vulputate in eu lacus. Nam eleifend eu libero sit amet efficitur. Praesent dapibus quam sed tortor aliquam dapibus. Suspendisse at tincidunt velit. Nullam non gravida enim. Maecenas eu neque libero.
+			</p>
+			<a href="https://www.formsandflows.com" target="_blank">Learn More</a>
+
+		</div>
+           </div>
+	</div>
+
+<style>
+
+
+/* =========================
+   EDITABLE
+   ========================= */
+
+   /* -----  Main Section   ----- */
+
+   .ff-content-style-2 {
+
+   }
+   
+
+   /* -----  Image Column   ----- */
+
+   .ff-content-style-2  .image-column{
+   	background-image:url("https://static.showit.co/file/ZNrjIU5zsj2Gl1_lLqHKtA/78210/sunflower12.jpg");
+   	background-size:cover;
+   	background-position:center;
+   	min-height:65vh;
+     flex-basis:50%;
+   }
+
+   /* -----  Text Column   ----- */
+
+   .ff-content-style-2  .text-column{
+   	background-color: var(--second-color);
+    flex-basis:50%;
+    padding-left: 50px;
+    padding-right: 100px;
+   }
+
+
+
+   /* -----  Content Text  ----- */
+
+   .ff-content-style-2 .content-text{
+   	text-align:center;
+   	padding:20px 40px;
+   }
+
+   .ff-content-style-2 .content-text h1{
+   	margin-top:15px;
+   }
+
+   .ff-content-style-2 .content-text h4{
+   	margin:0px;
+letter-spacing:2px;
+        font-size:10px;
+   	text-transform:uppercase;
+
+   }
+
+   .ff-content-style-2 .content-text p{
+   }
+
+
+   /* -----  Content Button  ----- */
+
+   .ff-content-style-2 .content-text a{
+   	background-color:var(--first-color);
+   	padding:10px 25px;
+   	margin-top:15px;
+   	text-transform:uppercase;
+   	color:white;
+   }
+
+
+/* =========================
+  DON'T TOUCH
+  ========================= */
+
+
+   .ff-content-style-2  .text-column{
+   	display:flex;
+   	align-items: center;
+   	justify-content: center;
+   }
+
+
+  /* -----  Main Section   ----- */
+
+  .ff-content-style-2 {
+  	display:flex;
+  }
+
+  /* -----  Content Button  ----- */
+
+  .ff-content-style-2 .content-text a{
+  	display:inline-block;
+  }
+
+
+  /* -----  Mobile Styles   ----- */
+
+  @media screen and (max-width: 700px) {
+  	.ff-content-style-2 {
+  		flex-direction:column;
+  	}
+
+  }
+</style>
+<b class="hide-on-front">Row Identifier: Package Stretch</b>
+
+<div class="row-full-width-identify row-package-stretch-identify"></div></span>
+
+<b class="hide-on-front">Row Identifier: PACKAGE EQUAL</b>
+
+<div class="row-package-equal-identify"></div></span>
+<div class="ff-timeline-style2-container">
+	<ul class="timeline-style2 alternating">
+    	
+    	
+    	<li class="timeline-style2-item">
+        	<div class="timeline-style2-date">January 1st, 2020</div>
+            <div class="timeline-style2-marker"></div>
+            <div class="timeline-style2-content">
+            	<h3 class="timeline-style2-title">Event Title</h3>
+                <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis eu pede mollis pretium. Pellentesque ut neque.</p>
+             </div>
+         </li>
+         
+        <li class="timeline-style2-item">
+        	<div class="timeline-style2-date">January 1st, 2020</div>
+            <div class="timeline-style2-marker"></div>
+            <div class="timeline-style2-content">
+            	<h3 class="timeline-style2-title">Event Title</h3>
+                <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis eu pede mollis pretium. Pellentesque ut neque.</p>
+             </div>
+         </li>
+         
+               
+        <li class="timeline-style2-item">
+        	<div class="timeline-style2-date">January 1st, 2020</div>
+            <div class="timeline-style2-marker"></div>
+            <div class="timeline-style2-content">
+            	<h3 class="timeline-style2-title">Event Title</h3>
+                <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis eu pede mollis pretium. Pellentesque ut neque.</p>
+             </div>
+         </li>
+         
+         
+         <li class="timeline-style2-item">
+        	<div class="timeline-style2-date">January 1st, 2020</div>
+            <div class="timeline-style2-marker"></div>
+            <div class="timeline-style2-content">
+            	<h3 class="timeline-style2-title">Event Title</h3>
+                <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis eu pede mollis pretium. Pellentesque ut neque.</p>
+             </div>
+         </li>
+         
+    </ul>
+</div>
+   
+
+
+<style>
+
+/* =========================
+   EDITABLE
+   ========================= */
+
+/*----- OVERALL CONTAINER -----*/
+.ff-timeline-style2-container{
+    padding:25px;
+}
+
+@media only screen and (max-width: 700px) {
+  .ff-timeline-style2-container{
+    padding:5px;
+    }
+}
+
+/*----- DATE -----*/
+.timeline-style2-date {
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  margin: 0 0 0.5em 0;
+  text-transform: uppercase;
+}
+
+/*----- HEADER/TITLE -----*/
+.timeline-style2-title{
+	color:black;
+}
+
+/*----- CONTENT -----*/
+.timeline-style2-content{
+	color:black;
+}
+
+/*----- MARKER ICON -----*/
+.timeline-style2-marker:before {
+  background: var(--first-color);
+  border-radius: 0%;
+}
+
+/*----- MARKER LINE -----*/
+.timeline-style2-marker:after {
+  width: 3px;
+  background: #CCD5DB;
+}
+
+
+
+/* =========================
+   DONT TOUCH
+   ========================= */
+
+.timeline-style2-item{
+width:100%;
+}
+
+.timeline-style2 {
+  list-style: none;
+  padding-inline-start: 0;
+}
+.timeline-style2 h1, .timeline-style2 h2, .timeline-style2 h3, .timeline-style2 h4, .timeline-style2 h5, .timeline-style2 h6 {
+  margin-top:0px;
+}
+
+
+/*----- Timeline Item -----*/
+.timeline-style2-item {
+  position: relative;
+}
+
+
+/*----- MARKER -----*/
+.timeline-style2-marker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 15px;
+}
+
+.timeline-style2-marker:before {
+  content: "";
+  display: block;
+  height: 15px;
+  width: 15px;
+  margin:auto;
+  
+}
+.timeline-style2-marker:after {
+  content: "";
+  display: block;
+  height:100%;
+  margin:auto;
+}
+
+.timeline-style2-item:last-child .timeline-style2-marker:after {
+  content: none;
+}
+
+.timeline-style2-content, .timeline-style2-date {
+  padding-left: 25px;
+}
+
+.timeline-style2-content{
+  padding-bottom:25px;
+}
+
+
+
+/*----- ALTERNATING -----*/
+@media (min-width: 992px) {
+  .alternating, .alternating .timeline-style2-item, .alternating .timeline-style2-date, .alternating .timeline-style2-marker, .alternating .timeline-style2-content {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .alternating .timeline-style2-item {
+    padding: 0px 0px 30px 0px;
+    overflow: hidden;
+  }
+  .alternating .timeline-style2-marker {
+    position: absolute;
+    left: 48%;
+    width:4%;
+  }
+  .alternating .timeline-style2-date, .alternating .timeline-style2-content {
+    width: 48%;
+  }
+  .alternating > .timeline-style2-item:nth-child(odd) .timeline-style2-date {
+    float: left;
+    text-align: right;
+  }
+  .alternating > .timeline-style2-item:nth-child(odd) .timeline-style2-content {
+    float: right;
+    text-align: left;
+  }
+  .alternating > .timeline-style2-item:nth-child(even) .timeline-style2-date {
+    float: right;
+    text-align: left;
+  }
+  .alternating > .timeline-style2-item:nth-child(even) .timeline-style2-content {
+    float: left;
+    text-align: right;
+  }
+ 
+}
+
+
+</style>
+<div class="testimonial-overall-style5 full-width-row">
+<div class="hero-card">
+
+<h2>Client Love</h2>
+
+<div class="ff-testimonial-slider-style5">
+<div class="swiper-container swiper-container-style5">
+<div class="swiper-wrapper">
+
+
+
+
+<div class="swiper-slide">
+<div class="testimonial">
+<div class="testimonial-inner">
+<p class="testimonial-text">
+"Purchasing the template has been an absolute game changer for my business, but the biggest plus for us has been the support provided by Alice. Every time we have needed assistance with the code she has helped straight away and gone above and beyond for us - a big 5 stars from us. Thanks Alice!!"
+</p>
+<p class="testimonial-name">Jessica Marchioro
+<br>The Collab Society </p>
+</div>
+</div>
+</div>
+
+
+<div class="swiper-slide">
+<div class="testimonial">
+<div class="testimonial-inner">
+<p class="testimonial-text">
+"Oh my goodness! Alice is truly a gem. These templates are not only beautiful, but literally take my brand to the next level. Alice went above and beyond to help me and reassure me as I'm new to Dubsado.
+She has a repeat customer in me from here on out. Thank you Alice for all you've done and your beautiful + creative templates!"
+</p>
+<p class="testimonial-name">Deirdre E. Orr, M.A.
+</p>
+</div>
+</div>
+</div>
+
+<div class="swiper-slide">
+<div class="testimonial">
+<div class="testimonial-inner">
+<p class="testimonial-text">
+"Alice Louise has created a top notch product in forms + flow. With all the code already written, the course itself is easy to follow and customize to brand. Alice Louise has made it so simple to make your dubsado forms look killer! I highly recommend getting the templates! Thank you Alice!"
+</p>
+<p class="testimonial-name">Reiko Soukup</p>
+</div>
+</div>
+</div>
+
+<div class="swiper-slide">
+<div class="testimonial">
+<div class="testimonial-inner">
+<p class="testimonial-text">
+"Alice can only be called a blessing to the Dubsado community. She has helped myself and my clients with their form design so much. Before I was making external graphic to put into forms, but with her simple code, I can do it all within Dubsado itself. Not only is she incredibly talented, but if I have a request or an idea, she will help out. I'm so grateful for her."
+</p>
+<p class="testimonial-name">Kendra Courtney</p>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<!-- Pagination -->
+<div class="swiper-pagination swiper-pagination-style5"></div>
+
+<!-- Navigation Arrows -->
+<div class="swiper-button-prev swiper-button-prev-style5"></div>
+<div class="swiper-button-next swiper-button-next-style5"></div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<style>
+
+/* =========================
+EDITABLE
+========================= */
+
+/* ----- Background ----- */
+.testimonial-overall-style5{
+background-image: url(https://res.cloudinary.com/dubsado/image/upload/v1604054857/z3wji4mtkihs9qhlbesj.jpg);
+background-size:cover;
+background-attachment:fixed;
+background-position:center;
+padding:100px;
+}
+
+
+/*----- Inner Card -----*/
+.testimonial-overall-style5 .hero-card{
+background-color:white;
+margin:auto;
+width:60%;
+padding:25px 25px;
+text-align:center;
+box-shadow: -5px 5px 15px rgba(0,0,0,0.25);
+}
+
+/*----- Inner Card on smaller screens -----*/
+@media only screen and (max-width: 767px) {
+.testimonial-overall-style5 .hero-card{
+width: 85%;
+}
+
+.testimonial-overall-style5{
+padding:5px;
+}
+
+.testimonial-overall-style5 .hero-card{
+padding:25px 0px;
+}
+
+}
+
+
+/* ----- TESTIMONIAL TEXT ----- */
+.ff-testimonial-slider-style5 .testimonial-text {
+font-size: 1rem;
+font-weight: 400;
+font-style: italic;
+margin-bottom: 40px;
+margin-top: 0px;
+margin-left: 20px;
+margin-right: 10px;
+}
+
+/* ----- TESTIMONIAL NAME ----- */
+.ff-testimonial-slider-style5 .testimonial-name {
+font-weight: 800;
+text-transform: uppercase;
+font-size: 0.8rem;
+letter-spacing: 2px;
+margin-bottom: 0px;
+}
+
+
+/* ----- Navigation Dots ----- */
+.ff-testimonial-slider-style5 .swiper-pagination-bullet-active {
+background-color: black;
+}
+
+/* ----- Navigation Arrows ----- */
+.ff-testimonial-slider-style5 .swiper-button-next-style5:after, .ff-testimonial-slider-style5 .swiper-button-prev-style5:after{
+color:#333;
+}
+
+
+/* =========================
+DONT TOUCH
+========================= */
+
+
+.ff-testimonial-slider-style5 [class^="swiper-button-"]{
+width:50px;
+}
+
+.ff-testimonial-slider-style5 .swiper-container-style5 {
+width: 100%;
+height: 100%;
+overflow: hidden;
+position: relative;
+}
+
+
+
+
+.ff-testimonial-slider-style5 .swiper-slide {
+background-size: cover;
+height: 100%;
+}
+
+
+.ff-testimonial-slider-style5 .testimonial-inner {
+padding: 0px;
+width: 80%;
+}
+
+.ff-testimonial-slider-style5 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+margin: 0 5px;
+position: relative;
+opacity: 0.2;
+transition: all 0.3s ease;
+}
+
+.swiper-wrapper {
+align-items: center;
+}
+
+.ff-testimonial-slider-style5 .testimonial {
+margin: 25px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.ff-testimonial-slider-style5 .swiper-button-next-style5:after {
+content: '\f061';
+font-size: 20px;
+font-family: "FontAwesome";
+}
+
+
+.ff-testimonial-slider-style5 .swiper-button-prev-style5:after {
+content: '\f060';
+font-size: 20px;
+font-family: "FontAwesome";
+}
+
+.ff-testimonial-slider-style5 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet:hover, .ff-testimonial-slider-style5 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+opacity: 1;
+}
+
+</style>
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+<script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"/></script>
+
+<img class="hide-on-front" src="https://formsandflows.com/wp-content/uploads/2020/05/Forms-and-Flows.png" onload = "
+
+function testimonialSlider5() {
+
+var testimonial_swiper_style5 = new Swiper('.swiper-container-style5', {
+effect: 'slide',
+grabCursor: true,
+loop:true,
+centeredSlides: true,
+slidesPerView: 1,
+pagination: {
+el: '.swiper-pagination-style5',
+clickable: true,
+},
+
+
+
+navigation: {
+nextEl: '.swiper-button-next-style5',
+prevEl: '.swiper-button-prev-style5',
+},
+keyboard: {
+enabled: true,
+onlyInViewport: true,
+}
+});
+
+
+}
+
+function waitForElementTestimonial5(){
+if(typeof testimonial_swiper_style5 === 'undefined'){
+if (typeof Swiper !== 'undefined'){
+testimonialSlider5();
+
+
+}
+
+else{
+setTimeout(waitForElementTestimonial5, 250);
+}
+}
+}
+
+waitForElementTestimonial5();
+
+
+" width="1" style="display:none"/>
+<b class="hide-on-front">Move Submit Here</b>
+<div class="row-move-submit-id"></div>
