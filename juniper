@@ -1,0 +1,1971 @@
+<div class="hide-on-front"> 🚨READ ME!💡How to Use This Template💡 Click for more info.</div> 
+ <style>
+
+/* =========================
+   INTRO
+=========================== */
+Here at Forms and Flows, we ALWAYS believe in doing things in the EASIEST way possible. That's why we recommend customizing your proposal template fully and then duplicating it  to your other form types. It will save you SO much time. 
+
+Look for “♻️Multi-Form Use Block!♻️” throughout your form to see how you might be able to use this section in other form types. 
+  
+/* =========================
+   HOW TO CREATE YOUR MATCHING COLLECTION
+=========================== */
+This is our recommended order of steps:
+1️⃣ Fully customize your proposal template. That means change out all fonts, colors, images, and other changes you wish to make. Do NOT remove the “♻️Multi-Form Use Block! P / LC / Q♻️” items at this time.
+2️⃣ When you’ve finished customizing, duplicate your proposal 2 times. 
+3️⃣ Click & Drag one of the copies to the Questionnaire column, and drag the other to the Lead Capture column. (You can always ask Dubsado about this piece if you’re unsure!)
+4️⃣ Go through your Lead Capture template first and remove all of the irrelevant sections. We recommend that MOST of your design for your lead capture is done directly on your website instead of in your form. That means you’ll probably be deleting most items except the block that asks for client information. Look for the blocks that say “LC” in the title for recommended blocks to keep! Make sure to map those fields!
+5️⃣ Go through your Questionnaire template and remove any irrelevant sections. Most likely, you’ll be keeping your header, your welcome message, and your client question section. Look for the blocks that say “Q” in the title for recommended blocks to keep!
+6️⃣ Optionally, you can delete this code block & the ♻️Multi-Form Use Block!♻️ items when you’re done customizing. You don’t HAVE to though,this will NOT be visible to your client.)
+<div class="hide-on-front">Buffer</div>
+
+<style>
+
+#submitButton>button.btn.btn-primary.btn-lg.userBgColor{display:none;
+}
+
+</style>
+<div class="hide-on-front"><img src="https://static.showit.co/file/yooByo-5btLXAw-XIIAhsw/78210/ff_logo.png" width="20"/>Main Templates Code</div> 
+
+  
+<style>
+#editor-form hide-on-front{
+    display:none!important;
+    }
+  
+.hide-on-front{
+    display:none!important;
+    }
+  
+</style>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alice-louise/dub-templates@main/template.min.css">
+
+<script type="application/javascript" src="https://cdn.jsdelivr.net/gh/alice-louise/dub-templates@main/template.min.js"/ defer></script/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alice-louise/dub-templates@main/animations.css">
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/alice-louise/dub-templates@main/animations.js"/ defer></script/>
+
+<div class="hide-on-front">Fonts Styles</div> 
+<style>
+
+
+.dubsado-form, 
+.dubsado-form p, 
+.dubsado-form .form-element__input-label, 
+.form-checkbox-element .checkbox-option label, 
+.dubsado-form input, 
+.dubsado-form textarea, 
+.dubsado-form select, 
+.form-multiple-choice-element, 
+.radio-option label, 
+.file-element, 
+.form-element-wrapper {   font-family: 'Poppins', sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   line-height: 1.8;
+   color: #000000;
+}
+
+.dubsado-form h1  {
+   font-family: 'Playfair Display', serif;
+   font-weight: 600;
+   color: #000000;
+   font-size: 3em;
+}
+
+.dubsado-form h2  {
+   font-family: 'Poppins', sans-serif;
+   font-weight: 600;
+   color: #000000;
+}
+
+.dubsado-form h3 {
+   font-family: 'Poppins', sans-serif;
+   color: #000000;
+}
+
+.dubsado-form h4  {
+   font-family: 'Playfair Display', serif;
+   font-style: normal;
+   color: #000000;
+}
+
+b,
+strong {
+   font-weight: 600;
+}
+
+
+
+</style>
+<div class="hide-on-front">Colors</div> 
+
+<style>
+
+:root {
+   --first-color:rgb(191,157,90);
+   --second-color:  #E9DCC5;
+   --third-color:  #f2f2f2;
+}
+
+</style>
+
+<div class="hide-on-front">Form Field Styles</div> 
+
+
+<style>
+
+
+/* ===== GENERAL FIELDS ===== */
+
+/* Add space below the form fields */
+.dubsado-form .form-element__input {
+	margin-bottom: 30px;
+}
+
+/* All fields label text */
+.form-element__input-label {
+	font-weight: 800;
+	text-transform: capitalize;
+	letter-spacing: 2px;
+}
+
+/* All fields placeholder text */
+.dubsado-form input::placeholder,
+.dubsado-form textarea::placeholder,
+.dubsado-form .select--placeholder {
+	
+}
+
+/* All input fields --- use !important */
+.dubsado-form input, .dubsado-form textarea, .dubsado-form select {
+border-width: 2px 2px 2px 2px!important;
+	border-color: var(--first-color)!important;
+	box-shadow: none!important;
+	background-color: #ffffff!important;
+	min-height: 40px!important;
+	}
+
+
+/* All input fields --- when clicked on */
+.form-element__input:focus {
+}
+
+/* All input fields if an error */
+
+.form-element__content.has-error .form-element__input{
+	    border-color: red;
+}
+
+/* ===== TEXT FIELDS ===== */
+
+
+/* Short answer */
+.form-element__input {}
+
+/* Free response */
+.free-response-element__text-area {
+	min-height:100px!important;
+}
+
+
+/* ===== DROPDOWN FIELDS ===== */
+
+/* Dropdown fields */
+.dubsado-form select {}
+
+/* Dropdown caret */
+.form-element__select-container::after {}
+
+/* Dropdown selected option text --- use !important for color */
+.dubsado-form .form-element__select-container .select--selected-option {
+  background-color: var(--first-color)!important;}
+
+/* ===== CHECKBOX FIELDS ===== */
+
+/* Checkbox option label text */
+.form-checkbox-element .checkbox-option label {}
+
+/* Checkbox unchecked */
+.form-checkbox-element .checkmark {
+	background-color: white;
+	border-radius: 0!important;
+	border-width: 2px;
+	border-color: var(--first-color);
+}
+
+/* Checkbox checked */
+.form-checkbox-element .checkbox-option input:checked ~ .checkmark {
+	background-color: var(--first-color);
+}
+
+/* Checkbox checked checkmark */
+.form-checkbox-element .checkbox-option .checkmark:after {
+  border-color: white; /* checkmark color */
+}
+
+
+/* Text after checkmark */
+.checkbox label{
+        font-weight:normal;
+}
+
+/* ===== CHECKBOX FIELDS ===== */
+
+/* Multiple choice option label text */
+.form-multiple-choice-element .radio-option label {}
+
+/* Multiple choice radio button unselected */
+.form-multiple-choice-element .checkmark {
+		border: 2px solid  var(--first-color);
+}
+
+/* Multiple choice radio button unselected hover */
+.form-multiple-choice-element .checkmark:hover {
+	  background-color: var(--first-color);!important;}
+}
+
+/* Multiple choice radio button selected */
+.form-multiple-choice-element .radio-option input:checked ~ .checkmark {
+		background-color: var(--first-color);!important;
+}
+
+/* Multiple choice radio button selected marker */
+.form-multiple-choice-element .radio-option .checkmark:after {
+  background-color: var(--first-color); /* inner circle color */
+}
+
+
+/* ===== CALENDAR FIELDS ===== */
+
+/* Date select input fields --- use !important for borders */
+.dubsado-form .date-input input {}
+
+/* Date select calendar button --- use !important */
+.dubsado-form .date-input .icon-button__button {
+  border-radius: 00px!important;
+	border-width: 2px 2px 2px 0px!important;
+	border-color: var(--first-color)!important;
+	box-shadow: none!important;
+	background-color: #ffffff!important;
+	height: 36px!important;}
+
+/* Date select calendar button icon --- use !important */
+.dubsado-form .date-input .icon-button__icon {}
+
+
+/* Date select calendar */
+.dubsado-form .rdtPicker {
+	width:90%;
+}
+
+/* Date select calendar month and year */
+.dubsado-form .rdtPicker th.rdtSwitch {
+  color:var(--first-color);
+  }
+
+/* Date select calendar month and year hover */
+.dubsado-form .rdtPicker th.rdtSwitch:hover {}
+
+/* Date select calendar arrows */
+.dubsado-form .rdtPicker th.rdtPrev,
+.dubsado-form .rdtPicker th.rdtNext {
+	color:var(--first-color);
+}
+
+/* Date select calendar arrows hover */
+.dubsado-form .rdtPicker th.rdtPrev:hover,
+.dubsado-form .rdtPicker th.rdtNext:hover {
+	color:var(--second-color);
+}
+
+/* Date select calendar days of the week */
+.dubsado-form .rdtPicker .dow {}
+
+/* Date select calendar dates current month */
+.dubsado-form .rdtPicker .rdtDay,
+.dubsado-form .rdtPicker .rdtMonth,
+.dubsado-form .rdtPicker .rdtYear {}
+
+/* Date select calendar dates previous and next month */
+.dubsado-form .rdtPicker .rdtOld,
+.dubsado-form .rdtPicker .rdtNew {}
+
+/* Date select calendar current date */
+.dubsado-form .rdtPicker .rdtToday {
+		color: black;
+}
+
+/* Date select calendar dates hover */
+.dubsado-form .rdtPicker td.rdtDay:hover,
+.dubsado-form .rdtPicker td.rdtMonth:hover,
+.dubsado-form .rdtPicker td.rdtYear:hover {}
+
+/* Date select calendar selected date */
+.dubsado-form .rdtPicker td.rdtActive {
+	background-color: var(--first-color);
+}
+
+
+/* Time select input field --- use !important for borders */
+.dubsado-form .time-select input {}
+
+/* Time select dropdown menu */
+.dubsado-form .time-select .time-select__menu {}
+
+/* Time select dropdown menu hover */
+.dubsado-form .time-select .time-select__menu .time-select__option:hover {}
+
+
+
+/* ===== FILE UPLOAD FIELDS ===== */
+
+   /* File uploader button */
+.file-element__drop-zone .upload-btn {
+	border-color: var(--first-color);
+	background-color: #ffffff;
+	box-shadow: none!important;
+	border-width: 2px 2px 2px 2px;
+	border-radius: 0px;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	height: 40px;
+}
+
+/* File uploader button hover */
+.file-element__drop-zone .upload-btn:hover {
+	background-color: var(--first-color);
+	border-color: var(--first-color);
+}
+/* ===== CONTRACT SIGNATURE FIELDS ===== */
+  
+/* Initials element */
+.initials-element {
+}
+
+/* Initials input --- may require !important */
+.initials-element__initials-input {
+border-width: 2px 2px 2px 2px!important;
+    border-color: var(--first-color)!important;
+    box-shadow: none!important;
+    background-color: #ffffff!important;
+    min-height: 40px!important;}
+
+/* Initials text */
+.initials-element__text-label {}
+
+
+/* Signature area element */
+.signature-element {
+}
+
+/* Signature area text */
+.signature-element .form-element__input-label {
+}
+
+/* Signature area first and last name fields --- may require !important */
+.signature-element .signature-name-fields-name {
+border-width: 2px 2px 2px 2px!important;
+    border-color: var(--first-color)!important;
+    box-shadow: none!important;
+    background-color: #ffffff!important;
+    min-height: 40px!important;}
+
+/* Signature area first and last name fields placeholder */
+.signature-element .signature-name-fields-name::placeholder {}
+
+/* Signature field label */
+.signature-input-label {
+}
+
+/* Signature field --- may require !important */
+.signature-element .signature-input-field {
+border-width: 2px 2px 2px 2px!important;
+    border-color: var(--first-color)!important;
+    box-shadow: none!important;
+    background-color: #ffffff!important;
+    min-height: 40px!important;}
+
+/* Signature field placeholder */
+.signature-element .signature-input-field::placeholder {}
+
+/* Signature information text */ 
+.signature-element .signature-information {}
+  
+</style>
+<div class="hide-on-front">Proposal, Contract, Invoice Top Bar Styles</div> 
+
+<style>
+
+
+ /* Proposal tabs area background */
+  .client-view-tabs {
+    background-color: var(--first-color)!important;
+  }
+  
+
+/* Proposal tabs text */
+.client-view-tabs-col-label{ 
+  color: #ffffff!important;
+    letter-spacing: 2px;
+    font-size:14px;
+    transition: 1s;
+    text-transform:uppercase;
+    font-family: Poppins;
+  }
+  
+.client-view-tabs-col-label:hover{   
+  color: black!important;
+    text-decoration: none;
+}
+/* Proposal tabs underline --- use !important */
+.client-view-tabs-col div {
+    display: none;
+    }
+  
+
+</style>
+<div class="hide-on-front">Row & Package Styles</div> 
+
+<style>
+
+
+/*---------------------
+1 - ROWS
+----------------------- */
+.dubsado-form div.full-width-row {
+    width: 100vw!important;
+    margin: 0 -50vw!important;
+    position: relative!important;
+    left: 50%!important;
+    right: 50%!important;
+}
+/* =========================
+    1.1 - ROW STYLE 1 - 60% top color
+   ========================= */
+
+/* ----- 1.1.1 - Style 1 - Main Row Background  ----- */
+
+.row-style1 {
+    background: linear-gradient(to bottom, var(--first-color) 0%, var(--first-color) 60%,  var(--third-color) 60%,  var(--third-color)100%);
+
+    padding: 3vw 10vw;
+}
+
+
+/* =========================
+    1.2 - ROW STYLE 2 - 60% Bottom Colour
+   ========================= */
+
+/* ----- 1.2.1 - Style 2 - Main Row Background  ----- */
+
+.row-style2 {
+    background: linear-gradient(to top, var(--first-color) 0%, var(--first-color) 60%,  var(--third-color) 60%,  var(--third-color)100%);
+    padding: 3vw 10vw;
+}
+
+/* =========================
+    1.3 - ROW STYLE 3 - Solid BG (Second Colour)
+   ========================= */
+
+/* ----- 1.3.1 - Style 3 - Main Row Background  ----- */
+
+.row-style3 {
+    background:var(--second-color);
+        padding: 3vw 10vw;
+}
+
+
+/* =========================
+    1.4 - ROW STYLE 4 - Solid BG (Third Colour)
+  ========================= */
+
+/* ----- 1.4.1 - Style 4 - Main Row Background  ----- */
+
+.row-style4 {
+       background:var(--third-color);
+        padding: 3vw 10vw;
+}
+
+/*---------------------
+2 - PACKAGES
+----------------------- */
+
+/* =========================
+    2.1 DEFAULT PACKAGES
+    ========================= */
+
+    /* ----- 2.1.1 Default - Packages Not Selected  ----- */
+
+    .packageNotSelected {
+      background-color: var(--second-color)!important;
+      padding: 10%;
+      margin:5px;
+      transition: background-color 1s;
+    }
+
+    /* ----- 2.1.2 Default - Packages Selected  ----- */
+
+    .packageSelected {
+      background-color: var(--second-color)!important;
+      padding: 10%;
+     margin:5px;
+      transition: background-color 1s;
+    }
+
+
+    /* ----- 2.1.3 Default - Package Button Unselected  ----- */
+
+    .form-package-element .btn {
+      color: var(--first-color)!important;
+      font-weight: 600;
+      letter-spacing:2px;
+      padding: 15px 25px;
+      border-color:var(--first-color)!important;
+      border-width:2px;
+      text-transform:uppercase;
+      border-radius:0px;
+      background-color: transparent;
+      transition: 0.5s;
+      margin-top:10px;
+    }
+
+    /* ----- 2.1.4 Default - Package Button on Hover  ----- */
+
+    .form-package-element .packageSelected .btn:hover {
+      background-color:var(--first-color)!important;
+      border-color:var(--first-color)!important;
+      color:white!important;
+      transition: 0.5s;
+    }
+
+    /* ----- 2.1.5 Default - Package Button when Selected  ----- */
+
+    .form-package-element .packageSelected .btn{
+      background-color: var(--first-color)!important;
+      border-color:var(--first-color)!important;
+      color:white!important;
+      transition: 0.5s;
+    }
+
+
+/* Change button text to selected */
+.form-package-element .packageSelected .btn.btn-squared.border-around:after{
+       content: "ED";
+}
+  
+/* =========================
+   2.2 PACKAGES STYLE 1 - Overlap on the Left
+   ========================= */
+
+   /* ----- 2.2.1 Packages Z index (Always layer on top) ----- */
+
+   .package-style1{
+    z-index:99;
+  }
+
+  /* ----- 2.2.2 - Style 1 - Packages Not Selected  ----- */
+
+  .package-style1 .packageNotSelected {
+    padding: 5%;
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
+    background-color: white!important;  
+    margin-left: -25%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height:auto;
+  }
+
+  /* ----- 2.2.3 - Style 1 - Packages Selected ----- */
+
+  .package-style1 .packageSelected {
+    padding: 5%;
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
+    background-color: white!important;
+    margin-left: -25%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height:auto;
+  }
+
+  /* ----- 2.2.4 - Style 1 - Mobile Styles ----- */
+
+  @media only screen and (max-width: 767px) {
+    .package-style1 .packageNotSelected{
+      margin:0px;
+    }
+    .package-style1 .packageSelected{
+      margin:0px;
+    }
+  }
+
+/* =========================
+   3 - PACKAGES STYLE 2 - Overlap on the Right
+   ========================= */
+
+   /* ----- 2.3.1 Packages Z index (Always layer on top) ----- */
+
+   .package-style2{
+    z-index:99;
+  }
+
+  /* ----- 2.3.2 - Style 2 - Packages Not Selected  ----- */
+
+  .package-style2 .packageNotSelected {
+    padding: 5%;
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
+    background-color: white!important;
+    margin-right: -25%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height:auto;
+  }
+
+  /* ----- 2.3.3 - Style 2 - Packages Selected ----- */
+
+  .package-style2 .packageSelected {
+    padding: 5%;
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
+    background-color: white!important;
+    margin-right: -25%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height:auto;
+  }
+
+  /* ----- 2.3.4 - Style 2 - Mobile Styles ----- */
+
+  @media only screen and (max-width: 767px) {
+    .package-style2 .packageNotSelected{
+      margin:0px;
+    }
+    .package-style2 .packageSelected{
+      margin:0px;
+    }
+  }
+
+/*---------------------
+3 - Columns Inners
+----------------------- */
+
+/* =========================
+   1 - INNER COLUMN STYLE 1 - Overlap on the Left - White BG
+   ========================= */
+
+   /* ----- 3.1.1 Inner Column Styling ----- */
+
+.inner-column-style1 {
+    margin: 50px 0px 50px -15%;
+    background-color: white;
+    padding-top: 5%!important;
+    padding-left: 5%!important;
+    padding-right: 5%!important;
+    padding-bottom: 5%!important;    border: 4px;
+    border-style: solid;
+    border-color: white;
+}
+
+.inner-column-style1{
+    z-index:99;
+}
+
+   /* ----- 3.1.2 Inner Column Styling Mobile ----- */
+@media only screen and (max-width: 767px) {
+  .inner-column-style1{
+      margin: 0px;
+     }
+}
+
+
+/* =========================
+   2 - INNER COLUMN STYLE 2 - Overlap on the Right - White BG
+   ========================= */
+
+   /* ----- 3.2.1 Inner Column Styling ----- */
+
+.inner-column-style2 {
+    margin: 50px -15% 50px 0px;
+    background-color: white;
+    padding-top: 5%!important;
+    padding-left: 5%!important;
+    padding-right: 5%!important;
+    padding-bottom: 5%!important;    border: 4px;
+    border-style: solid;
+    border-color: white;
+}
+
+.inner-column-style2{
+    z-index:99;
+}
+
+   /* ----- 3.2.2 Inner Column Styling Mobile ----- */
+@media only screen and (max-width: 767px) {
+  .inner-column-style2 {
+      margin: 0px;
+     }
+}
+
+
+/* =========================
+   3 - INNER COLUMN STYLE 3 - Overlap on the Left - Colour BG
+   ========================= */
+
+   /* ----- 3.3.1 Inner Column Styling ----- */
+
+.inner-column-style3 {
+    margin: 50px 0px 50px -15%;
+    background-color: var(--second-color)!important;;
+    padding-top: 5%!important;
+    padding-left: 5%!important;
+    padding-right: 5%!important;
+    padding-bottom: 5%!important;    border: 4px;
+    border-style: solid;
+    border-color: var(--first-color)!important;;
+}
+
+.inner-column-style3{
+    z-index:99;
+}
+
+   /* ----- 3.3.2 Inner Column Styling Mobile ----- */
+@media only screen and (max-width: 767px) {
+  .inner-column-style3 {
+      margin: 15px;
+     }
+}
+
+
+/* =========================
+   4 - INNER COLUMN STYLE 4 - Overlap on the Right - Colour BG
+   ========================= */
+
+   /* ----- 3.4.1 Inner Column Styling ----- */
+
+.inner-column-style4 {
+    margin: 50px -15% 50px 0px;
+    background-color: var(--second-color)!important;;
+    padding-top: 5%!important;
+    padding-left: 5%!important;
+    padding-right: 5%!important;
+    padding-bottom: 5%!important;
+    border: 4px;
+    border-style: solid;
+    border-color: var(--first-color)!important;;
+}
+
+.inner-column-style4{
+    z-index:99;
+}
+
+   /* ----- 3.4.2 Inner Column Styling Mobile ----- */
+@media only screen and (max-width: 767px) {
+  .inner-column-style4 {
+      margin: 15px;
+     }
+}
+
+</style>
+<div class="hide-on-front">Submit Styles</div> 
+
+<style>
+
+
+   /* Footer area fixed to bottom */
+.form-viewer-footer {
+    position: fixed;
+     bottom: 0;
+     width: 100vw;
+     margin: 0rem -50vw;
+     left: 50%;
+     right: 50%;
+     display: flex;
+     justify-content: center;
+     z-index:99;
+     height:50px;
+    max-width:100vw!important;
+  }
+  
+  @media print { 
+  .form-viewer-footer {
+    position: relative!important;
+}
+    }
+  
+  .form-viewer-footer-content {
+    max-width: 100%!important;
+    flex-direction: row;
+    justify-content: center;
+    padding:0px;
+}
+  
+  .form-viewer-footer__buttons{
+    width:auto;
+    }
+  
+  /* Footer area colour*/
+.form-viewer-footer {
+  background-color: var(--first-color);
+  }
+
+/* Proposal total */
+.proposal-total {
+     font-weight:bold;
+     font-size:16px;
+     color:white!important;
+  text-transform:uppercase;
+  }
+
+/* Questionnaire save draft button */
+.save-draft-button {
+  background-color:transparent!important;
+     border:0px;
+     font-weight:bold;
+     font-size:16px;
+     color:white!important;
+  text-transform:uppercase;}
+
+/* Submit button --- use !important */
+.submit-form-button {
+  background-color:transparent!important;
+     border:0px;
+     font-weight:bold;
+     font-size:16px;
+     color:white!important;
+  text-transform:uppercase;}
+
+/* PDF download button */
+.pdf-button {
+  background-color:transparent!important;
+     border:0px;
+     font-weight:bold;
+     font-size:16px;
+     color:white!important;
+  text-transform:uppercase;
+  }
+
+/* PDF download button icon --- use !important */
+.pdf-button svg {
+  color:white!important}
+
+/* Back to portal button */
+.back-to-portal-button {
+  font-weight:bold;
+     background-color:transparent!important;
+     border:0px;
+     font-weight:bold;
+     font-size:16px;
+     color:white!important;
+  text-transform:uppercase;
+  }
+
+/* Back to portal button back arrow --- use !important */
+.back-to-portal-button svg {
+  color:white!important}
+  
+    
+    
+</style>
+<div class="hide-on-front">Print Friendly</div> 
+
+
+<style>
+
+@media print{
+
+/* -----Colours ----- */
+
+* {
+    -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
+    color-adjust: exact !important;                 /*Firefox*/
+     background-attachment: initial!important;
+}
+
+/* -----Hide Scroll to Top ----- */
+
+.scroll-to-top, .top-arrow-style{
+display:none!important;
+}
+
+/* ----- Hide Submit Bar ----- */
+
+div#submitButton {
+    position: relative!important;
+    bottom: 0!important;
+    width: auto!important;
+    margin: 0px!important;
+    left: 0!important;
+    right: 0!important;
+    display: block!important;
+    background:none;
+}
+
+/* ----- Total Text ----- */
+
+#submitButton .btn {
+    display: block!important;
+}
+
+#submitButton{
+font-size:1em;
+}
+
+#submitButton > div{
+color:black!important;
+font-size:2em;
+ }
+
+/* ----- Reduce extra padding ----- */
+
+.full-width-row{
+padding:0px 25px!important;
+}
+
+.full-width-row {
+    min-height: auto!important;
+}
+/* ----- Prevent rows from breaking ----- */
+
+.full-width-row,   .row, .form-group, .column, .form-text {
+    page-break-inside: avoid;
+}
+
+/* ----- Reduce margin on form groups ----- */
+
+.form-group {
+    margin-bottom: 0px!important;
+}
+
+/* ----- Open FAQS ----- */
+
+.faq-tab-content {
+       max-height: 100%!important;
+}
+
+/* ----- Reduce padding on packages ----- */
+
+.packageNotSelected, .packageSelected{
+padding: 2.5%;
+}
+
+
+.package-image,.full-row-1{
+min-height:25vh;
+}
+
+/* ----- Flex Row Styling ----- */
+
+.row-flex .column.ng-scope.col-sm-6, .row-flex-reverse .column.ng-scope.col-sm-6 {
+    flex-basis: 50%;
+}
+
+/* ----- Font Size ----- */
+
+h1{
+font-size:2.5em;
+}
+
+/* ----- Video Hero ----- */
+
+
+.video-hero-content {
+    height: 35vh!important;
+
+
+}
+
+}
+</style>
+
+
+<img class="hide-on-front" src="https://formsandflows.com/wp-content/uploads/2020/07/FF-Logo.png" width="0" onload="
+function removePrintBG(){
+
+	var stylesheetsList = document.styleSheets;
+	for (var i = 0; i < stylesheetsList.length; i++) {
+
+try {
+			var stylesheetsListRules = stylesheetsList[i].cssRules;
+
+		}
+		catch(err) {
+			break
+		}
+		if (stylesheetsListRules)
+
+		for(var j=0;  j < stylesheetsListRules.length; j++){
+
+			if(stylesheetsListRules[j].cssText.indexOf('@media print') !=-1 ){
+				if(stylesheetsListRules[j].cssRules[0].selectorText == '*, ::after, ::before' ){
+					stylesheetsListRules[j].deleteRule(0);
+				}
+
+			}
+		}
+	}
+} 
+
+removePrintBG();
+
+">
+<div class="hide-on-front">♻️ Multi-Form Use Block! P / Q ♻️ Click for more info.</div> 
+ <style>
+  
+/* =========================
+   RECOMMENDED USE 
+=========================== */
+This section is GREAT for any purpose where you need to collect information from your clients. 
+We recommend using it for your:
+1️⃣ proposals (as seen here)
+2️⃣ lead capture
+3️⃣ questionnaires
+  
+/* =========================
+   FINAL DIRECTIONS
+=========================== */
+Delete this code block when you are done designing and are feeling good about your form! (But don’t worry, if you forget to delete, this will NOT be visible to your client.)
+
+<div class="ff-image-slider-style3 full-width-row">
+
+  <div class="swiper-container swiper-container-style3">
+   <div class="heading-text"><img src="https://static.showit.co/file/yooByo-5btLXAw-XIIAhsw/78210/ff_logo.png">
+<h1> Proposal Title</h1>
+<h3>For {{client.firstName}} </h3>
+</div>
+
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide" style="background-image:url(https://static.showit.co/file/Kgdd8EsmR1Z3BqSxS1hToQ/78210/olivephoto18_scaled.jpg)">
+     
+      </div>
+
+      <div class="swiper-slide" style="background-image:url(https://static.showit.co/file/Wh8sEJMQbNBic3liJqnDuA/78210/olivephoto20_scaled.jpg)">
+       
+      </div>
+
+      <div class="swiper-slide" style="background-image:url(https://static.showit.co/file/fdESDGUz2u1x4im3lcFe-w/78210/olivephoto21_scaled.jpg)">
+       
+      </div>
+
+
+    </div>
+
+  </div>
+</div>
+
+
+<style>
+
+/* =========================
+   EDITABLE
+   ========================= */
+
+/* -----  Overall Height  ----- */
+.ff-image-slider-style3{
+    height:35vw;
+  min-height:300px;
+    max-height:500px;
+padding:0px!important;
+  }
+
+/* -----  Image positioning centered ----- */
+.ff-image-slider-style3 .swiper-slide {
+    background-position: bottom;
+    background-size: cover;
+  }
+
+
+/* -----  Navigation Dots  ----- */
+.ff-image-slider-style3 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+}
+
+/* -----  Navigation Arrows  ----- */
+.ff-image-slider-style3 .swiper-button-next-style3:after, .ff-image-slider-style3 .swiper-button-prev-style3:after{
+color:white;
+}
+
+.ff-image-slider-style3 .heading-text {
+   display: flex;
+   padding:20px;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 99;
+    background-color: rgba(255,255,255,0.5);
+    flex-direction:column;
+}
+
+.ff-image-slider-style3 .heading-text h1{
+color:black;
+font-weight:bold;
+text-align:center;
+}
+
+.ff-image-slider-style3 .heading-text img{
+min-width:100px;
+width:10%;
+}
+
+
+/* =========================
+   DONT TOUCH
+   ========================= */
+
+
+   .ff-image-slider-style3 [class^="swiper-button-"]{
+    width:50px;
+
+  }
+
+  .ff-image-slider-style3  .swiper-container-style3 {
+    width: 100%;
+    height:100%;
+  }
+
+
+  .ff-image-slider-style3 .swiper-slide {
+    background-size: cover;
+    height: 100%;
+
+  }
+
+
+  .ff-image-slider-style3 .swiper-slide .content {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    padding: 1% 5%;
+  }
+
+  .ff-image-slider-style3 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 5px;
+    position: relative;
+    opacity: 0.2;
+    transition: all 0.3s ease;
+  }
+
+
+  .ff-image-slider-style3 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet:hover, .ff-image-slider-style3 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+  </style>
+<b class="hide-on-front" style="color:black">Hero Javascript</b>
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+<script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"/></script>
+
+  <img class="hide-on-front" src="https://formsandflows.com/wp-content/uploads/2020/05/Forms-and-Flows.png" onload = "
+
+function imageSlider3() {
+ 
+
+   var swiper_style3 = new Swiper('.swiper-container-style3', {
+      effect: 'fade',
+      grabCursor: true,
+      loop:true,
+      speed:800,
+      centeredSlides: true,
+      slidesPerView: 1,
+      pagination: {
+        el: '.swiper-pagination-style3',
+        clickable: true,
+      },
+
+      autoplay: {
+    delay: 2000,
+    disableOnInteraction:true,
+  },
+  
+ 
+      keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  }
+    });
+
+}
+
+function waitForElement3(){
+  if(typeof swiper_style3 === 'undefined'){
+    if (typeof Swiper !== 'undefined'){ 
+      imageSlider3();
+    }
+    
+    else{
+      setTimeout(waitForElement3, 250);
+    }
+  }
+}
+
+waitForElement3();
+
+
+"
+
+ width="1" style="display:none">
+<div class="hide-on-front">♻️ Multi-Form Use Block! P / Q ♻️ Click for more info.</div> 
+ <style>
+  
+/* =========================
+   RECOMMENDED USE 
+=========================== */
+This section is GREAT for any purpose where you need to collect information from your clients. 
+We recommend using it for your:
+1️⃣ proposals (as seen here)
+2️⃣ lead capture
+3️⃣ questionnaires
+  
+/* =========================
+   FINAL DIRECTIONS
+=========================== */
+Delete this code block when you are done designing and are feeling good about your form! (But don’t worry, if you forget to delete, this will NOT be visible to your client.)
+
+<div class="ff-content-style-3 image-left full-width-row">
+  <div class="overall-section">
+
+    <div class="image-column" style="background-image:url(https://static.showit.co/file/cMkkPASeUcoc-tNGbnzJEQ/78210/alg_6778.jpg);   background-position:center;">  
+    </div>
+
+    <div class="text-column right-slide-in">
+      <div class="content-text">
+        <h4>About!</h4>
+        <h2>Hi - I'm Cait</h2>
+        <p>I'm Cait. I started my online career oin 2018 when I started a photography business (what in the world was I doing??). Since I was working as an Operations Manager for a nonprofit, I wasn't surprised to quickly learn that I needed a system to manage the business while I worked ful time or else I'd start pulling my hair out.  Cue, Dubsado.<br><br>
+          Dubsado allowed me to completely revolutionize my workflows, it allowed me to automate so much of my client lead process, I quickly fell in love.
+
+        </p>
+        <a href="https://www.formsandflows.com/about/" target="_blank">Learn More</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<style>
+
+
+/* =========================
+   EDITABLE
+   ========================= */
+
+   /* -----  Background   ----- */
+
+   .ff-content-style-3.image-left {
+     background-color:var(--third-color) ;
+     padding: 50px 20px;
+   }
+
+   /* -----  Main Section   ----- */
+
+   .ff-content-style-3.image-left .overall-section{
+     max-width:950px;
+   }
+
+   /* -----  Image Column Image ----- */
+
+   .ff-content-style-3 .image-column{
+     background-size:cover;
+     border: 6px;
+     border-style: solid;
+     border-color: white;
+   }
+
+
+  /* -----  Content Text  ----- */
+
+  .ff-content-style-3 .content-text{
+   margin-top: 50px;
+   margin-bottom: 50px;
+   text-align:center;
+   padding: 50px 40px;
+   background-color:var(--second-color);
+   border: 5px;
+   border-style: solid;
+   border-color: white;
+   box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
+ }
+
+
+
+ /* -----  Text Styles  ----- */
+
+ .ff-content-style-3 .content-text h1{
+   margin-top:15px;
+ }
+
+ .ff-content-style-3 .content-text h4{
+   margin:0px;
+ }
+
+ .ff-content-style-3 .content-text p{
+ }
+
+
+ /* -----  Content Button  ----- */
+
+ .ff-content-style-3 .content-text a{
+   background-color:var(--first-color);
+   padding:10px 25px;
+   margin-top: 15px;
+   text-transform:uppercase;
+   color:white;
+ }
+
+
+/* =========================
+  DON'T TOUCH
+  ========================= */
+
+  /* -----  Main Section   ----- */
+
+  .ff-content-style-3 .overall-section{
+   margin:auto;
+  display:flex;
+ }
+
+
+
+  /* -----  Text Column    ----- */
+
+  .ff-content-style-3  .text-column{
+    flex-basis:50%;
+    z-index:1;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ff-content-style-3.image-left .content-text{
+margin-left:-20%;
+}
+
+.ff-content-style-3.image-right .content-text{
+margin-right:-20%;
+}
+
+
+   .ff-content-style-3  .image-column{
+    flex-basis:50%;
+    z-index:0; 
+    min-height:250px;
+  }
+
+
+/* -----  Content Button  ----- */
+
+.ff-content-style-3 .content-text a{
+  display:inline-block;
+}
+
+
+/* -----  Mobile Styles   ----- */
+
+@media screen and (max-width: 700px) {
+  .ff-content-style-3 .overall-section {
+    flex-direction:column;
+
+  }
+
+.ff-content-style-3.image-right .overall-section {
+    flex-direction:column-reverse!important;
+  }
+
+  .ff-content-style-3 .content-text{
+    margin: -50px 25px 10px 25px!important;
+  }
+
+.ff-content-style-3 .text-column{
+        overflow: visible;
+  }
+
+
+}
+</style>
+<div class="hide-on-front">♻️ Multi-Form Use Block! P / Q ♻️ Click for more info.</div> 
+ <style>
+  
+/* =========================
+   RECOMMENDED USE 
+=========================== */
+This section is GREAT for any purpose where you need to collect information from your clients. 
+We recommend using it for your:
+1️⃣ proposals (as seen here)
+2️⃣ lead capture
+3️⃣ questionnaires
+  
+/* =========================
+   FINAL DIRECTIONS
+=========================== */
+Delete this code block when you are done designing and are feeling good about your form! (But don’t worry, if you forget to delete, this will NOT be visible to your client.)
+
+<div class="ff-content-style-3 image-right full-width-row">
+  <div class="overall-section">
+
+  
+    <div class="text-column left-slide-in">
+      <div class="content-text">
+       <h4>What We Do</h4>
+                <h2>Forms & Flows</h2>
+                <p>Forms & Flows is your one stop shop for all things Dubsado.<br><br> We help you create beautiful forms with no coding experience necessary. Our free course Beautiful Dubsado Forms teaches you absolutely everything you need to know about creating beautiful proposals within Dubsado.<BR><BR>
+We offer beautiful Templates and Code Snippets to help you stand out from your competitors with premium Dubsado templates that are built with you in mind. Our templates are coded to allow you to easily update, edit and change as your business grows.
+<br><br>
+No Dubsado setup would be complete without workflows. We help you aautomate your Dubsado account with strategic, automated workflows, canned emails, contracts, and packages. You'll get everything you need to map out your process and take complete control.<br>
+ </p>
+        <a href="https://www.formsandflows.com/about/" target="_blank">Learn More</a>
+      </div>
+    </div>
+
+   <div class="image-column" style="background-image:url(https://static.showit.co/file/UExYMiLD8rdRgoHrcuYDiA/78210/capture-2024-09-10-205808.png); background-position:center;">  
+    </div>
+
+
+
+  </div>
+</div>
+
+
+<style>
+
+
+/* =========================
+   EDITABLE
+   ========================= */
+
+   /* -----  Background   ----- */
+
+   .ff-content-style-3 {
+     background-color:var(--third-color) ;
+     padding: 50px 20px;
+   }
+
+   /* -----  Main Section   ----- */
+
+   .ff-content-style-3 .overall-section{
+     max-width:950px;
+   }
+
+   /* -----  Image Column Image ----- */
+
+   .ff-content-style-3 .image-column{
+     background-size:cover;
+     border: 6px;
+     border-style: solid;
+     border-color: white;
+   }
+
+
+  /* -----  Content Text  ----- */
+
+  .ff-content-style-3 .content-text{
+   margin-top: 50px;
+   margin-bottom: 50px;
+   text-align:center;
+   padding: 50px 40px;
+   background-color:var(--second-color);
+   border: 5px;
+   border-style: solid;
+   border-color: white;
+   box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
+ }
+
+
+ /* -----  Text Styles  ----- */
+
+ .ff-content-style-3 .content-text h1{
+   margin-top:15px;
+ }
+
+ .ff-content-style-3 .content-text h4{
+   margin:0px;
+ }
+
+ .ff-content-style-3 .content-text p{
+ }
+
+
+ /* -----  Content Button  ----- */
+
+ .ff-content-style-3 .content-text a{
+   background-color:var(--first-color);
+   padding:10px 25px;
+   margin-top: 15px;
+   text-transform:uppercase;
+   color:white;
+ }
+
+
+/* =========================
+  DON'T TOUCH
+  ========================= */
+
+  /* -----  Main Section   ----- */
+
+  .ff-content-style-3 .overall-section{
+   margin:auto;
+  display:flex;
+ }
+
+
+
+  /* -----  Text Column    ----- */
+
+  .ff-content-style-3  .text-column{
+    flex-basis:50%;
+    z-index:1;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ff-content-style-3.image-left .content-text{
+margin-left:-20%;
+}
+
+.ff-content-style-3.image-right .content-text{
+margin-right:-20%;
+}
+
+   .ff-content-style-3  .image-column{
+    flex-basis:50%;
+    z-index:0; 
+    min-height:250px;
+  }
+
+
+/* -----  Content Button  ----- */
+
+.ff-content-style-3 .content-text a{
+  display:inline-block;
+}
+
+
+/* -----  Mobile Styles   ----- */
+
+@media screen and (max-width: 700px) {
+  .ff-content-style-3 .overall-section {
+    flex-direction:column;
+
+  }
+
+.ff-content-style-3.image-right .overall-section {
+    flex-direction:column-reverse!important;
+  }
+
+  .ff-content-style-3 .content-text{
+    margin: -50px 25px 10px 25px!important;
+  }
+
+.ff-content-style-3 .text-column{
+        overflow: visible;
+  }
+
+
+}
+</style>
+
+/* -----  3 column container ----- */
+
+/* -----  column 1 / package 1----- */
+
+<b class="hide-on-front" style="color:black">Animate left</b>
+
+<div class='animate-left-identify animation-identify'"></div>
+
+/* -----  column 2 / package 2 ----- */
+<b class="hide-on-front" style="color:black">Animate Up</b>
+
+<div class='animate-up-identify'></div>
+
+/* -----  column 3 / package 3----- */
+<b class="hide-on-front" style="color:black">Animate Right</b>
+
+<div class='animate-right-identify'></div>
+
+<b class="hide-on-front" style="color:black">package Identifier: Style 1 (Overlapping on the Left)</b>
+
+<div class='package-style1-identify'></div>
+
+
+/* -----  2 column container ----- */
+
+<b class="hide-on-front" style="color:black">Animate Right</b>
+
+<div class='animate-right-identify' style="padding:0px!important; margin:0px;"></div>
+
+<b class="hide-on-front" style="color:black">Row Identifier: Style 1 - Split Color</b>
+
+/* -----  2 column container ----- */
+
+<div class='row-style1-identify'></div>
+
+<b class="hide-on-front" style="color:black">Row Identifier: Style 4 - Solid BG</b>
+
+<div class='row-style4-identify'></div>
+
+<b class="hide-on-front" style="color:black">package Identifier: Style 2 (Overlapping on the Right)</b>
+
+<div class='package-style2-identify'></div>
+
+<b class="hide-on-front" style="color:black">Animate Left</b>
+
+<div class='animate-left-identify' style="padding:0px!important; margin:0px;"></div>
+
+/* -----  2 column container ----- */
+
+<b class="hide-on-front" style="color:black">Row Identifier: Style 2 - Split Color</b>
+
+<div class='row-style2-identify'></div>
+
+<b class="hide-on-front" style="color:black">package Identifier: Style 1 (Overlapping on the Left)</b>
+
+<div class='package-style1-identify'></div>
+
+<b class="hide-on-front" style="color:black">Animate Right</b>
+
+<div class='animate-right-identify' style="padding:0px!important; margin:0px;"></div>
+
+<div class="ff-faq-section-style3">
+
+<div class="faq-outer">
+  <input id="faq-tab-1" type="radio" name="faq-tab">
+  <label for="faq-tab-1" class="faq-tab-style3"><span class="faq-number">1</span>Frequently Asked Question 1</label>
+  <div class="faq-tab-content">
+    <p>
+      Cras posuere leo vitae odio mollis, ut hendrerit orci rutrum. Nullam pretium ante vel metus convallis porta. Sed finibus tincidunt enim, id posuere diam placerat in. Sed nunc mi, pretium in nunc sed, tristique pellentesque dolor. Morbi a volutpat elit. Proin vitae nibh id arcu vehicula aliquam. Sed ac laoreet velit. In tortor arcu, faucibus eu lacus placerat, scelerisque efficitur felis.
+    </p>
+  </div>
+</div>
+
+<div class="faq-outer">
+  <input id="faq-tab-2" type="radio" name="faq-tab">
+  <label for="faq-tab-2" class="faq-tab-style3"><span class="faq-number">2</span>Frequently Asked Question 1</label>
+  <div class="faq-tab-content">
+    <p>
+      Cras posuere leo vitae odio mollis, ut hendrerit orci rutrum. Nullam pretium ante vel metus convallis porta. Sed finibus tincidunt enim, id posuere diam placerat in. Sed nunc mi, pretium in nunc sed, tristique pellentesque dolor. Morbi a volutpat elit. Proin vitae nibh id arcu vehicula aliquam. Sed ac laoreet velit. In tortor arcu, faucibus eu lacus placerat, scelerisque efficitur felis.
+    </p>
+  </div>
+</div>
+
+<div class="faq-outer">
+  <input id="faq-tab-3" type="radio" name="faq-tab">
+  <label for="faq-tab-3" class="faq-tab-style3"><span class="faq-number">3</span>Frequently Asked Question 1</label>
+  <div class="faq-tab-content">
+    <p>
+      Cras posuere leo vitae odio mollis, ut hendrerit orci rutrum. Nullam pretium ante vel metus convallis porta. Sed finibus tincidunt enim, id posuere diam placerat in. Sed nunc mi, pretium in nunc sed, tristique pellentesque dolor. Morbi a volutpat elit. Proin vitae nibh id arcu vehicula aliquam. Sed ac laoreet velit. In tortor arcu, faucibus eu lacus placerat, scelerisque efficitur felis.
+    </p>
+  </div>
+</div>
+
+<div class="faq-outer">
+  <input id="faq-tab-4" type="radio" name="faq-tab">
+  <label for="faq-tab-4" class="faq-tab-style3"><span class="faq-number">4</span>Frequently Asked Question 1</label>
+  <div class="faq-tab-content">
+    <p>
+      Cras posuere leo vitae odio mollis, ut hendrerit orci rutrum. Nullam pretium ante vel metus convallis porta. Sed finibus tincidunt enim, id posuere diam placerat in. Sed nunc mi, pretium in nunc sed, tristique pellentesque dolor. Morbi a volutpat elit. Proin vitae nibh id arcu vehicula aliquam. Sed ac laoreet velit. In tortor arcu, faucibus eu lacus placerat, scelerisque efficitur felis.
+    </p>
+  </div>
+</div>
+</div>
+  
+
+<style>
+
+/****** EDITABLE CODE ******/
+
+.ff-faq-section-style3{
+background-color:transparent
+}
+
+.ff-faq-section-style3 .faq-outer{
+  max-width:600px;
+  margin:20px auto;
+}
+
+.ff-faq-section-style3 label {
+  background:var(--second-color);
+  color: #2b2d2f;
+  border:0px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-weight:bold;
+  padding: 10px 25px;
+  padding-left:15px;
+  margin-top:10px;
+  margin-bottom:0px;
+}
+
+
+.ff-faq-section-style3 .faq-number {
+padding-right:25px;
+font-size:2em;
+}
+
+.ff-faq-section-style3 .faq-tab-content {
+  background: #fff;
+}
+
+
+.ff-faq-section-style3 .faq-tab-content p{
+  color: black;
+}
+
+
+
+
+/****** DON'T TOUCH ******/
+
+
+.ff-faq-section-style3 .faq-section-style3{
+  margin:20px;
+}
+
+
+.ff-faq-section-style3 label {
+  display: block;
+}
+
+
+.ff-faq-section-style3 .faq-tab-style3 {
+  position:relative;
+  display: flex;
+  align-items: center;
+}
+
+.ff-faq-section-style3 input {
+  display: none;
+}
+
+
+.ff-faq-section-style3 label.faq-tab-style3::after {
+  content:"\276F";
+  position: absolute;
+  right: 10px;
+  display: block;
+  transition: all 0.4s;
+}
+
+@media screen and (max-width: 600px) {
+.ff-faq-section-style3 label.faq-tab-style3::after {
+position: relative!important;
+}
+}
+
+.ff-faq-section-style3 input:checked + label::after
+{
+  transform: rotate(90deg);
+}
+
+.ff-faq-section-style3 input:checked + label::after
+{
+  content:"\2715";
+}
+
+
+
+.ff-faq-section-style3 .faq-tab-content {
+  overflow: hidden;
+  max-height: 0;
+}
+
+.ff-faq-section-style3 .faq-tab-content p {
+  margin: 20px;
+}
+
+
+.ff-faq-section-style3 input:checked + label + .faq-tab-content {
+  max-height: none;
+}
+</style>
+
+
+
+<img class="hide-on-front" src="https://formsandflows.com/wp-content/uploads/2020/05/Forms-and-Flows.png" onload = "
+
+function uncheckRadio() {
+
+ jQuery('input[name=faq-tab]').click(function(){
+  var jQueryradio = jQuery(this);
+
+        // if this was previously checked
+        if (jQueryradio.data('waschecked') == true)
+        {
+          jQueryradio.prop('checked', false);
+          jQueryradio.data('waschecked', false);
+        }
+        else
+          jQueryradio.data('waschecked', true);
+        
+        // remove was checked from other radios
+        jQueryradio.siblings('input[name=faq-tab]').data('waschecked', false);
+      });
+
+}
+uncheckRadio();
+
+" width="0px">
+
+<script type="text/javascript">
+window.autoplay_slider = 'true';   <!-- true or false (NO CAPITALS) -->
+window.autoplay_speed = '2500';   <!-- In Milli Seconds -->
+
+</script/>
+
+<div class="ff-image-slider-style6 full-width-row">
+
+ <div class="swiper-container swiper-container-style6">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://static.showit.co/file/QigfzejpgjhlNwwhr34kpA/78210/vertical_2.jpg"></div>
+      <div class="swiper-slide"><img src="https://static.showit.co/file/tcPEo7kAxylL4VoT0wlxNQ/78210/6_1024x683.jpg"></div>
+      <div class="swiper-slide"><img src="https://static.showit.co/file/-4dx6GB2EThiqgw7KX0Ogw/78210/blog_7.jpg"></div>
+      <div class="swiper-slide"><img src="https://static.showit.co/file/pUu6S2we-cxfjM04lDzQyQ/78210/1_2560x1707.jpg"></div>
+      <div class="swiper-slide"><img src="https://static.showit.co/file/vKyUneHTsZlxgY-czrlp6A/78210/dubsado-questionnaire-example-juniper.png"></div>
+      <div class="swiper-slide"><img src="https://static.showit.co/file/SWVUDGQO-TvqdfK4GCrGYw/78210/dubsado-lead-capture-example-juniper.png"></div>
+      <div class="swiper-slide"><img src="https://static.showit.co/file/S24z6A55R5VwQ9V2BDYikQ/78210/portfolio-style-2.gif"></div>
+      <div class="swiper-slide"><img src="https://static.showit.co/file/UqQfBTg8nImU90TcA7iJ1g/78210/juniper-dubsado-proposal-template-mockup.png"></div>
+      <div class="swiper-slide"><img src="https://static.showit.co/file/fdESDGUz2u1x4im3lcFe-w/78210/olivephoto21_scaled.jpg"></div>
+
+    </div>
+
+
+
+
+     <!-- Navigation Arrows -->
+    <div class="swiper-button-prev swiper-button-prev-style6"></div>
+
+    <div class="swiper-button-next swiper-button-next-style6"></div>
+  
+
+    </div>
+
+
+  </div>
+</div>
+
+
+<style>
+
+/* =========================
+   EDITABLE
+   ========================= */
+
+/* -----  Overall Height  ----- */
+.ff-image-slider-style6{
+    height:350px;
+  }
+
+
+/* -----  Navigation Arrows  ----- */
+.ff-image-slider-style6 .swiper-button-next-style6:after, .ff-image-slider-style6 .swiper-button-prev-style6:after{
+color:white;
+}
+
+
+
+/* =========================
+   DONT TOUCH
+   ========================= */
+
+
+.swiper-container-style6 {
+      width: 100%;
+      height: 100%;
+    }
+
+
+
+
+.swiper-container-style6 .swiper-slide {
+  width:auto!important;
+        text-align: center;
+        font-size: 18px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    
+    }
+
+
+.swiper-container-style6 .swiper-slide img{
+ height:100%;
+}    
+
+
+
+
+
+.ff-image-slider-style6 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet:hover, .ff-image-slider-style6 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+  </style>
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+<script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"/></script>
+
+  <img class="hide-on-front" src="https://formsandflows.com/wp-content/uploads/2020/05/Forms-and-Flows.png" onload = "
+
+function imageSlider6() {
+ 
+
+   var swiper_style6 = new Swiper('.swiper-container-style6', {
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+      loop:true,
+      autoplay: autoplay_slider,
+autoplay: {
+   delay: autoplay_speed,
+ },
+      pagination: {
+        el: '.swiper-pagination-style6',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next-style6',
+        prevEl: '.swiper-button-prev-style6',
+      },
+      keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  }
+    });
+
+}
+
+function waitForElement6(){
+  if(typeof swiper_style6 === 'undefined'){
+    if (typeof Swiper !== 'undefined'){ 
+      imageSlider6();
+    }
+    
+    else{
+      setTimeout(waitForElement6, 250);
+    }
+  }
+}
+
+waitForElement6();
+
+
+"
+
+ width="1" style="display:none">
