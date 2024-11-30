@@ -1,0 +1,3183 @@
+"<div class=""hide-on-front""><img src=""https://formsandflows.com/wp-content/uploads/2020/07/FF-Logo.png"" width=""20""/> Dubsado Toolkit</div> 
+
+<div class=""hide-on-front toggle-div"" style=""margin-left:20px!important;"">
+<input type=""checkbox"" id=""toggle-main-guidelines"" value=""supress"" class=""hide-on-front"">
+<label class=""hide-on-front toggle-box"" for=""toggle-main-guidelines"">Toggle Guidelines</label>
+</div>
+
+<div class=""hide-on-front toggle-div"" style=""margin-left:20px!important;"">
+<input type=""checkbox"" id=""toggle-hover-guidelines"" value=""supress"" class=""hide-on-front"">
+<label class=""hide-on-front toggle-box"" for=""toggle-hover-guidelines"">Toggle Hover Guidelines</label>
+</div>
+
+<link rel=""stylesheet"" href=""https://formsandflows.com/form-codes/dubsadotoolkit.min.css"">
+
+<script type=""text/javascript"" src=""https://formsandflows.com/form-codes/dubsadotoolkit.min.js""/ defer></script/>
+
+
+<style>
+
+#edit-form .hide-on-front{
+display:inline-block;
+}
+
+.hide-on-front{
+display: none;
+}
+
+</style>"
+"/* ===============================
+    1 - IMPORT FIVE CUSTOM FONTS
+   =============================== */
+
+@font-face { 
+font-family: 'INSERT FONT NAME'; 
+src: url('https://static.showit.co/file/WwYOYTNAR62fW_u1P8jz7A/shared/chloe-regular.woff') format('woff');
+font-weight: normal; 
+font-style: normal; 
+}
+
+@font-face { 
+font-family: 'INSERT FONT NAME'; 
+src: url('https://static.showit.co/file/Yd6ge4YBRHC68hRWKCboeQ/shared/north-regular.woff') format('woff');
+font-weight: normal; 
+font-style: normal; 
+}
+
+@font-face { 
+font-family: 'INSERT FONT NAME'; 
+src: url('https://static.showit.co/file/Yd6ge4YBRHC68hRWKCboeQ/shared/north-regular.woff') format('woff');
+font-weight: normal; 
+font-style: normal; 
+}
+
+@font-face { 
+font-family: 'INSERT FONT NAME'; 
+src: url('https://static.showit.co/file/_k88C_aJScu6_el-eYe6sA/shared/eisha_script.woff') format('woff');
+font-weight: normal; 
+font-style: normal; 
+}
+
+@font-face { 
+font-family: 'INSERT FONT NAME'; 
+src: url('https://static.showit.co/file/CocEvxzKSju3yUPba_895Q/shared/neutratext-book.woff') format('woff');
+font-weight: normal; 
+font-style: normal; 
+}"
+"/* ===============================
+    2 - Font Styles and Styling
+   =============================== */
+/* This block sets the font family, weight, style, size, and color for the entire Dubsado form, including paragraphs, labels, inputs, textareas, select fields, and other form elements */
+
+.dubsado-form, 
+.dubsado-form p, 
+.dubsado-form .form-element__input-label, 
+.form-checkbox-element .checkbox-option label, 
+.dubsado-form input, 
+.dubsado-form textarea, 
+.dubsado-form select, 
+.form-multiple-choice-element, 
+.radio-option label, 
+.file-element, 
+.form-element-wrapper, .text-editor ol,
+.text-editor ul  {
+	font-family: 'IMPORTED FONT NAME', sans-serif !important; /* Use your imported font here */
+	font-weight: normal;  /* Normal font weight for form text */
+	font-style: normal;   /* Normal font style (not italic) */
+	font-size: 18px;      /* Base font size for form text */
+	letter-spacing: 0em;  /* Default letter spacing */
+	color: #333336;       /* Dark gray text color for readability */
+}
+
+
+/* This block is for any form package element description lines, ensuring it has specific margins and padding for better spacing */
+.form-package-element .descriptionLine {
+    margin: 0;            /* Removes any default margin */
+    font-size: 18px;       /* Ensures consistent font size */
+    padding-top: 15px;     /* Adds space above the description */
+}
+
+/* H1 styling: This is for the main heading of the form. You can customize the font family, weight, color, and style */
+.dubsado-form h1 {
+	font-family: 'IMPORTED FONT NAME', sans-serif; /* Main heading font */
+	font-weight: 400;   /* Regular weight */
+	font-style: normal;  /* Non-italic */
+	color: #333336;      /* Same dark gray as the text */
+}
+
+/* H2 styling: For secondary headings, similar to H1 but can be adjusted */
+.dubsado-form h2 {
+	font-family: 'IMPORTED FONT NAME', sans-serif; 
+	font-weight: 400; 
+	font-style: normal; 
+	color: #333336;
+}
+
+/* H3 styling: For tertiary headings, keeping consistent with the theme */
+.dubsado-form h3 {
+	font-family: 'IMPORTED FONT NAME', sans-serif; 
+	font-weight: 400; 
+	font-style: normal; 
+	color: #333336;
+}
+
+/* H4 styling: For smaller headings, possibly for section headers. */
+.dubsado-form h4 {
+	font-family: 'IMPORTED FONT NAME', serif; /* Using a serif font for differentiation */
+	font-weight: 400; 
+	font-style: normal; 
+	color: #333336;
+}
+
+
+/* ===============================
+    Additional Important Styling
+   =============================== */
+
+
+/* Adjusting padding for form elements to ensure consistent spacing */
+.dubsado-form input, 
+.dubsado-form textarea, 
+.dubsado-form select {
+	padding: 10px;           /* Uniform padding inside form inputs */
+	border: 1px solid #ccc;   /* Light border around input fields */
+	border-radius: 4px;       /* Slightly rounded corners for input fields */
+}"
+"<div class=""hide-on-front""><img src=""https://formsandflows.com/wp-content/uploads/2020/07/FF-Logo.png"" width=""20""/>Dubsado Form Toolkit</div> 
+
+
+
+<link rel=""stylesheet"" href=""https://cdn.jsdelivr.net/gh/alice-louise/dub-templates@main/conditional-logic.min.css"">
+  
+<script type=""text/javascript"" src=""https://cdn.jsdelivr.net/gh/alice-louise/dub-templates@main/conditional-logic.min.js""/ defer></script/>
+  
+
+
+<style>
+
+#editor .hide-on-front {
+display:inline-block;
+}
+
+.hide-on-front{
+display: none;
+}
+
+</style>"
+"<div class=""hide-on-front"">SHOW CONTAINERS<div>
+<style>
+.sc-LzOjk .cCgOCS{
+opacity: 1;
+border: 2px solid #00a888;
+padding:5px;
+}
+.sc-LzOjk.fYqFss {
+border: 1px solid #969fac;
+border-style: dashed;
+}
+  .hide-on-front {
+    background-color: lightgrey;
+    padding: 5px 10px;
+    font-size:10px;
+}
+</style>"
+"<b class=""hide-on-front"">Conditional Logic Trigger Identifier: conditional-1</b>
+<div class='cl-conditional-1 conditional-trigger-identify'></div>"
+"<b class=""hide-on-front"">Conditional Logic Display Identifier: conditional-1</b>
+<div class='cl-conditional-1 conditional-display-identify'></div>"
+"<b class=""hide-on-front"">Conditional Trigger Group: group1 </b>
+<div class='group-cl-group1 disable-group'></div>
+Sometimes we only want clients to be able to select one package or option.
+To do this; first, install the MAIN CODE listed on a separate line called ""CL Conditional Logic Main Code"". 
+Then add the code above to the column containing each package that you'd like to be part of the group, either in the global columns or individual package columns.
+It's important to start each group with group-cl- followed by whatever you'd like the group to be called, here we've used group1."
+"/* HIDE PROPOSAL TOTAL TEXT */
+ .proposal-total {
+     display: none;
+}
+"
+".client-view-tabs {
+
+display:none;
+
+}"
+"/* =========================
+ TOP BAR
+ ========================= */
+
+ /* Proposal tabs area background */
+  .client-view-tabs {
+    background-color: #f2f2f2!important;
+  }
+  
+
+/* Proposal tabs text */
+.client-view-tabs-col-label{ 
+  color:black!important;
+    letter-spacing: 2px;
+    font-size:14px;
+    transition: 1s;
+  text-transform:uppercase;
+  }
+  
+/* Proposal tabs text when hovered */
+.client-view-tabs-col-label:hover{   
+  color:  black!important;
+    text-decoration: none;
+}
+/* Proposal tabs underline --- use !important */
+.client-view-tabs-col div {
+    display: none;
+    }"
+"<div class=""hide-on-front"">Top Bar</div> 
+
+
+
+
+<script type=""text/javascript"">
+
+window.logoImage = 'https://images.squarespace-cdn.com/content/v1/588b7c50b8a79be9aed296bd/a0dd8525-09f6-4f3a-8488-259d41881bdd/Katie+Chappell+Logo.png?format=1500w';
+
+
+
+
+</script/>
+
+
+
+
+<style>
+
+/* =========================
+
+ EDITABLE
+
+ ========================= */
+
+
+
+
+ /* -----  Image Size  ----- */
+
+.header-logo img{
+
+max-height:50px;
+
+}
+
+
+/*----Text Style----*/
+
+#quote-flow a{
+
+color: white!important;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+   font-family: 'tuttifrutti', sans-serif;
+
+font-weight:normal;
+
+}
+
+
+#quote-flow a:hover{
+
+color:var(--third-color)!important;
+
+}
+
+
+
+/*----Background color &; padding----*/
+
+.row.hidden-print.ng-scope {
+
+padding: 25px;
+
+background-color:var(--main-color)!important;
+
+}
+
+
+td.header-logo{
+
+text-align:left;
+
+}
+
+
+
+
+/* =========================
+
+   DONT TOUCH
+
+   ========================= */
+
+/*----Remove Padding----*/
+
+.container{
+
+padding-top:0px;
+
+}
+
+
+
+/*----Hide Underline----*/
+
+#quote-flow #magic-line {
+
+display: none;
+
+}
+
+
+
+.row.hidden-print.ng-scope {
+
+width: 100vw;
+
+margin: 0rem -50vw;
+
+position: relative;
+
+left: 50%;
+
+right: 50%;
+
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+td.header-logo {
+
+    display: block;
+
+    width: 100%;
+
+}
+
+
+
+td.header-logo img {
+
+    max-width:60vw;
+
+}
+
+
+
+td#proposal {
+
+    display: inline-block;
+
+    width: 33%;
+
+}
+
+
+td#contract {
+
+    display: inline-block;
+
+    width: 33%;
+
+}
+
+td#invoice {
+
+    display: inline-block;
+
+    width: 33%;
+
+}
+
+
+}
+
+
+</style>
+
+<script type=""text/javascript"">
+function addLogoTopBar() 
+{
+
+var logoImageHTML = '<img src='+logoImage+'>';
+
+  var topBar = document.getElementById('quote-flow');
+
+  var tableRow = topBar.getElementsByTagName('TR');
+
+  var logo = tableRow[0].insertCell(0);
+
+  logo.classList.add('header-logo');
+
+  logo.innerHTML = logoImageHTML;
+
+}
+
+function waitTopBar(){
+
+var topBar = document.getElementById('quote-flow');
+
+ if (typeof logoImage !== 'undefined'){ 
+
+ if (typeof topBar !== 'undefined'){ 
+
+
+      addLogoTopBar();
+
+    }
+
+}
+
+    else{
+
+setTimeout(waitTopBar, 250);
+
+    }
+
+}
+
+waitTopBar();
+
+</script>"
+"<div class=""hide-on-front"">Scroll to top</div> 
+
+<div> <div onclick=""javascript:document.body.scrollTop = 0;
+
+ javascript:document.documentElement.scrollTop=0;
+
+"" id=""scroll-to-top""><div class=""top-arrow-style"">&#10132;</div>
+
+ </div> </div> 
+
+
+<style>
+
+/****** SCROLL TO TOP BUTTON *******/
+
+
+#scroll-to-top {
+
+	background-color: var(--main-color);
+
+	color: white;
+
+	border-radius: 100%;
+
+	font-size: 18px;
+
+	height: 50px;
+
+	width: 50px;
+
+}
+
+
+#scroll-to-top:hover {
+
+	background-color: black;
+
+}
+
+
+/* ----- Scroll To Top - DON'T TOUCH ----- */
+
+
+#scroll-to-top {
+
+        display:flex;
+
+ 	position: fixed;
+
+	-webkit-transform: rotate(-90deg);
+
+	transform: rotate(-90deg);
+
+	bottom: 30px;
+
+	right: 30px;
+
+	z-index: 99;
+
+	flex-direction: column;
+
+	align-items: center;
+
+	cursor: pointer;
+
+}
+
+.top-arrow-style {
+
+	margin: auto;
+
+}
+
+
+body {
+
+	scroll-behavior: smooth;
+
+}
+
+@media only screen and (max-width: 767px) {
+
+#submitButton .btn {
+
+    z-index: 999;
+
+}
+
+
+div#submitButton {
+
+    margin: 5px 0px;
+
+}
+
+
+#submitButton .btn {
+
+    margin: 0px!important;
+
+    background-color: white;
+
+}
+
+
+#submitButton .btn[disabled]{
+
+opacity:1;
+
+}
+
+
+
+}
+
+
+</style>"
+"<div class=""hide-on-front"">Print Friendly</div> 
+
+
+<style>
+
+@media print{
+
+/* -----Colours ----- */
+
+* {
+    -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
+    color-adjust: exact !important;                 /*Firefox*/
+     background-attachment: initial!important;
+}
+
+/* -----Hide Scroll to Top ----- */
+
+.scroll-to-top, .top-arrow-style{
+display:none!important;
+}
+
+/* ----- Hide Submit Bar ----- */
+
+div#submitButton {
+    position: relative!important;
+    bottom: 0!important;
+    width: auto!important;
+    margin: 0px!important;
+    left: 0!important;
+    right: 0!important;
+    display: block!important;
+    background:none;
+}
+
+/* ----- Total Text ----- */
+
+#submitButton .btn {
+    display: block!important;
+}
+
+#submitButton{
+font-size:1em;
+}
+
+#submitButton > div{
+color:black!important;
+font-size:2em;
+ }
+
+/* ----- Reduce extra padding ----- */
+
+.full-width-row{
+padding:0px 25px!important;
+}
+
+.full-width-row {
+    min-height: auto!important;
+}
+/* ----- Prevent rows from breaking ----- */
+
+.full-width-row,   .row, .form-group, .column, .form-text {
+    page-break-inside: avoid;
+}
+
+/* ----- Reduce margin on form groups ----- */
+
+.form-group {
+    margin-bottom: 0px!important;
+}
+
+/* ----- Open FAQS ----- */
+
+.faq-tab-content {
+       max-height: 100%!important;
+}
+
+/* ----- Reduce padding on packages ----- */
+
+.packageNotSelected, .packageSelected{
+padding: 2.5%;
+}
+
+
+.package-image,.full-row-1{
+min-height:25vh;
+}
+
+/* ----- Flex Row Styling ----- */
+
+.row-flex .column.ng-scope.col-sm-6, .row-flex-reverse .column.ng-scope.col-sm-6 {
+    flex-basis: 50%;
+}
+
+/* ----- Font Size ----- */
+
+h1{
+font-size:2.5em;
+}
+
+/* ----- Video Hero ----- */
+
+
+.video-hero-content {
+    height: 35vh!important;
+
+
+}
+
+/* ----- Textbox height ----- */
+pre.ng-binding {
+    height: auto!important;
+}
+
+
+}
+</style>
+
+
+<img class=""hide-on-front"" src=""https://formsandflows.com/wp-content/uploads/2020/07/FF-Logo.png"" width=""0"" onload=""
+function removePrintBG(){
+
+	var stylesheetsList = document.styleSheets;
+	for (var i = 0; i < stylesheetsList.length; i++) {
+
+try {
+			var stylesheetsListRules = stylesheetsList[i].cssRules;
+
+		}
+		catch(err) {
+			break
+		}
+		if (stylesheetsListRules)
+
+		for(var j=0;  j < stylesheetsListRules.length; j++){
+
+			if(stylesheetsListRules[j].cssText.indexOf('@media print') !=-1 ){
+				if(stylesheetsListRules[j].cssRules[0].selectorText == '*, ::after, ::before' ){
+					stylesheetsListRules[j].deleteRule(0);
+				}
+
+			}
+		}
+	}
+} 
+
+removePrintBG();
+
+"">"
+"<b class=""hide-on-front"">Fixed Submit Button</b> 
+
+<style>
+
+/* ----- Create a fixed submit bar ----- */
+
+div#submitButton {
+
+     position: fixed;
+
+     bottom: 0;
+
+     width: 100vw;
+
+     margin: 0rem -50vw;
+
+     left: 50%;
+
+     right: 50%;
+
+     display: flex;
+
+     justify-content: center;
+
+     background-color: #f4f5f7;
+
+     }
+
+div#submitButton .btn{
+
+ margin:0px;
+
+}
+
+@media only screen and (max-width: 700px) {
+
+    div#submitButton {
+
+        flex-direction: column;
+
+               height:auto!important;
+
+    }
+
+}
+
+</style>"
+"/* CHANGE TOTAL COLOR */
+
+ .proposal-total {
+
+   color: #ffffff;
+
+}"
+"/* Footer area color*/
+
+.form-viewer-footer {
+
+background-color: #0E2F44;
+
+}"
+"/* HIDE SUBMIT BUTTON */
+ .submit-form-button {
+     display: none;
+}
+"
+"<script type=""application/javascript"">
+    document.querySelector('.submit-form-button').innerHTML = 'New Button Text';
+</script>
+"
+"/* STYLE FILE UPLOADER BUTTON */
+.file-element__drop-zone .upload-btn {
+    font-family: Helvetica, sans-serif; /* Update font */
+    color: #000000 !important; /* Update font color */
+    font-size: 11px; /* Update size of font (you can update the unit to use either “px,” “em,” “rem,” “%,” or “pt”) */
+    font-weight: normal; /* Update weight of font (e.g., 300, 400, 500, etc.) */
+    letter-spacing: 0.35em; /* Update horizontal spacing between text characters (you can update the unit to use either “px,” “em,” “rem,” “%,” or “pt”) */
+    line-height: 0em; /* Update distance between lines of text (you can update the unit to use either “px,” “em,” “rem,” “%,” or “pt”) */
+    text-transform: uppercase; /* Choose between “uppercase,” “lowercase,” “capitalize,” or “none” */
+    font-style: normal; /* Choose between “normal” or “italic” */
+    background-color: #ffffff !important; /* Update background color */
+    border-radius: 0px; /* Update corner radius */
+    border: 2px solid; /* Update border thickness */
+    border-color: #000000; /* Update border color */
+    padding: 20px 15px; /* Update space around button text (first value is vertical spacing, second value is horizontal spacing) */
+}
+/* STYLE FILE UPLOADER BUTTON ON HOVER */
+.file-element__drop-zone .upload-btn:hover {
+    background-color: #000000 !important; /* Update background color on hover */
+    color: #ffffff; /* Update font color on hover */
+    border-color: #000000; /* Update border color on hover */
+}
+"
+"<div class=""ff-image-slider-style6"">
+
+
+
+
+
+
+ <div class=""swiper-container swiper-container-style6"">
+
+
+  <div class=""swiper-wrapper"">
+
+
+   <div class=""swiper-slide""><img decoding=""async"" src=""https://static.showit.co/file/5TOqi_kjTNi_PisJTOxLoQ/78210/4.png""></div>
+
+
+   <div class=""swiper-slide""><img decoding=""async"" src=""https://static.showit.co/file/lTpy8jj_TKGVcSjtJd0vtA/78210/7.png""></div>
+
+
+   <div class=""swiper-slide""><img decoding=""async"" src=""https://static.showit.co/file/vOO184q2RhG34vBHgFZ5MA/78210/3.png""></div>
+
+
+   <div class=""swiper-slide""><img decoding=""async"" src=""https://static.showit.co/file/Qw1Pak1jRxCgJEHGAW16jw/78210/case_study_featured_image_mockup_square_1.png""></div>
+
+
+   <div class=""swiper-slide""><img decoding=""async"" src=""https://static.showit.co/file/g0raQl0LTmiWYJA9MSYRLQ/78210/1.png""></div>
+
+
+   <div class=""swiper-slide""><img decoding=""async"" src=""https://static.showit.co/file/lZ7e8HLzRZu_qHA3_052kA/78210/2.png""></div>
+
+
+   <div class=""swiper-slide""><img decoding=""async"" src=""https://static.showit.co/file/MWntr6IMRgOQzytUxXP-QA/78210/6.png""></div>
+
+
+   <div class=""swiper-slide""><img decoding=""async"" src=""https://static.showit.co/file/hcmhTNwBTkWvsKD0SfPFtg/78210/portfolio_horizontal_mockups.png""></div>
+
+
+   <div class=""swiper-slide""><img decoding=""async"" src=""https://static.showit.co/file/iXdBU3gKTQSZuzJudO6ytw/78210/case_study_featured_image_mockup_verticalin_post_1.png""></div>
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+  <!-- Navigation Arrows -->
+
+
+  <div class=""swiper-button-prev swiper-button-prev-style6""></div>
+
+
+
+
+
+
+  <div class=""swiper-button-next swiper-button-next-style6""></div>
+
+
+
+
+
+
+
+
+
+
+ </div>
+
+
+</div>
+
+
+
+
+
+
+<style>
+
+
+
+
+
+
+/* =========================
+
+
+  EDITABLE
+
+
+  ========================= */
+
+
+/* ----- Overall Height ----- */
+
+
+.ff-image-slider-style6{
+
+
+  height:350px;
+
+
+ }
+
+
+/* ----- Navigation Arrows ----- */
+
+
+.ff-image-slider-style6 .swiper-button-next-style6:after, .ff-image-slider-style6 .swiper-button-prev-style6:after{
+
+
+color:white;
+
+
+}
+
+
+/* =========================
+
+
+  DONT TOUCH
+
+
+  ========================= */
+
+
+.swiper-container-style6 {
+
+
+   width: 100%;
+
+
+   height: 100%;
+
+
+  }
+
+
+.swiper-container-style6 .swiper-slide {
+
+
+ width:auto!important;
+
+
+    text-align: center;
+
+
+    font-size: 18px;
+
+
+    display: -webkit-box;
+
+
+    display: -ms-flexbox;
+
+
+    display: -webkit-flex;
+
+
+    display: flex;
+
+
+    -webkit-box-pack: center;
+
+
+    -ms-flex-pack: center;
+
+
+    -webkit-justify-content: center;
+
+
+    justify-content: center;
+
+
+    -webkit-box-align: center;
+
+
+    -ms-flex-align: center;
+
+
+    -webkit-align-items: center;
+
+
+    align-items: center;
+
+
+   
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+.swiper-container-style6 .swiper-slide img{
+
+
+ height:100%;
+
+
+}   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ff-image-slider-style6 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet:hover, .ff-image-slider-style6 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+
+
+ opacity: 1;
+
+
+}
+
+
+
+
+
+
+.swiper-container{
+
+
+overflow:hidden;
+
+
+}
+
+
+.swiper-button-prev.swiper-button-prev-style6 {
+
+
+  left: 20px;
+
+
+}
+
+
+
+
+
+
+ .swiper-button-next.swiper-button-next-style6 {
+
+
+  right: 20px;
+
+
+}
+
+
+ </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <img decoding=""async"" class=""hide-on-front"" src=""https://formsandflows.com/wp-content/uploads/2020/05/Forms-and-Flows.png"" onload=""
+
+
+
+
+
+
+function imageSlider6() {
+
+
+ 
+
+
+
+
+
+
+  var swiper_style6 = new Swiper('.swiper-container-style6', {
+
+
+   slidesPerView: 'auto',
+
+
+   spaceBetween: 10,
+
+
+   loop:true,
+
+
+   pagination: {
+
+
+    el: '.swiper-pagination-style6',
+
+
+    clickable: true,
+
+
+   },
+
+
+   navigation: {
+
+
+    nextEl: '.swiper-button-next-style6',
+
+
+    prevEl: '.swiper-button-prev-style6',
+
+
+   },
+
+
+   keyboard: {
+
+
+  enabled: true,
+
+
+  onlyInViewport: true,
+
+
+ }
+
+
+  });
+
+
+
+
+
+
+}
+
+
+
+
+
+
+function waitForElement6(){
+
+
+ if(typeof swiper_style6 === 'undefined'){
+
+
+  if (typeof Swiper !== 'undefined'){ 
+
+
+   imageSlider6();
+
+
+  }
+
+
+   
+
+
+  else{
+
+
+   setTimeout(waitForElement6, 250);
+
+
+  }
+
+
+ }
+
+
+}
+
+
+
+
+
+
+waitForElement6();
+
+
+
+
+
+
+
+
+
+
+"" width=""1"" style=""display:none"">
+
+
+
+
+
+
+<link rel=""stylesheet"" href=""https://unpkg.com/swiper/swiper-bundle.min.css"">
+
+
+
+
+<script type=""text/javascript"" src=""https://unpkg.com/swiper/swiper-bundle.min.js""/>"
+"<div class=""single-sliding-image-container"">
+  <div class=""scroll-on-hover"" style=""background-image: url(https://static.showit.co/file/ywG-CYf2R7OxRbyFu1hnig/78210/new_builder_go_getter_proposal.png);"">
+    </div>  
+</div>
+
+
+<style>
+/* =========================
+   EDITABLE
+   ========================= */
+
+
+/*---Container---*/
+.single-sliding-image-container{
+  box-shadow: 0 0 13px 0 rgba(0,0,0,.11);
+  height:300px;
+}
+
+
+/*---Scroll image on hover---*/
+.scroll-on-hover{
+transition-duration: 5s;
+}
+
+
+
+
+/* =========================
+   DONT TOUCH
+   ========================= */
+
+
+/*---Scroll image on hover---*/
+.scroll-on-hover{
+  transition-property:background-position;
+  transition-timing-function: linear;
+  background-position: top center;
+  background-size: 100% auto!important;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+
+.scroll-on-hover:hover {
+  background-position: bottom center!important;
+}
+
+
+</style>"
+"<script type=""application/javascript"">
+    var diReplaceMenuItemScript = document.createElement('script');
+diReplaceMenuItemScript.setAttribute('type', 'text/javascript');
+diReplaceMenuItemScript.src = ""https://cdn.jsdelivr.net/npm/@dub-ins/change-dubsado-menu-label@1.5.0/index.js"";
+document.getElementsByTagName(""head"")[0].appendChild(diReplaceMenuItemScript);
+diReplaceMenuItemScript.onload = function() {
+    replaceDiMenuItem('Proposal', 'Your Wish'); //Update your Proposal name
+    replaceDiMenuItem('Contract', 'Is My'); //Update your Contract name
+    replaceDiMenuItem('Invoice', 'Command'); //Update your Invoice name
+}</script>"
+"<script type=""application/javascript"">
+    var diReplaceMenuItemScript = document.createElement('script');
+diReplaceMenuItemScript.setAttribute('type', 'text/javascript');
+diReplaceMenuItemScript.src = ""https://cdn.jsdelivr.net/npm/@dub-ins/change-dubsado-menu-label@1.5.0/index.js"";
+document.getElementsByTagName(""head"")[0].appendChild(diReplaceMenuItemScript);
+diReplaceMenuItemScript.onload = function() {
+    replaceDiMenuItem('Schedule', 'Schedule'); //Update your Scheduler name
+    replaceDiMenuItem('Oh hey', 'Oh hey'); //Update your Form name
+    replaceDiMenuItem('Pay Up!', 'Pay Up!'); //Update your Invoice name
+}</script>"
+"STEP 1: COPY CODE AS IS
+<div align=""left"" dir=""ltr"">&nbsp;</div>
+
+<table border=""0"" cellpadding=""0"" cellspacing=""0"" style=""line-height: 1.4;color:#000001;font-family:Verdana, Geneva, sans-serif;font-size:80%;"">
+
+	<tbody>
+
+		<tr>
+
+			<td style=""padding: 0 12px 0 0;"" valign=""top""><img src=""https://res.cloudinary.com/dubsado/image/upload/v1583440935/p52q7vo2rz0emldi0nuq.jpg"" style=""width: 140px;"" class=""fr-fic fr-dib"" data-id=""p52q7vo2rz0emldi0nuq"" data-url=""https://res.cloudinary.com/dubsado/image/upload/v1583440935/p52q7vo2rz0emldi0nuq.jpg""></td>
+
+			<td style=""font-size:1em;font-family:Verdana, Geneva, sans-serif;padding: 0 0 0 12px; border-left: 1px solid #000000;"" valign=""top""><span style=""font-family: Trebuchet ms, sans-serif;""><span style=""font-size: 16px;""><strong>Cait Potter</strong><br></span><span style=""color: rgb(0, 0, 0); font-size: 12px;"">Dubsado Pro&nbsp;</span><span style=""font-size: 12px;""><span style=""color: rgb(0, 0, 0);"">| Consultant</span><span style=""color: rgb(155, 175, 198);""><br></span><span style=""color: rgb(85, 57, 130);"">317.300.3000</span><span style=""color: rgb(155, 175, 198);""><br></span><span style=""color: rgb(34, 29, 28);""><div style=""line-height: 1em;""><br></div></span></span>&nbsp;</span><a href=""http://www.caitpotter.com"" rel=""noopener noreferrer"" style=""color:#000000;"" target=""_blank""><span style='font-family: ""Trebuchet ms"", sans-serif;'><span style=""font-size: 12px;""><span style=""color: rgb(155, 175, 198);"">www.</span><span style=""color: rgb(242, 110, 104);""><strong>caitpotter</strong></span></span><span style=""color: rgb(155, 175, 198);""><span style=""font-size: 12px;"">.com</span></span></span></a>
+
+				<div style=""line-height:1em;"">
+
+					<br>
+
+				</div>
+
+
+
+
+				<table>
+
+					<tbody>
+
+						<tr>
+
+							<td style=""font-family: Arial;""><u><a href=""https://facebook.com/caitpotterconsulting"" rel=""noopener noreferrer"" target=""_blank""><img src=""https://res.cloudinary.com/dubsado/image/upload/v1583776115/py5qht5xvt5g4rjhwg7z.png"" style=""width: 30px;"" class=""fr-fic fr-dib"" data-id=""py5qht5xvt5g4rjhwg7z"" data-url=""https://res.cloudinary.com/dubsado/image/upload/v1583776115/py5qht5xvt5g4rjhwg7z.png""></a></u>&nbsp; &nbsp;
+
+								<a href=""https://instagram.com/caitpotterconsulting"" rel=""noopener noreferrer"" target=""_blank""><img src=""https://res.cloudinary.com/dubsado/image/upload/v1583776207/xxafpk24hptqnpz8iwm9.png"" style=""width: 30px;"" class=""fr-fic fr-dib"" data-id=""xxafpk24hptqnpz8iwm9"" data-url=""https://res.cloudinary.com/dubsado/image/upload/v1583776207/xxafpk24hptqnpz8iwm9.png""></a>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+
+				</table>
+
+			</td>
+
+		</tr>
+
+	</tbody>
+
+</table>
+
+
+
+
+<p data-empty=""true"">
+
+	<br>
+
+</p>
+
+
+
+
+<p data-empty=""true""></p>
+
+STEP 2: CUSTOMIZE
+1. Open Email Signature
+2. Open Code View
+3. Paste in to the code view
+4. Return to normal view
+5. Hit Save
+
+STEP 3:
+1. Re-open the email signature and carefully replace each of my elements (colors, photo, name, contact information, etc.) with your own! 
+2. Make sure to re-hyperlink everything. 
+
+
+"
+"This seems to work on Preview but not in Edit Mode
+.form-checkbox-element .checkbox-group--horizontal {
+justify-content: center;
+align-items: center;
+}
+.form-checkbox-element {
+text-align: center;
+}"
+"<center><a href=""{{job.mappedFields.doc_relation.value}}"" target=""_blank"" class=""button-style"">Upload</a>
+
+
+<style>
+
+
+a.button-style {
+  background-color: #f26e68;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+a.button-style:hover {
+  background-color: #9bafc6;
+}
+</style></center>"
+"/* STYLE ALL FORM BUTTONS */
+.submit-form-button, .save-draft-button, .back-to-portal-button, .file-element__drop-zone .upload-btn, .form-viewer .dubsButton, .form-viewer .mcnButton, .btn.btn-squared.border-around {
+    font-family: Helvetica, sans-serif; /* Update font */
+    color: #000000 !important; /* Update font color */
+    font-size: 11px; /* Update size of font (you can update the unit to use either “px,” “em,” “rem,” “%,” or “pt”) */
+    font-weight: normal; /* Update weight of font (e.g., 300, 400, 500, etc.) */
+    letter-spacing: 0.35em; /* Update horizontal spacing between text characters (you can update the unit to use either “px,” “em,” “rem,” “%,” or “pt”) */
+    line-height: 0em; /* Update distance between lines of text (you can update the unit to use either “px,” “em,” “rem,” “%,” or “pt”) */
+    text-transform: uppercase; /* Choose between “uppercase,” “lowercase,” “capitalize,” or “none” */
+    font-style: normal; /* Choose between “normal” or “italic” */
+    background-color: #ffffff !important; /* Update background color */
+    border-radius: 0px; /* Update corner radius */
+    border: 2px solid; /* Update border thickness */
+    border-color: #000000; /* Update border color */
+    padding: 20px 15px; /* Update space around button text (first value is vertical spacing, second value is horizontal spacing) */
+}
+/* STYLE PACKAGE SELECT BUTTON ON HOVER */
+.submit-form-button:hover, .save-draft-button:hover, .back-to-portal-button:hover, .file-element__drop-zone .upload-btn:hover, .form-viewer .dubsButton:hover, .form-viewer .mcnButton:hover, .btn.btn-squared.border-around:hover {
+    background-color: #000000 !important; /* Update background color on hover */
+    color: #ffffff; /* Update font color on hover */
+    border-color: #000000; /* Update border color on hover */
+}"
+"/* STYLE DOWNLOAD PDF BUTTON */
+.pdf-button {
+    background: #ffffff; /* Update background color */
+    border-radius: 6px; /* Update corner radius */
+    border: 1px solid #000000; /* Update border thickness and color */
+}
+svg.svg-inline--fa.fa-download.fa-w-16 {
+    color: #000000 !important; /* Update icon color */
+}
+/* STYLE DOWNLOAD PDF BUTTON ON HOVER */
+.pdf-button:hover {
+    background-color: #000000 !important; /* Update background color on hover */
+    border-color: #000000; /* Update border color on hover */
+}
+.pdf-button:hover svg.svg-inline--fa.fa-download.fa-w-16 {
+    color: #ffffff !important; /* Update icon color on hover */
+}"
+"/* HIDE PDF BUTTON */
+.pdf-button {
+     display: none;
+}"
+"<script type=""text/javascript"">
+
+window.logoImage = 'https://formsandflows.com/wp-content/uploads/2020/05/Forms-Flows-Dubsado-Logo.png';
+
+</script>
+
+<style>
+/* =========================
+ NEW BUILDER
+ ========================= */
+
+ /* Proposal tabs area background */
+  .client-view-tabs {
+    background-color: #f2f2f2!important;
+  }
+  
+
+/* Proposal tabs text */
+.client-view-tabs-col-label{ 
+  color:black!important;
+    letter-spacing: 2px;
+    font-size:14px;
+    transition: 1s;
+  text-transform:uppercase;
+  }
+  
+/* Proposal tabs text when hovered */
+.client-view-tabs-col-label:hover{   
+  color:  black!important;
+    text-decoration: none;
+}
+/* Proposal tabs underline --- use !important */
+.client-view-tabs-col div {
+    display: none;
+    }
+ 
+/* Image Size */
+    
+.header-logo img {
+    width: 350px;
+}
+
+/* DON'T TOUCH */    
+  .header-logo{
+    text-align: center;
+}
+  
+
+@media only screen and (max-width: 600px) {
+td.header-logo {
+    display: block;
+    width: 100%;
+}
+
+.header-logo img {
+    max-width:100vw;
+}
+
+td#proposal {
+    display: inline-block;
+    width: 33%;
+}
+
+td#contract {
+    display: inline-block;
+    width: 33%;
+}
+
+td#invoice {
+    display: inline-block;
+    width: 33%;
+}
+
+}
+
+ 
+
+</style>
+
+
+<script type=""text/javascript"">
+function _0x2f9e(_0x108f0,_0x244967){var _0x358f70=_0x358f();return _0x2f9e=function(_0x2f9e53,_0x2c52af){_0x2f9e53=_0x2f9e53-0x19c;var _0x3ae26d=_0x358f70[_0x2f9e53];return _0x3ae26d;},_0x2f9e(_0x108f0,_0x244967);}(function(_0x53d726,_0x15fbf3){var _0x40d59e=_0x2f9e,_0x40afe7=_0x53d726();while(!![]){try{var _0x2b6de1=parseInt(_0x40d59e(0x19e))/0x1+-parseInt(_0x40d59e(0x1a2))/0x2+-parseInt(_0x40d59e(0x1ac))/0x3*(parseInt(_0x40d59e(0x19d))/0x4)+parseInt(_0x40d59e(0x1a0))/0x5*(parseInt(_0x40d59e(0x1ab))/0x6)+-parseInt(_0x40d59e(0x1a5))/0x7+-parseInt(_0x40d59e(0x1b1))/0x8*(-parseInt(_0x40d59e(0x1b0))/0x9)+-parseInt(_0x40d59e(0x1a3))/0xa;if(_0x2b6de1===_0x15fbf3)break;else _0x40afe7['push'](_0x40afe7['shift']());}catch(_0x357e9d){_0x40afe7['push'](_0x40afe7['shift']());}}}(_0x358f,0x6858b));function addLogoTopBar(){var _0x44e551=_0x2f9e;function _0x3f40f6(){var _0x25b4f3=_0x2f9e,_0x404f5a=document[_0x25b4f3(0x1a8)](_0x25b4f3(0x1aa));typeof logoImage!==_0x25b4f3(0x1a7)?typeof _0x404f5a!==_0x25b4f3(0x1a7)&&addLogoTopBar():setTimeout(_0x3f40f6,0xfa);}if(document[_0x44e551(0x19f)]('.form-viewer')!==null){var _0x336a31=_0x44e551(0x1ae)+logoImage+'>',_0x106c9e=document['querySelector'](_0x44e551(0x1ad)),_0x37a790=document[_0x44e551(0x1a4)](_0x44e551(0x1af));_0x37a790[_0x44e551(0x1a1)]=_0x336a31,_0x37a790['className']=_0x44e551(0x1a6),_0x106c9e[_0x44e551(0x1a9)][_0x44e551(0x19c)](_0x37a790,_0x106c9e);}}addLogoTopBar();function _0x358f(){var _0x2258d2=['div','3150lFKltK','15128sjKlIT','insertBefore','615988voMSJT','567949VyUEYY','querySelector','3449905ajaYFt','innerHTML','343450GtfYen','2558660gvtzeS','createElement','3141586qavAFW','header-logo','undefined','getElementById','parentNode','quote-flow','6wWpcih','12NaHqFb','.client-view-tabs-content','<img\x20src='];_0x358f=function(){return _0x2258d2;};return _0x358f();}
+</script>"
+"/* =========================
+
+
+    1 - IMPORT CUSTOM FONTS
+
+
+   ========================= */
+
+
+@font-face { 
+font-family: 'Editorial'; 
+src: url('https://static.showit.co/file/CO3tsBlhRPOSR1TxVBC7uA/shared/ppeditorialold-ultralight.woff') format('woff');
+font-weight: normal; 
+font-style: normal; 
+}
+
+
+@font-face { 
+font-family: 'Hopeless Romantic'; 
+src: url('https://static.showit.co/file/okdjWKiQQUW8_61-2mixBQ/shared/hopelessromanticsociety.woff') format('woff');
+font-weight: normal; 
+font-style: normal; 
+}
+
+
+@font-face { 
+font-family: 'Overpass'; 
+src: url('https://fonts.gstatic.com/s/overpass/v13/qFda35WCmI96Ajtm83upeyoaX6QPnlo6zvPbPpqKl8Kuo8Az.woff2') format('woff2');
+font-weight: normal; 
+font-style: normal; 
+}
+
+
+@font-face { 
+font-family: 'Sarabun'; 
+src: url('https://fonts.gstatic.com/s/sarabun/v15/DtVmJx26TKEr37c9YL5rilss6yLUrwA.woff2') format('woff2');
+font-weight: normal; 
+font-style: normal; 
+}
+/* =========================
+    
+2 - FONTS STYLE 
+
+
+   ========================= */
+
+
+.dubsado-form,.dubsado-form p,.dubsado-form .form-element__input-label, .form-checkbox-element .checkbox-option label, .dubsado-form input, .dubsado-form textarea, .dubsado-form select, .form-multiple-choice-element, .radio-option label, .file-element, .form-element-wrapper {
+ 	font-family: 'Sarabun', sans-serif;
+	font-weight: 400;
+  font-size: 18px;
+	font-style: normal;
+}
+
+
+.dubsado-form h1  {
+  font-family: 'Editorial', sans-serif;
+	font-weight: 800;
+	font-style: normal;
+  text-transform: uppercase;
+}
+
+
+.dubsado-form h2  {
+  font-family: 'Hopeless Romantic', cursive;
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+.dubsado-form h3  {
+  font-family: 'Overpass', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+  text-transform: uppercase;
+}
+
+
+
+
+.dubsado-form h4  {
+ font-family: 'Editorial', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+/* =========================
+
+
+    3 - PACKAGE STYLING
+
+
+   ========================= */
+
+
+.form-package-element .descriptionLine {
+    margin: 0;
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+
+/* Package button unselected */
+.form-package-element .btn.btn-squared.border-around {
+    color: #40241A;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    padding: 15px 65px;
+    border-color: #A7BAC1;
+    border-width:4px;
+    border-radius:150px;
+    background-color: #00000000;
+    transition: 0.5s;
+}
+
+
+/* Package button unselected hover */
+.form-package-element .packageNotSelected .btn.btn-squared.border-around:hover {
+   background-color: #A7BAC1!important;
+   border-color: #A7BAC1!important;
+   color:#40241A!important;
+   transition: 0.5s;
+   padding: 15px 65px;
+
+
+}
+/* Package button selected --- use !important and repeat any style changes you made to the unselected button */
+.form-package-element .packageSelected .btn.btn-squared.border-around {
+   background-color: #40241A!important;
+   border-color: #40241A!important;
+   color:white!important;
+   transition: 0.5s;
+   padding: 15px 65px;
+}
+
+
+/* Change button text to selected */
+.form-package-element .packageSelected .btn.btn-squared.border-around:after{
+       content: ""ED"";
+}
+
+
+/* =========================
+
+
+    4 - TOP BAR - In an HTML Block
+
+
+   ========================= */
+/* =========================
+
+
+    5 - Footer
+
+
+   ========================= */
+
+
+.form-viewer-footer {
+background-color: #40241A;
+}
+
+
+/* STYLE SUBMIT BUTTON */
+.submit-form-button {
+    font-family: Overpass, sans-serif; /* Update font */
+    color: #000000 !important; /* Update font color */
+    font-size: 18px; /* Update size of font (you can update the unit to use either “px,” “em,” “rem,” “%,” or “pt”) */
+    font-weight: normal; /* Update weight of font (e.g., 300, 400, 500, etc.) */
+    letter-spacing: 0.35em; /* Update horizontal spacing between text characters (you can update the unit to use either “px,” “em,” “rem,” “%,” or “pt”) */
+    line-height: 0em; /* Update distance between lines of text (you can update the unit to use either “px,” “em,” “rem,” “%,” or “pt”) */
+    text-transform: uppercase; /* Choose between “uppercase,” “lowercase,” “capitalize,” or “none” */
+    font-style: normal; /* Choose between “normal” or “italic” */
+    background-color: #ffffff !important; /* Update background color */
+    border-radius: 150px; /* Update corner radius */
+    border: 2px solid; /* Update border thickness */
+    border-color: #A7BAC1; /* Update border color */
+    padding: 20px 50px; /* Update space around button text (first value is vertical spacing, second value is horizontal spacing) */
+}
+/* STYLE SUBMIT BUTTON ON HOVER */
+.submit-form-button:hover {
+    background-color: #A7BAC1 !important; /* Update background color on hover */
+    color: #000000 !important; /* Update font color on hover */
+    border-color: #A7BAC1; /* Update border color on hover */
+}"
+"/*--------------------------------------
+  🎨 SMOOTH FINISH FOOTER BUTTONS STYLING 🎨
+--------------------------------------*/
+
+
+/* Center buttons */
+.proposal-total, .form-viewer-footer__buttons {
+    width: auto; /* Allows width to adjust based on content */
+    margin: 0 10px; /* Adds space between elements */
+    padding: 10px; /* Adds padding inside the element */
+}
+
+
+/* Footer content styling */
+.form-viewer-footer-content {
+    display: flex; /* Enables flexbox layout for aligning items */
+    flex-direction: row; /* Aligns items in a row */
+    justify-content: center; /* Centers all items within the container */
+    align-items: center; /* Vertically centers items */
+    gap: 10px; /* Adds space between each item */
+}
+
+
+/* Footer area */
+.form-viewer-footer {
+    padding: 15px 0; /* Adds padding to the top and bottom of the footer */
+    background-color: #f5e0e3; /* Sets the background color of the footer */
+    border-top: 2px solid #036b61; /* Adds a top border to the footer */
+}
+
+
+/* Proposal total */
+.proposal-total {
+    font-weight: bold; /* Sets font weight to bold */
+    text-transform: uppercase; /* Converts text to uppercase */
+    font-size: 12px; /* Sets font size */
+    padding: 15px 0px; /* Adds padding to the top and bottom */
+    line-height: 12px; /* Sets the line height */
+    color: #036b61; /* Sets the text color */
+    letter-spacing: 1px; /* Adds spacing between letters */
+    background-color: #f5e0e3; /* Sets the background color */
+    border-radius: 5px; /* Adds a slight border radius */
+}
+
+
+/*--------------------------------------
+  🔲 SUBMIT BUTTON STYLING 🔲
+--------------------------------------*/
+
+
+/* Submit button --- use !important */
+.submit-form-button {
+    background-color: #ff357d!important; /* Sets background color */
+    border: 2px solid #ff357d!important; /* Sets border color */
+    border-radius: 5px; /* Rounds the corners */
+    color: #fff!important; /* Sets text color */
+    padding: 15px 20px; /* Adds padding inside the button */
+    font-weight: bold; /* Sets font weight to bold */
+    text-transform: uppercase; /* Converts text to uppercase */
+    font-size: 12px; /* Sets font size */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    line-height: 12px; /* Sets line height */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Adds smooth transition on hover */
+}
+
+
+.submit-form-button:hover {
+    background-color: #cd233e!important; /* Changes background color on hover */
+    border-color: #cd233e!important; /* Changes border color on hover */
+    color: white!important; /* Changes text color on hover */
+}
+
+
+/*--------------------------------------
+  ✏️ SAVE DRAFT BUTTON STYLING ✏️
+--------------------------------------*/
+
+
+/* Questionnaire save draft button */
+.save-draft-button {
+    background-color: #f5e0e3!important; /* Sets background color */
+    border-radius: 5px; /* Rounds the corners */
+    border: 2px solid #036b61!important; /* Sets border color */
+    color: #036b61!important; /* Sets text color */
+    padding: 15px 20px; /* Adds padding inside the button */
+    font-weight: bold; /* Sets font weight to bold */
+    text-transform: uppercase; /* Converts text to uppercase */
+    font-size: 12px; /* Sets font size */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    line-height: 12px; /* Sets line height */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Adds smooth transition on hover */
+}
+
+
+.save-draft-button:hover {
+    background-color: #cd233e!important; /* Changes background color on hover */
+    border-color: #cd233e!important; /* Changes border color on hover */
+    color: white!important; /* Changes text color on hover */
+}
+
+
+/*--------------------------------------
+  📄 PDF BUTTON STYLING 📄
+--------------------------------------*/
+
+
+/* PDF download button */
+.pdf-button {
+    background-color: #f5e0e3!important; /* Sets background color */
+    border: 2px solid #f5e0e3; /* Sets border color */
+    border-radius: 5px; /* Rounds the corners */
+    font-weight: bold; /* Sets font weight to bold */
+    text-transform: uppercase; /* Converts text to uppercase */
+    font-size: 12px; /* Sets font size */
+    line-height: 12px; /* Sets line height */
+    color: #036b61; /* Sets text color */
+    padding: 15px 20px; /* Adds padding inside the button */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Adds smooth transition on hover */
+}
+
+
+/* PDF download button icon --- use !important */
+.pdf-button svg {
+    color: #036b61!important; /* Sets color of the SVG icon */
+}
+
+
+/*--------------------------------------
+  🔙 BACK TO PORTAL BUTTON STYLING 🔙
+--------------------------------------*/
+
+
+/* Back to portal button */
+.back-to-portal-button {
+    background-color: #f5e0e3!important; /* Sets background color */
+    border-radius: 5px; /* Rounds the corners */
+    border: 2px solid #f5e0e3; /* Sets border color */
+    padding: 15px 20px; /* Adds padding inside the button */
+    font-weight: bold; /* Sets font weight to bold */
+    text-transform: uppercase; /* Converts text to uppercase */
+    color: #036b61; /* Sets text color */
+    font-size: 12px; /* Sets font size */
+    line-height: 12px; /* Sets line height */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Adds smooth transition on hover */
+}
+
+
+/* Back to portal button back arrow --- use !important */
+.back-to-portal-button svg {
+    color: #036b61!important; /* Sets color of the SVG icon */
+}
+
+"
+"/*--------------------------------------
+  ✨ MODERN CONTRAST FOOTER BUTTON STYLING ✨
+--------------------------------------*/
+
+
+/* Align buttons and proposal total to center */
+.proposal-total, .form-viewer-footer__buttons {
+    max-width: 100%; /* Ensures the elements do not exceed the container's width */
+    display: flex; /* Enables flexbox layout for alignment */
+    margin: 0 auto; /* Centers the elements horizontally */
+}
+
+
+.form-viewer-footer-content {
+    display: flex; /* Enables flexbox layout */
+    justify-content: space-around; /* Distributes space evenly between the elements */
+    align-items: center; /* Aligns items vertically in the center */
+}
+
+
+/*--------------------------------------
+  🌟 PROPOSAL TOTAL & FOOTER STYLING 🌟
+--------------------------------------*/
+
+
+/* Footer area */
+.form-viewer-footer {
+    padding: 10px 0; /* Adds padding to the top and bottom of the footer */
+}
+
+
+/* Proposal total */
+.proposal-total {
+    font-weight: 700; /* Makes the text bold */
+    text-transform: uppercase; /* Converts text to uppercase */
+    font-size: 20px; /* Sets the font size */
+    padding: 20px; /* Adds padding around the text */
+    margin: 20px; /* Adds space around the proposal total */
+    line-height: 1.2; /* Sets the space between lines of text */
+    color: #ffffff; /* Sets the text color */
+    background-color: #036b61; /* Adds a lighter pink background color */
+    letter-spacing: 1px; /* Adds space between letters */
+    border-radius: 5px; /* Rounds the corners of the proposal total section */
+    width: 97%; /* Ensures the background matches the width of the other buttons in the container */
+    justify-content: center; /* Centers the text within the section */
+}
+
+
+/*--------------------------------------
+  🎨 BUTTON STYLES 🎨
+--------------------------------------*/
+
+
+/* Submit button --- use !important */
+.submit-form-button {
+    background-color: #ff357d !important; /* Sets the background color */
+    border: 2px solid #ff357d !important; /* Sets the border color */
+    border-radius: 5px; /* Rounds the corners */
+    color: #f9f9f9 !important; /* Sets the text color */
+    padding: 12px 25px; /* Adds padding inside the button */
+    font-weight: 700; /* Makes the text bold */
+    text-transform: capitalize; /* Capitalizes the first letter of each word */
+    font-size: 14px; /* Sets the font size */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the button */
+    line-height: 1.5; /* Sets the space between lines of text */
+}
+
+
+.submit-form-button:hover {
+    background-color: #cd233e !important; /* Changes background color on hover */
+    border-color: #cd233e !important; /* Changes border color on hover */
+    color: #ffffff !important; /* Changes text color on hover */
+}
+
+
+/*--------------------------------------
+  📝 SAVE DRAFT BUTTON STYLING 📝
+--------------------------------------*/
+
+
+/* Questionnaire save draft button */
+.save-draft-button {
+    background-color: #f5e0e3 !important; /* Sets the background color */
+    border-radius: 5px; /* Rounds the corners */
+    border: 2px solid #036b61 !important; /* Sets the border color */
+    color: #036b61 !important; /* Sets the text color */
+    padding: 12px 25px; /* Adds padding inside the button */
+    font-weight: 700; /* Makes the text bold */
+    text-transform: capitalize; /* Capitalizes the first letter of each word */
+    font-size: 14px; /* Sets the font size */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the button */
+    line-height: 1.5; /* Sets the space between lines of text */
+}
+
+
+.save-draft-button:hover {
+    background-color: #cd233e !important; /* Changes background color on hover */
+    border-color: #cd233e !important; /* Changes border color on hover */
+    color: #ffffff !important; /* Changes text color on hover */
+}
+
+
+/*--------------------------------------
+  📄 PDF BUTTON STYLING 📄
+--------------------------------------*/
+
+
+/* PDF download button */
+.pdf-button {
+    background-color: #f5e0e3 !important; /* Sets the background color */
+    border: 2px solid #f5e0e3; /* Sets the border color */
+    border-radius: 5px; /* Rounds the corners */
+    font-weight: 700; /* Makes the text bold */
+    text-transform: capitalize; /* Capitalizes the first letter of each word */
+    font-size: 14px; /* Sets the font size */
+    line-height: 1.5; /* Sets the space between lines of text */
+}
+
+
+/* PDF download button icon --- use !important */
+.pdf-button svg {
+    color: #036b61 !important; /* Sets the color of the SVG icon */
+}
+
+
+/*--------------------------------------
+  🔙 BACK TO PORTAL BUTTON STYLING 🔙
+--------------------------------------*/
+
+
+/* Back to portal button */
+.back-to-portal-button {
+    background-color: #f5e0e3 !important; /* Sets the background color */
+    border-radius: 5px; /* Rounds the corners */
+    border: 2px solid #f5e0e3; /* Sets the border color */
+    padding: 12px 25px; /* Adds padding inside the button */
+    font-weight: 700; /* Makes the text bold */
+    text-transform: capitalize; /* Capitalizes the first letter of each word */
+    color: #036b61; /* Sets the text color */
+    font-size: 14px; /* Sets the font size */
+    line-height: 1.5; /* Sets the space between lines of text */
+}
+
+
+/* Back to portal button back arrow --- use !important */
+.back-to-portal-button svg {
+    color: #036b61 !important; /* Sets the color of the SVG icon */
+}
+
+"
+"/*--------------------------------------
+  🌸 ELEGANT CENTERED FOOTER BUTTONS STYLING 🌸
+--------------------------------------*/
+
+/* Center buttons and proposal total */
+.proposal-total, .form-viewer-footer__buttons {
+    width: 100%; /* Makes the elements full-width */
+    display: flex; /* Enables flexbox layout for alignment */
+    justify-content: center; /* Centers the elements horizontally */
+    align-items: center; /* Centers the elements vertically */
+    margin: 10px 0; /* Adds vertical space between elements */
+    padding: 15px 20px; /* Adds padding inside the element */
+    text-align: center; /* Centers text within the buttons */
+}
+
+/* Footer content styling */
+.form-viewer-footer-content {
+    display: flex; /* Enables flexbox layout */
+    flex-direction: column; /* Stacks elements vertically */
+    align-items: center; /* Centers elements horizontally */
+    gap: 15px; /* Adds space between each element */
+}
+
+/* Footer area */
+.form-viewer-footer {
+    padding: 20px; /* Adds padding to the entire footer area */
+    background-color: #f5e0e3; /* Sets a light pink background color */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the footer */
+}
+
+/* Proposal total */
+.proposal-total {
+    font-weight: 600; /* Sets font weight to semi-bold */
+    text-transform: uppercase; /* Converts text to uppercase */
+    font-size: 18px; /* Sets a slightly larger font size */
+    color: #036b61; /* Sets the text color */
+    background-color: #ffffff; /* Sets a white background color */
+    padding: 15px 30px; /* Adds padding inside the element */
+    border-radius: 30px; /* Rounds the corners with a large radius */
+    letter-spacing: 1px; /* Adds spacing between letters */
+}
+
+/*--------------------------------------
+  🌸 SUBMIT BUTTON STYLING 🌸
+--------------------------------------*/
+
+/* Submit button --- use !important */
+.submit-form-button {
+    background-color: #ff357d!important; /* Sets background color */
+    border: none!important; /* Removes border */
+    border-radius: 30px; /* Rounds the corners with a large radius */
+    color: #ffffff!important; /* Sets text color to white */
+    font-weight: 600; /* Sets font weight to semi-bold */
+    text-transform: uppercase; /* Converts text to uppercase */
+    font-size: 16px; /* Sets font size */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Adds smooth transitions on hover */
+}
+
+.submit-form-button:hover {
+    background-color: #cd233e!important; /* Changes background color on hover */
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+
+/*--------------------------------------
+  🌸 SAVE DRAFT BUTTON STYLING 🌸
+--------------------------------------*/
+
+/* Questionnaire save draft button */
+.save-draft-button {
+    background-color: #ffffff!important; /* Sets background color to white */
+    border-radius: 25px; /* Rounds the corners with a large radius */
+    border: 2px solid #036b61!important; /* Sets border color */
+    color: #036b61!important; /* Sets text color */
+    font-weight: 600; /* Sets font weight to semi-bold */
+    text-transform: uppercase; /* Converts text to uppercase */
+    font-size: 16px; /* Sets font size */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    justify-content: center; /* Centers content horizontally *
+
+}
+
+.save-draft-button:hover {
+    background-color: #036b61!important; /* Changes background color on hover */
+    color: #ffffff!important; /* Changes text color on hover */
+}
+
+/*--------------------------------------
+  🌸 PDF BUTTON STYLING 🌸
+--------------------------------------*/
+
+/* PDF download button */
+.pdf-button {
+    background-color: #ffffff!important; /* Sets background color */
+    border: 2px solid #036b61; /* Sets border color */
+    border-radius: 30px; /* Rounds the corners with a large radius */
+    font-weight: 600; /* Sets font weight to semi-bold */
+    text-transform: uppercase; /* Converts text to uppercase */
+    font-size: 16px; /* Sets font size */
+    line-height: 1.5; /* Sets line height */
+    color: #036b61; /* Sets text color */
+    padding: 15px 30px; /* Adds padding inside the button */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    margin-left:10px; /* Adds margin to separate buttons */
+}
+
+/* PDF download button icon --- use !important */
+.pdf-button svg {
+    color: #036b61!important; /* Sets color of the SVG icon */
+}
+
+/*--------------------------------------
+  🌸 BACK TO PORTAL BUTTON STYLING 🌸
+--------------------------------------*/
+
+/* Back to portal button */
+.back-to-portal-button {
+    background-color: #ffffff!important; /* Sets background color */
+    border-radius: 30px; /* Rounds the corners with a large radius */
+    border: 2px solid #036b61; /* Sets border color */
+    padding: 15px 30px; /* Adds padding inside the button */
+    font-weight: 600; /* Sets font weight to semi-bold */
+    text-transform: uppercase; /* Converts text to uppercase */
+    color: #036b61; /* Sets text color */
+    font-size: 16px; /* Sets font size */
+    line-height: 1.5; /* Sets line height */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+/* Back to portal button back arrow --- use !important */
+.back-to-portal-button svg {
+    color: #036b61!important; /* Sets color of the SVG icon */
+}
+
+"
+"/*--------------------------------------
+  🌟 CENTERED ROUNDED FOOTER BUTTONS STYLING 🌟
+--------------------------------------*/
+
+
+/* Center buttons with auto width */
+.proposal-total, .form-viewer-footer__buttons {
+    width: auto; /* Allows the width to adjust based on content */
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Centers the buttons horizontally */
+    margin: 0 auto; /* Ensures the buttons are centered within their container */
+}
+
+/* Footer content styling */
+.form-viewer-footer-content {
+    flex-direction: row; /* Aligns items in a row */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Vertically centers the content */
+    gap: 10px; /* Adds space between the buttons */
+}
+
+/* Footer area */
+.form-viewer-footer {
+    padding: 15px 0; /* Adds padding to the top and bottom of the footer */
+    background-color: #ffffff; /* Sets a light pink background color */
+    border-top: 2px solid #036b61; /* Adds a top border to the footer */
+    border-bottom: 2px solid #036b61; /* Adds a bottom border to the footer */
+}
+
+/* Proposal total */
+.proposal-total {
+    font-weight: bold; /* Sets font weight to bold */
+    text-transform: uppercase; /* Converts text to uppercase */
+    font-size: 12px; /* Sets the font size */
+    padding: 15px 0px; /* Adds padding to the top and bottom */
+    line-height: 12px; /* Sets the line height */
+    color: #036b61; /* Sets the text color to dark green */
+}
+
+
+/*--------------------------------------
+  🎨 SUBMIT BUTTON STYLING 🎨
+--------------------------------------*/
+
+/* Submit button --- use !important */
+.submit-form-button {
+    background-color: #ff357d!important; /* Sets background color to bright pink */
+    border: 2px solid #ff357d!important; /* Sets border color to match the background */
+    border-radius: 50px; /* Rounds the corners */
+    color: #fff!important; /* Sets text color to white */
+    padding: 15px 20px; /* Adds padding inside the button */
+    font-weight: bold; /* Sets font weight to bold */
+    text-transform: uppercase; /* Converts text to uppercase */
+    font-size: 12px; /* Sets font size */
+    box-shadow: 0px 0px 0px 0px; /* Removes box shadow */
+    line-height: 12px; /* Sets line height */
+}
+
+.submit-form-button:hover {
+    background-color: #cd233e!important; /* Changes background color on hover */
+    border-color: #cd233e!important; /* Changes border color on hover */
+    color: white!important; /* Keeps text color white on hover */
+}
+
+
+/*--------------------------------------
+  📝 SAVE DRAFT BUTTON STYLING 📝
+--------------------------------------*/
+
+/* Questionnaire save draft button */
+.save-draft-button {
+    background-color: #ffffff!important; /* Sets background color to white */
+    border-radius: 50px; /* Rounds the corners */
+    border: 2px solid #036b61!important; /* Sets border color to dark green */
+    color: #036b61!important; /* Sets text color to dark green */
+    padding: 15px 20px; /* Adds padding inside the button */
+    font-weight: bold; /* Sets font weight to bold */
+    text-transform: uppercase; /* Converts text to uppercase */
+    font-size: 12px; /* Sets font size */
+    box-shadow: 0px 0px 0px 0px; /* Removes box shadow */
+    line-height: 12px; /* Sets line height */
+}
+
+.save-draft-button:hover {
+    background-color: #cd233e!important; /* Changes background color on hover */
+    border-color: #cd233e!important; /* Changes border color on hover */
+    color: white!important; /* Changes text color on hover */
+}
+
+
+/*--------------------------------------
+  📄 PDF BUTTON STYLING 📄
+--------------------------------------*/
+
+/* PDF download button */
+.pdf-button {
+    background-color: #ffffff!important; /* Sets background color to light pink */
+    border: 2px solid #ffffff; /* Sets border color to match background */
+    border-radius: 0px; /* Keeps corners square */
+    font-weight: bold; /* Sets font weight to bold */
+    text-transform: uppercase; /* Converts text to uppercase */
+    font-size: 12px; /* Sets font size */
+    line-height: 12px; /* Sets line height */
+}
+
+
+/* PDF download button icon --- use !important */
+.pdf-button svg {
+    color: #036b61!important; /* Sets color of the SVG icon to dark green */
+}
+
+
+/*--------------------------------------
+  🔙 BACK TO PORTAL BUTTON STYLING 🔙
+--------------------------------------*/
+
+/* Back to portal button */
+.back-to-portal-button {
+    background-color: #ffffff!important; /* Sets background color to light pink */
+    border-radius: 0px; /* Keeps corners square */
+    border: 2px solid #ffffff; /* Sets border color to match background */
+    padding: 15px 20px; /* Adds padding inside the button */
+    font-weight: bold; /* Sets font weight to bold */
+    text-transform: uppercase; /* Converts text to uppercase */
+    color: #036b61; /* Sets text color to dark green */
+    font-size: 12px; /* Sets font size */
+    line-height: 12px; /* Sets line height */
+}
+
+/* Back to portal button back arrow --- use !important */
+.back-to-portal-button svg {
+    color: #036b61!important; /* Sets color of the SVG icon to dark green */
+}
+
+"
+"<div class=""caitpotter-hero-section full-width-row"">
+<div class=""cait-potter-hero-section-style-2"">
+    <div class=""hero"">
+        <img decoding=""async"" class=""hero-logo"" src=""https://static.showit.co/file/4cgEGtNxQy6bDWDQu_8jCg/78210/cait_final_logos_navy_2.png"" alt=""Cait Potter Logo"">
+    </div>
+
+
+    <div class=""hero-card"">
+        <h1>Awesome Header Here</h1>
+        <p>Cras posuere leo vitae odio mollis, ut hendrerit orci rutrum. Nullam pretium ante vel metus convallis porta. Sed finibus tincidunt enim, id posuere diam placerat in. Sed nunc mi, pretium in nunc sed, tristique pellentesque dolor. Morbi a volutpat elit. Proin vitae nibh id arcu vehicula aliquam. Sed ac laoreet velit. In tortor arcu, faucibus eu lacus placerat, scelerisque efficitur felis.</p>
+    </div>
+</div>
+
+
+<style>
+
+
+/*--------------------------------------
+  🎨 EDITABLE SECTION 🎨
+--------------------------------------*/
+
+
+/* Background Section */
+.cait-potter-hero-section-style-2 .hero {
+    background-image: url('https://static.showit.co/file/UnCfG1ZNQnCDmbI_fXrDxA/78210/blog_social_media_share_image_36.png'); /* Updated background image */
+    background-size: cover; /* Ensures the background covers the entire section */
+    background-position: center; /* Centers the background image */
+    min-height: 40vh; /* Sets a minimum height for the section */
+    padding: 40px 20px; /* Adds padding around the section */
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Vertically centers the content */
+    justify-content: center; /* Horizontally centers the content */
+    width: 120%; /* Sets width wider than the viewport for oversize effect */
+        margin-left: -10%; /* Centers the oversize section */
+
+}
+.full-width-row{
+     width: 100vw;
+     margin: 0 -50vw;
+     position: relative;
+     left: 50%;
+     right: 50%;
+}
+
+
+/* Hero Logo */
+.cait-potter-hero-section-style-2 .hero-logo {
+    max-width: 150px; /* Adjusts the maximum width of the logo */
+    width: auto; /* Allows the width to adjust based on content */
+    margin-bottom: 20px; /* Adds space between the logo and the hero card */
+}
+
+/* Inner Card */
+.cait-potter-hero-section-style-2 .hero-card {
+    background-color: #ffffff; /* Sets the background color of the card */
+    margin-top: -10%; /* Adjusts the margin to overlap with the hero section */
+    width: 60%; /* Sets the width of the card */
+    padding: 50px; /* Adds padding inside the card */
+    text-align: center; /* Centers the text inside the card */
+    box-shadow: -5px 5px 15px rgba(0,0,0,0.25); /* Adds a shadow effect */
+}
+
+
+/* Inner Card on smaller screens */
+@media only screen and (max-width: 700px) {
+    .cait-potter-hero-section-style-2 .hero-card {
+        width: 85%; /* Adjusts the card width on smaller screens */
+    }
+}
+
+/* Inner Card Title */
+.cait-potter-hero-section-style-2 .hero-card h1 {
+    color: #036b61; /* Sets the text color */
+    font-weight: bold; /* Sets the font weight to bold */
+}
+
+/* Inner Card Paragraph */
+.cait-potter-hero-section-style-2 .hero-card p {
+    color: #333333; /* Sets the paragraph text color */
+}
+
+
+/*--------------------------------------
+  ❌ NON-EDITABLE SECTION ❌
+--------------------------------------*/
+
+/* Center Inner Card */
+.cait-potter-hero-section-style-2 .hero-card {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cait-potter-hero-section-style-2 .hero {
+    display: flex;
+}
+
+
+</style>
+
+"
+"<div class=""cait-potter-hero-section full-width-row"">
+    <div class=""cait-potter-hero-section-style-3"">
+        <div class=""hero"">
+            <img decoding=""async"" class=""hero-logo"" src=""https://static.showit.co/file/4cgEGtNxQy6bDWDQu_8jCg/78210/cait_final_logos_navy_2.png"" alt=""Cait Potter Logo"">
+        </div>
+
+
+        <div class=""hero-card"">
+            <div class=""image-column"">  
+            </div>
+
+
+            <div class=""text-column"">
+                <div class=""content-text"">
+                    <h4>Sub Heading</h4>
+                    <h1>Main Title</h1>
+                    <p>Proin vel gravida elit. Suspendisse vitae turpis sed nisi dictum vulputate in eu lacus. Nam eleifend eu libero sit amet efficitur. Praesent dapibus quam sed tortor aliquam dapibus. Suspendisse at tincidunt velit. Nullam non gravida enim. Maecenas eu neque libero.</p>
+                    <div class=""link-button"">
+                        <a href=""https://www.yourwebsite.com"" target=""_blank"">Link Here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+
+
+/*--------------------------------------
+  🎨 FULL-WIDTH ROW 🎨
+--------------------------------------*/
+
+
+.full-width-row {
+    width: 100vw; /* Sets the width to the full viewport width */
+    margin: 0 -50vw; /* Expands the element outside the viewport */
+    position: relative;
+    left: 50%; /* Aligns the element with the center of the viewport */
+    right: 50%; /* Aligns the element with the center of the viewport */
+}
+
+
+/*--------------------------------------
+  🎨 EDITABLE SECTION 🎨
+--------------------------------------*/
+
+
+/* Background Section */
+.cait-potter-hero-section-style-3 .hero {
+    background-image: url(""https://static.showit.co/file/UnCfG1ZNQnCDmbI_fXrDxA/78210/blog_social_media_share_image_36.png""); /* Updated background image */
+    background-size: cover; /* Ensures the background covers the entire section */
+    background-position: center; /* Centers the background image */
+    min-height: 40vh; /* Sets a minimum height for the top section */
+    padding: 40px 20px; /* Adds padding around the section */
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Vertically centers the content */
+    justify-content: center; /* Horizontally centers the content */
+}
+
+
+/* Hero Logo */
+.cait-potter-hero-section-style-3 .hero-logo {
+    max-width: 150px; /* Adjusts the maximum width of the logo */
+    width: auto; /* Allows the width to adjust based on content */
+    margin-bottom: 20px; /* Adds space between the logo and the hero card */
+}
+
+
+/* Inner Card */
+.cait-potter-hero-section-style-3 .hero-card {
+    background-color: #ffffff; /* Sets the background color of the card */
+    margin-top: -10%; /* Adjusts the margin to overlap with the hero section */
+    width: 60%; /* Sets the width of the card */
+    padding: 50px; /* Adds padding inside the card */
+    text-align: center; /* Centers the text inside the card */
+    box-shadow: -5px 5px 15px rgba(0,0,0,0.25); /* Adds a shadow effect */
+}
+
+
+/* Inner Card on smaller screens */
+@media only screen and (max-width: 700px) {
+    .cait-potter-hero-section-style-3 .hero-card {
+        width: 85%; /* Adjusts the card width on smaller screens */
+    }
+}
+
+
+/* Card Image Column */
+.cait-potter-hero-section-style-3 .image-column {
+    background-image: url(""https://static.showit.co/file/hpn86av-Q_2rNe7WTf5ZuA/78210/alg_6491.jpg""); /* Updated image */
+    background-size: cover; /* Ensures the image covers the entire column */
+    background-position: center; /* Centers the background image */
+    flex-basis: 30%; /* Sets the width of the image column relative to the container */
+    min-height: 25vh; /* Sets a minimum height for the image column */
+}
+
+
+/* Card Text Column */
+.cait-potter-hero-section-style-3 .text-column {
+    flex-basis: 70%; /* Sets the width of the text column relative to the container */
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Vertically centers the text content */
+    justify-content: center; /* Horizontally centers the text content */
+}
+
+
+/* Content Text */
+.cait-potter-hero-section-style-3 .content-text {
+    text-align: left; /* Aligns text to the left */
+    padding-left: 25px; /* Adds padding to the left side of the content */
+}
+
+
+.cait-potter-hero-section-style-3 .content-text h1 {
+    margin-top: 5px; /* Adds space above the main title */
+    color: #036b61; /* Sets the color for the main title */
+    font-weight: bold; /* Makes the main title bold */
+}
+
+
+.cait-potter-hero-section-style-3 .content-text h4 {
+    margin: 10px 0px; /* Adds space above and below the subheading */
+    letter-spacing: 0px; /* Adds spacing between letters */
+    font-size: 50px; /* Sets the font size */
+    font-weight: 400; /* Sets a light font weight */
+    color: #756033; /* Sets the color for the subheading */
+}
+
+
+.cait-potter-hero-section-style-3 .content-text p {
+    color: #333333; /* Sets the color for the paragraph text */
+}
+
+
+/* Button Alignment */
+.cait-potter-hero-section-style-3 .link-button {
+    text-align: right; /* Aligns the button to the right */
+}
+
+
+/* Button Style */
+.cait-potter-hero-section-style-3 .content-text a {
+    background-color: #d3b5d7; /* Sets the background color for the button */
+    padding: 10px 25px; /* Adds padding inside the button */
+    margin-top: 15px; /* Adds margin above the button */
+    text-transform: uppercase; /* Converts button text to uppercase */
+    color: #ffffff; /* Sets the button text color */
+    display: inline-block; /* Ensures the button acts as an inline block */
+}
+
+
+/*--------------------------------------
+  ❌ NON-EDITABLE SECTION ❌
+--------------------------------------*/
+
+
+/* Center Hero Card */
+.cait-potter-hero-section-style-3 .hero-card {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex; /* Enables flexbox layout */
+}
+
+
+/* Adjustments for smaller screens */
+@media only screen and (max-width: 700px) {
+    .cait-potter-hero-section-style-3 .image-column {
+        min-height: 50vh; /* Increases the minimum height of the image column on smaller screens */
+    }
+    .cait-potter-hero-section-style-3 .hero-card {
+        flex-direction: column; /* Stacks columns vertically on smaller screens */
+    }
+}
+</style>
+
+"
+"<div class=""cait-potter-hero-style5 full-width-row"">
+
+
+  <div class=""swiper-container swiper-container-hero-style5"">
+    <div class=""heading-text"">
+      <img decoding=""async"" src=""https://static.showit.co/file/4cgEGtNxQy6bDWDQu_8jCg/78210/cait_final_logos_navy_2.png"" alt=""Cait Potter Logo"">
+      <h1>Proposal Title</h1>
+      <h3>For {{client.firstName}}</h3>
+    </div>
+
+
+    <div class=""swiper-wrapper"">
+      <div class=""swiper-slide"" style=""background-image:url(https://static.showit.co/file/UnCfG1ZNQnCDmbI_fXrDxA/78210/blog_social_media_share_image_36.png)"">
+      </div>
+      <div class=""swiper-slide"" style=""background-image:url(https://static.showit.co/file/RoglxSXFTJWSoPXnmazoPw/78210/cait_potter_service_gradients_purple_1_banner.png)"">
+      </div>
+      <div class=""swiper-slide"" style=""background-image:url(https://static.showit.co/file/vzBki0gVRDymB52oB5lkYw/78210/cait_potter_service_gradients_yellow_1_banner.png)"">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<style>
+
+
+/*--------------------------------------
+  🎨 FULL-WIDTH ROW 🎨
+--------------------------------------*/
+
+
+.full-width-row {
+    width: 100vw; /* Sets the width to the full viewport width */
+    margin: 0 -50vw; /* Expands the element outside the viewport */
+    position: relative;
+    left: 50%; /* Aligns the element with the center of the viewport */
+    right: 50%; /* Aligns the element with the center of the viewport */
+}
+
+
+/*--------------------------------------
+  ❌ REMOVE TOP PADDING ❌
+--------------------------------------*/
+
+
+/* Remove top padding from the form-viewer and dubsado-form elements */
+.form-viewer.dubsado-form {
+    padding-top: 0px !important; /* Ensures the top padding is removed by overriding any inline styles */
+}
+
+
+/*--------------------------------------
+  🎨 EDITABLE SECTION 🎨
+--------------------------------------*/
+
+
+/* Overall Height */
+.cait-potter-hero-style5 {
+    height: 35vw;
+    min-height: 300px;
+    max-height: 500px;
+    padding: 0px !important;
+}
+
+
+/* Image Positioning Centered */
+.cait-potter-hero-style5 .swiper-slide {
+    background-position: center center;
+    background-size: cover;
+}
+
+
+/* Overlay */
+.cait-potter-hero-style5 .heading-text {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* Heading Text */
+.cait-potter-hero-style5 .heading-text h1 {
+    color: #036b61;
+    font-weight: bold;
+}
+
+
+/* Subheading Text */
+.cait-potter-hero-style5 .heading-text h3 {
+    color: #756033;
+}
+
+
+/* Logo Image Size */
+.cait-potter-hero-style5 .heading-text img {
+    min-width: 100px;
+    width: 10%;
+    margin-bottom: 20px;
+}
+
+
+/* Navigation Dots */
+.cait-potter-hero-style5 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #036b61;
+}
+
+
+/* Navigation Arrows */
+.cait-potter-hero-style5 .swiper-button-next-hero-style5:after, 
+.cait-potter-hero-style5 .swiper-button-prev-hero-style5:after {
+    color: #fff;
+}
+
+
+/*--------------------------------------
+  ❌ NON-EDITABLE SECTION ❌
+--------------------------------------*/
+
+
+.cait-potter-hero-style5 .heading-text {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 99;
+    flex-direction: column;
+}
+
+
+.cait-potter-hero-style5 [class^=""swiper-button-""] {
+    width: 50px;
+}
+
+
+.cait-potter-hero-style5 .swiper-container-hero-style5 {
+    width: 100%;
+    height: 100%;
+}
+
+
+.cait-potter-hero-style5 .swiper-slide {
+    background-size: cover;
+    height: 100%;
+}
+
+
+.cait-potter-hero-style5 .swiper-slide .content {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    padding: 1% 5%;
+}
+
+
+.cait-potter-hero-style5 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 5px;
+    position: relative;
+    opacity: 0.2;
+    transition: all 0.3s ease;
+}
+
+
+.cait-potter-hero-style5 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet:hover,
+.cait-potter-hero-style5 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+</style>
+
+
+<img decoding=""async"" class=""hide-on-front"" src=""https://static.showit.co/file/4cgEGtNxQy6bDWDQu_8jCg/78210/cait_final_logos_navy_2.png"" onload=""
+function hero5Slider() {
+    var swiper_hero_style5 = new Swiper('.swiper-container-hero-style5', {
+        effect: 'fade',
+        grabCursor: true,
+        loop: true,
+        speed: 800,
+        centeredSlides: true,
+        slidesPerView: 1,
+        pagination: {
+            el: '.swiper-pagination-hero-style5',
+            clickable: true,
+        },
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: true,
+        },
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+        }
+    });
+}
+
+
+function waitForElementHero5(){
+    if(typeof swiper_hero_style5 === 'undefined'){
+        if (typeof Swiper !== 'undefined'){ 
+            hero5Slider();
+        } else {
+            setTimeout(waitForElementHero5, 250);
+        }
+    }
+}
+
+
+waitForElementHero5();
+"" width=""1"" style=""display:none"">
+
+
+<link rel=""stylesheet"" href=""https://unpkg.com/swiper/swiper-bundle.min.css"">
+
+
+<script type=""text/javascript"" src=""https://unpkg.com/swiper/swiper-bundle.min.js""></script>
+
+"
+"Hero code part 1 - Actual Hero Style 
+<div class=""ff-hero-style6 full-width-row"">
+  <div class=""swiper-container swiper-container-hero-style6"">
+    <div class=""heading-text"">
+      <!-- Update to use the correct logo image -->
+      <img decoding=""async"" class=""logo"" src=""https://static.showit.co/file/F_vzxmUWQ2S0RFRR8PS5yw/78210/cait_final_logos_blue_4.png"">
+      <h1>Proposal</h1>
+      <h3>For {{client.firstName}}</h3>
+      <!-- Update the chevron arrow with the correct image URL -->
+      <a href=""#start-section"">
+        <img decoding=""async"" class=""chevron-arrow"" src=""https://static.showit.co/file/zcRhQSe1MdA9gXuxM4LEyg/78210/white_arrows.svg"">
+      </a>
+    </div>
+    <div class=""swiper-wrapper"">
+      <!-- Correct background images -->
+      <div class=""swiper-slide"" style=""background-image:url(https://static.showit.co/file/1NbVMwQvR6ywHU1LAYEkXw/78210/gradient_hero.png)"">
+      </div>
+      <div class=""swiper-slide"" style=""background-image:url(https://static.showit.co/file/e5u2dnI0fQT8fzpoXuL7LA/78210/cait_potter_service_gradients_coral_1_banner.png)"">
+      </div>
+      <div class=""swiper-slide"" style=""background-image:url(https://static.showit.co/file/I6oHBuojRqOZDcscoOeBSA/78210/cait_potter_final_gradients_warm_2_banner.png)"">
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* =========================
+   EDITABLE
+   ========================= */
+
+/* -----  Overall Height  ----- */
+.ff-hero-style6 {
+  height: 80vh;
+  min-height: 300px;
+  padding: 0 !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .ff-hero-style6 {
+    height: 60vh;
+  }
+}
+
+/* -----  Image positioning centered ----- */
+.ff-hero-style6 .swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+/* -----  Navigation Dots  ----- */
+.ff-hero-style6 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+}
+
+/* -----  Navigation Arrows  ----- */
+.ff-hero-style6 .swiper-button-next-hero-style6:after,
+.ff-hero-style6 .swiper-button-prev-hero-style6:after {
+  color: white;
+}
+
+/* ----- Heading Text Style ----- */
+.ff-hero-style6 .heading-text {
+  display: flex;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.25);
+  flex-direction: column;
+  color: white;
+}
+
+.ff-hero-style6 .heading-text h1 {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.ff-hero-style6 .heading-text h3 {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+/* ----- Logo Image Style ----- */
+.ff-hero-style6 .heading-text img.logo {
+  min-width: 150px;
+  width: 10%;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .ff-hero-style6 .heading-text img.logo {
+    min-width: 100px;
+  }
+}
+
+/* =========================
+   DONT TOUCH
+   ========================= */
+.full-width-row {
+  width: 100vw;
+  margin: 0 -50vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+}
+
+.ff-hero-style6 [class^=""swiper-button-""] {
+  width: 50px;
+}
+
+.ff-hero-style6 .swiper-container-hero-style6 {
+  width: 100%;
+  height: 100%;
+}
+
+.ff-hero-style6 .swiper-slide {
+  background-size: cover;
+  height: 100%;
+}
+
+.ff-hero-style6 .swiper-slide .content {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  padding: 1% 5%;
+}
+
+.ff-hero-style6 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 5px;
+  position: relative;
+  opacity: 0.2;
+  transition: all 0.3s ease;
+}
+
+.ff-hero-style6 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet:hover,
+.ff-hero-style6 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+@keyframes bounce {
+  0% { opacity: 1; transform: translateY(0px) scale(1); }
+  25% { opacity: 0; transform: translateY(10px) scale(0.9); }
+  26% { opacity: 0; transform: translateY(-10px) scale(0.9); }
+  55% { opacity: 1; transform: translateY(0px) scale(1); }
+}
+
+.chevron-arrow:hover {
+  animation-name: bounce;
+  animation-duration: 1.4s;
+  animation-iteration-count: 2;
+  animation-timing-function: linear;
+}
+
+.chevron-arrow {
+  bottom: 50px;
+  width: 20px;
+  position: absolute;
+}
+</style>
+
+<img decoding=""async"" class=""hide-on-front"" src=""https://formsandflows.com/wp-content/uploads/2020/05/Forms-and-Flows.png"" onload=""
+function Hero6Slider() {
+  var swiper_hero_style6 = new Swiper('.swiper-container-hero-style6', {
+    effect: 'fade',
+    grabCursor: true,
+    loop: true,
+    speed: 800,
+    centeredSlides: true,
+    slidesPerView: 1,
+    pagination: {
+      el: '.swiper-pagination-hero-style6',
+      clickable: true,
+    },
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: true,
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    }
+  });
+}
+
+function waitForElementHero6() {
+  if (typeof swiper_hero_style6 === 'undefined') {
+    if (typeof Swiper !== 'undefined') {
+      Hero6Slider();
+    } else {
+      setTimeout(waitForElementHero6, 250);
+    }
+  }
+}
+
+waitForElementHero6();
+"" width=""1"" style=""display:none"">
+
+<link rel=""stylesheet"" href=""https://unpkg.com/swiper/swiper-bundle.min.css"">
+<script type=""text/javascript"" src=""https://unpkg.com/swiper/swiper-bundle.min.js""></script>
+
+
+Hero code part 2 - Scroll to
+<!-- Begin Section with Hidden Content on Frontend -->
+<b class=""hide-on-front"">Start Content ID Scroll</b>
+
+<!-- Anchor for Content Scroll -->
+<div id=""start-section""></div>
+
+<style>
+/* Hide elements with the 'hide-on-front' class */
+.hide-on-front {
+    display: none;
+}
+
+/* Ensure 'hide-on-front' elements remain hidden even within the edit form */
+#edit-form .hide-on-front {
+    display: none;
+}
+
+/* Optional: Add any additional custom styles or overrides here */
+</style>
+
+"
+"<style>
+/*--------------------------------------
+🎨 CAIT POTTER PROPOSAL STYLING 🎨
+--------------------------------------*/
+
+/* ========== GLOBAL STYLES ========== */
+body {
+    font-family: 'Arial, sans-serif';
+    background-color: #f5e0e3; /* Secondary color */
+    margin: 0;
+    padding: 0;
+}
+
+/* ========== HEADER ========== */
+.cait-potter-header {
+    background-color: #036b61; /* Primary dark green */
+    text-align: center;
+    padding: 20px;
+}
+
+.cait-potter-header h1 {
+    color: #fff;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ========== PROPOSAL TABS ========== */
+.cait-potter-tabs {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #ff357d; /* Accent bright pink */
+    padding: 10px;
+}
+
+.cait-potter-tabs a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.cait-potter-tabs a:hover {
+    background-color: #d3b5d7; /* Accent lavender */
+    color: black;
+}
+
+/* ========== MAIN CONTENT ========== */
+.cait-potter-content {
+    padding: 20px;
+    background-image: url('https://static.showit.co/file/1NbVMwQvR6ywHU1LAYEkXw/78210/gradient_hero.png');
+    background-size: cover;
+    color: #036b61;
+}
+
+.cait-potter-content h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #756033;
+    text-align: center;
+}
+
+.cait-potter-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* ========== BUTTON STYLES ========== */
+.cait-potter-button {
+    background-color: #036b61;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cait-potter-button:hover {
+    background-color: #ff357d;
+}
+
+/* ========== FOOTER ========== */
+.cait-potter-footer {
+    background-color: #036b61;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.cait-potter-footer p {
+    margin: 0;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+/* ========== LOGO STYLES ========== */
+.cait-potter-logo {
+    max-width: 150px;
+    margin: 20px auto;
+    display: block;
+}
+
+@media only screen and (max-width: 768px) {
+    .cait-potter-tabs {
+        flex-direction: column;
+    }
+
+    .cait-potter-content {
+        font-size: 1em;
+    }
+
+    .cait-potter-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* 💻 Custom JavaScript for interactivity */
+</style>
+
+<!-- Proposal Content -->
+<div class=""cait-potter-header"">
+    <img src=""https://static.showit.co/file/tpaSaxdIQZ-7SyoMxAjZ7g/78210/cait_final_logos_navy_11.png"" alt=""Cait Potter Logo"" class=""cait-potter-logo"">
+    <h1>Proposal for {{client.firstName}}</h1>
+</div>
+
+<div class=""cait-potter-tabs"">
+    <a href=""#"">Overview</a>
+    <a href=""#"">Details</a>
+    <a href=""#"">Pricing</a>
+</div>
+
+<div class=""cait-potter-content"">
+    <h2>Our Offer to You</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <button class=""cait-potter-button"">Accept Proposal</button>
+</div>
+
+<div class=""cait-potter-footer"">
+    <p>&copy; 2024 Cait Potter - All Rights Reserved</p>
+</div>
+
+ 
+
+
+"
