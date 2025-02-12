@@ -346,7 +346,7 @@ span.col-xs-12.ng-binding.ng-scope {
 }
 
 .row-package-equal .container-form-element__column {
-    overflow: hidden;
+ overflow: visible !important;
 }
 
 .row-package-equal .packageNotSelected, .row-package-equal .packageSelected{
