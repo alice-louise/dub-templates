@@ -346,7 +346,7 @@ span.col-xs-12.ng-binding.ng-scope {
 }
 
 .row-package-equal .container-form-element__column {
- overflow: visible !important;
+
 }
 
 .row-package-equal .packageNotSelected, .row-package-equal .packageSelected{
@@ -355,7 +355,27 @@ margin-top:15px!important;
 margin-bottom:15px!important;
 
 }
-
+.form-viewer__form-elements-list {
+display: flex !important;
+flex-direction: column !important;
+}
+.rpe-package .form-viewer__form-elements-list,
+.rpe-package .form-viewer-element,
+.rpe-package .form-element__content,
+.rpe-package.form-viewer-element {
+height: auto !important;
+flex: 1 !important;
+}
+.form-element__content {
+height: 100% !important;
+}
+.form-viewer-element.form-element.rpe-package {
+display: flex !important;
+}
+.row-package-equal .packageNotSelected,
+.row-package-equal .packageSelected {
+margin: 0 !important;
+}
 
 .row-package-equal .form-viewer__form-elements-list {
     height: 100%;
