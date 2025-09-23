@@ -1296,12 +1296,12 @@ margin-bottom:20px;
 .ff-hero-style5 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: #fff;
+  background-color: #fff !important;
 }
 
 /* -----  Navigation Arrows  ----- */
 .ff-hero-style5 .swiper-button-next-hero-style4:after, .ff-hero-style4 .swiper-button-prev-hero-style4:after{
-color:white;
+color:white !important;
 }
 
 
