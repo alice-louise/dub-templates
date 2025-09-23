@@ -1499,7 +1499,7 @@ padding:0px!important;
 
 /* -----  Navigation Arrows  ----- */
 .ff-hero-style6 .swiper-button-next-hero-style6:after, .ff-hero-style6 .swiper-button-prev-hero-style6:after{
-color:white;
+color:white!important;
 }
 
 .ff-hero-style6 .heading-text {
@@ -1730,7 +1730,7 @@ padding:0px!important;
 }
 /* -----  Navigation Arrows  ----- */
 .ff-hero-style7 .swiper-button-next-hero-style7:after, .ff-hero-style7 .swiper-button-prev-hero-style7:after{
-color:white;
+color:white!important;
 }
 .ff-hero-style7 .heading-text {
    display: flex;
@@ -3841,7 +3841,7 @@ background-color: white;
 
 /* ----- Navigation Arrows ----- */
 .ff-testimonial-slider-style4 .swiper-button-next-style4:after, .ff-testimonial-slider-style4 .swiper-button-prev-style4:after{
-color:#fff;
+color:#fff!important;
 }
 
 
@@ -4012,7 +4012,7 @@ color:white;
 /* CHANGING THE ARROWS */
 /* ----- Navigation Arrows ----- */
 .ff-testimonial-slider-style4 .swiper-button-next-style4:after, .ff-testimonial-slider-style4 .swiper-button-prev-style4:after{
-color:#fff;
+color:#fff !important;
 }
 /* ADDING AND REMOVING TESTIMONIALS */
 <div class=""testimonial-overall-style4 full-width-row"">
@@ -4200,7 +4200,7 @@ background-color: black;
 
 /* ----- Navigation Arrows ----- */
 .ff-testimonial-slider-style5 .swiper-button-next-style5:after, .ff-testimonial-slider-style5 .swiper-button-prev-style5:after{
-color:#333;
+color:#333!important;
 }
 
 
@@ -4371,7 +4371,7 @@ ALL CUSTOMIZATIONS FOR TESTIMONIAL STYLE 5
 /* CHANGING THE ARROWS */
 /* -----  Navigation Arrows  ----- */
 .ff-testimonial-slider-style5 .swiper-button-next-style5:after, .ff-testimonial-slider-style5 .swiper-button-prev-style5:after{
-color:#333;
+color:#333!important;
 }
 /* CHANGING THE NAVIGATION DOTS */
 /* -----  Navigation Dots  ----- */
@@ -5474,7 +5474,7 @@ SNIPPET: IMAGE SLIDER STYLE 2
 
 /* -----  Navigation Arrows  ----- */
 .ff-image-slider-style2 .swiper-button-next-style2:after, .ff-image-slider-style2 .swiper-button-prev-style2:after{
-color:white;
+color:white!important;
 }
 
 
@@ -5572,7 +5572,7 @@ ALL CUSTOMIZATIONS FOR IMAGE SLIDER STYLE 2
 /* CHANGING THE ARROWS - ISS2 */
 /* -----  Navigation Arrows  ----- */
 .ff-image-slider-style2 .swiper-button-next-style2:after, .ff-image-slider-style2 .swiper-button-prev-style2:after{
-color:white;
+color:white!important;
 }
 /* CHANGING THE NAVIGATION DOTS - ISS2 */
 /* -----  Navigation Dots  ----- */
@@ -5699,7 +5699,7 @@ SNIPPET: IMAGE SLIDER STYLE 3
 
 /* -----  Navigation Arrows  ----- */
 .ff-image-slider-style3 .swiper-button-next-style3:after, .ff-image-slider-style3 .swiper-button-prev-style3:after{
-color:white;
+color:white!important;
 }
 
 
@@ -5809,7 +5809,7 @@ ALL CUSTOMIZATIONS FOR IMAGE SLIDER STYLE 3
 /* CHANGING THE ARROWS - ISS3 */
 /* -----  Navigation Arrows  ----- */
 .ff-image-slider-style3 .swiper-button-next-style3:after, .ff-image-slider-style3 .swiper-button-prev-style3:after{
-color:white;
+color:white!important;
 }
 /* UPDATE THE IMAGE(S) - ISS3 */
 <div class=""swiper-slide"" style=""background-image:url(https://formsandflows.com/wp-content/uploads/2020/07/1.jpg)"">
@@ -5936,7 +5936,7 @@ background-position: center;
 
 /* ----- Navigation Arrows ----- */
 .image-slider-style4 .swiper-button-next-style4:after, .image-slider-style4 .swiper-button-prev-style4:after{
-color:white;
+color:white!important;
 }
 
 /* =========================
@@ -6199,7 +6199,7 @@ SNIPPET: IMAGE SLIDER STYLE 5
 
   /* -----  Navigation Arrows  ----- */
   .ff-image-slider-style5 .swiper-button-next-style5:after, .ff-image-slider-style5 .swiper-button-prev-style5:after{
-    color:white;
+    color:white!important;
   }
 
 
@@ -6329,7 +6329,7 @@ ALL CUSTOMIZATIONS FOR IMAGE SLIDER STYLE 5
 /* CHANGING THE ARROWS - ISS5 */
 /* -----  Navigation Arrows  ----- */
   .ff-image-slider-style5 .swiper-button-next-style5:after, .ff-image-slider-style5 .swiper-button-prev-style5:after{
-    color:white;
+    color:white!important;
   }
 /* CHANGING THE NAVIGATION DOTS - ISS6 */
 /* -----  Navigation Dots  ----- */
@@ -6407,7 +6407,7 @@ SNIPPET: IMAGE SLIDER STYLE 6
 
 /* -----  Navigation Arrows  ----- */
 .ff-image-slider-style6 .swiper-button-next-style6:after, .ff-image-slider-style6 .swiper-button-prev-style6:after{
-color:white;
+color:white!important;
 }
 
 
@@ -6524,7 +6524,7 @@ ALL CUSTOMIZATIONS FOR IMAGE SLIDER STYLE 6
 /* CHANGING THE ARROWS - ISS6 */
 /* -----  Navigation Arrows  ----- */
   .ff-image-slider-style6 .swiper-button-next-style6:after, .ff-image-slider-style6 .swiper-button-prev-style6:after{
-    color:white;
+    color:white!important;
   }
 /* CHANGING THE HEIGHT - ISS6 */
 /* -----  Overall Height  ----- */
