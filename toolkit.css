@@ -6789,3 +6789,14 @@ div#submitButton {
     width: 100%;
 }
 
+:root {
+  --swiper-theme-color: white !important;
+}
+
+.swiper-button-prev {
+  left: var(--swiper-navigation-sides-offset, 14px) !important;
+}
+
+.swiper-button-next {
+  right: var(--swiper-navigation-sides-offset, 14px) !important;
+}
