@@ -1580,3 +1580,8 @@ max-height:900px;
 .swiper-button-next {
   right: var(--swiper-navigation-sides-offset, 14px) !important;
 }
+
+.swiper-button-next-style4 svg.swiper-navigation-icon,
+.swiper-button-prev-style4 svg.swiper-navigation-icon {
+  display: none;
+}
