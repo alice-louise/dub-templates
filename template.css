@@ -1588,5 +1588,5 @@ max-height:900px;
 
 .swiper-button-next-style5 svg.swiper-navigation-icon,
 .swiper-button-prev-style5 svg.swiper-navigation-icon {
-  display: none;
+  display: none!important;
 }
