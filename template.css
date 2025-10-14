@@ -1570,7 +1570,8 @@ max-height:900px;
 
 
 :root {
-  --swiper-theme-color: white !important;
+  --swiper-theme-color: transparent!important;
+	--swiper-navigation-color: transparent;
 }
 
 .swiper-button-prev {
