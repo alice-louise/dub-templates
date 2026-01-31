@@ -1,4 +1,4 @@
-console.log("Conditional Logic JS – dropdown value support – v2025-02-01d");
+console.log("Conditional Logic JS – dropdown value support – v2025-02-01e");
 
 const CONDITIONAL_PREFIXES = [
   "conditional-display",
@@ -150,7 +150,7 @@ function assignConditionalLogic(prefix) {
 
     for (let i = 0; i < nodes.length; i += 1) {
       const node = nodes[i];
-      const classTokens = element.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
+      const classTokens = node.classList   .toString()   .split(" ")   .map((c) => c.trim())   .filter((c) => c !== "") .map((c) => c.trim()) .filter((c) => c !== "");
 
       for (let j = 0; j < classTokens.length; j += 1) {
         const classToken = classTokens[j];
@@ -172,7 +172,7 @@ function assignConditionalLogic(prefix) {
 
     for (let i = 0; i < nodes.length; i += 1) {
       const node = nodes[i];
-      const classTokens = element.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
+      const classTokens = node.classList   .toString()   .split(" ")   .map((c) => c.trim())   .filter((c) => c !== "") .map((c) => c.trim()) .filter((c) => c !== "");
 
       for (let j = 0; j < classTokens.length; j += 1) {
         const classToken = classTokens[j];
@@ -376,9 +376,8 @@ function conditionalLogicRemoveWorkflows() {
         for (let k = 0; k < triggers.length; k += 1) {
           const trigger = triggers[k];
           if (trigger.classList.contains(classToken)) {
-            const shouldReset =
-              trigger.querySelector("input[type='checkbox']:checked") === null &&
-              trigger.querySelector(".packageSelected") === null;
+          const shouldReset =
+            !isTriggerSelected(trigger);
 
             if (shouldReset) {
               const selects = displayNode.querySelectorAll("select");
