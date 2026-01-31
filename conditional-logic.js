@@ -737,6 +737,21 @@ function conditionalCheck() {
   );
 }
 
+function conditionalCheckSelects() {
+  document.addEventListener(
+    "change",
+    (event) => {
+      if (event.target && event.target.tagName === "SELECT") {
+        conditionalLogicDisableFunction();
+        conditionalLogic();
+        conditionalLogicRemoveItem();
+        addCheckboxID();
+      }
+    },
+    false,
+  );
+}
+
 function conditionalCheckMouse() {
   const triggers = document.getElementsByClassName("conditional-trigger-id");
   for (let i = 0; i < triggers.length; i += 1) {
@@ -778,6 +793,7 @@ function startJavascript() {
   conditionalLogic();
   conditionalCheck();
   conditionalCheckMouse();
+  conditionalCheckSelects(); 
 }
 
 startJavascript();
