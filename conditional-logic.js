@@ -98,7 +98,11 @@ function isTriggerSelected(element) {
   const selects = element.querySelectorAll("select");
 
   // NEW: read any value-specific constraints from classes
-  const classTokens = element.classList.toString().split(" ");
+const classTokens = node.classList
+  .toString()
+  .split(" ")
+  .map((c) => c.trim())
+  .filter((c) => c !== "");
   const valueConstraints = classTokens
     .filter((c) => c.startsWith("cl-value-"))
     .map((c) => c.replace("cl-value-", ""));
