@@ -1,4 +1,4 @@
-console.log("Conditional Logic JS – dropdown value support – v2025-02-01r");
+console.log("Conditional Logic JS – dropdown value support – v2025-02-01s");
 
 const CONDITIONAL_PREFIXES = [
   "conditional-display",
@@ -137,31 +137,20 @@ if (select && select.selectedIndex > 0) {
   }
 }
 
-  /* ---------- RADIO (SINGLE SELECT) ---------- */
-  const checkedRadio = column.querySelector("input[type='radio']:checked");
-  if (checkedRadio) {
-    let labelText = "";
+  /* ---------- RADIO (SINGLE SELECT – SAFE) ---------- */
+const checkedRadio = column.querySelector("input[type='radio']:checked");
 
-// preferred path
-const label =
-  checkedRadio.closest(".radio-option")?.querySelector("label");
+if (checkedRadio) {
+  const wrapper = checkedRadio.closest(".radio-option");
+  const label = wrapper?.querySelector("label");
 
-// fallback path
-if (label && label.textContent) {
-  labelText = label.textContent;
-} else {
-  // try aria-label or value as last resort
-  labelText =
-    checkedRadio.getAttribute("aria-label") ||
-    checkedRadio.value ||
-    "";
+  if (!label) return false;
+
+  const normalized = normalizeForCSS(label.textContent || "");
+  return displayValues.includes(normalized);
 }
 
-const normalized = normalizeForCSS(labelText);
-return displayValues.includes(normalized);
-  }
-
-  return false;
+    return false;
 }
 
 function isTriggerSelected(element) {
@@ -178,8 +167,8 @@ function isTriggerSelected(element) {
   );
 
   /* ---------- RADIO (SINGLE SELECT) ---------- */
-  const hasCheckedRadio =
-    column.querySelector("input[type='radio']:checked") !== null;
+const hasCheckedRadio =
+  column.querySelector("input[type='radio']:checked") !== null;
 
   /* ---------- CHECKBOX / PACKAGE ---------- */
   const hasCheckedCheckbox =
