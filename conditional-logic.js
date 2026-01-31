@@ -1,3 +1,5 @@
+console.log("Conditional Logic JS – dropdown value support – v2025-02-01w-7");
+
 const CONDITIONAL_PREFIXES = [
   "conditional-display",
   "conditional-trigger",
@@ -121,7 +123,6 @@ function displayValueMatchesTrigger(displayNode, trigger) {
     trigger.closest(".column");
 
   if (!column) return false;
-
 
   /* ---------- DROPDOWN ---------- */
   const select = column.querySelector("select");
@@ -504,6 +505,7 @@ function addCheckboxID() {
   const checkboxes = document.querySelectorAll("input[type='checkbox']");
   checkboxes.forEach((checkbox) => {
     const wrapper = checkbox.closest(".checkbox-option");
+    if (!wrapper) return;
     wrapper.classList.remove("checkboxChecked");
     wrapper.classList.add("checkboxNotChecked");
   });
@@ -513,6 +515,7 @@ function addCheckboxID() {
   );
   checkedCheckboxes.forEach((checkbox) => {
     const wrapper = checkbox.closest(".checkbox-option");
+    if (!wrapper) return;
     wrapper.classList.add("checkboxChecked");
     wrapper.classList.remove("checkboxNotChecked");
   });
