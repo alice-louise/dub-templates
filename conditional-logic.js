@@ -1,4 +1,4 @@
-console.log("Conditional Logic JS – dropdown value support – v2025-02-01b");
+console.log("Conditional Logic JS – dropdown value support – v2025-02-01c");
 
 const CONDITIONAL_PREFIXES = [
   "conditional-display",
@@ -76,6 +76,22 @@ const CLASS_KEEPERS = new Set([
   "column",
 ]);
 
+function safeAddClass(element, className) {
+  if (!className) return;
+
+  const clean = className.trim();
+
+  if (clean === "") return;
+
+  // Defensive: never allow whitespace in class names
+  if (/\s/.test(clean)) {
+    console.warn("Blocked invalid class:", JSON.stringify(className));
+    return;
+  }
+
+  element.classList.add(clean);
+}
+
 function hasEditContext() {
   return EDIT_CONTEXT_SELECTORS.some(
     (selector) => document.querySelector(selector) !== null,
@@ -141,7 +157,7 @@ function assignConditionalLogic(prefix) {
         if (classToken.includes("cl-") || classToken.includes("clhide-")) {
           node.parentNode.style.minHeight = "0";
           const column = node.closest(".column");
-          column.classList.add(classToken);
+          columnsafeAddClass(column, classToken);
           column.classList.add(targetClass);
           column.classList.add("conditional-id");
         }
@@ -163,7 +179,7 @@ function assignConditionalLogic(prefix) {
         if (classToken.includes("cl-") || classToken.includes("clhide-")) {
           node.parentNode.style.minHeight = "0";
           const column = node.closest(".container-form-element__column");
-          column.classList.add(classToken);
+          columnsafeAddClass(column, classToken);
           column.classList.add(targetClass);
           column.classList.add("conditional-id");
         }
@@ -257,7 +273,7 @@ function assignConditionalLogicTriggerDisable() {
         if (classToken.includes("group-cl-") || classToken.includes("cl-")) {
           group.parentNode.style.minHeight = "0";
           const column = group.closest(".column");
-          column.classList.add(classToken);
+          columnsafeAddClass(column, classToken);
           column.classList.add("conditional-group-disable-id");
         }
       }
@@ -275,7 +291,7 @@ function assignConditionalLogicTriggerDisable() {
         if (classToken.includes("group-cl-") || classToken.includes("cl-")) {
           group.parentNode.style.minHeight = "0";
           const column = group.closest(".container-form-element__column");
-          column.classList.add(classToken);
+          columnsafeAddClass(column, classToken);
           column.classList.add("conditional-group-disable-id");
         }
       }
