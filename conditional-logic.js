@@ -1,4 +1,4 @@
-console.log("Conditional Logic JS – dropdown value support – v2025-02-01w-6");
+console.log("Conditional Logic JS – dropdown value support – v2025-02-01w-7");
 
 const CONDITIONAL_PREFIXES = [
   "conditional-display",
@@ -124,10 +124,14 @@ function displayValueMatchesTrigger(displayNode, trigger) {
 
   if (!column) return false;
 
+
   /* ---------- RADIO (SINGLE SELECT) ---------- */
- const checkedRadio = column.querySelector("input[type='radio']:checked");
+  const checkedRadio = column.querySelector("input[type='radio']:checked");
   if (checkedRadio) {
-    const label = checkedRadio.closest(".radio-option")?.querySelector("label");
+    const label = checkedRadio
+      .closest(".radio-option")
+      ?.querySelector("label");
+
     if (!label) return false;
 
     const normalized = normalizeForCSS(label.textContent || "");
@@ -135,12 +139,18 @@ function displayValueMatchesTrigger(displayNode, trigger) {
   }
 
   /* ---------- DROPDOWN ---------- */
- const select = trigger.querySelector("select"); 
-  if (select && select.selectedIndex > 0) { 
-    const selectedOption = select.options[select.selectedIndex]; 
-    const textMatch = normalizeForCSS( selectedOption?.textContent || "" ); 
-    const valueMatch = normalizeForCSS( select.value || "" ); 
-    return ( displayValues.includes(textMatch) || displayValues.includes(valueMatch) ); 
+  const select = column.querySelector("select");
+  if (
+    select &&
+    select.selectedIndex > 0 &&
+    !select.options[select.selectedIndex].disabled
+  ) {
+    const selectedOption = select.options[select.selectedIndex];
+    const normalized = normalizeForCSS(
+      selectedOption.textContent || ""
+    );
+
+    return displayValues.includes(normalized);
   }
 
   return false;
