@@ -1,4 +1,4 @@
-console.log("Conditional Logic JS – dropdown value support – v2025-02-01w-5");
+console.log("Conditional Logic JS – dropdown value support – v2025-02-01w-6");
 
 const CONDITIONAL_PREFIXES = [
   "conditional-display",
@@ -124,27 +124,8 @@ function displayValueMatchesTrigger(displayNode, trigger) {
 
   if (!column) return false;
 
-/* ---------- DROPDOWN ---------- */
-const select = trigger.querySelector("select");
-if (select && select.selectedIndex > 0) {
-  const selectedOption = select.options[select.selectedIndex];
-
-  const textMatch = normalizeForCSS(
-    selectedOption?.textContent || ""
-  );
-
-  const valueMatch = normalizeForCSS(
-    select.value || ""
-  );
-
-  return (
-    displayValues.includes(textMatch) ||
-    displayValues.includes(valueMatch)
-  );
-}
-
   /* ---------- RADIO (SINGLE SELECT) ---------- */
-  const checkedRadio = column.querySelector("input[type='radio']:checked");
+ const checkedRadio = column.querySelector("input[type='radio']:checked");
   if (checkedRadio) {
     const label = checkedRadio.closest(".radio-option")?.querySelector("label");
     if (!label) return false;
@@ -153,39 +134,16 @@ if (select && select.selectedIndex > 0) {
     return displayValues.includes(normalized);
   }
 
-  return false;
-}
-
-function isTriggerSelected(element) {
-  const column =
-    element.closest(".container-form-element__column") ||
-    element.closest(".column");
-
-  if (!column) return false;
-
   /* ---------- DROPDOWN ---------- */
-  const selects = column.querySelectorAll("select");
-  const hasSelectValue = Array.from(selects).some(
-    (select) => select.value && select.selectedIndex !== 0
-  );
+ const select = trigger.querySelector("select"); 
+  if (select && select.selectedIndex > 0) { 
+    const selectedOption = select.options[select.selectedIndex]; 
+    const textMatch = normalizeForCSS( selectedOption?.textContent || "" ); 
+    const valueMatch = normalizeForCSS( select.value || "" ); 
+    return ( displayValues.includes(textMatch) || displayValues.includes(valueMatch) ); 
+  }
 
-  /* ---------- RADIO (SINGLE SELECT) ---------- */
-  const hasCheckedRadio =
-    column.querySelector("input[type='radio']:checked") !== null;
-
-  /* ---------- CHECKBOX / PACKAGE ---------- */
-  const hasCheckedCheckbox =
-    element.querySelector("input[type='checkbox']:checked") !== null;
-
-  const hasSelectedPackage =
-    element.querySelector(".packageSelected") !== null;
-
-  return (
-    hasSelectValue ||
-    hasCheckedRadio ||
-    hasCheckedCheckbox ||
-    hasSelectedPackage
-  );
+  return false;
 }
 
 
