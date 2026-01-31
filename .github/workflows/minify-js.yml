@@ -1,0 +1,34 @@
+name: Minify JavaScript
+
+on:
+  push:
+    paths:
+      - "**/*.js"
+      - "!**/*.min.js"
+
+jobs:
+  minify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install Terser
+        run: npm install terser -g
+
+      - name: Minify JS files
+        run: |
+          for file in *.js; do
+            if [[ "$file" != *.min.js ]]; then
+              terser "$file" -c -m -o "${file%.js}.min.js"
+            fi
+          done
+
+      - name: Commit minified files
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add *.min.js
+          git commit -m "Auto-minify JS" || echo "No changes"
+          git push
