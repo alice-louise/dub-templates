@@ -1,4 +1,4 @@
-console.log("Conditional Logic JS – dropdown value support – v2025-02-01w");
+console.log("Conditional Logic JS – dropdown value support – v2025-02-01w-2");
 
 const CONDITIONAL_PREFIXES = [
   "conditional-display",
@@ -127,8 +127,7 @@ function displayValueMatchesTrigger(displayNode, trigger) {
   /* ---------- DROPDOWN ---------- */
   const select = column.querySelector("select");
   if (select && select.value && select.selectedIndex !== 0) {
-const selectedOption = select.options[select.selectedIndex];
-const normalized = normalizeForCSS(selectedOption.text);
+const normalized = normalizeForCSS(select.value);
     return displayValues.includes(normalized);
   }
 
