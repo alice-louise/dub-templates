@@ -1,4 +1,4 @@
-console.log("Conditional Logic JS – dropdown value support – v2025-02-01i");
+console.log("Conditional Logic JS – dropdown value support – v2025-02-01j");
 
 const CONDITIONAL_PREFIXES = [
   "conditional-display",
@@ -133,6 +133,20 @@ function isTriggerSelected(element) {
     Array.from(element.querySelectorAll("select")).some(
       (select) => select.value && select.selectedIndex !== 0
     );
+
+    // Find the column this trigger lives in
+  const column =
+    element.closest(".container-form-element__column") ||
+    element.closest(".column");
+
+  if (!column) return false;
+
+  // Look for selects in the same column
+  const selects = column.querySelectorAll("select");
+
+  const hasSelectValue = Array.from(selects).some(
+    (select) => select.value && select.selectedIndex !== 0
+  );
 
   return (
     hasSelectValue ||
