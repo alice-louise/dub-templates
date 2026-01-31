@@ -1,4 +1,4 @@
-console.log("Conditional Logic JS – dropdown value support – v2025-02-01m");
+console.log("Conditional Logic JS – dropdown value support – v2025-02-01n");
 
 const CONDITIONAL_PREFIXES = [
   "conditional-display",
@@ -118,20 +118,39 @@ function displayValueMatchesTrigger(displayNode, trigger) {
   // No value constraints = show when trigger is active
   if (displayValues.length === 0) return true;
 
-  // Find the select in the SAME COLUMN as the trigger
+  // Find the column this trigger lives in
   const column =
     trigger.closest(".container-form-element__column") ||
     trigger.closest(".column");
 
   if (!column) return false;
 
+  // 1) DROPDOWNS
   const select = column.querySelector("select");
-  if (!select || !select.value || select.selectedIndex === 0) return false;
+  if (select && select.selectedIndex !== 0) {
+    const selectedOption = select.options[select.selectedIndex];
+    if (!selectedOption) return false;
 
-  const selectedOption = select.options[select.selectedIndex];
-  const normalized = normalizeForCSS(selectedOption.text);
-  return displayValues.includes(normalized);
+    const normalized = normalizeForCSS(selectedOption.textContent);
+    return displayValues.includes(normalized);
+  }
+
+  // 2) RADIO (single select)
+  const checkedRadio = column.querySelector("input[type='radio']:checked");
+  if (checkedRadio) {
+    const label = checkedRadio
+      .closest(".radio-option")
+      ?.querySelector("label");
+
+    if (!label) return false;
+
+    const normalized = normalizeForCSS(label.textContent);
+    return displayValues.includes(normalized);
+  }
+
+  return false;
 }
+
 
 function isTriggerSelected(element) {
   // Find the column this trigger lives in
