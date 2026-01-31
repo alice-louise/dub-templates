@@ -1,4 +1,4 @@
-console.log("Conditional Logic JS – dropdown value support – v2025-02-01w-8");
+console.log("Conditional Logic JS – dropdown value support – v2025-02-01y");
 
 const CONDITIONAL_PREFIXES = [
   "conditional-display",
@@ -143,19 +143,21 @@ function displayValueMatchesTrigger(displayNode, trigger) {
   }
 
   /* ---------- DROPDOWN ---------- */
-  const select = column.querySelector("select");
-  if (
-    select &&
-    select.selectedIndex > 0 &&
-    !select.options[select.selectedIndex].disabled
-  ) {
-    const selectedOption = select.options[select.selectedIndex];
-    const normalized = normalizeForCSS(
-      selectedOption.textContent || ""
-    );
+const select = column.querySelector("select");
+if (
+  select &&
+  select.selectedIndex > -1 &&
+  select.options[select.selectedIndex] &&
+  !select.options[select.selectedIndex].disabled &&
+  select.value !== ""
+) {
+  const selectedOption = select.options[select.selectedIndex];
+  const normalized = normalizeForCSS(
+    selectedOption.value || selectedOption.textContent || ""
+  );
 
-    return displayValues.includes(normalized);
-  }
+  return displayValues.includes(normalized);
+}
 
   return false;
 }
