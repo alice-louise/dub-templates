@@ -100,9 +100,7 @@ function isTriggerSelected(element) {
   // NEW: read any value-specific constraints from classes
 const classTokens = node.classList
   .toString()
-  .split(" ")
-  .map((c) => c.trim())
-  .filter((c) => c !== "");
+  .split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
   const valueConstraints = classTokens
     .filter((c) => c.startsWith("cl-value-"))
     .map((c) => c.replace("cl-value-", ""));
@@ -136,7 +134,7 @@ function assignConditionalLogic(prefix) {
 
     for (let i = 0; i < nodes.length; i += 1) {
       const node = nodes[i];
-      const classTokens = node.classList.toString().split(" ");
+      const classTokens = node.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
 
       for (let j = 0; j < classTokens.length; j += 1) {
         const classToken = classTokens[j];
@@ -158,7 +156,7 @@ function assignConditionalLogic(prefix) {
 
     for (let i = 0; i < nodes.length; i += 1) {
       const node = nodes[i];
-      const classTokens = node.classList.toString().split(" ");
+      const classTokens = node.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
 
       for (let j = 0; j < classTokens.length; j += 1) {
         const classToken = classTokens[j];
@@ -186,7 +184,7 @@ function removeConditionalLogicDisplay() {
   const displayNodes = document.querySelectorAll(".conditional-display-id");
   displayNodes.forEach((displayNode) => {
     displayNode.classList.remove("conditional-display-id");
-    const classTokens = displayNode.classList.toString().split(" ");
+    const classTokens = displayNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
 
     classTokens.forEach((classToken) => {
       const keep =
@@ -209,7 +207,7 @@ function removeConditionalLogicTrigger() {
   const triggerNodes = document.querySelectorAll(".conditional-trigger-id");
   triggerNodes.forEach((triggerNode) => {
     triggerNode.classList.remove("conditional-trigger-id");
-    const classTokens = triggerNode.classList.toString().split(" ");
+    const classTokens = triggerNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
 
     classTokens.forEach((classToken) => {
       const keep =
@@ -232,7 +230,7 @@ function removeConditionalGroup() {
   const groupNodes = document.querySelectorAll(".conditional-group-id");
   groupNodes.forEach((groupNode) => {
     groupNode.classList.remove("conditional-group-id");
-    const classTokens = groupNode.classList.toString().split(" ");
+    const classTokens = groupNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
 
     classTokens.forEach((classToken) => {
       const keep =
@@ -252,7 +250,7 @@ function assignConditionalLogicTriggerDisable() {
     const disableGroups = document.getElementsByClassName("disable-group");
     for (let i = 0; i < disableGroups.length; i += 1) {
       const group = disableGroups[i];
-      const classTokens = group.classList.toString().split(" ");
+      const classTokens = group.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
 
       for (let j = 0; j < classTokens.length; j += 1) {
         const classToken = classTokens[j];
@@ -270,7 +268,7 @@ function assignConditionalLogicTriggerDisable() {
     const disableGroups = document.getElementsByClassName("disable-group");
     for (let i = 0; i < disableGroups.length; i += 1) {
       const group = disableGroups[i];
-      const classTokens = group.classList.toString().split(" ");
+      const classTokens = group.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
 
       for (let j = 0; j < classTokens.length; j += 1) {
         const classToken = classTokens[j];
@@ -291,7 +289,7 @@ function conditionalLogic() {
     let shouldShow = false;
     const displayNode = displayNodes[i];
     const displayParent = displayNode.parentNode;
-    const classTokens = displayNode.classList.toString().split(" ");
+    const classTokens = displayNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
 
     for (let j = 0; j < classTokens.length; j += 1) {
       const classToken = classTokens[j];
@@ -324,7 +322,7 @@ function conditionalLogicRemoveItem() {
   for (let i = 0; i < displayNodes.length; i += 1) {
     let shouldHide = false;
     const displayNode = displayNodes[i];
-    const classTokens = displayNode.classList.toString().split(" ");
+    const classTokens = displayNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
 
     for (let j = 0; j < classTokens.length; j += 1) {
       const classToken = classTokens[j];
@@ -353,7 +351,7 @@ function conditionalLogicRemoveWorkflows() {
   const displayNodes = document.getElementsByClassName("conditional-display-id");
   for (let i = 0; i < displayNodes.length; i += 1) {
     const displayNode = displayNodes[i];
-    const classTokens = displayNode.classList.toString().split(" ");
+    const classTokens = displayNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
 
     for (let j = 0; j < classTokens.length; j += 1) {
       const classToken = classTokens[j];
@@ -385,7 +383,7 @@ function conditionalLogicDisableFunction() {
     const groups = document.getElementsByClassName("conditional-group-disable-id");
     for (let i = 0; i < groups.length; i += 1) {
       const groupNode = groups[i];
-      const classTokens = groupNode.classList.toString().split(" ");
+      const classTokens = groupNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
 
       for (let j = 0; j < classTokens.length; j += 1) {
         const classToken = classTokens[j];
@@ -432,7 +430,7 @@ function conditionalLogicDisableFunction() {
     const groups = document.getElementsByClassName("conditional-group-disable-id");
     for (let i = 0; i < groups.length; i += 1) {
       const groupNode = groups[i];
-      const classTokens = groupNode.classList.toString().split(" ");
+      const classTokens = groupNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
 
       for (let j = 0; j < classTokens.length; j += 1) {
         const classToken = classTokens[j];
@@ -512,7 +510,7 @@ function addConditionalGuides() {
     const conditionalNodes = document.getElementsByClassName("conditional-id");
     for (let i = 0; i < conditionalNodes.length; i += 1) {
       const conditionalNode = conditionalNodes[i];
-      const classTokens = conditionalNode.classList.toString().split(" ");
+      const classTokens = conditionalNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
       for (let j = 0; j < classTokens.length; j += 1) {
         const classToken = classTokens[j];
         if (classToken.includes("cl-") && !classToken.includes("group")) {
@@ -521,7 +519,7 @@ function addConditionalGuides() {
           for (let k = 0; k < triggers.length; k += 1) {
             let triggerClasses = "";
             const trigger = triggers[k];
-            const triggerTokens = trigger.classList.toString().split(" ");
+            const triggerTokens = trigger.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
 
             for (let m = 0; m < triggerTokens.length; m += 1) {
               const triggerToken = triggerTokens[m];
@@ -569,7 +567,7 @@ function addConditionalGuides() {
           for (let k = 0; k < displayNodes.length; k += 1) {
             let displayClasses = "";
             const displayNode = displayNodes[k];
-            const displayTokens = displayNode.classList.toString().split(" ");
+            const displayTokens = displayNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
 
             for (let m = 0; m < displayTokens.length; m += 1) {
               const displayToken = displayTokens[m];
@@ -651,7 +649,7 @@ function conditionalRequired() {
   for (let i = 0; i < displayNodes.length; i += 1) {
     let shouldEnable = false;
     const displayNode = displayNodes[i];
-    const classTokens = displayNode.classList.toString().split(" ");
+    const classTokens = displayNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
 
     for (let j = 0; j < classTokens.length; j += 1) {
       const classToken = classTokens[j];
