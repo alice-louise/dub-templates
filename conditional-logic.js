@@ -1,4 +1,4 @@
-console.log("Conditional Logic JS – dropdown value support – v2025-02-01g");
+console.log("Conditional Logic JS – dropdown value support – v2025-02-01h");
 
 const CONDITIONAL_PREFIXES = [
   "conditional-display",
@@ -127,29 +127,26 @@ const select = document.querySelector(
   const normalized = normalizeForCSS(select.value);
   return displayValues.includes(normalized);
 }
-
 function isTriggerSelected(element) {
   const selects = element.querySelectorAll("select");
 
-  // NEW: read any value-specific constraints from classes
-const classTokens = element.classList
-  .toString()
-  .split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
-  const valueConstraints = classTokens
-    .filter((c) => c.startsWith("cl-value-"))
-    .map((c) => c.replace("cl-value-", ""));
-
   const hasMatchingSelect = Array.from(selects).some((select) => {
     const rawValue = select.value ? select.value.trim() : "";
-
-    // nothing selected
     if (!rawValue || select.selectedIndex === 0) return false;
 
-    // no value constraints = ANY selection counts (existing behavior)
+    // NEW: if this trigger has cl-value-* classes, require a match
+    const valueConstraints = Array.from(element.classList)
+      .filter((c) => c.startsWith("cl-value-"))
+      .map((c) => c.replace("cl-value-", ""));
+
     if (valueConstraints.length === 0) return true;
 
-    // value-specific matching
-    const normalized = normalizeForCSS(rawValue);
+    const normalized = rawValue
+      .toLowerCase()
+      .trim()
+      .replace(/\s+/g, "-")
+      .replace(/[^a-z0-9-_]/g, "");
+
     return valueConstraints.includes(normalized);
   });
 
