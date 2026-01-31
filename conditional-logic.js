@@ -1,4 +1,4 @@
-console.log("Conditional Logic JS – dropdown value support – v2025-02-01w-7");
+console.log("Conditional Logic JS – dropdown value support – v2025-02-01w-8");
 
 const CONDITIONAL_PREFIXES = [
   "conditional-display",
@@ -77,6 +77,9 @@ const CLASS_KEEPERS = new Set([
 ]);
 
 function safeAddClass(element, className) {
+  // Defensive: element may legitimately be null in Dubsado DOM
+  if (!element || !element.classList) return;
+
   if (!className) return;
 
   const clean = className.trim();
@@ -91,6 +94,7 @@ function safeAddClass(element, className) {
 
   element.classList.add(clean);
 }
+
 
 function hasEditContext() {
   return EDIT_CONTEXT_SELECTORS.some(
