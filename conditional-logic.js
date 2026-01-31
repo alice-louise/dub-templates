@@ -1,4 +1,4 @@
-console.log("Conditional Logic JS – dropdown value support – v2025-02-01t");
+console.log("Conditional Logic JS – dropdown value support – v2025-02-01u");
 
 const CONDITIONAL_PREFIXES = [
   "conditional-display",
@@ -137,17 +137,20 @@ if (select && select.selectedIndex > 0) {
   }
 }
 
-  /* ---------- RADIO (SINGLE SELECT – SAFE) ---------- */
+  /* ---------- RADIO (SINGLE SELECT – MATCH LIKE DROPDOWN) ---------- */
 const checkedRadio = column.querySelector("input[type='radio']:checked");
 
 if (checkedRadio) {
   const wrapper = checkedRadio.closest(".radio-option");
   const label = wrapper?.querySelector("label");
 
-  if (!label) return false;
+  const textNorm = normalizeForCSS(label?.textContent || "");
+  const valueNorm = normalizeForCSS(checkedRadio.value || "");
 
-  const normalized = normalizeForCSS(label.textContent || "");
-  return displayValues.includes(normalized);
+  return (
+    displayValues.includes(textNorm) ||
+    displayValues.includes(valueNorm)
+  );
 }
 
     return false;
