@@ -1,4 +1,4 @@
-console.log("Conditional Logic JS – dropdown value support – v2025-02-01p");
+console.log("Conditional Logic JS – dropdown value support – v2025-02-01q");
 
 const CONDITIONAL_PREFIXES = [
   "conditional-display",
@@ -800,7 +800,11 @@ function conditionalCheckSelects() {
   document.addEventListener(
     "change",
     (event) => {
-      if (event.target && event.target.tagName === "SELECT") {
+      if (
+        event.target &&
+        (event.target.tagName === "SELECT" ||
+         event.target.type === "radio")
+      ) {
         conditionalLogicDisableFunction();
         conditionalLogic();
         conditionalLogicRemoveItem();
