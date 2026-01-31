@@ -1,4 +1,4 @@
-console.log("Conditional Logic JS – dropdown value support – v2025-02-01o");
+console.log("Conditional Logic JS – dropdown value support – v2025-02-01p");
 
 const CONDITIONAL_PREFIXES = [
   "conditional-display",
@@ -124,12 +124,15 @@ function displayValueMatchesTrigger(displayNode, trigger) {
 
   if (!column) return false;
 
-  /* ---------- DROPDOWN ---------- */
-  const select = column.querySelector("select");
-  if (select && select.value && select.selectedIndex !== 0) {
-    const normalized = normalizeForCSS(select.value);
-    return displayValues.includes(normalized);
-  }
+  /* ---------- DROPDOWN AND PROJECT TRACKING ---------- */
+const select = column.querySelector("select");
+if (select && select.selectedIndex > 0) {
+  const optionText =
+    select.options[select.selectedIndex]?.textContent || "";
+
+  const normalized = normalizeForCSS(optionText);
+  return displayValues.includes(normalized);
+}
 
   /* ---------- RADIO (SINGLE SELECT) ---------- */
   const checkedRadio = column.querySelector("input[type='radio']:checked");
