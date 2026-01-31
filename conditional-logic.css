@@ -43,6 +43,11 @@ view-form-public-component label{
     height: 0;
 }
 
+.conditional-display-id.show-content {
+  opacity: 1 !important;
+  height: auto !important;
+  overflow: initial !important;
+}
 
 .hide-content{
   opacity:0;
