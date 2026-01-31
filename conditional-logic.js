@@ -1,4 +1,4 @@
-console.log("Conditional Logic JS – dropdown value support – v2025-02-01q");
+console.log("Conditional Logic JS – dropdown value support – v2025-02-01r");
 
 const CONDITIONAL_PREFIXES = [
   "conditional-display",
@@ -125,23 +125,40 @@ function displayValueMatchesTrigger(displayNode, trigger) {
   if (!column) return false;
 
   /* ---------- DROPDOWN AND PROJECT TRACKING ---------- */
-const select = column.querySelector("select");
+  const select = column.querySelector("select");
 if (select && select.selectedIndex > 0) {
   const optionText =
     select.options[select.selectedIndex]?.textContent || "";
 
   const normalized = normalizeForCSS(optionText);
-  return displayValues.includes(normalized);
+
+  if (displayValues.includes(normalized)) {
+    return true;
+  }
 }
 
   /* ---------- RADIO (SINGLE SELECT) ---------- */
   const checkedRadio = column.querySelector("input[type='radio']:checked");
   if (checkedRadio) {
-    const label = checkedRadio.closest(".radio-option")?.querySelector("label");
-    if (!label) return false;
+    let labelText = "";
 
-    const normalized = normalizeForCSS(label.textContent || "");
-    return displayValues.includes(normalized);
+// preferred path
+const label =
+  checkedRadio.closest(".radio-option")?.querySelector("label");
+
+// fallback path
+if (label && label.textContent) {
+  labelText = label.textContent;
+} else {
+  // try aria-label or value as last resort
+  labelText =
+    checkedRadio.getAttribute("aria-label") ||
+    checkedRadio.value ||
+    "";
+}
+
+const normalized = normalizeForCSS(labelText);
+return displayValues.includes(normalized);
   }
 
   return false;
@@ -786,7 +803,9 @@ function identifyMainCodes() {
 function conditionalCheck() {
   document.addEventListener(
     "click",
-    () => {
+    (event) => {
+      if (event.target && event.target.type === "radio") return;
+
       conditionalLogicDisableFunction();
       conditionalLogic();
       conditionalLogicRemoveItem();
@@ -795,6 +814,7 @@ function conditionalCheck() {
     false,
   );
 }
+
 
 function conditionalCheckSelects() {
   document.addEventListener(
