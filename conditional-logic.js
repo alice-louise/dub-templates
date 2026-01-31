@@ -1,4 +1,4 @@
-console.log("Conditional Logic JS – dropdown value support – v2025-02-01t");
+console.log("Conditional Logic JS – dropdown value support – v2025-02-01v");
 
 const CONDITIONAL_PREFIXES = [
   "conditional-display",
@@ -124,33 +124,25 @@ function displayValueMatchesTrigger(displayNode, trigger) {
 
   if (!column) return false;
 
-  /* ---------- DROPDOWN AND PROJECT TRACKING ---------- */
-  const select = column.querySelector("select");
-if (select && select.selectedIndex > 0) {
-  const optionText =
-    select.options[select.selectedIndex]?.textContent || "";
+  /* ---------- DROPDOWN AND PROJECT TRACKING ---------- */ 
+  const select = column.querySelector("select"); 
+  if (select && select.selectedIndex > 0) { 
+    const optionText = select.options[select.selectedIndex]?.textContent || ""; 
+    
+    const normalized = normalizeForCSS(optionText); 
+    return displayValues.includes(normalized); }
 
-  const normalized = normalizeForCSS(optionText);
+  /* ---------- RADIO (SINGLE SELECT) ---------- */
+  const checkedRadio = column.querySelector("input[type='radio']:checked");
+  if (checkedRadio) {
+    const label = checkedRadio.closest(".radio-option")?.querySelector("label");
+    if (!label) return false;
 
-  if (displayValues.includes(normalized)) {
-    return true;
+    const normalized = normalizeForCSS(label.textContent || "");
+    return displayValues.includes(normalized);
   }
-}
 
-  /* ---------- RADIO (SINGLE SELECT – SAFE) ---------- */
-const checkedRadio = column.querySelector("input[type='radio']:checked");
-
-if (checkedRadio) {
-  const wrapper = checkedRadio.closest(".radio-option");
-  const label = wrapper?.querySelector("label");
-
-  if (!label) return false;
-
-  const normalized = normalizeForCSS(label.textContent || "");
-  return displayValues.includes(normalized);
-}
-
-    return false;
+  return false;
 }
 
 function isTriggerSelected(element) {
@@ -167,12 +159,12 @@ function isTriggerSelected(element) {
   );
 
   /* ---------- RADIO (SINGLE SELECT) ---------- */
-const hasCheckedRadio =
-  column.querySelector("input[type='radio']:checked") !== null;
+  const hasCheckedRadio =
+    column.querySelector("input[type='radio']:checked") !== null;
 
   /* ---------- CHECKBOX / PACKAGE ---------- */
-const hasCheckedCheckbox =
-  column.querySelector("input[type='checkbox']:checked") !== null;
+  const hasCheckedCheckbox =
+    element.querySelector("input[type='checkbox']:checked") !== null;
 
   const hasSelectedPackage =
     element.querySelector(".packageSelected") !== null;
@@ -345,49 +337,39 @@ function assignConditionalLogicTriggerDisable() {
 
 function conditionalLogic() {
   const displayNodes = document.getElementsByClassName("conditional-display-id");
-
   for (let i = 0; i < displayNodes.length; i += 1) {
     let shouldShow = false;
     const displayNode = displayNodes[i];
     const displayParent = displayNode.parentNode;
-
-    const classTokens = displayNode.classList
-      .toString()
-      .split(" ")
-      .map((c) => c.trim())
-      .filter((c) => c !== "");
+    const classTokens = displayNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
 
     for (let j = 0; j < classTokens.length; j += 1) {
       const classToken = classTokens[j];
-
       if (classToken.includes("cl-")) {
         const triggers = document.getElementsByClassName("conditional-trigger-id");
-
         for (let k = 0; k < triggers.length; k += 1) {
           const trigger = triggers[k];
+            if (trigger.classList.contains(classToken)) {
+              const selected =
+                isTriggerSelected(trigger) &&
+                displayValueMatchesTrigger(displayNode, trigger);
+            
+              shouldShow = shouldShow || selected;
 
-          if (trigger.classList.contains(classToken)) {
-            const selected =
-              isTriggerSelected(trigger) &&
-              displayValueMatchesTrigger(displayNode, trigger);
 
-            shouldShow = shouldShow || selected;
+            if (shouldShow) {
+              displayNode.classList.add("show-content");
+              displayParent.classList.remove("remove-padding");
+            } else {
+              displayNode.classList.remove("show-content");
+              displayParent.classList.add("remove-padding");
+            }
           }
         }
       }
     }
-
-    // ✅ APPLY RESULT ONCE
-    if (shouldShow) {
-      displayNode.classList.add("show-content");
-      displayParent.classList.remove("remove-padding");
-    } else {
-      displayNode.classList.remove("show-content");
-      displayParent.classList.add("remove-padding");
-    }
   }
 }
-
 
 function conditionalLogicRemoveItem() {
   const displayNodes = document.getElementsByClassName(
@@ -802,7 +784,7 @@ function identifyMainCodes() {
 function conditionalCheck() {
   document.addEventListener(
     "click",
-    (event) => {
+    () => {
       conditionalLogicDisableFunction();
       conditionalLogic();
       conditionalLogicRemoveItem();
@@ -812,16 +794,11 @@ function conditionalCheck() {
   );
 }
 
-
 function conditionalCheckSelects() {
   document.addEventListener(
     "change",
     (event) => {
-      if (
-        event.target &&
-        (event.target.tagName === "SELECT" ||
-         event.target.type === "radio")
-      ) {
+      if (event.target && event.target.tagName === "SELECT") {
         conditionalLogicDisableFunction();
         conditionalLogic();
         conditionalLogicRemoveItem();
