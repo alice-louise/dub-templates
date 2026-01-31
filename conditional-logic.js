@@ -84,15 +84,39 @@ function hasFormViewer() {
   return document.querySelector(".form-viewer") !== null;
 }
 
+function normalizeForCSS(value) {
+  return value
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9-_]/g, "");
+}
+
 function isTriggerSelected(element) {
   const selects = element.querySelectorAll("select");
-  const hasSelection = Array.from(selects).some((select) => {
-    const value = select.value ? select.value.trim() : "";
-    return value !== "" && select.selectedIndex > 0;
+
+  // NEW: read any value-specific constraints from classes
+  const classTokens = element.classList.toString().split(" ");
+  const valueConstraints = classTokens
+    .filter((c) => c.startsWith("cl-value-"))
+    .map((c) => c.replace("cl-value-", ""));
+
+  const hasMatchingSelect = Array.from(selects).some((select) => {
+    const rawValue = select.value ? select.value.trim() : "";
+
+    // nothing selected
+    if (!rawValue || select.selectedIndex === 0) return false;
+
+    // no value constraints = ANY selection counts (existing behavior)
+    if (valueConstraints.length === 0) return true;
+
+    // value-specific matching
+    const normalized = normalizeForCSS(rawValue);
+    return valueConstraints.includes(normalized);
   });
 
   return (
-    hasSelection ||
+    hasMatchingSelect ||
     element.querySelector(".packageSelected") !== null ||
     element.querySelector("input[type='checkbox']:checked") !== null
   );
