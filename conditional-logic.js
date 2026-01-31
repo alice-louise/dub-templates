@@ -1,4 +1,4 @@
-console.log("Conditional Logic JS – dropdown value support – v2025-02-01y");
+console.log("Conditional Logic JS – dropdown value support – v2025-02-01y-1");
 
 const CONDITIONAL_PREFIXES = [
   "conditional-display",
@@ -525,19 +525,27 @@ function addCheckboxID() {
   const checkboxes = document.querySelectorAll("input[type='checkbox']");
   checkboxes.forEach((checkbox) => {
     const wrapper = checkbox.closest(".checkbox-option");
+    if (!wrapper) return;
+    
     wrapper.classList.remove("checkboxChecked");
     wrapper.classList.add("checkboxNotChecked");
+
   });
 
   const checkedCheckboxes = document.querySelectorAll(
-    "input[type='checkbox']:checked",
-  );
-  checkedCheckboxes.forEach((checkbox) => {
-    const wrapper = checkbox.closest(".checkbox-option");
-    wrapper.classList.add("checkboxChecked");
-    wrapper.classList.remove("checkboxNotChecked");
-  });
+  "input[type='checkbox']:checked",
+);
+checkedCheckboxes.forEach((checkbox) => {
+  const wrapper = checkbox.closest(".checkbox-option");
+  if (!wrapper) return;
+
+  wrapper.classList.add("checkboxChecked");
+  wrapper.classList.remove("checkboxNotChecked");
+});
+
 }
+
+
 
 function addConditionalGuides() {
   const toggle = document.getElementById("toggle-conditional-guidelines");
