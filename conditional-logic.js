@@ -1,4 +1,4 @@
-console.log("Conditional Logic JS – dropdown value support – v2025-02-01o-2");
+console.log("Conditional Logic JS – dropdown value support – v2025-02-01o-3");
 
 const CONDITIONAL_PREFIXES = [
   "conditional-display",
@@ -125,11 +125,18 @@ function displayValueMatchesTrigger(displayNode, trigger) {
   if (!column) return false;
 
   /* ---------- DROPDOWN ---------- */
-  const select = column.querySelector("select");
-  if (select && select.value && select.selectedIndex !== 0) {
-    const normalized = normalizeForCSS(select.value);
-    return displayValues.includes(normalized);
-  }
+const select = column.querySelector("select");
+if (select && select.value && select.selectedIndex !== 0) {
+  const option = select.options[select.selectedIndex];
+
+  const valueNorm = normalizeForCSS(option.value || "");
+  const textNorm = normalizeForCSS(option.textContent || "");
+
+  return (
+    displayValues.includes(valueNorm) ||
+    displayValues.includes(textNorm)
+  );
+}
 
   /* ---------- RADIO (SINGLE SELECT) ---------- */
   const checkedRadio = column.querySelector("input[type='radio']:checked");
@@ -336,39 +343,49 @@ function assignConditionalLogicTriggerDisable() {
 
 function conditionalLogic() {
   const displayNodes = document.getElementsByClassName("conditional-display-id");
+
   for (let i = 0; i < displayNodes.length; i += 1) {
     let shouldShow = false;
     const displayNode = displayNodes[i];
     const displayParent = displayNode.parentNode;
-    const classTokens = displayNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
+
+    const classTokens = displayNode.classList
+      .toString()
+      .split(" ")
+      .map((c) => c.trim())
+      .filter((c) => c !== "");
 
     for (let j = 0; j < classTokens.length; j += 1) {
       const classToken = classTokens[j];
+
       if (classToken.includes("cl-")) {
         const triggers = document.getElementsByClassName("conditional-trigger-id");
+
         for (let k = 0; k < triggers.length; k += 1) {
           const trigger = triggers[k];
-            if (trigger.classList.contains(classToken)) {
-              const selected =
-                isTriggerSelected(trigger) &&
-                displayValueMatchesTrigger(displayNode, trigger);
-            
-              shouldShow = shouldShow || selected;
 
+          if (trigger.classList.contains(classToken)) {
+            const selected =
+              isTriggerSelected(trigger) &&
+              displayValueMatchesTrigger(displayNode, trigger);
 
-            if (shouldShow) {
-              displayNode.classList.add("show-content");
-              displayParent.classList.remove("remove-padding");
-            } else {
-              displayNode.classList.remove("show-content");
-              displayParent.classList.add("remove-padding");
-            }
+            shouldShow = shouldShow || selected;
           }
         }
       }
     }
+
+    // ✅ APPLY ONCE
+    if (shouldShow) {
+      displayNode.classList.add("show-content");
+      displayParent.classList.remove("remove-padding");
+    } else {
+      displayNode.classList.remove("show-content");
+      displayParent.classList.add("remove-padding");
+    }
   }
 }
+
 
 function conditionalLogicRemoveItem() {
   const displayNodes = document.getElementsByClassName(
