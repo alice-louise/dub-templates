@@ -123,19 +123,6 @@ function displayValueMatchesTrigger(displayNode, trigger) {
   if (!column) return false;
 
 
-  /* ---------- RADIO (SINGLE SELECT) ---------- */
-  const checkedRadio = column.querySelector("input[type='radio']:checked");
-  if (checkedRadio) {
-    const label = checkedRadio
-      .closest(".radio-option")
-      ?.querySelector("label");
-
-    if (!label) return false;
-
-    const normalized = normalizeForCSS(label.textContent || "");
-    return displayValues.includes(normalized);
-  }
-
   /* ---------- DROPDOWN ---------- */
   const select = column.querySelector("select");
   if (
