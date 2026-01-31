@@ -1,4 +1,4 @@
-console.log("Conditional Logic JS – dropdown value support – v2025-02-01h");
+console.log("Conditional Logic JS – dropdown value support – v2025-02-01i");
 
 const CONDITIONAL_PREFIXES = [
   "conditional-display",
@@ -127,29 +127,19 @@ const select = document.querySelector(
   const normalized = normalizeForCSS(select.value);
   return displayValues.includes(normalized);
 }
+
 function isTriggerSelected(element) {
-  const selects = element.querySelectorAll("select");
+  const hasSelectValue = element.querySelectorAll("select").length > 0 &&
+    Array.from(element.querySelectorAll("select")).some(
+      (select) => select.value && select.selectedIndex !== 0
+    );
 
-  const hasMatchingSelect = Array.from(selects).some((select) => {
-    const rawValue = select.value ? select.value.trim() : "";
-    if (!rawValue || select.selectedIndex === 0) return false;
-
-    // NEW: if this trigger has cl-value-* classes, require a match
-    const valueConstraints = Array.from(element.classList)
-      .filter((c) => c.startsWith("cl-value-"))
-      .map((c) => c.replace("cl-value-", ""));
-
-    if (valueConstraints.length === 0) return true;
-
-    const normalized = rawValue
-      .toLowerCase()
-      .trim()
-      .replace(/\s+/g, "-")
-      .replace(/[^a-z0-9-_]/g, "");
-
-    return valueConstraints.includes(normalized);
-  });
-
+  return (
+    hasSelectValue ||
+    element.querySelector(".packageSelected") !== null ||
+    element.querySelector("input[type='checkbox']:checked") !== null
+  );
+}
   return (
     hasMatchingSelect ||
     element.querySelector(".packageSelected") !== null ||
