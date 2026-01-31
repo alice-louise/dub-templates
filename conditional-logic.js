@@ -1,4 +1,4 @@
-console.log("Conditional Logic JS – dropdown value support – v2025-02-01e");
+console.log("Conditional Logic JS – dropdown value support – v2025-02-01f");
 
 const CONDITIONAL_PREFIXES = [
   "conditional-display",
@@ -108,6 +108,21 @@ function normalizeForCSS(value) {
     .trim()
     .replace(/\s+/g, "-")
     .replace(/[^a-z0-9-_]/g, "");
+}
+
+function displayValueMatchesTrigger(displayNode, trigger) {
+  const displayValues = Array.from(displayNode.classList)
+    .filter((c) => c.startsWith("cl-value-"))
+    .map((c) => c.replace("cl-value-", ""));
+
+  // If display has no value constraints, allow it
+  if (displayValues.length === 0) return true;
+
+  const select = trigger.querySelector("select");
+  if (!select || !select.value) return false;
+
+  const normalized = normalizeForCSS(select.value);
+  return displayValues.includes(normalized);
 }
 
 function isTriggerSelected(element) {
@@ -313,9 +328,13 @@ function conditionalLogic() {
         const triggers = document.getElementsByClassName("conditional-trigger-id");
         for (let k = 0; k < triggers.length; k += 1) {
           const trigger = triggers[k];
-          if (trigger.classList.contains(classToken)) {
-            const selected = isTriggerSelected(trigger);
-            shouldShow = shouldShow || selected;
+            if (trigger.classList.contains(classToken)) {
+              const selected =
+                isTriggerSelected(trigger) &&
+                displayValueMatchesTrigger(displayNode, trigger);
+            
+              shouldShow = shouldShow || selected;
+
 
             if (shouldShow) {
               displayNode.classList.add("show-content");
