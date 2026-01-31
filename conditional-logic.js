@@ -1,4 +1,4 @@
-console.log("Conditional Logic JS – dropdown value support – v2025-02-01c");
+console.log("Conditional Logic JS – dropdown value support – v2025-02-01d");
 
 const CONDITIONAL_PREFIXES = [
   "conditional-display",
@@ -114,7 +114,7 @@ function isTriggerSelected(element) {
   const selects = element.querySelectorAll("select");
 
   // NEW: read any value-specific constraints from classes
-const classTokens = node.classList
+const classTokens = element.classList
   .toString()
   .split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
   const valueConstraints = classTokens
@@ -150,14 +150,14 @@ function assignConditionalLogic(prefix) {
 
     for (let i = 0; i < nodes.length; i += 1) {
       const node = nodes[i];
-      const classTokens = node.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
+      const classTokens = element.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
 
       for (let j = 0; j < classTokens.length; j += 1) {
         const classToken = classTokens[j];
         if (classToken.includes("cl-") || classToken.includes("clhide-")) {
           node.parentNode.style.minHeight = "0";
           const column = node.closest(".column");
-          columnsafeAddClass(column, classToken);
+          safeAddClass(column, classToken);
           column.classList.add(targetClass);
           column.classList.add("conditional-id");
         }
@@ -172,14 +172,14 @@ function assignConditionalLogic(prefix) {
 
     for (let i = 0; i < nodes.length; i += 1) {
       const node = nodes[i];
-      const classTokens = node.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
+      const classTokens = element.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
 
       for (let j = 0; j < classTokens.length; j += 1) {
         const classToken = classTokens[j];
         if (classToken.includes("cl-") || classToken.includes("clhide-")) {
           node.parentNode.style.minHeight = "0";
           const column = node.closest(".container-form-element__column");
-          columnsafeAddClass(column, classToken);
+          safeAddClass(column, classToken);
           column.classList.add(targetClass);
           column.classList.add("conditional-id");
         }
@@ -273,7 +273,7 @@ function assignConditionalLogicTriggerDisable() {
         if (classToken.includes("group-cl-") || classToken.includes("cl-")) {
           group.parentNode.style.minHeight = "0";
           const column = group.closest(".column");
-          columnsafeAddClass(column, classToken);
+          safeAddClass(column, classToken);
           column.classList.add("conditional-group-disable-id");
         }
       }
@@ -291,7 +291,7 @@ function assignConditionalLogicTriggerDisable() {
         if (classToken.includes("group-cl-") || classToken.includes("cl-")) {
           group.parentNode.style.minHeight = "0";
           const column = group.closest(".container-form-element__column");
-          columnsafeAddClass(column, classToken);
+          safeAddClass(column, classToken);
           column.classList.add("conditional-group-disable-id");
         }
       }
