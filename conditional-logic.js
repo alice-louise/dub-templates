@@ -1,4 +1,4 @@
-console.log("Conditional Logic JS – dropdown value support – v2025-02-01o-1");
+console.log("Conditional Logic JS – dropdown value support – v2025-02-01o-2");
 
 const CONDITIONAL_PREFIXES = [
   "conditional-display",
