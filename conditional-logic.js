@@ -1,4 +1,4 @@
-console.log("Conditional Logic JS – dropdown value support – v2025-02-01f");
+console.log("Conditional Logic JS – dropdown value support – v2025-02-01g");
 
 const CONDITIONAL_PREFIXES = [
   "conditional-display",
@@ -118,7 +118,10 @@ function displayValueMatchesTrigger(displayNode, trigger) {
   // If display has no value constraints, allow it
   if (displayValues.length === 0) return true;
 
-  const select = trigger.querySelector("select");
+const select = document.querySelector(
+    `.conditional-trigger-id.${Array.from(trigger.classList).find(c => c.startsWith("cl-"))} select`
+  );
+
   if (!select || !select.value) return false;
 
   const normalized = normalizeForCSS(select.value);
