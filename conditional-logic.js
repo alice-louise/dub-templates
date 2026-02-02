@@ -1,4 +1,4 @@
-console.log("Conditional Logic JS – dropdown value support – v2025-02-01y-1");
+console.warn("🔥 CONDITIONAL SCRIPT LOADED");
 
 const CONDITIONAL_PREFIXES = [
   "conditional-display",
@@ -75,6 +75,24 @@ const CLASS_KEEPERS = new Set([
   "ng-scope",
   "column",
 ]);
+
+function isTriggerSelected(trigger) {
+  if (!trigger) return false;
+
+  const input = trigger.querySelector("input, select");
+  if (!input) return false;
+
+  if (input.type === "checkbox" || input.type === "radio") {
+    return input.checked;
+  }
+
+  if (input.tagName === "SELECT") {
+    return input.value !== "";
+  }
+
+  return false;
+}
+
 
 function safeAddClass(element, className) {
   // Defensive: element may legitimately be null in Dubsado DOM
@@ -834,6 +852,7 @@ function whileEdit() {
 }
 
 function startJavascript() {
+  console.warn("🚀 startJavascript() RUNNING");
   assignConditionalClasses();
   assignConditionalLogicTriggerDisable();
   conditionalLogicDisableFunction();
@@ -845,5 +864,10 @@ function startJavascript() {
   conditionalCheckMouse();
   conditionalCheckSelects(); 
 }
+console.warn("🔥 startJavascript is defined");
 
-startJavascript();
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", startJavascript);
+} else {
+  startJavascript();
+}
