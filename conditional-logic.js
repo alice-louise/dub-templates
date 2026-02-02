@@ -1,1 +1,849 @@
-const CONDITIONAL_PREFIXES=["conditional-display","conditional-trigger","conditional-group","conditional-disable-group","conditional-hide-trigger","conditional-hide-display"],COLOR_PALETTE=["#FF6633","#7FE5F0","#00B8AE","#9A8899","#00B3E6","#E6B333","#3366E6","#999966","#B34D4D","#80B300","#809900","#E6B3B3","#6680B3","#66991A","#FF99E6","#FF1A66","#E6331A","#33FFCC","#B366CC","#4D8000","#B33300","#CC80CC","#66664D","#991AFF","#E666FF","#4DB3FF","#1AB399","#E666B3","#33991A","#CC9999","#B3B31A","#00E680","#4D8066","#809980","#E6FF80","#1AFF33","#999933","#FF3380","#CCCC00","#66E64D","#4D80CC","#9900B3","#E64D66","#4DB380","#FF4D4D","#99E6E6","#6666FF"],EDIT_CONTEXT_SELECTORS=["view-form-public-component","legacy-form-preview-component","#edit-form","#view-form"],CLASS_KEEPERS=new Set(["row","item","packageNotSelected","packageSelected","selected","ng-scope","column"]);function safeAddClass(e,t){if(!t)return;const o=t.trim();""!==o&&(/\s/.test(o)?console.warn("Blocked invalid class:",JSON.stringify(t)):e.classList.add(o))}function hasEditContext(){return EDIT_CONTEXT_SELECTORS.some((e=>null!==document.querySelector(e)))}function hasFormViewer(){return null!==document.querySelector(".form-viewer")}function normalizeForCSS(e){return e.toLowerCase().trim().replace(/\s+/g,"-").replace(/[^a-z0-9-_]/g,"")}function displayValueMatchesTrigger(e,t){const o=Array.from(e.classList).filter((e=>e.startsWith("cl-value-"))).map((e=>e.replace("cl-value-","")));if(0===o.length)return!0;const i=t.closest(".container-form-element__column")||t.closest(".column");if(!i)return!1;const n=i.querySelector("input[type='radio']:checked");if(n){const e=n.closest(".radio-option")?.querySelector("label");if(!e)return!1;const t=normalizeForCSS(e.textContent||"");return o.includes(t)}const l=i.querySelector("select");if(l&&l.selectedIndex>0&&!l.options[l.selectedIndex].disabled){const e=normalizeForCSS(l.options[l.selectedIndex].textContent||"");return o.includes(e)}return!1}function assignConditionalLogic(e){if(hasEditContext()){const t=`${e}-identify`,o=`${e}-id`,i=document.getElementsByClassName(t);for(let e=0;e<i.length;e+=1){const t=i[e],n=t.classList.toString().split(" ").map((e=>e.trim())).filter((e=>""!==e)).map((e=>e.trim())).filter((e=>""!==e));for(let e=0;e<n.length;e+=1){const i=n[e];if(i.includes("cl-")||i.includes("clhide-")){t.parentNode.style.minHeight="0";const e=t.closest(".column");safeAddClass(e,i),e.classList.add(o),e.classList.add("conditional-id")}}}}if(hasFormViewer()){const t=`${e}-identify`,o=`${e}-id`,i=document.getElementsByClassName(t);for(let e=0;e<i.length;e+=1){const t=i[e],n=t.classList.toString().split(" ").map((e=>e.trim())).filter((e=>""!==e)).map((e=>e.trim())).filter((e=>""!==e));for(let e=0;e<n.length;e+=1){const i=n[e];if(i.includes("cl-")||i.includes("clhide-")){t.parentNode.style.minHeight="0";const e=t.closest(".container-form-element__column");safeAddClass(e,i),e.classList.add(o),e.classList.add("conditional-id")}}}}}function assignConditionalClasses(){CONDITIONAL_PREFIXES.forEach((e=>assignConditionalLogic(e)))}function removeConditionalLogicDisplay(){if(null===document.querySelector("#edit-form"))return;document.querySelectorAll(".conditional-display-id").forEach((e=>{e.classList.remove("conditional-display-id");e.classList.toString().split(" ").map((e=>e.trim())).filter((e=>""!==e)).forEach((t=>{CLASS_KEEPERS.has(t)||t.includes("col-")||t.includes(" ")||e.classList.remove(t)}))}))}function removeConditionalLogicTrigger(){if(null===document.querySelector("#edit-form"))return;document.querySelectorAll(".conditional-trigger-id").forEach((e=>{e.classList.remove("conditional-trigger-id");e.classList.toString().split(" ").map((e=>e.trim())).filter((e=>""!==e)).forEach((t=>{CLASS_KEEPERS.has(t)||t.includes("col-")||t.includes(" ")||e.classList.remove(t)}))}))}function removeConditionalGroup(){if(null===document.querySelector("#edit-form"))return;document.querySelectorAll(".conditional-group-id").forEach((e=>{e.classList.remove("conditional-group-id");e.classList.toString().split(" ").map((e=>e.trim())).filter((e=>""!==e)).forEach((t=>{CLASS_KEEPERS.has(t)||t.includes("col-")||t.includes(" ")||e.classList.remove(t)}))}))}function assignConditionalLogicTriggerDisable(){if(hasEditContext()){const e=document.getElementsByClassName("disable-group");for(let t=0;t<e.length;t+=1){const o=e[t],i=o.classList.toString().split(" ").map((e=>e.trim())).filter((e=>""!==e));for(let e=0;e<i.length;e+=1){const t=i[e];if(t.includes("group-cl-")||t.includes("cl-")){o.parentNode.style.minHeight="0";const e=o.closest(".column");safeAddClass(e,t),e.classList.add("conditional-group-disable-id")}}}}if(hasFormViewer()){const e=document.getElementsByClassName("disable-group");for(let t=0;t<e.length;t+=1){const o=e[t],i=o.classList.toString().split(" ").map((e=>e.trim())).filter((e=>""!==e));for(let e=0;e<i.length;e+=1){const t=i[e];if(t.includes("group-cl-")||t.includes("cl-")){o.parentNode.style.minHeight="0";const e=o.closest(".container-form-element__column");safeAddClass(e,t),e.classList.add("conditional-group-disable-id")}}}}}function conditionalLogic(){const e=document.getElementsByClassName("conditional-display-id");for(let t=0;t<e.length;t+=1){let o=!1;const i=e[t],n=i.parentNode,l=i.classList.toString().split(" ").map((e=>e.trim())).filter((e=>""!==e));for(let e=0;e<l.length;e+=1){const t=l[e];if(t.includes("cl-")){const e=document.getElementsByClassName("conditional-trigger-id");for(let l=0;l<e.length;l+=1){const s=e[l];if(s.classList.contains(t)){const e=isTriggerSelected(s)&&displayValueMatchesTrigger(i,s);o=o||e,o?(i.classList.add("show-content"),n.classList.remove("remove-padding")):(i.classList.remove("show-content"),n.classList.add("remove-padding"))}}}}}}function conditionalLogicRemoveItem(){const e=document.getElementsByClassName("conditional-hide-display-id");for(let t=0;t<e.length;t+=1){let o=!1;const i=e[t],n=i.classList.toString().split(" ").map((e=>e.trim())).filter((e=>""!==e));for(let e=0;e<n.length;e+=1){const t=n[e];if(t.includes("clhide-")){const e=document.getElementsByClassName("conditional-hide-trigger-id");for(let n=0;n<e.length;n+=1){const l=e[n];if(l.classList.contains(t)){const e=isTriggerSelected(l);o=o||e,o?i.classList.add("hide-content"):i.classList.remove("hide-content")}}}}}}function conditionalLogicRemoveWorkflows(){const e=document.getElementsByClassName("conditional-display-id");for(let t=0;t<e.length;t+=1){const o=e[t],i=o.classList.toString().split(" ").map((e=>e.trim())).filter((e=>""!==e));for(let e=0;e<i.length;e+=1){const t=i[e];if(t.includes("cl-")){const e=document.getElementsByClassName("conditional-trigger-id");for(let i=0;i<e.length;i+=1){const n=e[i];if(n.classList.contains(t)){if(!isTriggerSelected(n)){const e=o.querySelectorAll("select");for(let t=0;t<e.length;t+=1)e[t].value="",e[t].selectedIndex=0}}}}}}}function conditionalLogicDisableFunction(){if(hasEditContext()){const e=document.getElementsByClassName("conditional-group-disable-id");for(let t=0;t<e.length;t+=1){const o=e[t].classList.toString().split(" ").map((e=>e.trim())).filter((e=>""!==e));for(let e=0;e<o.length;e+=1){const t=o[e];if(t.includes("group-cl-")){const e=`.${t}`,o=document.querySelectorAll(e);let i=!1;o.forEach((e=>{i=i||isTriggerSelected(e)})),o.forEach((e=>{if(i){const t=e.getElementsByClassName("packageNotSelected");for(let e=0;e<t.length;e+=1)t[e].classList.add("disable-package");const o=e.querySelectorAll(".clip-check .ng-empty");for(let e=0;e<o.length;e+=1)o[e].parentElement.classList.add("disable-package")}else{const t=e.getElementsByClassName("packageNotSelected");for(let e=0;e<t.length;e+=1)t[e].classList.remove("disable-package");const o=e.querySelectorAll(".clip-check .ng-empty");for(let e=0;e<o.length;e+=1)o[e].parentElement.classList.remove("disable-package")}}))}}}}if(hasFormViewer()){const e=document.getElementsByClassName("conditional-group-disable-id");for(let t=0;t<e.length;t+=1){const o=e[t].classList.toString().split(" ").map((e=>e.trim())).filter((e=>""!==e));for(let e=0;e<o.length;e+=1){const t=o[e];if(t.includes("group-cl-")){const e=`.${t}`,o=document.querySelectorAll(e);let i=!1;o.forEach((e=>{i=i||isTriggerSelected(e)})),o.forEach((e=>{if(i){const t=e.getElementsByClassName("packageNotSelected");for(let e=0;e<t.length;e+=1)t[e].classList.add("disable-package");const o=e.querySelectorAll(".checkboxNotChecked");for(let e=0;e<o.length;e+=1)o[e].classList.add("disable-package");const i=e.querySelectorAll(".checkboxChecked");for(let e=0;e<i.length;e+=1)i[e].classList.remove("disable-package")}else{const t=e.getElementsByClassName("packageNotSelected");for(let e=0;e<t.length;e+=1)t[e].classList.remove("disable-package");const o=e.querySelectorAll(".checkboxNotChecked");for(let e=0;e<o.length;e+=1)o[e].classList.remove("disable-package")}}))}}}}}function addCheckboxID(){if(!hasFormViewer())return;document.querySelectorAll("input[type='checkbox']").forEach((e=>{const t=e.closest(".checkbox-option");t.classList.remove("checkboxChecked"),t.classList.add("checkboxNotChecked")}));document.querySelectorAll("input[type='checkbox']:checked").forEach((e=>{const t=e.closest(".checkbox-option");t.classList.add("checkboxChecked"),t.classList.remove("checkboxNotChecked")}))}function addConditionalGuides(){const e=document.getElementById("toggle-conditional-guidelines");if(e){if(!0===e.checked){let e="";const t=document.getElementsByClassName("conditional-id");for(let o=0;o<t.length;o+=1){const i=t[o].classList.toString().split(" ").map((e=>e.trim())).filter((e=>""!==e));for(let t=0;t<i.length;t+=1){const n=i[t];if(n.includes("cl-")&&!n.includes("group")){e=`${e} ${n}`;const t=document.getElementsByClassName("conditional-trigger-id");for(let e=0;e<t.length;e+=1){let i="";const l=t[e],s=l.classList.toString().split(" ").map((e=>e.trim())).filter((e=>""!==e));for(let e=0;e<s.length;e+=1){const t=s[e];if(t.includes("cl-")&&(i=`${i} ${t}`,l.classList.contains(n))){if(null===l.querySelector(".conditional-guides")&&""!==i){const e=document.createElement("div");e.classList.add("conditional-guides"),e.style.backgroundColor=COLOR_PALETTE[o],e.style.color="white",e.style.padding="10px 20px",e.style.display="block",e.style.textTransform="uppercase",e.style.letterSpacing="1px",e.style.fontSize="10px",l.style.border="1px solid",l.style.borderColor=COLOR_PALETTE[o],e.innerHTML=`Conditional Trigger:${i}`,l.insertBefore(e,l.firstChild)}if(""!==i&&null!==l.querySelector(".conditional-guides")){const e=l.querySelector("div.conditional-guides");e.innerHTML=`Conditional Trigger:${i}`,e.style.backgroundColor=COLOR_PALETTE[o],l.style.borderColor=COLOR_PALETTE[o]}}}}const i=document.getElementsByClassName("conditional-display-id");for(let e=0;e<i.length;e+=1){let t="";const l=i[e],s=l.classList.toString().split(" ").map((e=>e.trim())).filter((e=>""!==e));for(let e=0;e<s.length;e+=1){const i=s[e];if(i.includes("cl-")&&(t=`${t} ${i}`,l.classList.contains(n))){if(null===l.querySelector(".conditional-guides")&&""!==t){const e=document.createElement("div");e.classList.add("conditional-guides"),e.style.backgroundColor=COLOR_PALETTE[o],e.style.color="white",e.style.padding="10px 20px",e.style.display="block",e.style.textTransform="uppercase",e.style.letterSpacing="1px",e.style.fontSize="10px",l.style.border="1px solid",l.style.borderColor=COLOR_PALETTE[o],e.innerHTML=`Conditional Display:${t}`,l.insertBefore(e,l.firstChild)}if(""!==t&&null!==l.querySelector(".conditional-guides")){const e=l.querySelector("div.conditional-guides");e.innerHTML=`Conditional Display:${t}`,e.style.backgroundColor=COLOR_PALETTE[o],l.style.borderColor=COLOR_PALETTE[o]}}}}}}}}if(!1===e.checked){document.querySelectorAll("div.conditional-guides").forEach((e=>{e.parentNode.style.border="0px solid",e.parentNode.removeChild(e)}))}}}function removeConditionalGuidelines(){document.querySelectorAll("div.conditional-guides").forEach((e=>{const t=e.parentNode;if(!t.classList.contains("conditional-id")){t.querySelectorAll("div.conditional-guides").forEach((e=>{e.parentNode.style.border="0px solid",e.parentNode.removeChild(e)}))}}))}function conditionalRequired(){document.querySelectorAll("input").forEach((e=>{e.hasAttribute("required")&&e.classList.add("required-catch")}));const e=document.getElementsByClassName("conditional-display-id");for(let t=0;t<e.length;t+=1){let o=!1;const i=e[t],n=i.classList.toString().split(" ").map((e=>e.trim())).filter((e=>""!==e));for(let e=0;e<n.length;e+=1){const t=n[e];if(t.includes("cl-")){const e=document.getElementsByClassName("conditional-trigger-id");for(let n=0;n<e.length;n+=1){const l=e[n];if(l.classList.contains(t)){const e=isTriggerSelected(l);if(o=o||e,o){i.querySelectorAll(".required-catch").forEach((e=>{e.removeAttribute("required"),e.setAttribute("ng-required","false")}))}else{i.querySelectorAll(".required-catch").forEach((e=>{e.setAttribute("required","required")}))}}}}}}}function identifyMainCodes(){if(hasEditContext()&&document.querySelectorAll("div.hide-on-front")){document.querySelectorAll("div.hide-on-front").forEach((e=>{const t=e.closest(".row");t.classList.add("main-codes-id"),null!==document.querySelector("#edit-form")&&t.setAttribute("style","margin-top:0px!important;margin-bottom:0px!important; border:0px")}))}if(hasFormViewer()){if(document.querySelectorAll(".hide-on-front")){document.querySelectorAll("div.hide-on-front").forEach((e=>{const t=e.closest(".form-element__content");t.classList.add("hide-on-front-id"),t.setAttribute("style","margin-top:0px!important;margin-bottom:0px!important;padding:0px!important;height:0px;overflow:hidden;")}))}if(document.querySelectorAll(".hide-on-front")){document.querySelectorAll("b.hide-on-front").forEach((e=>{const t=e.closest(".form-element__content");t.classList.add("hide-on-front-id"),t.setAttribute("style","margin-top:0px!important;margin-bottom:0px!important;padding:0px!important;height:0px;overflow:hidden;")}))}}}function conditionalCheck(){document.addEventListener("click",(()=>{conditionalLogicDisableFunction(),conditionalLogic(),conditionalLogicRemoveItem(),addCheckboxID()}),!1)}function conditionalCheckSelects(){document.addEventListener("change",(e=>{e.target&&"SELECT"===e.target.tagName&&(conditionalLogicDisableFunction(),conditionalLogic(),conditionalLogicRemoveItem(),addCheckboxID())}),!1)}function conditionalCheckMouse(){const e=document.getElementsByClassName("conditional-trigger-id");for(let t=0;t<e.length;t+=1)e[t].addEventListener("mousemove",(()=>{conditionalLogicDisableFunction(),conditionalLogic(),conditionalLogicRemoveItem(),addCheckboxID()}),!1)}function whileEdit(){null!==document.querySelector("#edit-form")&&setInterval((()=>{addConditionalGuides(),removeConditionalGuidelines(),removeConditionalLogicDisplay(),removeConditionalLogicTrigger(),removeConditionalGroup(),assignConditionalClasses(),assignConditionalLogicTriggerDisable(),identifyMainCodes()}),250)}function startJavascript(){assignConditionalClasses(),assignConditionalLogicTriggerDisable(),conditionalLogicDisableFunction(),conditionalLogicRemoveItem(),whileEdit(),identifyMainCodes(),conditionalLogic(),conditionalCheck(),conditionalCheckMouse(),conditionalCheckSelects()}startJavascript();
+console.log("Conditional Logic JS – dropdown value support – v2025-02-01y-1");
+
+const CONDITIONAL_PREFIXES = [
+  "conditional-display",
+  "conditional-trigger",
+  "conditional-group",
+  "conditional-disable-group",
+  "conditional-hide-trigger",
+  "conditional-hide-display",
+];
+
+const COLOR_PALETTE = [
+  "#FF6633",
+  "#7FE5F0",
+  "#00B8AE",
+  "#9A8899",
+  "#00B3E6",
+  "#E6B333",
+  "#3366E6",
+  "#999966",
+  "#B34D4D",
+  "#80B300",
+  "#809900",
+  "#E6B3B3",
+  "#6680B3",
+  "#66991A",
+  "#FF99E6",
+  "#FF1A66",
+  "#E6331A",
+  "#33FFCC",
+  "#B366CC",
+  "#4D8000",
+  "#B33300",
+  "#CC80CC",
+  "#66664D",
+  "#991AFF",
+  "#E666FF",
+  "#4DB3FF",
+  "#1AB399",
+  "#E666B3",
+  "#33991A",
+  "#CC9999",
+  "#B3B31A",
+  "#00E680",
+  "#4D8066",
+  "#809980",
+  "#E6FF80",
+  "#1AFF33",
+  "#999933",
+  "#FF3380",
+  "#CCCC00",
+  "#66E64D",
+  "#4D80CC",
+  "#9900B3",
+  "#E64D66",
+  "#4DB380",
+  "#FF4D4D",
+  "#99E6E6",
+  "#6666FF",
+];
+
+const EDIT_CONTEXT_SELECTORS = [
+  "view-form-public-component",
+  "legacy-form-preview-component",
+  "#edit-form",
+  "#view-form",
+];
+
+const CLASS_KEEPERS = new Set([
+  "row",
+  "item",
+  "packageNotSelected",
+  "packageSelected",
+  "selected",
+  "ng-scope",
+  "column",
+]);
+
+function safeAddClass(element, className) {
+  // Defensive: element may legitimately be null in Dubsado DOM
+  if (!element || !element.classList) return;
+
+  if (!className) return;
+
+  const clean = className.trim();
+
+  if (clean === "") return;
+
+  // Defensive: never allow whitespace in class names
+  if (/\s/.test(clean)) {
+    console.warn("Blocked invalid class:", JSON.stringify(className));
+    return;
+  }
+
+  element.classList.add(clean);
+}
+
+
+function hasEditContext() {
+  return EDIT_CONTEXT_SELECTORS.some(
+    (selector) => document.querySelector(selector) !== null,
+  );
+}
+
+function hasFormViewer() {
+  return document.querySelector(".form-viewer") !== null;
+}
+
+function normalizeForCSS(value) {
+  return value
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9-_]/g, "");
+}
+
+function displayValueMatchesTrigger(displayNode, trigger) {
+  const displayValues = Array.from(displayNode.classList)
+    .filter((c) => c.startsWith("cl-value-"))
+    .map((c) => c.replace("cl-value-", ""));
+
+  // No value constraints = boolean trigger
+  if (displayValues.length === 0) return true;
+
+  const column =
+    trigger.closest(".container-form-element__column") ||
+    trigger.closest(".column");
+
+  if (!column) return false;
+
+
+  /* ---------- RADIO (SINGLE SELECT) ---------- */
+  const checkedRadio = column.querySelector("input[type='radio']:checked");
+  if (checkedRadio) {
+    const label = checkedRadio
+      .closest(".radio-option")
+      ?.querySelector("label");
+
+    if (!label) return false;
+
+    const normalized = normalizeForCSS(label.textContent || "");
+    return displayValues.includes(normalized);
+  }
+
+  /* ---------- DROPDOWN ---------- */
+const select = column.querySelector("select");
+if (
+  select &&
+  select.selectedIndex > -1 &&
+  select.options[select.selectedIndex] &&
+  !select.options[select.selectedIndex].disabled &&
+  select.value !== ""
+) {
+  const selectedOption = select.options[select.selectedIndex];
+  const normalized = normalizeForCSS(
+    selectedOption.value || selectedOption.textContent || ""
+  );
+
+  return displayValues.includes(normalized);
+}
+
+  return false;
+}
+
+
+function assignConditionalLogic(prefix) {
+  if (hasEditContext()) {
+    const identifierClass = `${prefix}-identify`;
+    const targetClass = `${prefix}-id`;
+    const nodes = document.getElementsByClassName(identifierClass);
+
+    for (let i = 0; i < nodes.length; i += 1) {
+      const node = nodes[i];
+      const classTokens = node.classList   .toString()   .split(" ")   .map((c) => c.trim())   .filter((c) => c !== "") .map((c) => c.trim()) .filter((c) => c !== "");
+
+      for (let j = 0; j < classTokens.length; j += 1) {
+        const classToken = classTokens[j];
+        if (classToken.includes("cl-") || classToken.includes("clhide-")) {
+          node.parentNode.style.minHeight = "0";
+          const column = node.closest(".column");
+          safeAddClass(column, classToken);
+          column.classList.add(targetClass);
+          column.classList.add("conditional-id");
+        }
+      }
+    }
+  }
+
+  if (hasFormViewer()) {
+    const identifierClass = `${prefix}-identify`;
+    const targetClass = `${prefix}-id`;
+    const nodes = document.getElementsByClassName(identifierClass);
+
+    for (let i = 0; i < nodes.length; i += 1) {
+      const node = nodes[i];
+      const classTokens = node.classList   .toString()   .split(" ")   .map((c) => c.trim())   .filter((c) => c !== "") .map((c) => c.trim()) .filter((c) => c !== "");
+
+      for (let j = 0; j < classTokens.length; j += 1) {
+        const classToken = classTokens[j];
+        if (classToken.includes("cl-") || classToken.includes("clhide-")) {
+          node.parentNode.style.minHeight = "0";
+          const column = node.closest(".container-form-element__column");
+          safeAddClass(column, classToken);
+          column.classList.add(targetClass);
+          column.classList.add("conditional-id");
+        }
+      }
+    }
+  }
+}
+
+function assignConditionalClasses() {
+  CONDITIONAL_PREFIXES.forEach((prefix) => assignConditionalLogic(prefix));
+}
+
+function removeConditionalLogicDisplay() {
+  if (document.querySelector("#edit-form") === null) {
+    return;
+  }
+
+  const displayNodes = document.querySelectorAll(".conditional-display-id");
+  displayNodes.forEach((displayNode) => {
+    displayNode.classList.remove("conditional-display-id");
+    const classTokens = displayNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
+
+    classTokens.forEach((classToken) => {
+      const keep =
+        CLASS_KEEPERS.has(classToken) ||
+        classToken.includes("col-") ||
+        classToken.includes(" ");
+
+      if (!keep) {
+        displayNode.classList.remove(classToken);
+      }
+    });
+  });
+}
+
+function removeConditionalLogicTrigger() {
+  if (document.querySelector("#edit-form") === null) {
+    return;
+  }
+
+  const triggerNodes = document.querySelectorAll(".conditional-trigger-id");
+  triggerNodes.forEach((triggerNode) => {
+    triggerNode.classList.remove("conditional-trigger-id");
+    const classTokens = triggerNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
+
+    classTokens.forEach((classToken) => {
+      const keep =
+        CLASS_KEEPERS.has(classToken) ||
+        classToken.includes("col-") ||
+        classToken.includes(" ");
+
+      if (!keep) {
+        triggerNode.classList.remove(classToken);
+      }
+    });
+  });
+}
+
+function removeConditionalGroup() {
+  if (document.querySelector("#edit-form") === null) {
+    return;
+  }
+
+  const groupNodes = document.querySelectorAll(".conditional-group-id");
+  groupNodes.forEach((groupNode) => {
+    groupNode.classList.remove("conditional-group-id");
+    const classTokens = groupNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
+
+    classTokens.forEach((classToken) => {
+      const keep =
+        CLASS_KEEPERS.has(classToken) ||
+        classToken.includes("col-") ||
+        classToken.includes(" ");
+
+      if (!keep) {
+        groupNode.classList.remove(classToken);
+      }
+    });
+  });
+}
+
+function assignConditionalLogicTriggerDisable() {
+  if (hasEditContext()) {
+    const disableGroups = document.getElementsByClassName("disable-group");
+    for (let i = 0; i < disableGroups.length; i += 1) {
+      const group = disableGroups[i];
+      const classTokens = group.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
+
+      for (let j = 0; j < classTokens.length; j += 1) {
+        const classToken = classTokens[j];
+        if (classToken.includes("group-cl-") || classToken.includes("cl-")) {
+          group.parentNode.style.minHeight = "0";
+          const column = group.closest(".column");
+          safeAddClass(column, classToken);
+          column.classList.add("conditional-group-disable-id");
+        }
+      }
+    }
+  }
+
+  if (hasFormViewer()) {
+    const disableGroups = document.getElementsByClassName("disable-group");
+    for (let i = 0; i < disableGroups.length; i += 1) {
+      const group = disableGroups[i];
+      const classTokens = group.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
+
+      for (let j = 0; j < classTokens.length; j += 1) {
+        const classToken = classTokens[j];
+        if (classToken.includes("group-cl-") || classToken.includes("cl-")) {
+          group.parentNode.style.minHeight = "0";
+          const column = group.closest(".container-form-element__column");
+          safeAddClass(column, classToken);
+          column.classList.add("conditional-group-disable-id");
+        }
+      }
+    }
+  }
+}
+
+function conditionalLogic() {
+  const displayNodes = document.getElementsByClassName("conditional-display-id");
+  for (let i = 0; i < displayNodes.length; i += 1) {
+    let shouldShow = false;
+    const displayNode = displayNodes[i];
+    const displayParent = displayNode.parentNode;
+    const classTokens = displayNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
+
+    for (let j = 0; j < classTokens.length; j += 1) {
+      const classToken = classTokens[j];
+      if (classToken.includes("cl-")) {
+        const triggers = document.getElementsByClassName("conditional-trigger-id");
+        for (let k = 0; k < triggers.length; k += 1) {
+          const trigger = triggers[k];
+            if (trigger.classList.contains(classToken)) {
+              const selected =
+                isTriggerSelected(trigger) &&
+                displayValueMatchesTrigger(displayNode, trigger);
+            
+              shouldShow = shouldShow || selected;
+
+
+            if (shouldShow) {
+              displayNode.classList.add("show-content");
+              displayParent.classList.remove("remove-padding");
+            } else {
+              displayNode.classList.remove("show-content");
+              displayParent.classList.add("remove-padding");
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+function conditionalLogicRemoveItem() {
+  const displayNodes = document.getElementsByClassName(
+    "conditional-hide-display-id",
+  );
+  for (let i = 0; i < displayNodes.length; i += 1) {
+    let shouldHide = false;
+    const displayNode = displayNodes[i];
+    const classTokens = displayNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
+
+    for (let j = 0; j < classTokens.length; j += 1) {
+      const classToken = classTokens[j];
+      if (classToken.includes("clhide-")) {
+        const triggers = document.getElementsByClassName(
+          "conditional-hide-trigger-id",
+        );
+        for (let k = 0; k < triggers.length; k += 1) {
+          const trigger = triggers[k];
+          if (trigger.classList.contains(classToken)) {
+            const selected = isTriggerSelected(trigger);
+            shouldHide = shouldHide || selected;
+            if (shouldHide) {
+              displayNode.classList.add("hide-content");
+            } else {
+              displayNode.classList.remove("hide-content");
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+function conditionalLogicRemoveWorkflows() {
+  const displayNodes = document.getElementsByClassName("conditional-display-id");
+  for (let i = 0; i < displayNodes.length; i += 1) {
+    const displayNode = displayNodes[i];
+    const classTokens = displayNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
+
+    for (let j = 0; j < classTokens.length; j += 1) {
+      const classToken = classTokens[j];
+      if (classToken.includes("cl-")) {
+        const triggers = document.getElementsByClassName("conditional-trigger-id");
+        for (let k = 0; k < triggers.length; k += 1) {
+          const trigger = triggers[k];
+          if (trigger.classList.contains(classToken)) {
+          const shouldReset =
+            !isTriggerSelected(trigger);
+
+            if (shouldReset) {
+              const selects = displayNode.querySelectorAll("select");
+              for (let index = 0; index < selects.length; index += 1) {
+                selects[index].value = "";
+                selects[index].selectedIndex = 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+function conditionalLogicDisableFunction() {
+  if (hasEditContext()) {
+    const groups = document.getElementsByClassName("conditional-group-disable-id");
+    for (let i = 0; i < groups.length; i += 1) {
+      const groupNode = groups[i];
+      const classTokens = groupNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
+
+      for (let j = 0; j < classTokens.length; j += 1) {
+        const classToken = classTokens[j];
+        if (classToken.includes("group-cl-")) {
+          const selector = `.${classToken}`;
+          const members = document.querySelectorAll(selector);
+          let anySelected = false;
+
+          members.forEach((member) => {
+            anySelected = anySelected || isTriggerSelected(member);
+          });
+
+          members.forEach((member) => {
+            if (anySelected) {
+              const packages = member.getElementsByClassName("packageNotSelected");
+              for (let index = 0; index < packages.length; index += 1) {
+                packages[index].classList.add("disable-package");
+              }
+
+              const emptyChecks = member.querySelectorAll(
+                ".clip-check .ng-empty",
+              );
+              for (let index = 0; index < emptyChecks.length; index += 1) {
+                emptyChecks[index].parentElement.classList.add("disable-package");
+              }
+            } else {
+              const packages = member.getElementsByClassName("packageNotSelected");
+              for (let index = 0; index < packages.length; index += 1) {
+                packages[index].classList.remove("disable-package");
+              }
+
+              const emptyChecks = member.querySelectorAll(".clip-check .ng-empty");
+              for (let index = 0; index < emptyChecks.length; index += 1) {
+                emptyChecks[index].parentElement.classList.remove("disable-package");
+              }
+            }
+          });
+        }
+      }
+    }
+  }
+
+  if (hasFormViewer()) {
+    const groups = document.getElementsByClassName("conditional-group-disable-id");
+    for (let i = 0; i < groups.length; i += 1) {
+      const groupNode = groups[i];
+      const classTokens = groupNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
+
+      for (let j = 0; j < classTokens.length; j += 1) {
+        const classToken = classTokens[j];
+        if (classToken.includes("group-cl-")) {
+          const selector = `.${classToken}`;
+          const members = document.querySelectorAll(selector);
+          let anySelected = false;
+
+          members.forEach((member) => {
+            anySelected = anySelected || isTriggerSelected(member);
+          });
+
+          members.forEach((member) => {
+            if (anySelected) {
+              const packages = member.getElementsByClassName("packageNotSelected");
+              for (let index = 0; index < packages.length; index += 1) {
+                packages[index].classList.add("disable-package");
+              }
+
+              const emptyChecks = member.querySelectorAll(".checkboxNotChecked");
+              for (let index = 0; index < emptyChecks.length; index += 1) {
+                emptyChecks[index].classList.add("disable-package");
+              }
+
+              const checked = member.querySelectorAll(".checkboxChecked");
+              for (let index = 0; index < checked.length; index += 1) {
+                checked[index].classList.remove("disable-package");
+              }
+            } else {
+              const packages = member.getElementsByClassName("packageNotSelected");
+              for (let index = 0; index < packages.length; index += 1) {
+                packages[index].classList.remove("disable-package");
+              }
+
+              const emptyChecks = member.querySelectorAll(".checkboxNotChecked");
+              for (let index = 0; index < emptyChecks.length; index += 1) {
+                emptyChecks[index].classList.remove("disable-package");
+              }
+            }
+          });
+        }
+      }
+    }
+  }
+}
+
+function addCheckboxID() {
+  if (!hasFormViewer()) {
+    return;
+  }
+
+  const checkboxes = document.querySelectorAll("input[type='checkbox']");
+  checkboxes.forEach((checkbox) => {
+    const wrapper = checkbox.closest(".checkbox-option");
+    if (!wrapper) return;
+    
+    wrapper.classList.remove("checkboxChecked");
+    wrapper.classList.add("checkboxNotChecked");
+
+  });
+
+  const checkedCheckboxes = document.querySelectorAll(
+  "input[type='checkbox']:checked",
+);
+checkedCheckboxes.forEach((checkbox) => {
+  const wrapper = checkbox.closest(".checkbox-option");
+  if (!wrapper) return;
+
+  wrapper.classList.add("checkboxChecked");
+  wrapper.classList.remove("checkboxNotChecked");
+});
+
+}
+
+
+
+function addConditionalGuides() {
+  const toggle = document.getElementById("toggle-conditional-guidelines");
+  if (!toggle) {
+    return;
+  }
+
+  if (toggle.checked === true) {
+    let conditionalClasses = "";
+    const conditionalNodes = document.getElementsByClassName("conditional-id");
+    for (let i = 0; i < conditionalNodes.length; i += 1) {
+      const conditionalNode = conditionalNodes[i];
+      const classTokens = conditionalNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
+      for (let j = 0; j < classTokens.length; j += 1) {
+        const classToken = classTokens[j];
+        if (classToken.includes("cl-") && !classToken.includes("group")) {
+          conditionalClasses = `${conditionalClasses} ${classToken}`;
+          const triggers = document.getElementsByClassName("conditional-trigger-id");
+          for (let k = 0; k < triggers.length; k += 1) {
+            let triggerClasses = "";
+            const trigger = triggers[k];
+            const triggerTokens = trigger.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
+
+            for (let m = 0; m < triggerTokens.length; m += 1) {
+              const triggerToken = triggerTokens[m];
+              if (triggerToken.includes("cl-")) {
+                triggerClasses = `${triggerClasses} ${triggerToken}`;
+                if (trigger.classList.contains(classToken)) {
+                  if (
+                    trigger.querySelector(".conditional-guides") === null &&
+                    triggerClasses !== ""
+                  ) {
+                    const guide = document.createElement("div");
+                    guide.classList.add("conditional-guides");
+                    guide.style.backgroundColor = COLOR_PALETTE[i];
+                    guide.style.color = "white";
+                    guide.style.padding = "10px 20px";
+                    guide.style.display = "block";
+                    guide.style.textTransform = "uppercase";
+                    guide.style.letterSpacing = "1px";
+                    guide.style.fontSize = "10px";
+                    trigger.style.border = "1px solid";
+                    trigger.style.borderColor = COLOR_PALETTE[i];
+                    guide.innerHTML = `Conditional Trigger:${triggerClasses}`;
+                    trigger.insertBefore(guide, trigger.firstChild);
+                  }
+
+                  if (
+                    triggerClasses !== "" &&
+                    trigger.querySelector(".conditional-guides") !== null
+                  ) {
+                    const existingGuide = trigger.querySelector(
+                      "div.conditional-guides",
+                    );
+                    existingGuide.innerHTML = `Conditional Trigger:${triggerClasses}`;
+                    existingGuide.style.backgroundColor = COLOR_PALETTE[i];
+                    trigger.style.borderColor = COLOR_PALETTE[i];
+                  }
+                }
+              }
+            }
+          }
+
+          const displayNodes = document.getElementsByClassName(
+            "conditional-display-id",
+          );
+          for (let k = 0; k < displayNodes.length; k += 1) {
+            let displayClasses = "";
+            const displayNode = displayNodes[k];
+            const displayTokens = displayNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
+
+            for (let m = 0; m < displayTokens.length; m += 1) {
+              const displayToken = displayTokens[m];
+              if (displayToken.includes("cl-")) {
+                displayClasses = `${displayClasses} ${displayToken}`;
+                if (displayNode.classList.contains(classToken)) {
+                  if (
+                    displayNode.querySelector(".conditional-guides") === null &&
+                    displayClasses !== ""
+                  ) {
+                    const guide = document.createElement("div");
+                    guide.classList.add("conditional-guides");
+                    guide.style.backgroundColor = COLOR_PALETTE[i];
+                    guide.style.color = "white";
+                    guide.style.padding = "10px 20px";
+                    guide.style.display = "block";
+                    guide.style.textTransform = "uppercase";
+                    guide.style.letterSpacing = "1px";
+                    guide.style.fontSize = "10px";
+                    displayNode.style.border = "1px solid";
+                    displayNode.style.borderColor = COLOR_PALETTE[i];
+                    guide.innerHTML = `Conditional Display:${displayClasses}`;
+                    displayNode.insertBefore(guide, displayNode.firstChild);
+                  }
+
+                  if (
+                    displayClasses !== "" &&
+                    displayNode.querySelector(".conditional-guides") !== null
+                  ) {
+                    const existingGuide = displayNode.querySelector(
+                      "div.conditional-guides",
+                    );
+                    existingGuide.innerHTML = `Conditional Display:${displayClasses}`;
+                    existingGuide.style.backgroundColor = COLOR_PALETTE[i];
+                    displayNode.style.borderColor = COLOR_PALETTE[i];
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  if (toggle.checked === false) {
+    const guides = document.querySelectorAll("div.conditional-guides");
+    guides.forEach((guide) => {
+      guide.parentNode.style.border = "0px solid";
+      guide.parentNode.removeChild(guide);
+    });
+  }
+}
+
+function removeConditionalGuidelines() {
+  const guides = document.querySelectorAll("div.conditional-guides");
+  guides.forEach((guide) => {
+    const parent = guide.parentNode;
+    const isConditional = parent.classList.contains("conditional-id");
+    if (!isConditional) {
+      const parentGuides = parent.querySelectorAll("div.conditional-guides");
+      parentGuides.forEach((parentGuide) => {
+        parentGuide.parentNode.style.border = "0px solid";
+        parentGuide.parentNode.removeChild(parentGuide);
+      });
+    }
+  });
+}
+
+function conditionalRequired() {
+  const inputs = document.querySelectorAll("input");
+  inputs.forEach((input) => {
+    if (input.hasAttribute("required")) {
+      input.classList.add("required-catch");
+    }
+  });
+
+  const displayNodes = document.getElementsByClassName("conditional-display-id");
+  for (let i = 0; i < displayNodes.length; i += 1) {
+    let shouldEnable = false;
+    const displayNode = displayNodes[i];
+    const classTokens = displayNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
+
+    for (let j = 0; j < classTokens.length; j += 1) {
+      const classToken = classTokens[j];
+      if (classToken.includes("cl-")) {
+        const triggers = document.getElementsByClassName("conditional-trigger-id");
+        for (let k = 0; k < triggers.length; k += 1) {
+          const trigger = triggers[k];
+          if (trigger.classList.contains(classToken)) {
+            const selected = isTriggerSelected(trigger);
+            shouldEnable = shouldEnable || selected;
+
+            if (shouldEnable) {
+              const requiredFields =
+                displayNode.querySelectorAll(".required-catch");
+              requiredFields.forEach((field) => {
+                field.removeAttribute("required");
+                field.setAttribute("ng-required", "false");
+              });
+            } else {
+              const requiredFields =
+                displayNode.querySelectorAll(".required-catch");
+              requiredFields.forEach((field) => {
+                field.setAttribute("required", "required");
+              });
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+function identifyMainCodes() {
+  if (hasEditContext()) {
+    if (document.querySelectorAll("div.hide-on-front")) {
+      const hiddenNodes = document.querySelectorAll("div.hide-on-front");
+      hiddenNodes.forEach((node) => {
+        const row = node.closest(".row");
+        row.classList.add("main-codes-id");
+        if (document.querySelector("#edit-form") !== null) {
+          row.setAttribute(
+            "style",
+            "margin-top:0px!important;margin-bottom:0px!important; border:0px",
+          );
+        }
+      });
+    }
+  }
+
+  if (hasFormViewer()) {
+    if (document.querySelectorAll(".hide-on-front")) {
+      const hiddenNodes = document.querySelectorAll("div.hide-on-front");
+      hiddenNodes.forEach((node) => {
+        const content = node.closest(".form-element__content");
+        content.classList.add("hide-on-front-id");
+        content.setAttribute(
+          "style",
+          "margin-top:0px!important;margin-bottom:0px!important;padding:0px!important;height:0px;overflow:hidden;",
+        );
+      });
+    }
+
+    if (document.querySelectorAll(".hide-on-front")) {
+      const hiddenNodes = document.querySelectorAll("b.hide-on-front");
+      hiddenNodes.forEach((node) => {
+        const content = node.closest(".form-element__content");
+        content.classList.add("hide-on-front-id");
+        content.setAttribute(
+          "style",
+          "margin-top:0px!important;margin-bottom:0px!important;padding:0px!important;height:0px;overflow:hidden;",
+        );
+      });
+    }
+  }
+}
+
+function conditionalCheck() {
+  document.addEventListener(
+    "click",
+    () => {
+      conditionalLogicDisableFunction();
+      conditionalLogic();
+      conditionalLogicRemoveItem();
+      addCheckboxID();
+    },
+    false,
+  );
+}
+
+function conditionalCheckSelects() {
+  document.addEventListener(
+    "change",
+    (event) => {
+      if (event.target && event.target.tagName === "SELECT") {
+        conditionalLogicDisableFunction();
+        conditionalLogic();
+        conditionalLogicRemoveItem();
+        addCheckboxID();
+      }
+    },
+    false,
+  );
+}
+
+function conditionalCheckMouse() {
+  const triggers = document.getElementsByClassName("conditional-trigger-id");
+  for (let i = 0; i < triggers.length; i += 1) {
+    triggers[i].addEventListener(
+      "mousemove",
+      () => {
+        conditionalLogicDisableFunction();
+        conditionalLogic();
+        conditionalLogicRemoveItem();
+        addCheckboxID();
+      },
+      false,
+    );
+  }
+}
+
+function whileEdit() {
+  if (document.querySelector("#edit-form") !== null) {
+    setInterval(() => {
+      addConditionalGuides();
+      removeConditionalGuidelines();
+      removeConditionalLogicDisplay();
+      removeConditionalLogicTrigger();
+      removeConditionalGroup();
+      assignConditionalClasses();
+      assignConditionalLogicTriggerDisable();
+      identifyMainCodes();
+    }, 250);
+  }
+}
+
+function startJavascript() {
+  assignConditionalClasses();
+  assignConditionalLogicTriggerDisable();
+  conditionalLogicDisableFunction();
+  conditionalLogicRemoveItem();
+  whileEdit();
+  identifyMainCodes();
+  conditionalLogic();
+  conditionalCheck();
+  conditionalCheckMouse();
+  conditionalCheckSelects(); 
+}
+
+startJavascript();
