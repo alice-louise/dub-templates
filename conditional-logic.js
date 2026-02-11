@@ -4,7 +4,7 @@
   }
   window.__conditionalLogicScriptLoaded = true;
 
-console.warn("🔥 CONDITIONAL SCRIPT LOADED");
+console.warn("1.3 CONDITIONAL SCRIPT LOADED");
 
 const CONDITIONAL_PREFIXES = [
   "conditional-display",
@@ -124,8 +124,9 @@ function displayValueMatchesTrigger(displayNode, trigger) {
     select.value !== ""
   ) {
     const selectedOption = select.options[select.selectedIndex];
+    const visibleLabel = (selectedOption.textContent || "").trim();
     const normalized = normalizeForCSS(
-      selectedOption.value || selectedOption.textContent || "",
+      visibleLabel || selectedOption.value || "",
     );
 
     return displayValues.includes(normalized);
@@ -339,6 +340,7 @@ function runConditionalCycleDeferred() {
   // Re-run on micro + short delays so obfuscated builds don't keep stale disable state.
   setTimeout(runConditionalCycle, 0);
   setTimeout(runConditionalCycle, 120);
+  setTimeout(runConditionalCycle, 300);
 }
 
 function attachConditionalListeners() {
@@ -429,6 +431,56 @@ function removeConditionalGroup() {
 }
 
 
+
+let packageStateObserver = null;
+
+function observePackageStateChanges() {
+  if (!document.body || packageStateObserver !== null) {
+    return;
+  }
+
+  let debounceId = null;
+  packageStateObserver = new MutationObserver((mutations) => {
+    let shouldRun = false;
+
+    for (let i = 0; i < mutations.length; i += 1) {
+      const mutation = mutations[i];
+      if (mutation.type !== "attributes" || mutation.attributeName !== "class") {
+        continue;
+      }
+
+      const target = mutation.target;
+      if (!(target instanceof Element)) continue;
+
+      if (
+        target.classList.contains("packageSelected") ||
+        target.classList.contains("packageNotSelected") ||
+        target.classList.contains("checkboxChecked") ||
+        target.classList.contains("checkboxNotChecked")
+      ) {
+        shouldRun = true;
+        break;
+      }
+    }
+
+    if (!shouldRun) return;
+
+    if (debounceId) {
+      clearTimeout(debounceId);
+    }
+
+    debounceId = setTimeout(() => {
+      runConditionalCycleDeferred();
+    }, 50);
+  });
+
+  packageStateObserver.observe(document.body, {
+    subtree: true,
+    attributes: true,
+    attributeFilter: ["class"],
+  });
+}
+
 function attachConditionalMousemoveListeners() {
   const triggers = document.getElementsByClassName("conditional-trigger-id");
 
@@ -457,6 +509,7 @@ function startJavascript() {
   whileEdit();
   attachConditionalListeners();
   attachConditionalMousemoveListeners();
+  observePackageStateChanges();
 }
 
 if (document.readyState === "loading") {
