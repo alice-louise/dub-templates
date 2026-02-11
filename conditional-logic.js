@@ -4,7 +4,7 @@
   }
   window.__conditionalLogicScriptLoaded = true;
 
-console.warn("1.3 CONDITIONAL SCRIPT LOADED");
+console.warn("2.4 CONDITIONAL SCRIPT LOADED");
 
 const CONDITIONAL_PREFIXES = [
   "conditional-display",
@@ -179,6 +179,36 @@ function assignConditionalLogic(prefix) {
   }
 }
 
+
+
+function assignConditionalLogicTriggerDisable() {
+  const disableGroups = document.getElementsByClassName("disable-group");
+
+  for (let i = 0; i < disableGroups.length; i += 1) {
+    const group = disableGroups[i];
+    const classTokens = getClassTokens(group);
+
+    for (let j = 0; j < classTokens.length; j += 1) {
+      const classToken = classTokens[j];
+      if (!classToken.includes("group-cl-") && !classToken.includes("cl-")) {
+        continue;
+      }
+
+      const column = hasFormViewer()
+        ? group.closest(".container-form-element__column")
+        : group.closest(".column");
+
+      if (!column) continue;
+
+      if (group.parentNode && group.parentNode.style) {
+        group.parentNode.style.minHeight = "0";
+      }
+
+      safeAddClass(column, classToken);
+      column.classList.add("conditional-group-disable-id");
+    }
+  }
+}
 
 function collapseHelperRows() {
   const helperSelectors = [
@@ -496,6 +526,7 @@ function whileEdit() {
       removeConditionalLogicTrigger();
       removeConditionalGroup();
       assignConditionalClasses();
+      assignConditionalLogicTriggerDisable();
       collapseHelperRows();
     }, 250);
   }
@@ -503,6 +534,7 @@ function whileEdit() {
 
 function startJavascript() {
   assignConditionalClasses();
+  assignConditionalLogicTriggerDisable();
   collapseHelperRows();
   addCheckboxID();
   runConditionalCycle();
