@@ -1,3 +1,9 @@
+(function initConditionalLogicScript() {
+  if (window.__conditionalLogicScriptLoaded) {
+    return;
+  }
+  window.__conditionalLogicScriptLoaded = true;
+
 console.warn("🔥 CONDITIONAL SCRIPT LOADED");
 
 const CONDITIONAL_PREFIXES = [
@@ -7,56 +13,6 @@ const CONDITIONAL_PREFIXES = [
   "conditional-disable-group",
   "conditional-hide-trigger",
   "conditional-hide-display",
-];
-
-const COLOR_PALETTE = [
-  "#FF6633",
-  "#7FE5F0",
-  "#00B8AE",
-  "#9A8899",
-  "#00B3E6",
-  "#E6B333",
-  "#3366E6",
-  "#999966",
-  "#B34D4D",
-  "#80B300",
-  "#809900",
-  "#E6B3B3",
-  "#6680B3",
-  "#66991A",
-  "#FF99E6",
-  "#FF1A66",
-  "#E6331A",
-  "#33FFCC",
-  "#B366CC",
-  "#4D8000",
-  "#B33300",
-  "#CC80CC",
-  "#66664D",
-  "#991AFF",
-  "#E666FF",
-  "#4DB3FF",
-  "#1AB399",
-  "#E666B3",
-  "#33991A",
-  "#CC9999",
-  "#B3B31A",
-  "#00E680",
-  "#4D8066",
-  "#809980",
-  "#E6FF80",
-  "#1AFF33",
-  "#999933",
-  "#FF3380",
-  "#CCCC00",
-  "#66E64D",
-  "#4D80CC",
-  "#9900B3",
-  "#E64D66",
-  "#4DB380",
-  "#FF4D4D",
-  "#99E6E6",
-  "#6666FF",
 ];
 
 const EDIT_CONTEXT_SELECTORS = [
@@ -76,43 +32,48 @@ const CLASS_KEEPERS = new Set([
   "column",
 ]);
 
+function getClassTokens(node) {
+  return node.classList
+    .toString()
+    .split(" ")
+    .map((c) => c.trim())
+    .filter((c) => c !== "");
+}
+
 function isTriggerSelected(trigger) {
   if (!trigger) return false;
 
-  const input = trigger.querySelector("input, select");
-  if (!input) return false;
-
-  if (input.type === "checkbox" || input.type === "radio") {
-    return input.checked;
+  // Package cards can act as triggers without native input elements.
+  if (
+    trigger.querySelector(".packageSelected") !== null ||
+    trigger.querySelector(".selected.packageSelected") !== null
+  ) {
+    return true;
   }
 
-  if (input.tagName === "SELECT") {
-    return input.value !== "";
+  const checkedInput = trigger.querySelector(
+    "input[type='checkbox']:checked, input[type='radio']:checked",
+  );
+  if (checkedInput) {
+    return true;
+  }
+
+  const select = trigger.querySelector("select");
+  if (select) {
+    return select.value !== "";
   }
 
   return false;
 }
 
-
 function safeAddClass(element, className) {
-  // Defensive: element may legitimately be null in Dubsado DOM
-  if (!element || !element.classList) return;
-
-  if (!className) return;
+  if (!element || !element.classList || !className) return;
 
   const clean = className.trim();
-
-  if (clean === "") return;
-
-  // Defensive: never allow whitespace in class names
-  if (/\s/.test(clean)) {
-    console.warn("Blocked invalid class:", JSON.stringify(className));
-    return;
-  }
+  if (clean === "" || /\s/.test(clean)) return;
 
   element.classList.add(clean);
 }
-
 
 function hasEditContext() {
   return EDIT_CONTEXT_SELECTORS.some(
@@ -137,7 +98,6 @@ function displayValueMatchesTrigger(displayNode, trigger) {
     .filter((c) => c.startsWith("cl-value-"))
     .map((c) => c.replace("cl-value-", ""));
 
-  // No value constraints = boolean trigger
   if (displayValues.length === 0) return true;
 
   const column =
@@ -146,89 +106,257 @@ function displayValueMatchesTrigger(displayNode, trigger) {
 
   if (!column) return false;
 
-
-  /* ---------- RADIO (SINGLE SELECT) ---------- */
   const checkedRadio = column.querySelector("input[type='radio']:checked");
   if (checkedRadio) {
-    const label = checkedRadio
-      .closest(".radio-option")
-      ?.querySelector("label");
-
+    const label = checkedRadio.closest(".radio-option")?.querySelector("label");
     if (!label) return false;
 
     const normalized = normalizeForCSS(label.textContent || "");
     return displayValues.includes(normalized);
   }
 
-  /* ---------- DROPDOWN ---------- */
-const select = column.querySelector("select");
-if (
-  select &&
-  select.selectedIndex > -1 &&
-  select.options[select.selectedIndex] &&
-  !select.options[select.selectedIndex].disabled &&
-  select.value !== ""
-) {
-  const selectedOption = select.options[select.selectedIndex];
-  const normalized = normalizeForCSS(
-    selectedOption.value || selectedOption.textContent || ""
-  );
+  const select = column.querySelector("select");
+  if (
+    select &&
+    select.selectedIndex > -1 &&
+    select.options[select.selectedIndex] &&
+    !select.options[select.selectedIndex].disabled &&
+    select.value !== ""
+  ) {
+    const selectedOption = select.options[select.selectedIndex];
+    const normalized = normalizeForCSS(
+      selectedOption.value || selectedOption.textContent || "",
+    );
 
-  return displayValues.includes(normalized);
-}
+    return displayValues.includes(normalized);
+  }
 
   return false;
 }
 
 
+function hasSelectedPackageOrInput(node) {
+  if (!node) return false;
+
+  return (
+    node.querySelector(".packageSelected") !== null ||
+    node.querySelector("input[type='checkbox']:checked") !== null ||
+    node.querySelector("input[type='radio']:checked") !== null
+  );
+}
+
 function assignConditionalLogic(prefix) {
-  if (hasEditContext()) {
-    const identifierClass = `${prefix}-identify`;
-    const targetClass = `${prefix}-id`;
-    const nodes = document.getElementsByClassName(identifierClass);
+  const identifierClass = `${prefix}-identify`;
+  const targetClass = `${prefix}-id`;
+  const nodes = document.getElementsByClassName(identifierClass);
 
-    for (let i = 0; i < nodes.length; i += 1) {
-      const node = nodes[i];
-      const classTokens = node.classList   .toString()   .split(" ")   .map((c) => c.trim())   .filter((c) => c !== "") .map((c) => c.trim()) .filter((c) => c !== "");
+  for (let i = 0; i < nodes.length; i += 1) {
+    const node = nodes[i];
+    const classTokens = getClassTokens(node);
 
-      for (let j = 0; j < classTokens.length; j += 1) {
-        const classToken = classTokens[j];
-        if (classToken.includes("cl-") || classToken.includes("clhide-")) {
-          node.parentNode.style.minHeight = "0";
-          const column = node.closest(".column");
-          safeAddClass(column, classToken);
-          column.classList.add(targetClass);
-          column.classList.add("conditional-id");
-        }
+    for (let j = 0; j < classTokens.length; j += 1) {
+      const classToken = classTokens[j];
+      if (!classToken.includes("cl-") && !classToken.includes("clhide-")) {
+        continue;
       }
-    }
-  }
 
-  if (hasFormViewer()) {
-    const identifierClass = `${prefix}-identify`;
-    const targetClass = `${prefix}-id`;
-    const nodes = document.getElementsByClassName(identifierClass);
+      const column = hasFormViewer()
+        ? node.closest(".container-form-element__column")
+        : node.closest(".column");
 
-    for (let i = 0; i < nodes.length; i += 1) {
-      const node = nodes[i];
-      const classTokens = node.classList   .toString()   .split(" ")   .map((c) => c.trim())   .filter((c) => c !== "") .map((c) => c.trim()) .filter((c) => c !== "");
+      if (!column) continue;
 
-      for (let j = 0; j < classTokens.length; j += 1) {
-        const classToken = classTokens[j];
-        if (classToken.includes("cl-") || classToken.includes("clhide-")) {
-          node.parentNode.style.minHeight = "0";
-          const column = node.closest(".container-form-element__column");
-          safeAddClass(column, classToken);
-          column.classList.add(targetClass);
-          column.classList.add("conditional-id");
-        }
+      // Prevent hidden helper marker blocks from reserving vertical space.
+      if (node.parentNode && node.parentNode.style) {
+        node.parentNode.style.minHeight = "0";
       }
+
+      safeAddClass(column, classToken);
+      column.classList.add(targetClass);
+      column.classList.add("conditional-id");
     }
   }
 }
 
+
+function collapseHelperRows() {
+  const helperSelectors = [
+    ".conditional-trigger-identify",
+    ".conditional-display-identify",
+    ".conditional-group-identify",
+    ".conditional-disable-group-identify",
+    ".conditional-hide-trigger-identify",
+    ".conditional-hide-display-identify",
+    ".disable-group",
+    ".hide-on-front",
+  ];
+
+  helperSelectors.forEach((selector) => {
+    const nodes = document.querySelectorAll(selector);
+
+    nodes.forEach((node) => {
+      const helperRow =
+        node.closest(".form-viewer-element.form-element") ||
+        node.closest(".form-element__content") ||
+        node.parentElement;
+
+      if (!helperRow || !helperRow.style) return;
+
+      helperRow.style.marginTop = "0";
+      helperRow.style.marginBottom = "0";
+      helperRow.style.paddingTop = "0";
+      helperRow.style.paddingBottom = "0";
+      helperRow.style.minHeight = "0";
+      helperRow.style.height = "0";
+      helperRow.style.overflow = "hidden";
+      helperRow.style.border = "0";
+    });
+  });
+}
+
 function assignConditionalClasses() {
   CONDITIONAL_PREFIXES.forEach((prefix) => assignConditionalLogic(prefix));
+}
+
+function addCheckboxID() {
+  if (!hasFormViewer()) {
+    return;
+  }
+
+  const checkboxes = document.querySelectorAll("input[type='checkbox']");
+  checkboxes.forEach((checkbox) => {
+    const wrapper = checkbox.closest(".checkbox-option");
+    if (!wrapper) return;
+
+    wrapper.classList.toggle("checkboxChecked", checkbox.checked);
+    wrapper.classList.toggle("checkboxNotChecked", !checkbox.checked);
+  });
+}
+
+function setCollapsedState(displayNode, isVisible) {
+  const displayParent = displayNode.parentNode;
+  if (!displayParent) return;
+
+  if (isVisible) {
+    displayNode.classList.add("show-content");
+    displayParent.classList.remove("remove-padding");
+  } else {
+    displayNode.classList.remove("show-content");
+    displayParent.classList.add("remove-padding");
+  }
+}
+
+function conditionalLogic() {
+  const displayNodes = document.getElementsByClassName("conditional-display-id");
+
+  for (let i = 0; i < displayNodes.length; i += 1) {
+    let shouldShow = false;
+    const displayNode = displayNodes[i];
+    const classTokens = getClassTokens(displayNode);
+
+    for (let j = 0; j < classTokens.length; j += 1) {
+      const classToken = classTokens[j];
+      if (!classToken.includes("cl-")) continue;
+
+      const triggers = document.getElementsByClassName("conditional-trigger-id");
+      for (let k = 0; k < triggers.length; k += 1) {
+        const trigger = triggers[k];
+        if (!trigger.classList.contains(classToken)) continue;
+
+        const selected =
+          isTriggerSelected(trigger) &&
+          displayValueMatchesTrigger(displayNode, trigger);
+
+        shouldShow = shouldShow || selected;
+      }
+    }
+
+    setCollapsedState(displayNode, shouldShow);
+  }
+}
+
+function conditionalLogicDisableFunction() {
+  // Keep checkbox wrapper classes in sync BEFORE disabling package UI.
+  addCheckboxID();
+
+  const groups = document.getElementsByClassName("conditional-group-disable-id");
+  for (let i = 0; i < groups.length; i += 1) {
+    const groupNode = groups[i];
+    const classTokens = getClassTokens(groupNode);
+
+    for (let j = 0; j < classTokens.length; j += 1) {
+      const classToken = classTokens[j];
+      if (!classToken.includes("group-cl-")) continue;
+
+      const members = document.querySelectorAll(`.${classToken}`);
+      let anySelected = false;
+
+      members.forEach((member) => {
+        anySelected = anySelected || hasSelectedPackageOrInput(member);
+      });
+
+      members.forEach((member) => {
+        const packages = member.getElementsByClassName("packageNotSelected");
+        for (let index = 0; index < packages.length; index += 1) {
+          packages[index].classList.toggle("disable-package", anySelected);
+        }
+
+        const unchecked = hasFormViewer()
+          ? member.querySelectorAll(".checkboxNotChecked")
+          : member.querySelectorAll(".clip-check .ng-empty");
+
+        for (let index = 0; index < unchecked.length; index += 1) {
+          if (hasFormViewer()) {
+            unchecked[index].classList.toggle("disable-package", anySelected);
+          } else if (unchecked[index].parentElement) {
+            unchecked[index].parentElement.classList.toggle(
+              "disable-package",
+              anySelected,
+            );
+          }
+        }
+
+        if (hasFormViewer()) {
+          const checked = member.querySelectorAll(".checkboxChecked");
+          for (let index = 0; index < checked.length; index += 1) {
+            checked[index].classList.remove("disable-package");
+          }
+        }
+      });
+    }
+  }
+}
+
+function runConditionalCycle() {
+  conditionalLogicDisableFunction();
+  conditionalLogic();
+}
+
+function runConditionalCycleDeferred() {
+  runConditionalCycle();
+
+  // Package selection classes in the form viewer can update after click handlers.
+  // Re-run on micro + short delays so obfuscated builds don't keep stale disable state.
+  setTimeout(runConditionalCycle, 0);
+  setTimeout(runConditionalCycle, 120);
+}
+
+function attachConditionalListeners() {
+  document.addEventListener("click", runConditionalCycleDeferred, false);
+  document.addEventListener(
+    "change",
+    (event) => {
+      if (
+        event.target &&
+        (event.target.matches("select") ||
+          event.target.matches("input[type='checkbox']") ||
+          event.target.matches("input[type='radio']"))
+      ) {
+        runConditionalCycleDeferred();
+      }
+    },
+    false,
+  );
 }
 
 function removeConditionalLogicDisplay() {
@@ -239,7 +367,7 @@ function removeConditionalLogicDisplay() {
   const displayNodes = document.querySelectorAll(".conditional-display-id");
   displayNodes.forEach((displayNode) => {
     displayNode.classList.remove("conditional-display-id");
-    const classTokens = displayNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
+    const classTokens = getClassTokens(displayNode);
 
     classTokens.forEach((classToken) => {
       const keep =
@@ -262,7 +390,7 @@ function removeConditionalLogicTrigger() {
   const triggerNodes = document.querySelectorAll(".conditional-trigger-id");
   triggerNodes.forEach((triggerNode) => {
     triggerNode.classList.remove("conditional-trigger-id");
-    const classTokens = triggerNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
+    const classTokens = getClassTokens(triggerNode);
 
     classTokens.forEach((classToken) => {
       const keep =
@@ -285,7 +413,7 @@ function removeConditionalGroup() {
   const groupNodes = document.querySelectorAll(".conditional-group-id");
   groupNodes.forEach((groupNode) => {
     groupNode.classList.remove("conditional-group-id");
-    const classTokens = groupNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
+    const classTokens = getClassTokens(groupNode);
 
     classTokens.forEach((classToken) => {
       const keep =
@@ -300,574 +428,41 @@ function removeConditionalGroup() {
   });
 }
 
-function assignConditionalLogicTriggerDisable() {
-  if (hasEditContext()) {
-    const disableGroups = document.getElementsByClassName("disable-group");
-    for (let i = 0; i < disableGroups.length; i += 1) {
-      const group = disableGroups[i];
-      const classTokens = group.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
 
-      for (let j = 0; j < classTokens.length; j += 1) {
-        const classToken = classTokens[j];
-        if (classToken.includes("group-cl-") || classToken.includes("cl-")) {
-          group.parentNode.style.minHeight = "0";
-          const column = group.closest(".column");
-          safeAddClass(column, classToken);
-          column.classList.add("conditional-group-disable-id");
-        }
-      }
-    }
-  }
-
-  if (hasFormViewer()) {
-    const disableGroups = document.getElementsByClassName("disable-group");
-    for (let i = 0; i < disableGroups.length; i += 1) {
-      const group = disableGroups[i];
-      const classTokens = group.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
-
-      for (let j = 0; j < classTokens.length; j += 1) {
-        const classToken = classTokens[j];
-        if (classToken.includes("group-cl-") || classToken.includes("cl-")) {
-          group.parentNode.style.minHeight = "0";
-          const column = group.closest(".container-form-element__column");
-          safeAddClass(column, classToken);
-          column.classList.add("conditional-group-disable-id");
-        }
-      }
-    }
-  }
-}
-
-function conditionalLogic() {
-  const displayNodes = document.getElementsByClassName("conditional-display-id");
-  for (let i = 0; i < displayNodes.length; i += 1) {
-    let shouldShow = false;
-    const displayNode = displayNodes[i];
-    const displayParent = displayNode.parentNode;
-    const classTokens = displayNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
-
-    for (let j = 0; j < classTokens.length; j += 1) {
-      const classToken = classTokens[j];
-      if (classToken.includes("cl-")) {
-        const triggers = document.getElementsByClassName("conditional-trigger-id");
-        for (let k = 0; k < triggers.length; k += 1) {
-          const trigger = triggers[k];
-            if (trigger.classList.contains(classToken)) {
-              const selected =
-                isTriggerSelected(trigger) &&
-                displayValueMatchesTrigger(displayNode, trigger);
-            
-              shouldShow = shouldShow || selected;
-
-
-            if (shouldShow) {
-              displayNode.classList.add("show-content");
-              displayParent.classList.remove("remove-padding");
-            } else {
-              displayNode.classList.remove("show-content");
-              displayParent.classList.add("remove-padding");
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-function conditionalLogicRemoveItem() {
-  const displayNodes = document.getElementsByClassName(
-    "conditional-hide-display-id",
-  );
-  for (let i = 0; i < displayNodes.length; i += 1) {
-    let shouldHide = false;
-    const displayNode = displayNodes[i];
-    const classTokens = displayNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
-
-    for (let j = 0; j < classTokens.length; j += 1) {
-      const classToken = classTokens[j];
-      if (classToken.includes("clhide-")) {
-        const triggers = document.getElementsByClassName(
-          "conditional-hide-trigger-id",
-        );
-        for (let k = 0; k < triggers.length; k += 1) {
-          const trigger = triggers[k];
-          if (trigger.classList.contains(classToken)) {
-            const selected = isTriggerSelected(trigger);
-            shouldHide = shouldHide || selected;
-            if (shouldHide) {
-              displayNode.classList.add("hide-content");
-            } else {
-              displayNode.classList.remove("hide-content");
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-function conditionalLogicRemoveWorkflows() {
-  const displayNodes = document.getElementsByClassName("conditional-display-id");
-  for (let i = 0; i < displayNodes.length; i += 1) {
-    const displayNode = displayNodes[i];
-    const classTokens = displayNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
-
-    for (let j = 0; j < classTokens.length; j += 1) {
-      const classToken = classTokens[j];
-      if (classToken.includes("cl-")) {
-        const triggers = document.getElementsByClassName("conditional-trigger-id");
-        for (let k = 0; k < triggers.length; k += 1) {
-          const trigger = triggers[k];
-          if (trigger.classList.contains(classToken)) {
-          const shouldReset =
-            !isTriggerSelected(trigger);
-
-            if (shouldReset) {
-              const selects = displayNode.querySelectorAll("select");
-              for (let index = 0; index < selects.length; index += 1) {
-                selects[index].value = "";
-                selects[index].selectedIndex = 0;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-function conditionalLogicDisableFunction() {
-  if (hasEditContext()) {
-    const groups = document.getElementsByClassName("conditional-group-disable-id");
-    for (let i = 0; i < groups.length; i += 1) {
-      const groupNode = groups[i];
-      const classTokens = groupNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
-
-      for (let j = 0; j < classTokens.length; j += 1) {
-        const classToken = classTokens[j];
-        if (classToken.includes("group-cl-")) {
-          const selector = `.${classToken}`;
-          const members = document.querySelectorAll(selector);
-          let anySelected = false;
-
-          members.forEach((member) => {
-            anySelected = anySelected || isTriggerSelected(member);
-          });
-
-          members.forEach((member) => {
-            if (anySelected) {
-              const packages = member.getElementsByClassName("packageNotSelected");
-              for (let index = 0; index < packages.length; index += 1) {
-                packages[index].classList.add("disable-package");
-              }
-
-              const emptyChecks = member.querySelectorAll(
-                ".clip-check .ng-empty",
-              );
-              for (let index = 0; index < emptyChecks.length; index += 1) {
-                emptyChecks[index].parentElement.classList.add("disable-package");
-              }
-            } else {
-              const packages = member.getElementsByClassName("packageNotSelected");
-              for (let index = 0; index < packages.length; index += 1) {
-                packages[index].classList.remove("disable-package");
-              }
-
-              const emptyChecks = member.querySelectorAll(".clip-check .ng-empty");
-              for (let index = 0; index < emptyChecks.length; index += 1) {
-                emptyChecks[index].parentElement.classList.remove("disable-package");
-              }
-            }
-          });
-        }
-      }
-    }
-  }
-
-  if (hasFormViewer()) {
-    const groups = document.getElementsByClassName("conditional-group-disable-id");
-    for (let i = 0; i < groups.length; i += 1) {
-      const groupNode = groups[i];
-      const classTokens = groupNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
-
-      for (let j = 0; j < classTokens.length; j += 1) {
-        const classToken = classTokens[j];
-        if (classToken.includes("group-cl-")) {
-          const selector = `.${classToken}`;
-          const members = document.querySelectorAll(selector);
-          let anySelected = false;
-
-          members.forEach((member) => {
-            anySelected = anySelected || isTriggerSelected(member);
-          });
-
-          members.forEach((member) => {
-            if (anySelected) {
-              const packages = member.getElementsByClassName("packageNotSelected");
-              for (let index = 0; index < packages.length; index += 1) {
-                packages[index].classList.add("disable-package");
-              }
-
-              const emptyChecks = member.querySelectorAll(".checkboxNotChecked");
-              for (let index = 0; index < emptyChecks.length; index += 1) {
-                emptyChecks[index].classList.add("disable-package");
-              }
-
-              const checked = member.querySelectorAll(".checkboxChecked");
-              for (let index = 0; index < checked.length; index += 1) {
-                checked[index].classList.remove("disable-package");
-              }
-            } else {
-              const packages = member.getElementsByClassName("packageNotSelected");
-              for (let index = 0; index < packages.length; index += 1) {
-                packages[index].classList.remove("disable-package");
-              }
-
-              const emptyChecks = member.querySelectorAll(".checkboxNotChecked");
-              for (let index = 0; index < emptyChecks.length; index += 1) {
-                emptyChecks[index].classList.remove("disable-package");
-              }
-            }
-          });
-        }
-      }
-    }
-  }
-}
-
-function addCheckboxID() {
-  if (!hasFormViewer()) {
-    return;
-  }
-
-  const checkboxes = document.querySelectorAll("input[type='checkbox']");
-  checkboxes.forEach((checkbox) => {
-    const wrapper = checkbox.closest(".checkbox-option");
-    if (!wrapper) return;
-    
-    wrapper.classList.remove("checkboxChecked");
-    wrapper.classList.add("checkboxNotChecked");
-
-  });
-
-  const checkedCheckboxes = document.querySelectorAll(
-  "input[type='checkbox']:checked",
-);
-checkedCheckboxes.forEach((checkbox) => {
-  const wrapper = checkbox.closest(".checkbox-option");
-  if (!wrapper) return;
-
-  wrapper.classList.add("checkboxChecked");
-  wrapper.classList.remove("checkboxNotChecked");
-});
-
-}
-
-
-
-function addConditionalGuides() {
-  const toggle = document.getElementById("toggle-conditional-guidelines");
-  if (!toggle) {
-    return;
-  }
-
-  if (toggle.checked === true) {
-    let conditionalClasses = "";
-    const conditionalNodes = document.getElementsByClassName("conditional-id");
-    for (let i = 0; i < conditionalNodes.length; i += 1) {
-      const conditionalNode = conditionalNodes[i];
-      const classTokens = conditionalNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
-      for (let j = 0; j < classTokens.length; j += 1) {
-        const classToken = classTokens[j];
-        if (classToken.includes("cl-") && !classToken.includes("group")) {
-          conditionalClasses = `${conditionalClasses} ${classToken}`;
-          const triggers = document.getElementsByClassName("conditional-trigger-id");
-          for (let k = 0; k < triggers.length; k += 1) {
-            let triggerClasses = "";
-            const trigger = triggers[k];
-            const triggerTokens = trigger.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
-
-            for (let m = 0; m < triggerTokens.length; m += 1) {
-              const triggerToken = triggerTokens[m];
-              if (triggerToken.includes("cl-")) {
-                triggerClasses = `${triggerClasses} ${triggerToken}`;
-                if (trigger.classList.contains(classToken)) {
-                  if (
-                    trigger.querySelector(".conditional-guides") === null &&
-                    triggerClasses !== ""
-                  ) {
-                    const guide = document.createElement("div");
-                    guide.classList.add("conditional-guides");
-                    guide.style.backgroundColor = COLOR_PALETTE[i];
-                    guide.style.color = "white";
-                    guide.style.padding = "10px 20px";
-                    guide.style.display = "block";
-                    guide.style.textTransform = "uppercase";
-                    guide.style.letterSpacing = "1px";
-                    guide.style.fontSize = "10px";
-                    trigger.style.border = "1px solid";
-                    trigger.style.borderColor = COLOR_PALETTE[i];
-                    guide.innerHTML = `Conditional Trigger:${triggerClasses}`;
-                    trigger.insertBefore(guide, trigger.firstChild);
-                  }
-
-                  if (
-                    triggerClasses !== "" &&
-                    trigger.querySelector(".conditional-guides") !== null
-                  ) {
-                    const existingGuide = trigger.querySelector(
-                      "div.conditional-guides",
-                    );
-                    existingGuide.innerHTML = `Conditional Trigger:${triggerClasses}`;
-                    existingGuide.style.backgroundColor = COLOR_PALETTE[i];
-                    trigger.style.borderColor = COLOR_PALETTE[i];
-                  }
-                }
-              }
-            }
-          }
-
-          const displayNodes = document.getElementsByClassName(
-            "conditional-display-id",
-          );
-          for (let k = 0; k < displayNodes.length; k += 1) {
-            let displayClasses = "";
-            const displayNode = displayNodes[k];
-            const displayTokens = displayNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
-
-            for (let m = 0; m < displayTokens.length; m += 1) {
-              const displayToken = displayTokens[m];
-              if (displayToken.includes("cl-")) {
-                displayClasses = `${displayClasses} ${displayToken}`;
-                if (displayNode.classList.contains(classToken)) {
-                  if (
-                    displayNode.querySelector(".conditional-guides") === null &&
-                    displayClasses !== ""
-                  ) {
-                    const guide = document.createElement("div");
-                    guide.classList.add("conditional-guides");
-                    guide.style.backgroundColor = COLOR_PALETTE[i];
-                    guide.style.color = "white";
-                    guide.style.padding = "10px 20px";
-                    guide.style.display = "block";
-                    guide.style.textTransform = "uppercase";
-                    guide.style.letterSpacing = "1px";
-                    guide.style.fontSize = "10px";
-                    displayNode.style.border = "1px solid";
-                    displayNode.style.borderColor = COLOR_PALETTE[i];
-                    guide.innerHTML = `Conditional Display:${displayClasses}`;
-                    displayNode.insertBefore(guide, displayNode.firstChild);
-                  }
-
-                  if (
-                    displayClasses !== "" &&
-                    displayNode.querySelector(".conditional-guides") !== null
-                  ) {
-                    const existingGuide = displayNode.querySelector(
-                      "div.conditional-guides",
-                    );
-                    existingGuide.innerHTML = `Conditional Display:${displayClasses}`;
-                    existingGuide.style.backgroundColor = COLOR_PALETTE[i];
-                    displayNode.style.borderColor = COLOR_PALETTE[i];
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  if (toggle.checked === false) {
-    const guides = document.querySelectorAll("div.conditional-guides");
-    guides.forEach((guide) => {
-      guide.parentNode.style.border = "0px solid";
-      guide.parentNode.removeChild(guide);
-    });
-  }
-}
-
-function removeConditionalGuidelines() {
-  const guides = document.querySelectorAll("div.conditional-guides");
-  guides.forEach((guide) => {
-    const parent = guide.parentNode;
-    const isConditional = parent.classList.contains("conditional-id");
-    if (!isConditional) {
-      const parentGuides = parent.querySelectorAll("div.conditional-guides");
-      parentGuides.forEach((parentGuide) => {
-        parentGuide.parentNode.style.border = "0px solid";
-        parentGuide.parentNode.removeChild(parentGuide);
-      });
-    }
-  });
-}
-
-function conditionalRequired() {
-  const inputs = document.querySelectorAll("input");
-  inputs.forEach((input) => {
-    if (input.hasAttribute("required")) {
-      input.classList.add("required-catch");
-    }
-  });
-
-  const displayNodes = document.getElementsByClassName("conditional-display-id");
-  for (let i = 0; i < displayNodes.length; i += 1) {
-    let shouldEnable = false;
-    const displayNode = displayNodes[i];
-    const classTokens = displayNode.classList.toString().split(" ") .map((c) => c.trim()) .filter((c) => c !== "");
-
-    for (let j = 0; j < classTokens.length; j += 1) {
-      const classToken = classTokens[j];
-      if (classToken.includes("cl-")) {
-        const triggers = document.getElementsByClassName("conditional-trigger-id");
-        for (let k = 0; k < triggers.length; k += 1) {
-          const trigger = triggers[k];
-          if (trigger.classList.contains(classToken)) {
-            const selected = isTriggerSelected(trigger);
-            shouldEnable = shouldEnable || selected;
-
-            if (shouldEnable) {
-              const requiredFields =
-                displayNode.querySelectorAll(".required-catch");
-              requiredFields.forEach((field) => {
-                field.removeAttribute("required");
-                field.setAttribute("ng-required", "false");
-              });
-            } else {
-              const requiredFields =
-                displayNode.querySelectorAll(".required-catch");
-              requiredFields.forEach((field) => {
-                field.setAttribute("required", "required");
-              });
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-function identifyMainCodes() {
-  if (hasEditContext()) {
-    if (document.querySelectorAll("div.hide-on-front")) {
-      const hiddenNodes = document.querySelectorAll("div.hide-on-front");
-      hiddenNodes.forEach((node) => {
-        const row = node.closest(".row");
-        row.classList.add("main-codes-id");
-        if (document.querySelector("#edit-form") !== null) {
-          row.setAttribute(
-            "style",
-            "margin-top:0px!important;margin-bottom:0px!important; border:0px",
-          );
-        }
-      });
-    }
-  }
-
-  if (hasFormViewer()) {
-    if (document.querySelectorAll(".hide-on-front")) {
-      const hiddenNodes = document.querySelectorAll("div.hide-on-front");
-      hiddenNodes.forEach((node) => {
-        const content = node.closest(".form-element__content");
-        content.classList.add("hide-on-front-id");
-        content.setAttribute(
-          "style",
-          "margin-top:0px!important;margin-bottom:0px!important;padding:0px!important;height:0px;overflow:hidden;",
-        );
-      });
-    }
-
-    if (document.querySelectorAll(".hide-on-front")) {
-      const hiddenNodes = document.querySelectorAll("b.hide-on-front");
-      hiddenNodes.forEach((node) => {
-        const content = node.closest(".form-element__content");
-        content.classList.add("hide-on-front-id");
-        content.setAttribute(
-          "style",
-          "margin-top:0px!important;margin-bottom:0px!important;padding:0px!important;height:0px;overflow:hidden;",
-        );
-      });
-    }
-  }
-}
-
-function conditionalCheck() {
-  document.addEventListener(
-    "click",
-    () => {
-      conditionalLogicDisableFunction();
-      conditionalLogic();
-      conditionalLogicRemoveItem();
-      addCheckboxID();
-    },
-    false,
-  );
-}
-
-function conditionalCheckSelects() {
-  document.addEventListener(
-    "change",
-    (event) => {
-      if (event.target && event.target.tagName === "SELECT") {
-        conditionalLogicDisableFunction();
-        conditionalLogic();
-        conditionalLogicRemoveItem();
-        addCheckboxID();
-      }
-    },
-    false,
-  );
-}
-
-function conditionalCheckMouse() {
+function attachConditionalMousemoveListeners() {
   const triggers = document.getElementsByClassName("conditional-trigger-id");
+
   for (let i = 0; i < triggers.length; i += 1) {
-    triggers[i].addEventListener(
-      "mousemove",
-      () => {
-        conditionalLogicDisableFunction();
-        conditionalLogic();
-        conditionalLogicRemoveItem();
-        addCheckboxID();
-      },
-      false,
-    );
+    triggers[i].addEventListener("mousemove", runConditionalCycle, false);
   }
 }
 
 function whileEdit() {
   if (document.querySelector("#edit-form") !== null) {
     setInterval(() => {
-      addConditionalGuides();
-      removeConditionalGuidelines();
       removeConditionalLogicDisplay();
       removeConditionalLogicTrigger();
       removeConditionalGroup();
       assignConditionalClasses();
-      assignConditionalLogicTriggerDisable();
-      identifyMainCodes();
+      collapseHelperRows();
     }, 250);
   }
 }
 
 function startJavascript() {
-  console.warn("🚀 startJavascript() RUNNING");
   assignConditionalClasses();
-  assignConditionalLogicTriggerDisable();
-  conditionalLogicDisableFunction();
-  conditionalLogicRemoveItem();
+  collapseHelperRows();
+  addCheckboxID();
+  runConditionalCycle();
   whileEdit();
-  identifyMainCodes();
-  conditionalLogic();
-  conditionalCheck();
-  conditionalCheckMouse();
-  conditionalCheckSelects(); 
+  attachConditionalListeners();
+  attachConditionalMousemoveListeners();
 }
-console.warn("🔥 startJavascript is defined");
 
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", startJavascript);
 } else {
   startJavascript();
 }
+
+})();
