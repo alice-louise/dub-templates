@@ -129,6 +129,14 @@ view-form-public-component .alert-warning.ng-isolate-scope.alert {
     text-align: center;
     padding:0px;
 }
+
+  /*=========================
+FIXED MOVED SUBMIT BAR
+========================= */
+#row-move-submit.form-viewer-element.form-element {
+  overflow: visible !important;
+}
+
   /*=========================
 REMOVE OVERALL PADDING 
 & WHITE SPACE ON FORM
