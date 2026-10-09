@@ -154,22 +154,3 @@ margin:initial!important;
 #edit-form .row{
     margin-left:0px!important;
     margin-right:0px!important}
-
-/* ----- Code labels in the Dubsado 2.0 form builder ----- */
-#FormBuilderCanvas b.hide-on-front,
-#FormBuilderCanvas div.hide-on-front {
-    border: 0px;
-    color: black;
-    background-color: #f2f2f2;
-    padding: 3px 5px;
-    width: 100%;
-    display: block;
-    margin: 0px;
-    text-transform: uppercase;
-    font-size: 10px;
-}
-
-#FormBuilderCanvas .main-codes-id div.hide-on-front {
-    background: none !important;
-    width: auto !important;
-}
